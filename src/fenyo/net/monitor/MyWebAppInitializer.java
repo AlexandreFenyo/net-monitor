@@ -9,18 +9,18 @@ import org.springframework.web.servlet.DispatcherServlet;
 
 public class MyWebAppInitializer implements WebApplicationInitializer {
     @Override
-    public void onStartup(ServletContext servletCxt) {
+    public void onStartup(final ServletContext servletCxt) {
 
       // Load Spring web application configuration
-      AnnotationConfigWebApplicationContext cxt = new AnnotationConfigWebApplicationContext();
+      final AnnotationConfigWebApplicationContext cxt = new AnnotationConfigWebApplicationContext();
       cxt.register(AppConfig.class);
       cxt.refresh();
 
       // Create DispatcherServlet
-      DispatcherServlet servlet = new DispatcherServlet(cxt);
+      final DispatcherServlet servlet = new DispatcherServlet(cxt);
 
       // Register and map the Servlet
-      ServletRegistration.Dynamic registration = servletCxt.addServlet("dispatch", servlet);
+      final ServletRegistration.Dynamic registration = servletCxt.addServlet("dispatch", servlet);
       registration.setLoadOnStartup(1);
       registration.addMapping("/socket/*");
     }

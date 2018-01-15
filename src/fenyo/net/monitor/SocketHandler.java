@@ -6,6 +6,9 @@ import org.springframework.web.socket.TextMessage;
 
 public class SocketHandler extends TextWebSocketHandler {
     @Override
-    public void handleTextMessage(WebSocketSession session, TextMessage message) {
+    public void handleTextMessage(final WebSocketSession session, final TextMessage message) {
+        if (message.equals("canstart")) {
+
+        }
     }
 }

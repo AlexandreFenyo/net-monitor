@@ -2,31 +2,46 @@
 <html>
 	<head>
 		<meta charset="ISO-8859-1">
-			<title>Insert title here</title>
-		</head>
+		<title>Insert title here</title>
+	</head>
 
-	<script type="text/javascript">
+	<script src="display/node_modules/jquery/dist/jquery.min.js"></script>
+
+<script type="text/javascript">
+
+var canStartCpt = 0;
+function canStart() {
+	canStartCpt++;
+	if (canStartCpt == 2) {
+		sendMessage("canstart");
+	}	
+};
+
+$(window).bind("load", function() {
+	canStart();
+});
 
 var connection = new WebSocket("ws://localhost:8080/net-monitor/socket", "json");
 
 connection.onopen = function() {
-  console.log("websocket connected");
+	console.log("websocket connected");
+	canStart();
 };
 
 connection.onerror = function(error) {
-  console.log("websocket error " + error);
+	console.log("websocket error " + error);
 };
 
 connection.onmessage = function(e) {
-  if(e.data.indexOf("subProtocol") == -1)
-    document.getElementById("response").innerHTML = e.data + "<br/>";
+	if(e.data.indexOf("subProtocol") == -1)
+	document.getElementById("response").innerHTML = e.data + "<br/>";
 };
 
 function sendMessage(msg){
-  connection.send(msg);
+	connection.send(msg);
 }
 
-	</script>
+</script>
 
 
 	<body>
