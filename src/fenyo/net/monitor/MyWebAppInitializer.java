@@ -12,15 +12,15 @@ public class MyWebAppInitializer implements WebApplicationInitializer {
     public void onStartup(ServletContext servletCxt) {
 
       // Load Spring web application configuration
-      final AnnotationConfigWebApplicationContext cxt = new AnnotationConfigWebApplicationContext();
+      AnnotationConfigWebApplicationContext cxt = new AnnotationConfigWebApplicationContext();
       cxt.register(AppConfig.class);
       cxt.refresh();
 
       // Create DispatcherServlet
-      final DispatcherServlet servlet = new DispatcherServlet(cxt);
+      DispatcherServlet servlet = new DispatcherServlet(cxt);
 
       // Register and map the Servlet
-      final ServletRegistration.Dynamic registration = servletCxt.addServlet("dispatch", servlet);
+      ServletRegistration.Dynamic registration = servletCxt.addServlet("dispatch", servlet);
       registration.setLoadOnStartup(1);
       registration.addMapping("/socket/*");
     }

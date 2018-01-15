@@ -1,1 +1,2 @@
 npm install chart.js --save
+npm install jquery

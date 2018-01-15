@@ -1,37 +1,30 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="ISO-8859-1">
-			<title>Insert title here</title>
-		</head>
-
-	<script type="text/javascript">
-
-var connection = new WebSocket("ws://localhost:8080/net-monitor/socket", "json");
-
-connection.onopen = function() {
-  console.log("websocket connected");
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<script type="text/javascript">
+var connection = new WebSocket('ws://localhost:8080/net-monitor/socket', 'json');
+connection.onopen = function () {
+  console.log('Connection Opened');
 };
-
-connection.onerror = function(error) {
-  console.log("websocket error " + error);
+connection.onerror = function (error) {
+  console.log('WebSocket Error ' + error);
 };
-
-connection.onmessage = function(e) {
-  if(e.data.indexOf("subProtocol") == -1)
-    document.getElementById("response").innerHTML = e.data + "<br/>";
+connection.onmessage = function (e) {
+  if(e.data.indexOf("subProtocol")==-1)
+    document.getElementById("response").innerHTML=e.data+"<br/>";
 };
-
 function sendMessage(msg){
   connection.send(msg);
 }
+</script>
 
-	</script>
 
+<body>
 
-	<body>
+SCRIPT
 
-Page HTML
-
-	</body>
+</body>
 </html>
