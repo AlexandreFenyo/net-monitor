@@ -1,11 +1,20 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <name>Dynamic Network Monitoring System</name>
+
   <modelVersion>4.0.0</modelVersion>
   <groupId>net-monitor</groupId>
   <artifactId>net-monitor</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>war</packaging>
-  <name>Dynamic Network Monitoring System</name>
   <description>monitoring network indicators</description>
+
+  <properties>
+    <java-version>1.8</java-version>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <org.slf4j-version>1.7.21</org.slf4j-version>
+    <org.log4j-version>1.2.17</org.log4j-version>
+  </properties>
+
   <build>
     <sourceDirectory>src</sourceDirectory>
     <plugins>
@@ -26,22 +35,57 @@
       </plugin>
     </plugins>
   </build>
+
   <dependencies>
-  	<dependency>
-  		<groupId>javax.servlet</groupId>
-  		<artifactId>javax.servlet-api</artifactId>
-  		<version>3.1.0</version>
-  		<scope>provided</scope>
-  	</dependency>
-  	<dependency>
-  		<groupId>org.springframework</groupId>
-  		<artifactId>spring-websocket</artifactId>
-  		<version>5.0.0.RELEASE</version>
-  	</dependency>
-  	<dependency>
-  		<groupId>org.springframework</groupId>
-  		<artifactId>spring-webmvc</artifactId>
-  		<version>5.0.0.RELEASE</version>
-  	</dependency>
+    <dependency>
+      <groupId>org.apache.commons</groupId>
+      <artifactId>commons-lang3</artifactId>
+      <version>3.4</version>
+  </dependency>
+
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-api</artifactId>
+      <version>${org.slf4j-version}</version>
+    </dependency>
+    
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>jcl-over-slf4j</artifactId>
+      <version>${org.slf4j-version}</version>
+      <scope>runtime</scope>
+    </dependency>
+    
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-log4j12</artifactId>
+      <version>${org.slf4j-version}</version>
+      <scope>runtime</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>log4j</groupId>
+      <artifactId>log4j</artifactId>
+      <version>${org.log4j-version}</version>
+      <scope>runtime</scope>
+    </dependency>
+
+  
+    <dependency>
+      <groupId>javax.servlet</groupId>
+      <artifactId>javax.servlet-api</artifactId>
+      <version>3.1.0</version>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-websocket</artifactId>
+      <version>5.0.0.RELEASE</version>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-webmvc</artifactId>
+      <version>5.0.0.RELEASE</version>
+    </dependency>
   </dependencies>
 </project>
