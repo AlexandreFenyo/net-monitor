@@ -29,17 +29,14 @@ stompClient.connect({}, function(frame) {
 
 connection.onopen = function() {
 	console.log("websocket connected");
+	var subscription = stompClient.subscribe("/test/queue", function(message) {
+		  if (message.body) {
+		    console.log("got message with body " + message.body)
+		  } else {
+			  console.log("got empty message");
+		  }
+		});
 	canStart();
-};
-
-connection.onerror = function(error) {
-	console.log("websocket error " + error);
-};
-
-connection.onmessage = function(e) {
-	console.log("websocket message");
-	if(e.data.indexOf("subProtocol") == -1)
-	document.getElementById("response").innerHTML = e.data + "<br/>";
 };
 
 function sendMessage(msg) {
