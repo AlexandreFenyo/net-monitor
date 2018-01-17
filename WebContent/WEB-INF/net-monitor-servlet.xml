@@ -38,9 +38,23 @@
       <property name="suffix" value=".jsp" />
     </bean>
 
-    <websocket:handlers>
-      <websocket:mapping path="/socket" handler="myWebSocketHandler"/>
+    <websocket:handlers allowed-origins="http://mydomain.com">
+      <websocket:mapping path="/socket" handler="myWebSocketHandler" />
+      <websocket:handshake-interceptors>
+        <bean class="org.springframework.web.socket.server.support.HttpSessionHandshakeInterceptor" />
+      </websocket:handshake-interceptors>
     </websocket:handlers>
+
     <bean id="myWebSocketHandler" class="fenyo.net.monitor.SocketHandler" />
-   
+
+    <bean class="org.springframework.web.socket.server.standard.ServletServerContainerFactoryBean">
+      <property name="maxTextMessageBufferSize" value="8192"/>
+      <property name="maxBinaryMessageBufferSize" value="8192"/>
+    </bean>
+
+    <websocket:message-broker application-destination-prefix="/app">
+      <websocket:stomp-endpoint path="/portfolio" />
+      <websocket:simple-broker prefix="/topic, /queue" />
+    </websocket:message-broker>
+  
 </beans>
