@@ -9,7 +9,7 @@
 			<param name="ConversionPattern" value="%-5p: %d %c - %m%n" />
 		</layout>
 	</appender>
-	
+
 	<!-- Application Loggers -->
 	<logger name="fenyo.net">
 		<level value="debug" />
