@@ -3,8 +3,8 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
-</head>
 
+<script src="display/node_modules/webstomp-client/dist/webstomp.min.js"></script>
 <script src="display/node_modules/jquery/dist/jquery.min.js"></script>
 
 <script type="text/javascript">
@@ -22,7 +22,7 @@ $(window).bind("load", function() {
 });
 
 var connection = new WebSocket("ws://localhost:8080/net-monitor/dispatch/socket", "json");
-var stompClient = Stomp.over(socket);
+var stompClient = webstomp.over(connection);
 stompClient.connect({}, function(frame) {
 	console.log("XXX");
 });
@@ -37,15 +37,18 @@ connection.onerror = function(error) {
 };
 
 connection.onmessage = function(e) {
+	console.log("websocket message");
 	if(e.data.indexOf("subProtocol") == -1)
 	document.getElementById("response").innerHTML = e.data + "<br/>";
 };
 
-function sendMessage(msg){
-	connection.send(msg);
+function sendMessage(msg) {
+	stompClient.send("/app/canStart", {priority: 9}, "Hello, STOMP");
 }
 
 </script>
+
+</head>
 
 
 <body>Page HTML<br/>

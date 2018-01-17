@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServletRequest;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.messaging.handler.annotation.MessageMapping;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -24,6 +25,12 @@ public class WebController {
         logger.debug("salut");
         final ModelAndView mav = new ModelAndView("user");
         return mav;
+    }
+    
+    @MessageMapping("/canStart")
+    public String handle(String greeting) {
+        logger.debug("canStart: " + greeting.toString());
+        return greeting;
     }
 
 }
