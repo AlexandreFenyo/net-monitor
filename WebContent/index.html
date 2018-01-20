@@ -21,15 +21,21 @@ $(window).bind("load", function() {
 	canStart();
 });
 
-var connection = new WebSocket("ws://w7:8080/net-monitor/dispatch/socket", "json");
-var stompClient = webstomp.over(connection);
+//var connection = new WebSocket("ws://w7:8080/net-monitor/dispatch/socket", "json");
+//var stompClient = webstomp.over(connection);
+var stompClient = webstomp.client("ws://w7:8080/net-monitor/dispatch/socket");
+
+
+//stompClient.heartbeat = {incoming: 1000, outgoing: 1000};
+console.log("heartbeat: " + stompClient.heartbeat.incoming);
+
 stompClient.connect({}, function(frame) {
-	console.log("XXX");
+	console.log("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX");
 });
 
 connection.onopen = function() {
 	console.log("websocket connected");
-	var subscription = stompClient.subscribe("/test/queue", function(message) {
+ 	var subscription = stompClient.subscribe("/test/queue", function(message) {
 		  if (message.body) {
 		    console.log("got message with body " + message.body)
 		  } else {
@@ -40,7 +46,7 @@ connection.onopen = function() {
 };
 
 function sendMessage(msg) {
-	stompClient.send("/app/canStart", {priority: 9}, "Hello, STOMP");
+ 	stompClient.send("/app/canStart", {priority: 9}, "Hello, STOMP");
 }
 
 </script>

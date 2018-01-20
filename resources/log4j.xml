@@ -16,7 +16,11 @@
 	</logger>
 
 	<logger name="org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler">
-		<level value="debug" />
+		<level value="all" />
+	</logger>
+
+	<logger name="org.springframework">
+		<level value="all" />
 	</logger>
 
 	<!-- Root Logger -->

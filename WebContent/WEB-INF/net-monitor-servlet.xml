@@ -44,6 +44,8 @@
     </bean>
 
 	<bean class="org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler" name="heartbeatScheduler">
+		<property name="poolSize" value="1"/>
+	    <property name="threadNamePrefix" value="wss-heartbeat-thread-"/>
 	</bean>
 
 <!-- si on veut éviter que tomcat ne compresse ses messages, pour pouvoir utiliser wireshark, démarrer tomcat avec le paramètre suivant : -Dorg.apache.tomcat.websocket.DISABLE_BUILTIN_EXTENSIONS=true -->
@@ -54,7 +56,7 @@
 	      <bean class="fenyo.net.monitor.NoCompressionHandshakeInterceptor"/>
       	</websocket:handshake-interceptors>
       </websocket:stomp-endpoint>
-      <websocket:simple-broker prefix="/test" heartbeat="1000,1000" scheduler="heartbeatScheduler" />
+      <websocket:simple-broker prefix="/test" heartbeat="10000,10000" scheduler="heartbeatScheduler" />
     </websocket:message-broker>
   
     
