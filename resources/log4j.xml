@@ -15,6 +15,10 @@
 		<level value="debug" />
 	</logger>
 
+	<logger name="org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler">
+		<level value="debug" />
+	</logger>
+
 	<!-- Root Logger -->
 	<root>
 		<priority value="info" />

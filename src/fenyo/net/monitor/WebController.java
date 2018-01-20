@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServletRequest;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
 import org.springframework.messaging.handler.annotation.MessageMapping;
 import org.springframework.messaging.handler.annotation.SendTo;
 import org.springframework.stereotype.Controller;
@@ -21,6 +22,9 @@ import org.springframework.web.servlet.view.RedirectView;
 public class WebController {
     private static final Logger logger = LoggerFactory.getLogger(WebController.class);
 
+    @Autowired
+    private org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler heartbeatScheduler;
+    
     @RequestMapping(value = "/request", method = RequestMethod.GET)
     public ModelAndView user(final Principal p) {
         logger.debug("salut");
@@ -31,6 +35,8 @@ public class WebController {
     @MessageMapping("/canStart")
     @SendTo("/test/queue")
     public String handle(String greeting) {
+    	logger.debug("scheduler: " + heartbeatScheduler);
+
         logger.debug("canStart: " + greeting.toString());
         return greeting;
     }
