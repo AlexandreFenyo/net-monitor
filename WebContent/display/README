@@ -1,2 +1,4 @@
 npm install chart.js --save
 npm install jquery
+
+remplacer dans gulpfile.js package par xpackage car mot réservé dans JS
