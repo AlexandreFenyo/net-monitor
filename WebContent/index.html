@@ -3,8 +3,8 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
-</head>
 
+<script src="display/node_modules/webstomp-client/dist/webstomp.min.js"></script>
 <script src="display/node_modules/jquery/dist/jquery.min.js"></script>
 
 <script type="text/javascript">
@@ -21,27 +21,37 @@ $(window).bind("load", function() {
 	canStart();
 });
 
-var connection = new WebSocket("ws://localhost:8080/net-monitor/dispatch/socket", "json");
+//var connection = new WebSocket("ws://w7:8080/net-monitor/dispatch/socket", "json");
+//var stompClient = webstomp.over(connection);
+var stompClient = webstomp.client("ws://w7:8080/net-monitor/dispatch/socket");
+
+
+//stompClient.heartbeat = {incoming: 1000, outgoing: 1000};
+console.log("heartbeat: " + stompClient.heartbeat.incoming);
+
+stompClient.connect({}, function(frame) {
+	console.log("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX");
+});
 
 connection.onopen = function() {
 	console.log("websocket connected");
+ 	var subscription = stompClient.subscribe("/test/queue", function(message) {
+		  if (message.body) {
+		    console.log("got message with body " + message.body)
+		  } else {
+			  console.log("got empty message");
+		  }
+		});
 	canStart();
 };
 
-connection.onerror = function(error) {
-	console.log("websocket error " + error);
-};
-
-connection.onmessage = function(e) {
-	if(e.data.indexOf("subProtocol") == -1)
-	document.getElementById("response").innerHTML = e.data + "<br/>";
-};
-
-function sendMessage(msg){
-	connection.send(msg);
+function sendMessage(msg) {
+ 	stompClient.send("/app/canStart", {priority: 9}, "Hello, STOMP");
 }
 
 </script>
+
+</head>
 
 
 <body>Page HTML<br/>
