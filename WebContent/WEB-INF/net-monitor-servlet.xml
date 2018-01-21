@@ -51,13 +51,10 @@
 <!-- si on veut éviter que tomcat ne compresse ses messages, pour pouvoir utiliser wireshark, démarrer tomcat avec le paramètre suivant : -Dorg.apache.tomcat.websocket.DISABLE_BUILTIN_EXTENSIONS=true -->
 
     <websocket:message-broker application-destination-prefix="/app" user-destination-prefix="/client">
-      <websocket:stomp-endpoint path="/socket">
-      	<websocket:handshake-interceptors>
-	      <bean class="fenyo.net.monitor.NoCompressionHandshakeInterceptor"/>
-      	</websocket:handshake-interceptors>
-      </websocket:stomp-endpoint>
-      <websocket:simple-broker prefix="/test" heartbeat="10000,10000" scheduler="heartbeatScheduler" />
-    </websocket:message-broker>
+		<websocket:stomp-endpoint path="/socket">
+		</websocket:stomp-endpoint>
+		<websocket:simple-broker prefix="/data" heartbeat="1000,1000" scheduler="heartbeatScheduler" />
+	</websocket:message-broker>
   
     
 </beans>

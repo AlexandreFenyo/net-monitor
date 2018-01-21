@@ -12,6 +12,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.messaging.handler.annotation.MessageMapping;
 import org.springframework.messaging.handler.annotation.SendTo;
+import org.springframework.messaging.simp.SimpMessagingTemplate;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -21,24 +22,21 @@ import org.springframework.web.servlet.view.RedirectView;
 @Controller
 public class WebController {
     private static final Logger logger = LoggerFactory.getLogger(WebController.class);
+    private SimpMessagingTemplate template;
 
     @Autowired
-    private org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler heartbeatScheduler;
+	public WebController(final SimpMessagingTemplate template) {
+		this.template = template;
+	}
     
     @RequestMapping(value = "/request", method = RequestMethod.GET)
     public ModelAndView user(final Principal p) {
         logger.debug("salut");
-        final ModelAndView mav = new ModelAndView("user");
+
+        String text = "date:valeur";
+		template.convertAndSend("/data/queue", text);
+
+		final ModelAndView mav = new ModelAndView("user");
         return mav;
     }
-    
-    @MessageMapping("/canStart")
-    @SendTo("/test/queue")
-    public String handle(String greeting) {
-    	logger.debug("scheduler: " + heartbeatScheduler);
-
-        logger.debug("canStart: " + greeting.toString());
-        return greeting;
-    }
-
 }
