@@ -19,6 +19,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.view.RedirectView;
@@ -45,17 +46,13 @@ public class WebController {
         return mav;
     }
 
+    // curl -v --header "Accept: application/json" http://localhost:8080/net-monitor/dispatch/request
     @RequestMapping(value = "/request", method = RequestMethod.GET)
-    public Object request(final Principal p) {
-        class X {
-            public int a = 2;
-            public Integer getA() {
-                return 2;
-            }
-            public void setA(Integer a) {
-                
-            }
-        };
-        return new X();
+    public Foo [] request(final Principal p) {
+    //public @ResponseBody String request(final Principal p) {
+    	Foo f[] = { new Foo() };
+    	f[0].id = 5;
+    	f[0].name = "salut";
+    	return f;
     }
 }
