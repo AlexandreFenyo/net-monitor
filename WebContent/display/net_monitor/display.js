@@ -74,6 +74,27 @@ function loaded() {
 	}
 	});
 
+	var xhttp = new XMLHttpRequest();
+    xhttp.open("GET", "http://localhost:8080/net-monitor/dispatch/request", true);
+    xhttp.onload = function () {
+		chart.options.scales.xAxes[0].time.min = newDateString(60);
+		chart.options.scales.xAxes[0].time.max = newDateString(0);
+
+        var response = JSON.parse(xhttp.responseText);
+		var now = new moment();
+		for (let i of response) {
+			var t = new Object();
+			var m = moment(now).subtract(i.secondsFromNow, 's');
+			t.x = m.format();
+			t.y = i.value;
+			t.moment = m;
+			chart.data.datasets[0].data.push(t);
+		}
+		chart.update();
+    }
+    xhttp.setRequestHeader("Content-type", "application/json");
+    xhttp.send();
+
 	window.setInterval(function() {
 		var retry = true;
 		do {

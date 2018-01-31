@@ -38,21 +38,16 @@ public class WebController {
 
     // http://localhost:8080/net-monitor/dispatch/add?value=123
     @RequestMapping(value = "/add", method = RequestMethod.GET)
-    public ModelAndView add(final Principal p, @RequestParam("value") final long value) {
+    public Boolean add(final Principal p, @RequestParam("value") final long value) {
         data1.addValue(new Long(value).toString());
         final String text = "{\"time\":0,\"value\":" + new Long(value).toString() + "}";
         template.convertAndSend("/data/queue", text);
-        final ModelAndView mav = new ModelAndView("user");
-        return mav;
+        return true;
     }
 
     // curl -v --header "Accept: application/json" http://localhost:8080/net-monitor/dispatch/request
     @RequestMapping(value = "/request", method = RequestMethod.GET)
-    public Foo [] request(final Principal p) {
-    //public @ResponseBody String request(final Principal p) {
-    	Foo f[] = { new Foo() };
-    	f[0].id = 5;
-    	f[0].name = "salut";
-    	return f;
+    public Data [] request(final Principal p) {
+    	return data1.toArray();
     }
 }

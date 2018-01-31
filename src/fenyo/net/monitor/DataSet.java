@@ -11,6 +11,8 @@ import java.time.temporal.TemporalUnit;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import sun.awt.SunHints.Value;
+
 public class DataSet {
     private static final Logger logger = LoggerFactory.getLogger(DataSet.class);
     private final long time_window;
@@ -26,11 +28,12 @@ public class DataSet {
         final Instant now = Instant.now();
         instants.add(now);
         values.add(value);
+        flush();
         return now;
     }
 
     // keep at most only one value outside of the time window
-    public synchronized void flush() {
+    private void flush() {
         final Instant beginning = Instant.now().minus(time_window, ChronoUnit.SECONDS);
         while (true) {
             final Iterator<Instant> it = instants.iterator();
@@ -46,6 +49,7 @@ public class DataSet {
     }
 
     public synchronized String toString() {
+        flush();
         final Instant now = Instant.now();
         final StringBuffer result = new StringBuffer("[");
         final Iterator<String> it = values.iterator();
@@ -59,5 +63,17 @@ public class DataSet {
         }
         result.append("]");
         return result.toString();
+    }
+
+    public synchronized Data [] toArray() {
+        flush();
+        final Instant now = Instant.now();
+        final Data [] array = new Data[instants.size()];
+        for (int i = 0; i < instants.size(); i++) {
+            array[i] = new Data();
+            array[i].secondsFromNow = instants.get(i).until(now, ChronoUnit.SECONDS);
+            array[i].value = values.get(i);
+        }
+        return array;
     }
 }
