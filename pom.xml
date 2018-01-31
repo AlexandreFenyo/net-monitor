@@ -16,7 +16,6 @@
   </properties>
 
   <build>
-    <sourceDirectory>src</sourceDirectory>
     <plugins>
       <plugin>
         <artifactId>maven-compiler-plugin</artifactId>
@@ -30,10 +29,44 @@
         <artifactId>maven-war-plugin</artifactId>
         <version>3.0.0</version>
         <configuration>
-          <warSourceDirectory>WebContent</warSourceDirectory>
-        </configuration>
+          <!-- <warSourceDirectory>WebContent</warSourceDirectory> -->
+          <webResources>
+
+          <resource>
+          <directory>node_modules</directory>
+            <includes>
+                <include>**</include>
+              </includes>
+              </resource>
+          <resource>
+
+          <directory>src/main/javascript</directory>
+            <includes>
+                <include>**</include>
+              </includes>
+              </resource>
+              </webResources>
+          </configuration>
       </plugin>
-    </plugins>
+
+</plugins>
+
+      <pluginManagement>
+            <plugins>
+                <plugin>
+                  <groupId>org.apache.tomcat.maven</groupId>
+                  <artifactId>tomcat7-maven-plugin</artifactId>
+                    <version>2.2</version>
+                     <configuration>
+                        <path>/net-monitor</path>
+                        <port>8080</port>
+                    </configuration>
+                </plugin>
+            </plugins>
+      </pluginManagement>
+      
+
+
   </build>
 
   <dependencies>
