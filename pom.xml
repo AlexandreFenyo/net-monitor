@@ -29,9 +29,7 @@
         <artifactId>maven-war-plugin</artifactId>
         <version>3.0.0</version>
         <configuration>
-          <!-- <warSourceDirectory>WebContent</warSourceDirectory> -->
           <webResources>
-
           <resource>
           <directory>node_modules</directory>
             <includes>
@@ -39,7 +37,6 @@
               </includes>
               </resource>
           <resource>
-
           <directory>src/main/javascript</directory>
             <includes>
                 <include>**</include>
@@ -48,7 +45,6 @@
               </webResources>
           </configuration>
       </plugin>
-
 </plugins>
 
       <pluginManagement>
@@ -64,9 +60,6 @@
                 </plugin>
             </plugins>
       </pluginManagement>
-      
-
-
   </build>
 
   <dependencies>
@@ -140,7 +133,5 @@
       <artifactId>jackson-annotations</artifactId>
       <version>2.9.4</version>
     </dependency>
-    
-    
   </dependencies>
 </project>

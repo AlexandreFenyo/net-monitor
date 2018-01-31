@@ -79,6 +79,7 @@ function loaded() {
     xhttp.onload = function () {
 		chart.options.scales.xAxes[0].time.min = newDateString(60);
 		chart.options.scales.xAxes[0].time.max = newDateString(0);
+		chart.data.datasets[0].data.splice(0, chart.data.datasets[0].data.length);
 
         var response = JSON.parse(xhttp.responseText);
 		var now = new moment();
@@ -88,7 +89,6 @@ function loaded() {
 			t.x = m.format();
 			t.y = i.value;
 			t.moment = m;
-			// chart.data.datasets[0].data.clear();
 			chart.data.datasets[0].data.push(t);
 		}
 		chart.update();
