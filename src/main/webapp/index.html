@@ -4,14 +4,24 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 
+<!-- https://www.alsacreations.com/tuto/lire/1754-debuter-avec-webpack.html -->
+
 <script src="jquery/dist/jquery.min.js"></script>
 <script src="webstomp-client/dist/webstomp.min.js"></script>
 <script src="moment/min/moment.min.js"></script>
 <script src="chart.js/dist/Chart.bundle.min.js"></script>
-<script src="display.js"></script>
-</head>
 
-<body onload="loaded()">Page HTML<br/>
+<script src="javascript/public/bundle.js"></script>
+
+<!-- <script src="javascript/dist/display.js"></script> -->
+ 
+ </head>
+
+<body onload="NetMonitor.loaded()">
+
+Page HTML<br/>
+
+
 servlet controller : <a href="dispatch/request">dispatch/request</a>
 <br/>
 <a href="dispatch/add?value=123">ajouter une valeur 123</a>

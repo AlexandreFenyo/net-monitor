@@ -7,11 +7,23 @@
     "type": "git",
     "url": "https://github.com/AlexandreFenyo/net-monitor/net-monitor.git"
   },
+  "scripts": {
+    "build": "babel src/main/javascript/src -d src/main/javascript/dist",
+    "watch": "webpack --watch"
+  },
   "author": "Alexandre Fenyo",
   "license": "Apache-2.0",
   "dependencies": {
     "chart.js": "^2.7.1",
     "jquery": "^3.3.1",
+    "requirejs-babel": "^0.0.9",
     "webstomp-client": "^1.2.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "webpack": "^3.10.0",
+    "webpack-dev-server": "^2.11.1"
   }
 }

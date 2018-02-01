@@ -46,9 +46,9 @@
               </includes>
               </resource>
           <resource>
-          <directory>src/main/javascript</directory>
+          <directory>src/main</directory>
             <includes>
-                <include>**</include>
+                <include>javascript/**</include>
               </includes>
               </resource>
               </webResources>
