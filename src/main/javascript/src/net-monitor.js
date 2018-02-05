@@ -1,11 +1,27 @@
 
 "use strict";
 
-module.exports = {
-		loaded: function () {
-			loaded();
-		}
-};
+////////////////////////////////////////////////////////////////
+// COMMENT THESE LINES WHEN DEVELOPING
+//import $ from "jquery/dist/jquery.min.js";
+//import moment from "moment/moment.js";
+//import webstomp from "webstomp-client/dist/webstomp.min.js";
+//import Chart from "chart.js/dist/Chart.bundle.min.js";
+//module.exports = {
+//		loaded: function () {
+//			loaded();
+//		}
+//};
+////////////////////////////////////////////////////////////////
+
+////////////////////////////////////////////////////////////////
+// UNCOMMENT THESE LINES WHEN DEVELOPING
+var NetMonitor = new Object();
+NetMonitor.loaded = loaded;
+////////////////////////////////////////////////////////////////
+
+//checking updates are taken into account
+$(function () { console.log('v#13'); });
 
 var stompClient;
 var chart;
@@ -142,3 +158,4 @@ function loaded() {
 
 	connectStomp();
 }
+

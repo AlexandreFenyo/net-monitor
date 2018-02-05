@@ -18,6 +18,7 @@
   </properties>
 
   <build>
+
     <plugins>
       <plugin>
         <artifactId>maven-compiler-plugin</artifactId>
@@ -39,39 +40,46 @@
             With maven:
               those resources are automatically deployed to /
            -->
-          <resource>
-          <directory>node_modules</directory>
-            <includes>
-                <include>**</include>
+
+            <!-- useful for development only, when not using webpack to minify the module -->
+            <resource>
+              <directory>node_modules</directory>
+              <includes>
+                <include>jquery/**</include>
+                <include>webstomp-client/**</include>
+                <include>moment/**</include>
+                <include>chart.js/**</include>
               </includes>
-              </resource>
-          <resource>
-          <directory>src/main</directory>
-            <includes>
+            </resource>
+            <resource>
+              <directory>src/main</directory>
+              <includes>
                 <include>javascript/**</include>
               </includes>
-              </resource>
-              </webResources>
-          </configuration>
+            </resource>
+          </webResources>
+        </configuration>
       </plugin>
-</plugins>
+    </plugins>
 
-      <pluginManagement>
-            <plugins>
-                <plugin>
-                  <groupId>org.apache.tomcat.maven</groupId>
-                  <artifactId>tomcat7-maven-plugin</artifactId>
-                    <version>2.2</version>
-                     <configuration>
-                        <path>/net-monitor</path>
-                        <port>8080</port>
-                    </configuration>
-                </plugin>
-            </plugins>
-      </pluginManagement>
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <groupId>org.apache.tomcat.maven</groupId>
+	       <artifactId>tomcat7-maven-plugin</artifactId>
+	       <version>2.2</version>
+           <configuration>
+            <path>/net-monitor</path>
+            <port>8080</port>
+           </configuration>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+
   </build>
 
   <dependencies>
+
     <dependency>
       <groupId>org.apache.commons</groupId>
       <artifactId>commons-lang3</artifactId>
@@ -104,7 +112,6 @@
       <version>${org.log4j-version}</version>
       <scope>runtime</scope>
     </dependency>
-
   
     <dependency>
       <groupId>javax.servlet</groupId>
@@ -112,35 +119,42 @@
       <version>3.1.0</version>
       <scope>provided</scope>
     </dependency>
+
     <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-websocket</artifactId>
       <version>${org.springframework-version}</version>
     </dependency>
+
     <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-webmvc</artifactId>
       <version>${org.springframework-version}</version>
     </dependency>
+
     <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-messaging</artifactId>
       <version>${org.springframework-version}</version>
     </dependency>
+
     <dependency>
       <groupId>com.fasterxml.jackson.core</groupId>
       <artifactId>jackson-core</artifactId>
       <version>${com.fasterxml.jackson-version}</version>
     </dependency>
+
     <dependency>
       <groupId>com.fasterxml.jackson.core</groupId>
       <artifactId>jackson-databind</artifactId>
       <version>${com.fasterxml.jackson-version}</version>
     </dependency>
-        <dependency>
+
+    <dependency>
       <groupId>com.fasterxml.jackson.core</groupId>
       <artifactId>jackson-annotations</artifactId>
       <version>${com.fasterxml.jackson-version}</version>
     </dependency>
+
   </dependencies>
 </project>

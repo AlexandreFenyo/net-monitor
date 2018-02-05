@@ -15,3 +15,9 @@ yarn install
 
 npm install --save-dev webpack@latest webpack-dev-server@latest
 npm install -g webpack@latest
+npm install --save-dev babel-loader babel-core
+
+npm install uglifyjs-webpack-plugin --save-dev
+
+<!-- https://www.alsacreations.com/tuto/lire/1754-debuter-avec-webpack.html -->
+
