@@ -19,7 +19,7 @@ try {
 }
 
 //checking updates are taken into account
-$(function () { console.log('v#16'); });
+$(function () { console.log('v#17'); });
 
 var stompClient;
 var chart;
