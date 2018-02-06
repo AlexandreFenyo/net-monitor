@@ -1,7 +1,7 @@
 
 "use strict";
 
-// import keyword is not supported by web browsers => not interpreted in development environment (i.e. without using Babel)
+// "import" keyword is not supported by web browsers => not interpreted in development environment (i.e. without using Babel)
 // This is why we must include the following lines at the top of development environment .html files:
 // <script src="jquery/dist/jquery.min.js"></script>
 // <script src="moment/moment.js"></script>
