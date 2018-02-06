@@ -1,27 +1,24 @@
 
 "use strict";
 
-////////////////////////////////////////////////////////////////
-// COMMENT THESE LINES WHEN DEVELOPING
-//import $ from "jquery/dist/jquery.min.js";
-//import moment from "moment/moment.js";
-//import webstomp from "webstomp-client/dist/webstomp.min.js";
-//import Chart from "chart.js/dist/Chart.bundle.min.js";
-//module.exports = {
-//		loaded: function () {
-//			loaded();
-//		}
-//};
-////////////////////////////////////////////////////////////////
-
-////////////////////////////////////////////////////////////////
-// UNCOMMENT THESE LINES WHEN DEVELOPING
-var NetMonitor = new Object();
-NetMonitor.loaded = loaded;
-////////////////////////////////////////////////////////////////
+// import keyword is not supported by web browsers => not interpreted in development environment (i.e. without using Babel)
+// This is why we must include the following lines at the top of development environment .html files:
+// <script src="jquery/dist/jquery.min.js"></script>
+// <script src="moment/moment.js"></script>
+// <script src="webstomp-client/dist/webstomp.min.js"></script>
+// <script src="chart.js/dist/Chart.bundle.min.js"></script>
+import $ from "jquery/dist/jquery.min.js";
+import moment from "moment/moment.js";
+import webstomp from "webstomp-client/dist/webstomp.min.js";
+import Chart from "chart.js/dist/Chart.bundle.min.js";
+module.exports = {
+		loaded: function () {
+			loaded();
+		}
+};
 
 //checking updates are taken into account
-$(function () { console.log('v#13'); });
+$(function () { console.log('v#15'); });
 
 var stompClient;
 var chart;
@@ -109,36 +106,15 @@ function loaded() {
 
 		var response = JSON.parse(xhttp.responseText);
 		var now = new moment();
-		var _iteratorNormalCompletion = true;
-		var _didIteratorError = false;
-		var _iteratorError = undefined;
-
-		try {
-			for (var _iterator = response[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
-				var i = _step.value;
-
-				var t = new Object();
-				var m = moment(now).subtract(i.secondsFromNow, 's');
-				t.x = m.format();
-				t.y = i.value;
-				t.moment = m;
-				chart.data.datasets[0].data.push(t);
-			}
-		} catch (err) {
-			_didIteratorError = true;
-			_iteratorError = err;
-		} finally {
-			try {
-				if (!_iteratorNormalCompletion && _iterator.return) {
-					_iterator.return();
-				}
-			} finally {
-				if (_didIteratorError) {
-					throw _iteratorError;
-				}
-			}
+		for (let i of response) {
+			var t = new Object();
+			var m = moment(now).subtract(i.secondsFromNow, 's');
+			t.x = m.format();
+			t.y = i.value;
+			t.moment = m;
+			chart.data.datasets[0].data.push(t);
 		}
-
+		
 		chart.update();
 	};
 	xhttp.setRequestHeader("Content-type", "application/json");
@@ -158,4 +134,3 @@ function loaded() {
 
 	connectStomp();
 }
-
