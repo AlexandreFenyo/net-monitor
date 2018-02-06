@@ -8,17 +8,18 @@
 // <script src="webstomp-client/dist/webstomp.min.js"></script>
 // <script src="chart.js/dist/Chart.bundle.min.js"></script>
 import $ from "jquery/dist/jquery.min.js";
-import moment from "moment/moment.js";
-import webstomp from "webstomp-client/dist/webstomp.min.js";
-import Chart from "chart.js/dist/Chart.bundle.min.js";
-module.exports = {
-		loaded: function () {
-			loaded();
-		}
-};
+try {
+	module.exports = {
+			loaded: function () {
+				loaded();
+			}
+	};
+} catch (error) {
+	console.log(error);
+}
 
 //checking updates are taken into account
-$(function () { console.log('v#15'); });
+$(function () { console.log('v#16'); });
 
 var stompClient;
 var chart;
