@@ -27,24 +27,23 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.view.RedirectView;
+import java.util.Collections;
 
 @RestController
 public class WebController {
     private static final Logger logger = LoggerFactory.getLogger(WebController.class);
     private SimpMessagingTemplate template;
 
-    private Map<String, DataSet> data_sets = new HashMap<String, DataSet>();
-    private DataSet data1 = new DataSet(120);
+    private Map<String, DataSet> data_sets = java.util.Collections.synchronizedMap(new HashMap<String, DataSet>());
     
     @Autowired
 	public WebController(final SimpMessagingTemplate template) {
 		this.template = template;
 	}
 
-    // http://localhost:8080/net-monitor/dispatch/add?value=123
+    // http://localhost:8080/net-monitor/dispatch/add?value=123&dataset=dataset1
     @RequestMapping(value = "/add", method = RequestMethod.GET)
     public Boolean add(final Principal p, @RequestParam("value") final long value, @RequestParam("dataset") final String dataset) {
-        logger.debug("DATASET: " + dataset);
         final DataSet data = data_sets.get(dataset);
         data.addValue(new Long(value).toString());
         final String text = "{\"time\":0,\"value\":" + new Long(value).toString() + "}";
@@ -52,13 +51,12 @@ public class WebController {
         return true;
     }
 
-    // curl -v --header "Accept: application/json" http://localhost:8080/net-monitor/dispatch/request
+    // curl -v --header "Accept: application/json" http://localhost:8080/net-monitor/dispatch/request?dataset=dataset1&range=60
     @RequestMapping(value = "/request", method = RequestMethod.GET)
     public Data [] request(final Principal p, @RequestParam("dataset") final String dataset, @RequestParam("range") final long range) {
-        logger.debug("DATASET: " + dataset);
-        if (!data_sets.containsKey(dataset)) {
-            data_sets.put(dataset, new DataSet(range));
-        }
+    	synchronized (data_sets) {
+    		if (!data_sets.containsKey(dataset)) data_sets.put(dataset, new DataSet(range));
+    	}
     	return data_sets.get(dataset).toArray();
     }
 }

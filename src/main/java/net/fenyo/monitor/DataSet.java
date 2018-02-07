@@ -33,7 +33,7 @@ public class DataSet {
     }
 
     // keep at most only one value outside of the time window
-    private void flush() {
+    private synchronized void flush() {
         final Instant beginning = Instant.now().minus(time_window, ChronoUnit.SECONDS);
         while (true) {
             final Iterator<Instant> it = instants.iterator();

@@ -54,7 +54,6 @@ function connectStomp(charts) {
 	stompClient.heartbeat = { incoming: 1000, outgoing: 1000 };
 	stompClient.connect({}, function () {
 		for (let c of charts) {
-			// 1st subscription
 			var subscription = stompClient.subscribe("/data/" + c.dataSet, function (message) {
 				if (message.body) {
 					var t = new Object();

@@ -2,21 +2,21 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>html#24</title>
+<title>html#27</title>
 
 <!-- ------------------------------------- -->
 <!-- UNCOMMENT THESE LINES WHEN DEVELOPING -->
 <!-- we include dependent libraries since import keyword is not supported in browsers (at the beginning of net-monitor.js)  -->
-<script src="jquery/dist/jquery.min.js"></script>
+<!-- <script src="jquery/dist/jquery.min.js"></script>
 <script src="moment/moment.js"></script>
 <script src="webstomp-client/dist/webstomp.min.js"></script>
 <script src="chart.js/dist/Chart.bundle.min.js"></script>
-<script src="javascript/public/net-monitor.dev.js"></script>
+<script src="javascript/public/net-monitor.dev.js"></script> -->
 <!-- ------------------------------------- -->
 
 <!-- ------------------------------------- -->
 <!-- COMMENT THIS LINE WHEN DEVELOPING     -->
-<!-- <script src="javascript/public/net-monitor.min.js"></script> -->
+<script src="javascript/public/net-monitor.min.js"></script>
 <!-- ------------------------------------- -->
  
  </head>
@@ -47,12 +47,12 @@ var charts = [
 <br/>
 
 
-servlet controler : <a href="dispatch/request">dispatch/request</a>
+servlet controller : <a href="dispatch/request">dispatch/request</a>
 <br/>
 <a href="dispatch/add?dataset=chart1&value=123">ajouter une valeur 123</a>
 <a href="dispatch/add?dataset=chart2&value=234">ajouter une valeur 234</a>
 
-<div style="width:20%;">
+<div style="width:15%;">
 	<canvas id="myChart" width="400" height="400"></canvas>
 </div>
 
