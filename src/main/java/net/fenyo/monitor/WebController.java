@@ -6,7 +6,10 @@ import java.nio.charset.Charset;
 import java.security.Principal;
 import java.time.Instant;
 import java.time.temporal.ChronoUnit;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
+
 import javax.servlet.http.HttpServletRequest;
 
 import org.slf4j.Logger;
@@ -30,6 +33,7 @@ public class WebController {
     private static final Logger logger = LoggerFactory.getLogger(WebController.class);
     private SimpMessagingTemplate template;
 
+    private Map<String, DataSet> data_sets = new HashMap<String, DataSet>();
     private DataSet data1 = new DataSet(120);
     
     @Autowired
@@ -39,16 +43,22 @@ public class WebController {
 
     // http://localhost:8080/net-monitor/dispatch/add?value=123
     @RequestMapping(value = "/add", method = RequestMethod.GET)
-    public Boolean add(final Principal p, @RequestParam("value") final long value) {
-        data1.addValue(new Long(value).toString());
+    public Boolean add(final Principal p, @RequestParam("value") final long value, @RequestParam("dataset") final String dataset) {
+        logger.debug("DATASET: " + dataset);
+        final DataSet data = data_sets.get(dataset);
+        data.addValue(new Long(value).toString());
         final String text = "{\"time\":0,\"value\":" + new Long(value).toString() + "}";
-        template.convertAndSend("/data/queue", text);
+        template.convertAndSend("/data/" + dataset, text);
         return true;
     }
 
     // curl -v --header "Accept: application/json" http://localhost:8080/net-monitor/dispatch/request
     @RequestMapping(value = "/request", method = RequestMethod.GET)
-    public Data [] request(final Principal p) {
-    	return data1.toArray();
+    public Data [] request(final Principal p, @RequestParam("dataset") final String dataset, @RequestParam("range") final long range) {
+        logger.debug("DATASET: " + dataset);
+        if (!data_sets.containsKey(dataset)) {
+            data_sets.put(dataset, new DataSet(range));
+        }
+    	return data_sets.get(dataset).toArray();
     }
 }

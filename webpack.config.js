@@ -29,7 +29,7 @@ let config_dev = {
 		path: path.resolve(__dirname, "./src/main/javascript/public"),
 	    filename: "./net-monitor.dev.js",
 	    libraryTarget: 'var',
-	    library: 'NetMonitor'
+	    library: 'NetMonitor',
 	},
 	module: {},
 	plugins: []
