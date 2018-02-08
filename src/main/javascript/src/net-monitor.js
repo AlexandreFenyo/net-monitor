@@ -130,7 +130,7 @@ function _loaded(charts) {
 		xhttp.onload = function () {
 			this.chart.options.scales.xAxes[0].time.min = newDateString(c.range);
 			this.chart.options.scales.xAxes[0].time.max = newDateString(0);
-			this.chart.data.datasets[0].data.splice(0, chart.data.datasets[0].data.length);
+			this.chart.data.datasets[0].data.splice(0, this.chart.data.datasets[0].data.length);
 
 			try {
 				var response = JSON.parse(this.responseText);
