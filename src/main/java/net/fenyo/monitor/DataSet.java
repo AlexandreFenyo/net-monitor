@@ -11,8 +11,6 @@ import java.time.temporal.TemporalUnit;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import sun.awt.SunHints.Value;
-
 public class DataSet {
     private static final Logger logger = LoggerFactory.getLogger(DataSet.class);
     private final long time_window;
