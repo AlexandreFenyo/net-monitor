@@ -34,7 +34,7 @@ public class WebController {
     private static final Logger logger = LoggerFactory.getLogger(WebController.class);
     private SimpMessagingTemplate template;
 
-    private Map<String, DataSet> data_sets = java.util.Collections.synchronizedMap(new HashMap<String, DataSet>());
+    private Map<String, DataSet> data_sets = Collections.synchronizedMap(new HashMap<String, DataSet>());
     
     @Autowired
 	public WebController(final SimpMessagingTemplate template) {
