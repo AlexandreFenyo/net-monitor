@@ -123,6 +123,7 @@ function _loaded(charts) {
 		});
 		c.chart = chart;
 
+		// utiliser un let pour eviter fe creer xhttp.chart
 		var xhttp = new XMLHttpRequest();
 		xhttp.chart = chart;
 		xhttp.open("GET", "http://localhost:8080/net-monitor/dispatch/request?dataset=" + c.dataSet + "&range=" + c.range, true);
