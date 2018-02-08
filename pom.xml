@@ -6,7 +6,7 @@
   <artifactId>net-monitor</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>war</packaging>
-  <description>monitoring network indicators</description>
+  <description>monitoring network probes</description>
 
   <properties>
     <java-version>1.8</java-version>
