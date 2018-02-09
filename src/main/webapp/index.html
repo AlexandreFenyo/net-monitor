@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>html#27</title>
+<title>html#32</title>
 
 <!-- ------------------------------------- -->
 <!-- UNCOMMENT THESE LINES WHEN DEVELOPING -->
@@ -25,22 +25,26 @@
 <body>
 
 <script>
-var charts = [
-	{
-		id: "myChart",
-		topLabel: "1 débit Internet descendant (kbit/s)",
-		bottomLabel: "1 dernière minute glissante",
-		range: 60,
-		dataSet: "chart1"
-	},
-	{
-		id: "myChart2",
-		topLabel: "2 débit Internet descendant (kbit/s)",
-		bottomLabel: "2 dernière minute glissante",
-		range: 30,
-		dataSet: "chart2"
-	}
-];
+var charts = {
+		webSocketUrl: "ws:/localhost:8080/net-monitor/dispatch/socket",
+		initialDataUrl: "http://localhost:8080/net-monitor/dispatch/request",
+		views: [
+			{
+				id: "myChart",
+				topLabel: "1 débit Internet descendant (kbit/s)",
+				bottomLabel: "1 dernière minute glissante",
+				range: 60,
+				dataSet: "chart1"
+			},
+			{
+				id: "myChart2",
+				topLabel: "2 débit Internet descendant (kbit/s)",
+				bottomLabel: "2 dernière minute glissante",
+				range: 30,
+				dataSet: "chart2"
+			}
+		]
+}
 </script>
 
 <body onload="NetMonitor.loaded(charts)">
