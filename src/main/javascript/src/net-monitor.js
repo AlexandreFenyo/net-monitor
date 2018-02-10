@@ -1,7 +1,7 @@
 
 "use strict";
 
-const version = "41";
+const version = "43";
 
 ////////////////////////////////////////////////////////////////
 // DEVELOPMENT ENVIRONMENT INIT - without Babel
