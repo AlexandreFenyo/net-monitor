@@ -20,6 +20,7 @@ import org.springframework.messaging.handler.annotation.MessageMapping;
 import org.springframework.messaging.handler.annotation.SendTo;
 import org.springframework.messaging.simp.SimpMessagingTemplate;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -53,6 +54,7 @@ public class WebController {
 
     // curl -v --header "Accept: application/json" http://localhost:8080/net-monitor/dispatch/request?dataset=dataset1&range=60
     @RequestMapping(value = "/request", method = RequestMethod.GET)
+    @CrossOrigin(origins = "*")
     public Data [] request(final Principal p, @RequestParam("dataset") final String dataset, @RequestParam("range") final long range) {
     	synchronized (data_sets) {
     		if (!data_sets.containsKey(dataset)) data_sets.put(dataset, new DataSet(range));

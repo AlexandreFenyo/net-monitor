@@ -1,6 +1,8 @@
 
 "use strict";
 
+const version = "43";
+
 ////////////////////////////////////////////////////////////////
 // DEVELOPMENT ENVIRONMENT INIT - without Babel
 
@@ -11,6 +13,7 @@
 // <script src="webstomp-client/dist/webstomp.min.js"></script>
 // <script src="chart.js/dist/Chart.bundle.min.js"></script>
 
+var debug = true;
 export const loaded = function (charts) {
 	_loaded(charts);
 };
@@ -32,7 +35,9 @@ try {
 				_loaded(charts);
 			}
 	};
+	debug = false;
 } catch (error) {
+	// running in dev env => module.exports is constant
 	console.log(error);
 }
 
@@ -40,20 +45,24 @@ try {
 ////////////////////////////////////////////////////////////////
 
 //checking updates are taken into account
-$(function () { console.log('js#27'); });
+$(function () { console.log("js#" + version); });
 
-var stompClient;
-var chart;
-
+// compute a date in the past
 function newDateString(sec) {
 	return moment().subtract(sec, 's').format();
 }
 
+// connect the web socket to the server
 function connectStomp(charts) {
-	stompClient = webstomp.client("ws://localhost:8080/net-monitor/dispatch/socket");
+	if (debug) console.error("URL: " + charts.webSocketUrl);
+	let stompClient = webstomp.client(
+			(typeof charts.webSocketUrl === "undefined") ?
+					((window.location.protocol === "http:" ? "ws:" : "wss:") + "//" + window.location.host + "/net-monitor/dispatch/socket")
+					: charts.webSocketUrl
+	);
 	stompClient.heartbeat = { incoming: 1000, outgoing: 1000 };
 	stompClient.connect({}, function () {
-		for (let c of charts) {
+		for (let c of charts.views) {
 			var subscription = stompClient.subscribe("/data/" + c.dataSet, function (message) {
 				if (message.body) {
 					var t = new Object();
@@ -63,7 +72,7 @@ function connectStomp(charts) {
 					t.moment = now;
 					c.chart.data.datasets[0].data.push(t);
 					c.chart.update();
-				} else console.error("error: got empty message");
+				} else console.error("error: got empty STOMP message");
 			});
 		}
 	}, function (error) {
@@ -78,10 +87,10 @@ function connectStomp(charts) {
 }
 
 function _loaded(charts) {
-	for (let c of charts) {
+	for (let c of charts.views) {
 
 		var ctx = document.getElementById(c.id).getContext("2d");
-		chart = new Chart(ctx, {
+		let chart = new Chart(ctx, {
 			type: "line",
 			data: {
 				datasets: [{
@@ -123,15 +132,15 @@ function _loaded(charts) {
 		});
 		c.chart = chart;
 
-		// utiliser un let pour eviter fe creer xhttp.chart
-		var xhttp = new XMLHttpRequest();
-		xhttp.chart = chart;
-		xhttp.open("GET", "http://localhost:8080/net-monitor/dispatch/request?dataset=" + c.dataSet + "&range=" + c.range, true);
-		console.error("envoi requête: " + "http://localhost:8080/net-monitor/dispatch/request?dataset=" + c.dataSet + "&range=" + c.range);
+		let xhttp = new XMLHttpRequest();
+		xhttp.open("GET", ((typeof charts.initialDataUrl === "undefined") ?
+						(window.location.protocol + "//" + window.location.host + "/net-monitor/dispatch/request")
+						: charts.initialDataUrl) + "?dataset=" + c.dataSet + "&range=" + c.range);
+		// console.log("envoi requête: " + "http://localhost:8080/net-monitor/dispatch/request?dataset=" + c.dataSet + "&range=" + c.range);
 		xhttp.onload = function () {
-			this.chart.options.scales.xAxes[0].time.min = newDateString(c.range);
-			this.chart.options.scales.xAxes[0].time.max = newDateString(0);
-			this.chart.data.datasets[0].data.splice(0, this.chart.data.datasets[0].data.length);
+			chart.options.scales.xAxes[0].time.min = newDateString(c.range);
+			chart.options.scales.xAxes[0].time.max = newDateString(0);
+			chart.data.datasets[0].data.splice(0, chart.data.datasets[0].data.length);
 
 			try {
 				var response = JSON.parse(this.responseText);
@@ -142,20 +151,20 @@ function _loaded(charts) {
 					t.x = m.format();
 					t.y = i.value;
 					t.moment = m;
-					this.chart.data.datasets[0].data.push(t);
+					chart.data.datasets[0].data.push(t);
 				}
 			} catch (error) {
 				console.log(error);
 			}
 			
-			this.chart.update();
+			chart.update();
 		};
 
 		xhttp.setRequestHeader("Content-type", "application/json");
 		xhttp.send();
 
 		window.setInterval(function () {
-			for (let c of charts) {
+			for (let c of charts.views) {
 				var retry = true;
 				do {
 					var limit = new moment().subtract(c.range, 's');
