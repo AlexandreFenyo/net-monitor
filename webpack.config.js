@@ -36,7 +36,7 @@ let config_dev = {
 }
 
 let config_ie11 = {
-	entry: [ "./src/main/javascript/src/net-monitor.js" ],
+	entry: [ "babel-polyfill", "./src/main/javascript/src/net-monitor.js" ],
 	output: {
 		path: path.resolve(__dirname, "./src/main/javascript/public"),
 	    filename: "./net-monitor.dev.ie11.js",
