@@ -1,7 +1,9 @@
 
 package net.fenyo.monitor;
 
-import java.net.URL;
+import java.io.IOException;
+import java.io.InputStream;
+//import java.net.URL;
 import java.nio.charset.Charset;
 import java.security.Principal;
 import java.time.Instant;
@@ -17,6 +19,9 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.event.ContextRefreshedEvent;
+import org.springframework.context.event.EventListener;
+import org.springframework.core.io.ClassPathResource;
 import org.springframework.messaging.handler.annotation.MessageMapping;
 import org.springframework.messaging.handler.annotation.SendTo;
 import org.springframework.messaging.simp.SimpMessagingTemplate;
@@ -29,6 +34,11 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.view.RedirectView;
+
+import com.fasterxml.jackson.core.JsonParseException;
+import com.fasterxml.jackson.databind.JsonMappingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
+
 import java.util.Collections;
 
 @RestController
@@ -36,29 +46,26 @@ public class WebController {
     private static final Logger logger = LoggerFactory.getLogger(WebController.class);
     private SimpMessagingTemplate template;
 
-//    @Autowired
-//    private ServletContext context;
+    @Autowired
+    private ServletContext context;
     
     private Map<String, DataSet> data_sets = Collections.synchronizedMap(new HashMap<String, DataSet>());
-
-//    public void setServletContext(ServletContext servletContext) {
-//        this.context = servletContext;
-//    }
 
     @Autowired
 	public WebController(final SimpMessagingTemplate template) {
 		this.template = template;
 	}
 
+    @EventListener(ContextRefreshedEvent.class)
+    public void contextRefreshedEvent() throws JsonParseException, JsonMappingException, IOException {
+    	ObjectMapper objectMapper = new ObjectMapper();
+    	InputStream is = context.getResourceAsStream("META-INF/config.json");
+    	SnmpConfig config = objectMapper.readValue(is, SnmpConfig.class);
+    }
+
     // http://localhost:8080/net-monitor/dispatch/add?value=123&dataset=dataset1
     @RequestMapping(value = "/add", method = RequestMethod.GET)
     public Boolean add(final Principal p, @RequestParam("value") final long value, @RequestParam("dataset") final String dataset) {
-
-//        logger.error("XXXXXXXXXXXXXX servlet context:" + context);
-//      Resource resource = new ClassPathResource(fileLocationInClasspath);
-//      InputStream resourceInputStream = resource.getInputStream();
-
-        
         final DataSet data = data_sets.get(dataset);
         data.addValue(new Long(value).toString());
         final String text = "{\"time\":0,\"value\":" + new Long(value).toString() + "}";
