@@ -21,3 +21,4 @@ npm install uglifyjs-webpack-plugin --save-dev
 
 <!-- https://www.alsacreations.com/tuto/lire/1754-debuter-avec-webpack.html -->
 
+Test from iPad
