@@ -10,6 +10,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import javax.servlet.*;
 import javax.servlet.http.HttpServletRequest;
 
 import org.slf4j.Logger;
@@ -35,8 +36,15 @@ public class WebController {
     private static final Logger logger = LoggerFactory.getLogger(WebController.class);
     private SimpMessagingTemplate template;
 
-    private Map<String, DataSet> data_sets = Collections.synchronizedMap(new HashMap<String, DataSet>());
+//    @Autowired
+//    private ServletContext context;
     
+    private Map<String, DataSet> data_sets = Collections.synchronizedMap(new HashMap<String, DataSet>());
+
+//    public void setServletContext(ServletContext servletContext) {
+//        this.context = servletContext;
+//    }
+
     @Autowired
 	public WebController(final SimpMessagingTemplate template) {
 		this.template = template;
@@ -45,6 +53,12 @@ public class WebController {
     // http://localhost:8080/net-monitor/dispatch/add?value=123&dataset=dataset1
     @RequestMapping(value = "/add", method = RequestMethod.GET)
     public Boolean add(final Principal p, @RequestParam("value") final long value, @RequestParam("dataset") final String dataset) {
+
+//        logger.error("XXXXXXXXXXXXXX servlet context:" + context);
+//      Resource resource = new ClassPathResource(fileLocationInClasspath);
+//      InputStream resourceInputStream = resource.getInputStream();
+
+        
         final DataSet data = data_sets.get(dataset);
         data.addValue(new Long(value).toString());
         final String text = "{\"time\":0,\"value\":" + new Long(value).toString() + "}";
