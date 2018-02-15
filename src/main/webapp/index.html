@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>html#35</title>
+<title>html#37</title>
 
 <!-- ------------------------------------- -->
 <!-- UNCOMMENT THESE LINES WHEN DEVELOPING -->
@@ -10,7 +10,10 @@
 <!-- we include dependent libraries since import keyword is not supported in browsers (at the beginning of net-monitor.js)  -->
 <script src="jquery/dist/jquery.min.js"></script>
 <script src="moment/moment.js"></script>
+
 <script src="webstomp-client/dist/webstomp.min.js"></script>
+<!-- <script src="webstomp-client/dist/webstomp.js"></script> -->
+
 <script src="chart.js/dist/Chart.bundle.min.js"></script>
 <!-- <script src="javascript/public/net-monitor.dev.js"></script> -->
 <script src="javascript/public/net-monitor.dev.ie11.js"></script>
@@ -27,7 +30,7 @@
 
 <script>
 var charts = {
-		webSocketUrl: "ws:/localhost:8080/net-monitor/dispatch/socket",
+		webSocketUrl: "ws://localhost:8080/net-monitor/dispatch/socket",
 		initialDataUrl: "http://localhost:8080/net-monitor/dispatch/request",
 		views: [
 			{

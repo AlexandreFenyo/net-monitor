@@ -1,7 +1,7 @@
 
 "use strict";
 
-const version = "44";
+const version = "54";
 
 ////////////////////////////////////////////////////////////////
 // DEVELOPMENT ENVIRONMENT INIT - without Babel
@@ -26,7 +26,10 @@ export const loaded = function (charts) {
 
 import $ from "jquery/dist/jquery.min.js";
 import moment from "moment/moment.js";
-import webstomp from "webstomp-client/dist/webstomp.min.js";
+
+//import webstomp from "webstomp-client/dist/webstomp.min.js";
+import webstomp from "webstomp-client/dist/webstomp.js";
+
 import Chart from "chart.js/dist/Chart.bundle.min.js";
 
 try {
