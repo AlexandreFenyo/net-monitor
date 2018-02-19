@@ -13,26 +13,34 @@ import org.slf4j.LoggerFactory;
 
 public class DataSet {
     private static final Logger logger = LoggerFactory.getLogger(DataSet.class);
-    private final long time_window;
+    private long lifetime;
     
-    private final List<Instant> instants = new ArrayList<Instant>();
-    private final List<String> values = new ArrayList<String>();
+    private final ArrayList<Instant> instants = new ArrayList<Instant>();
+    private final ArrayList<String> values = new ArrayList<String>();
 
-    public DataSet(long time_window) {
-        this.time_window = time_window;
+    public DataSet(long lifetime) {
+        this.lifetime = lifetime;
     }
 
-    public synchronized Instant addValue(final String value) {
+    public synchronized void extend(final long lifetime) {
+        if (lifetime > this.lifetime) {
+            this.lifetime = lifetime;
+            flush();
+        }
+    }
+
+    public synchronized Instant addValue(final String value, final long lifetime) {
         final Instant now = Instant.now();
         instants.add(now);
         values.add(value);
+        if (lifetime != 0 && lifetime > this.lifetime) logger.warn("increasing lifetime of a dataset can lead to inconsistent dataset (lost values between recorded/displayed values)");
+        if (lifetime != 0) this.lifetime = lifetime;
         flush();
         return now;
     }
 
-    // keep at most only one value outside of the time window
-    private synchronized void flush() {
-        final Instant beginning = Instant.now().minus(time_window, ChronoUnit.SECONDS);
+    private static void flush(final List<Instant> instants, final List<String> values, long lifetime) {
+        final Instant beginning = Instant.now().minus(lifetime, ChronoUnit.SECONDS);
         while (true) {
             final Iterator<Instant> it = instants.iterator();
             if (!it.hasNext()) return;
@@ -46,6 +54,11 @@ public class DataSet {
         }
     }
 
+    // keep at most only one value outside of the time window
+    private synchronized void flush() {
+        flush(instants, values, lifetime);
+    }
+
     public synchronized String toString() {
         flush();
         final Instant now = Instant.now();
@@ -57,19 +70,27 @@ public class DataSet {
                 result.append(",");
                 first = false;
             }
-            result.append("{\"time\":" + instant.until(now, ChronoUnit.SECONDS) + ",\"value\":" + it.next() + "}");
+            result.append("{\"time\":" + instant.until(now, ChronoUnit.MILLIS) + ",\"value\":" + it.next() + "}");
         }
         result.append("]");
         return result.toString();
     }
 
-    public synchronized Data [] toArray() {
+    public synchronized Data [] toArray(final long lifetime) {
         flush();
+
+        @SuppressWarnings("unchecked")
+        final List<Instant> instants = (List<Instant>) this.instants.clone();
+        @SuppressWarnings("unchecked")
+        final List<String> values = (List<String>) this.values.clone();
+
+        flush(instants, values, lifetime);
+        
         final Instant now = Instant.now();
         final Data [] array = new Data[instants.size()];
         for (int i = 0; i < instants.size(); i++) {
             array[i] = new Data();
-            array[i].secondsFromNow = instants.get(i).until(now, ChronoUnit.SECONDS);
+            array[i].millisecondsFromNow = instants.get(i).until(now, ChronoUnit.MILLIS);
             array[i].value = values.get(i);
         }
         return array;

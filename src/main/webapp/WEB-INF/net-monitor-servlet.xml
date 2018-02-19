@@ -22,9 +22,6 @@
     <mvc:annotation-driven />
     <context:component-scan base-package="net.fenyo.monitor" />
 
-    <!-- import global parameters -->
-    <context:property-placeholder location="META-INF/config.properties" />
-
     <!-- direct mappings without the need to use a controller -->
     <mvc:resources mapping="/javascript/**" location="/javascript/" />
     <mvc:resources mapping="/chartjs/**" location="/chartjs/" />

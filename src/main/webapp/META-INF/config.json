@@ -1,4 +1,5 @@
 {
+	"default_lifetime": 86400,
 	"probes": [
 		{
 			"version": "v2c",

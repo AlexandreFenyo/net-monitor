@@ -1,7 +1,7 @@
 
 "use strict";
 
-const version = "44";
+const version = "51";
 
 ////////////////////////////////////////////////////////////////
 // DEVELOPMENT ENVIRONMENT INIT - without Babel
@@ -14,8 +14,13 @@ const version = "44";
 // <script src="chart.js/dist/Chart.bundle.min.js"></script>
 
 var debug = true;
-export const loaded = function (charts) {
-	_loaded(charts);
+
+export const manage = function (charts) {
+	_manage(charts);
+};
+
+export const unmanage = function (charts) {
+	_unmanage(charts);
 };
 
 // END DEVELOPMENT ENVIRONMENT INIT
@@ -31,8 +36,11 @@ import Chart from "chart.js/dist/Chart.bundle.min.js";
 
 try {
 	module.exports = {
-			loaded: function (charts) {
-				_loaded(charts);
+			manage: function (charts) {
+				_manage(charts);
+			},
+			unmanage: function (charts) {
+				_unmanage(charts);
 			}
 	};
 	debug = false;
@@ -48,7 +56,7 @@ try {
 $(function () { console.log("js#" + version); });
 
 // compute a date in the past
-function newDateString(sec) {
+function pastDateString(sec) {
 	return moment().subtract(sec, 's').format();
 }
 
@@ -78,15 +86,23 @@ function connectStomp(charts) {
 	}, function (error) {
 		console.error("error: " + error);
 		stompClient.disconnect(function () {
-			console.log("disconnected");
+			console.log("websocket disconnected");
 		});
 		setTimeout(function () {
 			connectStomp(charts);
 		}, 3000);
 	});
+	return stompClient;
 }
 
-function _loaded(charts) {
+function _unmanage(charts) {
+	window.clearInterval(charts.intervalId);
+	charts.stompClient.disconnect(function () {
+		console.log("websocket disconnected");
+	});
+}
+
+function _manage(charts) {
 	for (let c of charts.views) {
 
 		var ctx = document.getElementById(c.id).getContext("2d");
@@ -107,8 +123,8 @@ function _loaded(charts) {
 					xAxes: [{
 						type: "time",
 						time: {
-							min: newDateString(c.range),
-							max: newDateString(0)
+							min: pastDateString(c.lifeTime),
+							max: pastDateString(0)
 						},
 						display: true,
 						scaleLabel: {
@@ -135,11 +151,11 @@ function _loaded(charts) {
 		let xhttp = new XMLHttpRequest();
 		xhttp.open("GET", ((typeof charts.initialDataUrl === "undefined") ?
 						(window.location.protocol + "//" + window.location.host + "/net-monitor/dispatch/request")
-						: charts.initialDataUrl) + "?dataset=" + c.dataSet + "&range=" + c.range);
-		// console.log("envoi requête: " + "http://localhost:8080/net-monitor/dispatch/request?dataset=" + c.dataSet + "&range=" + c.range);
+						: charts.initialDataUrl) + "?dataset=" + c.dataSet + "&lifetime=" + c.lifeTime);
+		// console.log("envoi requête: " + "http://localhost:8080/net-monitor/dispatch/request?dataset=" + c.dataSet + "&lifetime=" + c.lifetime);
 		xhttp.onload = function () {
-			chart.options.scales.xAxes[0].time.min = newDateString(c.range);
-			chart.options.scales.xAxes[0].time.max = newDateString(0);
+			chart.options.scales.xAxes[0].time.min = pastDateString(c.lifeTime);
+			chart.options.scales.xAxes[0].time.max = pastDateString(0);
 			chart.data.datasets[0].data.splice(0, chart.data.datasets[0].data.length);
 
 			try {
@@ -147,7 +163,7 @@ function _loaded(charts) {
 				var now = new moment();
 				for (let i of response) {
 					var t = new Object();
-					var m = moment(now).subtract(i.secondsFromNow, 's');
+					var m = moment(now).subtract(i.millisecondsFromNow, 'ms');
 					t.x = m.format();
 					t.y = i.value;
 					t.moment = m;
@@ -162,21 +178,21 @@ function _loaded(charts) {
 
 		xhttp.setRequestHeader("Content-type", "application/json");
 		xhttp.send();
+	}
 
-		window.setInterval(function () {
-			for (let c of charts.views) {
-				var retry = true;
-				do {
-					var limit = new moment().subtract(c.range, 's');
-					if (c.chart.data.datasets[0].data.length > 1 && c.chart.data.datasets[0].data[1].moment.isBefore(limit)) c.chart.data.datasets[0].data.splice(0, 1);else retry = false;
-				} while (retry);
-
-				c.chart.options.scales.xAxes[0].time.min = newDateString(c.range);
-				c.chart.options.scales.xAxes[0].time.max = newDateString(0);
-				c.chart.update();
-			}
-		}, 1000);
+	charts.intervalId = window.setInterval(function () {
+		for (let c of charts.views) {
+			var retry = true;
+			do {
+				var limit = new moment().subtract(c.lifeTime, 's');
+				if (c.chart.data.datasets[0].data.length > 1 && c.chart.data.datasets[0].data[1].moment.isBefore(limit)) c.chart.data.datasets[0].data.splice(0, 1);else retry = false;
+			} while (retry);
+			
+			c.chart.options.scales.xAxes[0].time.min = pastDateString(c.lifeTime);
+			c.chart.options.scales.xAxes[0].time.max = pastDateString(0);
+			c.chart.update();
 		}
+	}, 1000);
 
-	connectStomp(charts);
+	charts.stompClient = connectStomp(charts);
 }

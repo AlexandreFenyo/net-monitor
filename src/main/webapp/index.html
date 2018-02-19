@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>html#35</title>
+<title>html#37</title>
 
 <!-- ------------------------------------- -->
 <!-- UNCOMMENT THESE LINES WHEN DEVELOPING -->
@@ -12,8 +12,7 @@
 <script src="moment/moment.js"></script>
 <script src="webstomp-client/dist/webstomp.min.js"></script>
 <script src="chart.js/dist/Chart.bundle.min.js"></script>
-<!-- <script src="javascript/public/net-monitor.dev.js"></script> -->
-<script src="javascript/public/net-monitor.dev.ie11.js"></script>
+<script src="javascript/public/net-monitor.dev.js"></script>
 <!-- ------------------------------------- -->
 
 <!-- ------------------------------------- -->
@@ -27,30 +26,50 @@
 
 <script>
 var charts = {
-		webSocketUrl: "ws:/localhost:8080/net-monitor/dispatch/socket",
+		webSocketUrl: "ws://localhost:8080/net-monitor/dispatch/socket",
 		initialDataUrl: "http://localhost:8080/net-monitor/dispatch/request",
 		views: [
 			{
 				id: "myChart",
 				topLabel: "1 débit Internet descendant (kbit/s)",
 				bottomLabel: "1 dernière minute glissante",
-				range: 60,
+				lifeTime: 60,
 				dataSet: "chart1"
 			},
 			{
 				id: "myChart2",
 				topLabel: "2 débit Internet descendant (kbit/s)",
 				bottomLabel: "2 dernière minute glissante",
-				range: 30,
+				lifeTime: 30,
 				dataSet: "chart2"
+			}
+		]
+}
+
+var chart3 = {
+		webSocketUrl: "ws://localhost:8080/net-monitor/dispatch/socket",
+		initialDataUrl: "http://localhost:8080/net-monitor/dispatch/request",
+		views: [
+			{
+				id: "myChart3",
+				topLabel: "3 débit Internet descendant (kbit/s)",
+				bottomLabel: "3 dernière minute glissante",
+				lifeTime: 10,
+				dataSet: "chart1"
 			}
 		]
 }
 </script>
 
 <!-- <body onload="NetMonitor.loaded(charts)"> -->
-<body onload="NetMonitor.loaded(charts)">
+<body onload="NetMonitor.manage(charts);NetMonitor.manage(chart3)">
 
+<br/>
+
+<button onclick="NetMonitor.manage(charts)">manage charts</button>
+<button onclick="NetMonitor.manage(chart3)">manage chart3</button>
+<button onclick="NetMonitor.unmanage(charts)">unmanage charts</button>
+<button onclick="NetMonitor.unmanage(chart3)">unmanage chart3</button>
 <br/>
 
 
@@ -66,6 +85,13 @@ servlet controller : <a href="dispatch/request">dispatch/request</a>
 <div style="width:20%;">
 	<canvas id="myChart2" width="400" height="400"></canvas>
 </div>
+
+
+
+<div style="width:15%;">
+	<canvas id="myChart3" width="400" height="400"></canvas>
+</div>
+
 
 <script>
 </script>
