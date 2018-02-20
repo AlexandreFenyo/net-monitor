@@ -58,13 +58,9 @@ var chart3 = {
 
 var manager_charts;
 var manager_chart3;
-function load() {
-	manager_charts = NetMonitor.manage(charts);
-	manager_chart3 = NetMonitor.manage(chart3);
-}
 </script>
 
-<body onload="load()">
+<body onload="manager_charts = NetMonitor.manage(charts);manager_chart3 = NetMonitor.manage(chart3);">
 
 <br/>
 <button onclick="manager_charts = NetMonitor.manage(charts)">manage charts 1 and 2</button>
