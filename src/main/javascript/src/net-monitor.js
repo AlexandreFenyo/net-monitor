@@ -1,7 +1,7 @@
 
 "use strict";
 
-const version = "60";
+const version = "64";
 
 ////////////////////////////////////////////////////////////////
 // DEVELOPMENT ENVIRONMENT INIT - without Babel
@@ -16,19 +16,19 @@ const version = "60";
 var debug = true;
 
 export const manage = function (charts, callbackDone) {
-	_manage(charts, callbackDone);
+	return _manage(charts, callbackDone);
 };
 
-export const unmanage = function (charts, callbackDone) {
-	_unmanage(charts, callbackDone);
+export const unmanage = function (manager, callbackDone) {
+	_unmanage(manager, callbackDone);
 };
 
-export const pushValue = function (charts, dataSet, value, lifeTime, callbackDone) {
-	_pushValue(charts, dataSet, value, lifeTime, callbackDone);
+export const pushValue = function (manager, dataSet, value, lifeTime, callbackDone) {
+	_pushValue(manager, dataSet, value, lifeTime, callbackDone);
 };
 
-export const getChart = function (charts, dataSet) {
-	_getChart(charts, dataSet);
+export const getChart = function (manager, dataSet) {
+	_getChart(manager, dataSet);
 };
 
 // END DEVELOPMENT ENVIRONMENT INIT
@@ -45,16 +45,16 @@ import Chart from "chart.js/dist/Chart.bundle.min.js";
 try {
 	module.exports = {
 			manage: function (charts, callbackDone) {
-				_manage(charts, callbackDone);
+				return _manage(charts, callbackDone);
 			},
-			unmanage: function (charts, callbackDone) {
-				_unmanage(charts, callbackDone);
+			unmanage: function (manager, callbackDone) {
+				_unmanage(manager, callbackDone);
 			},
-			pushValue: function (charts, dataSet, value, lifeTime, callbackDone) {
-				pushValue(charts, dataSet, value, lifeTime, callbackDone);
+			pushValue: function (manager, dataSet, value, lifeTime, callbackDone) {
+				pushValue(manager, dataSet, value, lifeTime, callbackDone);
 			},
-			getChart: function (charts, dataSet) {
-				_manage(charts, dataSet);
+			getChart: function (manager, dataSet) {
+				_manage(manager, dataSet);
 			}
 	};
 	debug = false;
@@ -75,24 +75,24 @@ function pastDateString(sec) {
 }
 
 // connect the web socket to the server
-function connectStomp(charts) {
+function connectStomp(manager) {
 	let stompClient = webstomp.client(
-			((typeof charts.dispatchUrl === "undefined") ?
+			((typeof manager.dispatchUrl === "undefined") ?
 					((window.location.protocol === "http:" ? "ws:" : "wss:") + "//" + window.location.host + "/net-monitor/dispatch")
-					: charts.dispatchUrl.replace(/^http/i, "ws")) + "/socket"
+					: manager.dispatchUrl.replace(/^http/i, "ws")) + "/socket"
 	);
 	stompClient.heartbeat = { incoming: 1000, outgoing: 1000 };
 	stompClient.connect({}, function () {
-		for (let c of charts.views) {
-			var subscription = stompClient.subscribe("/data/" + c.dataSet, function (message) {
+		for (let dataSet in manager.chart) {
+			var subscription = stompClient.subscribe("/data/" + dataSet, function (message) {
 				if (message.body) {
 					var t = new Object();
 					var now = new moment();
 					t.x = now.format();
 					t.y = JSON.parse(message.body).value;
 					t.moment = now;
-					c.chart.data.datasets[0].data.push(t);
-					c.chart.update();
+					manager.chart[dataSet].data.datasets[0].data.push(t);
+					manager.chart[dataSet].update();
 				} else console.error("error: got empty STOMP message");
 			});
 		}
@@ -102,17 +102,16 @@ function connectStomp(charts) {
 			if (debug) console.log("websocket disconnected");
 		});
 		setTimeout(function () {
-			connectStomp(charts);
+			manager.stompClient = connectStomp(manager);
 		}, 3000);
 	});
 	return stompClient;
 }
 
-function _pushValue(charts, dataSet, value, lifeTime, callbackDone) {
-console.error("pushValue");
+function _pushValue(manager, dataSet, value, lifeTime, callbackDone) {
 	let xhttp = new XMLHttpRequest();
 	xhttp.open("GET",
-			((typeof charts.dispatchUrl === "undefined") ? (window.location.protocol + "//" + window.location.host + "/net-monitor/dispatch") : charts.dispatchUrl)
+			((typeof manager.dispatchUrl === "undefined") ? (window.location.protocol + "//" + window.location.host + "/net-monitor/dispatch") : manager.dispatchUrl)
 			+ "/add" + "?dataset=" + dataSet + "&value=" + value +
 			((typeof lifeTime !== "undefined") ? ("&lifetime=" + lifeTime) : ""));
 	xhttp.onload = function () {
@@ -122,22 +121,25 @@ console.error("pushValue");
 	xhttp.send();
 }
 
-function _getChart(charts, dataSet) {
-	for (let c of charts.views) {
-		if (c.dataSet == dataSet) return c.chart;
-	}
+function _getChart(manager, dataSet) {
+	return manager.chart[dataSet];
 }
 
-function _unmanage(charts, callbackDone) {
-	window.clearInterval(charts.intervalId);
-	charts.stompClient.disconnect(function () {
+function _unmanage(manager, callbackDone) {
+	window.clearInterval(manager.intervalId);
+	manager.stompClient.disconnect(function () {
 		if (debug) console.log("websocket disconnected");
 		if (typeof callbackDone !== "undefined") callbackDone();
 	});
-	for (let c of charts.views) c.chart.destroy();
+	for (let dataSet in manager.chart) manager.chart[dataSet].destroy();
 }
 
 function _manage(charts, callbackDone) {
+	var manager = new Object();
+	manager.chart = new Object();
+	manager.lifeTime = new Object();
+	manager.dispatchUrl = charts.dispatchUrl;
+
 	for (let c of charts.views) {
 		var ctx = document.getElementById(c.id).getContext("2d");
 		let chart = new Chart(ctx, {
@@ -145,9 +147,7 @@ function _manage(charts, callbackDone) {
 			data: {
 				datasets: [{
 					label: c.topLabel,
-
 					data: [],
-
 					backgroundColor: Color("#7743CE").alpha(0.5).rgbString(),
 					borderWidth: 1
 				}]
@@ -183,7 +183,8 @@ function _manage(charts, callbackDone) {
 				}
 			}
 		});
-		c.chart = chart;
+		manager.chart[c.dataSet] = chart;
+		manager.lifeTime[c.dataSet] = c.lifeTime;
 
 		let xhttp = new XMLHttpRequest();
 		xhttp.open("GET", ((typeof charts.dispatchUrl === "undefined") ?
@@ -217,19 +218,22 @@ function _manage(charts, callbackDone) {
 		xhttp.send();
 	}
 
-	charts.intervalId = window.setInterval(function () {
-		for (let c of charts.views) {
+	manager.intervalId = window.setInterval(function () {
+		for (let dataSet in manager.chart) {
 			var retry = true;
 			do {
-				var limit = new moment().subtract(c.lifeTime, 's');
-				if (c.chart.data.datasets[0].data.length > 1 && c.chart.data.datasets[0].data[1].moment.isBefore(limit)) c.chart.data.datasets[0].data.splice(0, 1);else retry = false;
+				var limit = new moment().subtract(manager.lifeTime[dataSet], 's');
+				if (manager.chart[dataSet].data.datasets[0].data.length > 1 && manager.chart[dataSet].data.datasets[0].data[1].moment.isBefore(limit))
+					manager.chart[dataSet].data.datasets[0].data.splice(0, 1);
+				else retry = false;
 			} while (retry);
 			
-			c.chart.options.scales.xAxes[0].time.min = pastDateString(c.lifeTime);
-			c.chart.options.scales.xAxes[0].time.max = pastDateString(0);
-			c.chart.update();
+			manager.chart[dataSet].options.scales.xAxes[0].time.min = pastDateString(manager.lifeTime[dataSet]);
+			manager.chart[dataSet].options.scales.xAxes[0].time.max = pastDateString(0);
+			manager.chart[dataSet].update();
 		}
 	}, 1000);
 
-	charts.stompClient = connectStomp(charts);
+	manager.stompClient = connectStomp(manager);
+	return manager;
 }

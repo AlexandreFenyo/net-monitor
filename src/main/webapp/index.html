@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>html#37</title>
+<title>html#38</title>
 
 <!-- ------------------------------------- -->
 <!-- UNCOMMENT THESE LINES WHEN DEVELOPING -->
@@ -29,7 +29,7 @@ var charts = {
 		dispatchUrl: "http://localhost:8080/net-monitor/dispatch",
 		views: [
 			{
-				id: "myChart",
+				id: "myChart1",
 				topLabel: "chart 1",
 				bottomLabel: "dataset 1",
 				lifeTime: 60,
@@ -43,8 +43,7 @@ var charts = {
 				dataSet: "set2"
 			}
 		]
-}
-
+};
 var chart3 = {
 		views: [
 			{
@@ -55,21 +54,27 @@ var chart3 = {
 				dataSet: "set1"
 			}
 		]
+};
+
+var manager_charts;
+var manager_chart3;
+function load() {
+	manager_charts = NetMonitor.manage(charts);
+	manager_chart3 = NetMonitor.manage(chart3);
 }
 </script>
 
-<body onload="NetMonitor.manage(charts);NetMonitor.manage(chart3)">
+<body onload="load()">
 
 <br/>
-
-<button onclick="NetMonitor.manage(charts)">manage charts 1 and 2</button>
-<button onclick="NetMonitor.manage(chart3)">manage chart 3</button>
-<button onclick="NetMonitor.unmanage(charts)">unmanage charts 1 and 2</button>
-<button onclick="NetMonitor.unmanage(chart3)">unmanage chart 3</button>
-<button onclick="NetMonitor.pushValue(charts, 'set1', 123, undefined, function () {console.error('value pushed')})">add value to dataset 1</button>
-<button onclick="NetMonitor.pushValue(chart3, 'set2', 234)">add value to dataset 2</button>
+<button onclick="manager_charts = NetMonitor.manage(charts)">manage charts 1 and 2</button>
+<button onclick="manager_chart3 = NetMonitor.manage(chart3)">manage chart 3</button>
+<button onclick="NetMonitor.unmanage(manager_charts)">unmanage charts 1 and 2</button>
+<button onclick="NetMonitor.unmanage(manager_chart3)">unmanage chart 3</button>
+<button onclick="NetMonitor.pushValue(manager_charts, 'set1', 123, undefined, function () {console.error('value pushed')})">add value to dataset 1</button>
+<button onclick="NetMonitor.pushValue(manager_chart3, 'set2', 234)">add value to dataset 2</button>
 <br/>
-	<canvas id="myChart" width="800" height="200"></canvas>
+	<canvas id="myChart1" width="800" height="200"></canvas>
 	<canvas id="myChart2" width="800" height="200"></canvas>
 	<canvas id="myChart3" width="800" height="200"></canvas>
 <script>
