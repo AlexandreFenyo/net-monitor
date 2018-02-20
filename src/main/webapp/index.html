@@ -26,73 +26,52 @@
 
 <script>
 var charts = {
-		webSocketUrl: "ws://localhost:8080/net-monitor/dispatch/socket",
-		initialDataUrl: "http://localhost:8080/net-monitor/dispatch/request",
+		dispatchUrl: "http://localhost:8080/net-monitor/dispatch",
 		views: [
 			{
 				id: "myChart",
-				topLabel: "1 débit Internet descendant (kbit/s)",
-				bottomLabel: "1 dernière minute glissante",
+				topLabel: "chart 1",
+				bottomLabel: "dataset 1",
 				lifeTime: 60,
-				dataSet: "chart1"
+				dataSet: "set1"
 			},
 			{
 				id: "myChart2",
-				topLabel: "2 débit Internet descendant (kbit/s)",
-				bottomLabel: "2 dernière minute glissante",
+				topLabel: "chart 2",
+				bottomLabel: "dataset 2",
 				lifeTime: 30,
-				dataSet: "chart2"
+				dataSet: "set2"
 			}
 		]
 }
 
 var chart3 = {
-		webSocketUrl: "ws://localhost:8080/net-monitor/dispatch/socket",
-		initialDataUrl: "http://localhost:8080/net-monitor/dispatch/request",
 		views: [
 			{
 				id: "myChart3",
-				topLabel: "3 débit Internet descendant (kbit/s)",
-				bottomLabel: "3 dernière minute glissante",
+				topLabel: "chart 3",
+				bottomLabel: "dataset 1",
 				lifeTime: 10,
-				dataSet: "chart1"
+				dataSet: "set1"
 			}
 		]
 }
 </script>
 
-<!-- <body onload="NetMonitor.loaded(charts)"> -->
 <body onload="NetMonitor.manage(charts);NetMonitor.manage(chart3)">
 
 <br/>
 
-<button onclick="NetMonitor.manage(charts)">manage charts</button>
-<button onclick="NetMonitor.manage(chart3)">manage chart3</button>
-<button onclick="NetMonitor.unmanage(charts)">unmanage charts</button>
-<button onclick="NetMonitor.unmanage(chart3)">unmanage chart3</button>
+<button onclick="NetMonitor.manage(charts)">manage charts 1 and 2</button>
+<button onclick="NetMonitor.manage(chart3)">manage chart 3</button>
+<button onclick="NetMonitor.unmanage(charts)">unmanage charts 1 and 2</button>
+<button onclick="NetMonitor.unmanage(chart3)">unmanage chart 3</button>
+<button onclick="NetMonitor.pushValue(charts, 'set1', 123, undefined, function () {console.error('value pushed')})">add value to dataset 1</button>
+<button onclick="NetMonitor.pushValue(chart3, 'set2', 234)">add value to dataset 2</button>
 <br/>
-
-
-servlet controller : <a href="dispatch/request">dispatch/request</a>
-<br/>
-<a href="dispatch/add?dataset=chart1&value=123">ajouter une valeur 123</a>
-<a href="dispatch/add?dataset=chart2&value=234">ajouter une valeur 234</a>
-
-<div style="width:15%;">
-	<canvas id="myChart" width="400" height="400"></canvas>
-</div>
-
-<div style="width:20%;">
-	<canvas id="myChart2" width="400" height="400"></canvas>
-</div>
-
-
-
-<div style="width:15%;">
-	<canvas id="myChart3" width="400" height="400"></canvas>
-</div>
-
-
+	<canvas id="myChart" width="800" height="200"></canvas>
+	<canvas id="myChart2" width="800" height="200"></canvas>
+	<canvas id="myChart3" width="800" height="200"></canvas>
 <script>
 </script>
 
