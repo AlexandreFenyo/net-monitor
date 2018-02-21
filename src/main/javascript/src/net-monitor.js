@@ -1,7 +1,7 @@
 
 "use strict";
 
-const version = "64";
+const version = "65";
 
 ////////////////////////////////////////////////////////////////
 // DEVELOPMENT ENVIRONMENT INIT - without Babel
@@ -69,6 +69,8 @@ try {
 //checking updates are taken into account
 if (debug) $(function () { console.error("================> js#" + version); });
 
+var chart2manager = new Object();
+
 // compute a date in the past
 function pastDateString(sec) {
 	return moment().subtract(sec, 's').format();
@@ -131,14 +133,27 @@ function _unmanage(manager, callbackDone) {
 		if (debug) console.log("websocket disconnected");
 		if (typeof callbackDone !== "undefined") callbackDone();
 	});
-	for (let dataSet in manager.chart) manager.chart[dataSet].destroy();
+	manager.stompClient = undefined;
+	for (let dataSet in manager.chart) {
+		chart2manager[manager.id[dataSet]] = undefined;
+		manager.chart[dataSet].destroy();
+		manager.id[dataSet] = undefined;
+	}
+	manager.chart = undefined;
 }
 
 function _manage(charts, callbackDone) {
 	var manager = new Object();
 	manager.chart = new Object();
 	manager.lifeTime = new Object();
+	manager.id = new Object();
 	manager.dispatchUrl = charts.dispatchUrl;
+
+	for (let c of charts.views)
+		if (chart2manager[c.id] !== undefined) {
+			console.error("chart with id [" + c.id + "] already managed");
+			return;
+		}
 
 	for (let c of charts.views) {
 		var ctx = document.getElementById(c.id).getContext("2d");
@@ -183,8 +198,10 @@ function _manage(charts, callbackDone) {
 				}
 			}
 		});
+		chart2manager[c.id] = manager;
 		manager.chart[c.dataSet] = chart;
 		manager.lifeTime[c.dataSet] = c.lifeTime;
+		manager.id[c.dataSet] = c.id;
 
 		let xhttp = new XMLHttpRequest();
 		xhttp.open("GET", ((typeof charts.dispatchUrl === "undefined") ?

@@ -1,6 +1,11 @@
 
 package net.fenyo.monitor;
 
+/**
+ * Web sockets dispatcher and web services controller
+ * @author Alexandre Fenyo
+ */
+
 import java.io.IOException;
 import java.io.InputStream;
 //import java.net.URL;
@@ -50,7 +55,7 @@ public class WebController {
     @Autowired
     private ServletContext context;
     
-    SnmpConfig config = null;
+    MonitorConfig config = null;
 
     private Map<String, DataSet> data_sets = Collections.synchronizedMap(new HashMap<String, DataSet>());
 
@@ -63,17 +68,22 @@ public class WebController {
     public void contextRefreshedEvent() throws JsonParseException, JsonMappingException, IOException {
     	final ObjectMapper objectMapper = new ObjectMapper();
     	final InputStream is = context.getResourceAsStream("META-INF/config.json");
-    	config = objectMapper.readValue(is, SnmpConfig.class);
-    	logger.error("TEST:" + config.default_lifetime);
+    	config = objectMapper.readValue(is, MonitorConfig.class);
+        MonitorConfig.initSnmp();
+    	config.runProbes(this);
     }
 
     // http://localhost:8080/net-monitor/dispatch/add?value=123&dataset=dataset1
     // http://localhost:8080/net-monitor/dispatch/add?value=123&dataset=dataset1&lifetime=60
+    // lifetime >= -1
+    // lifetime == -1 means default value
     @RequestMapping(value = "/add", method = RequestMethod.GET)
-    public Boolean add(final Principal p, @RequestParam("value") final long value, @RequestParam("dataset") final String dataset, @RequestParam(value = "lifetime", defaultValue = "0", required = false) final long lifetime) {
+    public Boolean add(final Principal p, @RequestParam("value") final long value, @RequestParam("dataset") final String dataset, @RequestParam(value = "lifetime", defaultValue = "0", required = false) long lifetime) throws MonitorException {
+        if (lifetime < -1) throw new MonitorException("add op.: invalid lifetime value [" + lifetime + "] for dataset [" + dataset + "]");
+        if (lifetime == -1) lifetime = config.default_lifetime;
         synchronized (data_sets) {
             if (!data_sets.containsKey(dataset)) {
-                data_sets.put(dataset, new DataSet((lifetime != 0) ? lifetime : config.default_lifetime));
+                data_sets.put(dataset, new DataSet(lifetime));
                 return true;
             } else {
                 final DataSet data = data_sets.get(dataset);
@@ -86,9 +96,11 @@ public class WebController {
     }
 
     // curl -v --header "Accept: application/json" http://localhost:8080/net-monitor/dispatch/request?dataset=dataset1&lifetime=60
+    // lifetime >= 0
     @RequestMapping(value = "/request", method = RequestMethod.GET)
     @CrossOrigin(origins = "*")
-    public Data [] request(final Principal p, @RequestParam("dataset") final String dataset, @RequestParam("lifetime") final long lifetime) {
+    public Data [] request(final Principal p, @RequestParam("dataset") final String dataset, @RequestParam("lifetime") final long lifetime) throws MonitorException {
+        if (lifetime == -1) throw new MonitorException("request op.: invalid lifetime value [" + lifetime + "] for dataset [" + dataset + "]");
     	synchronized (data_sets) {
     		if (!data_sets.containsKey(dataset)) data_sets.put(dataset, new DataSet(lifetime));
     	}

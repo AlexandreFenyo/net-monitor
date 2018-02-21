@@ -33,8 +33,10 @@ public class DataSet {
         final Instant now = Instant.now();
         instants.add(now);
         values.add(value);
-        if (lifetime != 0 && lifetime > this.lifetime) logger.warn("increasing lifetime of a dataset can lead to inconsistent dataset (lost values between recorded/displayed values)");
-        if (lifetime != 0) this.lifetime = lifetime;
+        if (lifetime > this.lifetime) {
+            logger.warn("increasing lifetime of a dataset can lead to temporary inconsistent dataset (lost values between recorded/displayed values)");
+            this.lifetime = lifetime;
+        } else if (lifetime < this.lifetime && lifetime != 0) logger.warn("decreasing lifetime is forbidden");
         flush();
         return now;
     }

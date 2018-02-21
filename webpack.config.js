@@ -35,22 +35,22 @@ let config_dev = {
 	plugins: []
 }
 
-//let config_ie11 = {
-//	entry: [ "babel-polyfill", "./src/main/javascript/src/net-monitor.js" ],
-//	output: {
-//		path: path.resolve(__dirname, "./src/main/javascript/public"),
-//	    filename: "./net-monitor.dev.ie11.js",
-//	    libraryTarget: 'var',
-//		library: 'NetMonitor'
-//	},
-//	module: {
-//		rules: [{
-//			test: /\.js$/,
-//			exclude: /node_modules/,
-//			loader: "babel-loader"
-//		}]
-//	  },
-//	plugins: []
-//}
+let config_ie11 = {
+	entry: [ "babel-polyfill", "./src/main/javascript/src/net-monitor.js" ],
+	output: {
+		path: path.resolve(__dirname, "./src/main/javascript/public"),
+	    filename: "./net-monitor.dev.ie11.js",
+	    libraryTarget: 'var',
+		library: 'NetMonitor'
+	},
+	module: {
+		rules: [{
+			test: /\.js$/,
+			exclude: /node_modules/,
+			loader: "babel-loader"
+		}]
+	  },
+	plugins: []
+}
 
- module.exports = [ config_prod, config_dev /*, config_ie11 */ ];
+ module.exports = [ /* config_prod, */ config_dev /*, config_ie11 */ ];

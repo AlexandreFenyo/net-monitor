@@ -63,8 +63,8 @@ var manager_chart3;
 <body onload="manager_charts = NetMonitor.manage(charts);manager_chart3 = NetMonitor.manage(chart3);">
 
 <br/>
-<button onclick="manager_charts = NetMonitor.manage(charts)">manage charts 1 and 2</button>
-<button onclick="manager_chart3 = NetMonitor.manage(chart3)">manage chart 3</button>
+<button onclick="var m = NetMonitor.manage(charts); if (m !== undefined) manager_charts = m">manage charts 1 and 2</button>
+<button onclick="var m = NetMonitor.manage(chart3); if (m !== undefined) manager_chart3 = m">manage chart 3</button>
 <button onclick="NetMonitor.unmanage(manager_charts)">unmanage charts 1 and 2</button>
 <button onclick="NetMonitor.unmanage(manager_chart3)">unmanage chart 3</button>
 <button onclick="NetMonitor.pushValue(manager_charts, 'set1', 123, undefined, function () {console.error('value pushed')})">add value to dataset 1</button>

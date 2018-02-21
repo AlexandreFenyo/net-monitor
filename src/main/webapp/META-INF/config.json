@@ -2,16 +2,30 @@
 	"default_lifetime": 86400,
 	"probes": [
 		{
-			"version": "v2c",
+			"dataset": "set1",
+			"lifetime": 3600,
+			"type": "snmp",
+			"version": "v3",
 			"agent": "192.168.0.5",
 			"community": "public",
-			"oid": "1.3.6.1.2.1.1"
+			"username": "aaa",
+			"password_auth": "bbb",
+			"password_priv": "ccc",
+			"oid": "1.3.6.1.2.1.1",
+			"rate": 1000
 		},
 		{
-			"version": "v2c",
-			"agent": "192.168.0.5",
+			"dataset": "set2",
+			"lifetime": 3600,
+			"type": "snmp",
+			"version": "v3",
+			"agent": "192.168.0.6",
 			"community": "public",
-			"oid": "1.3.6.1.2.1.2"
+			"username": "ddd",
+			"password_auth": "eee",
+			"password_priv": "fff",
+			"oid": "1.3.6.1.2.1.2",
+			"rate": 1000
 		}
 	] 
 }
