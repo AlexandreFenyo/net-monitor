@@ -42,6 +42,7 @@ import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.view.RedirectView;
 
 import com.fasterxml.jackson.core.JsonParseException;
+import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
@@ -68,6 +69,7 @@ public class WebController {
     public void contextRefreshedEvent() throws JsonParseException, JsonMappingException, IOException {
     	final ObjectMapper objectMapper = new ObjectMapper();
     	final InputStream is = context.getResourceAsStream("META-INF/config.json");
+    	objectMapper.disable(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES);
     	config = objectMapper.readValue(is, MonitorConfig.class);
         MonitorConfig.initSnmp();
     	config.runProbes(this);
