@@ -242,19 +242,38 @@ public class MonitorProbe implements Runnable {
 	      target.setTimeout(1500);
 	      target.setMaxSizeRequestPDU(1000);
 	    
-	      final PDU pdu;
+	      final PDU requestPDU;
+	      
 	      if (version.equals("v1")) {
-	          pdu = new PDUv1();
+	          requestPDU = new PDUv1();
 	      } else if (version.equals("v2c")) {
-	          pdu = new PDU();
-	      } else pdu = new ScopedPDU();
+	          requestPDU = new PDU();
+	      } else requestPDU = new ScopedPDU();
 
-	      pdu.add(new VariableBinding(new OID(oid)));
-	      pdu.setType(PDU.GETNEXT);
-	      try {
-            snmp.send(pdu, target, transport);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+	      final OID _oid = new OID(oid);
+	      requestPDU.add(new VariableBinding(_oid));
+	      requestPDU.setType(PDU.GETNEXT);
+	      
+	      while (true) {
+	          PDU responsePDU;
+	          ResponseEvent response;
+
+	          try {
+	              response = snmp.send(requestPDU, target, transport);
+	          } catch (IOException e) {
+	              logger.error(e.toString());
+	              return;
+	          }
+	          
+	          if (response == null) {
+	              logger.warn("SNMP response is null");
+	          } else {
+	              responsePDU = response.getResponse();
+	              if (responsePDU == null) {
+	                  logger.warn("SNMP response PDU is null");
+	              } else logger.info(responsePDU.getVariable(_oid).toString());
+	          }
+	      }
+
     }
 }

@@ -2,7 +2,7 @@
 	"default_lifetime": 86400,
 	"probes": [
 		{
-			"dataset": "set1",
+			"XXXdataset": "set1",
 
 			"__comment_lifetime": "life duration in seconds",
 			"lifetime": 3600,
@@ -27,7 +27,9 @@
 			"__comment_priv_algo": "only with AuthPriv: DES, 3DES, AES128, AES192 or AES256",
 			"priv_algo": "DES",
 			
-			"agent": "10.69.127.247",
+			"XXXagent": "10.69.127.247",
+			"agent": "FE80::6616:8DFF:FEC8:B241%3",
+
 			"password_auth": "password1234",
 			"password_priv": "password1234",
 			"oid": "1.3.6.1.2.1.1",
@@ -38,7 +40,8 @@
 			"lifetime": 3600,
 			"type": "snmp",
 			"version": "v2c",
-			"agent": "10.69.127.247",
+			"XXXagent": "10.69.127.247",
+			"agent": "FE80::6616:8DFF:FEC8:B241%3",
 			"community": "public",
 			"oid": "1.3.6.1.2.1.1",
 			"rate": 1000
