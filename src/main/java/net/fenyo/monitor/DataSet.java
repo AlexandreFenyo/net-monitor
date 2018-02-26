@@ -17,8 +17,6 @@ package net.fenyo.monitor;
  */
 
 import java.util.*;
-import java.util.Iterator;
-import java.util.List;
 import java.time.*;
 import java.time.temporal.*;
 import org.slf4j.*;
