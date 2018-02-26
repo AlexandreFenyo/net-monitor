@@ -179,7 +179,7 @@ function _manage(charts, callbackDone) {
 					xAxes: [{
 						type: "time",
 						time: {
-							unit: "seconds",
+							unit: "second",
 							min: pastDateString(c.lifeTime),
 							max: pastDateString(0)
 						},
