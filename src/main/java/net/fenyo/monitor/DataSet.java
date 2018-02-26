@@ -29,7 +29,7 @@ import org.slf4j.*;
 public class DataSet {
     private static final Logger logger = LoggerFactory.getLogger(DataSet.class);
     private long lifetime;
-    
+
     private final ArrayList<Instant> instants = new ArrayList<Instant>();
     private final ArrayList<String> values = new ArrayList<String>();
 
