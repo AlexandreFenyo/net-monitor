@@ -43,18 +43,19 @@
 
 <script>
 var charts = {
+		// optional URL to access the server:
 		// dispatchUrl: "http://localhost:8080/net-monitor/dispatch",
 		views: [
 			{
 				id: "myChart1",
-				topLabel: "chart 1",
+				topLabel: "chart 1: last 60 seconds of data set 1",
 				bottomLabel: "dataset 1",
 				lifeTime: 60,
 				dataSet: "set1"
 			},
 			{
 				id: "myChart2",
-				topLabel: "chart 2",
+				topLabel: "chart 2: last 30 seconds of data set 2",
 				bottomLabel: "dataset 2",
 				lifeTime: 30,
 				dataSet: "set2"
@@ -65,7 +66,7 @@ var chart3 = {
 		views: [
 			{
 				id: "myChart3",
-				topLabel: "chart 3",
+				topLabel: "chart 3: last 10 seconds of data set 1",
 				bottomLabel: "dataset 1",
 				lifeTime: 10,
 				dataSet: "set1"
@@ -77,9 +78,8 @@ var manager_charts;
 var manager_chart3;
 
 function init_charts() {
-	//manager_chart3.chart["set1"].options.scales.xAxes[0].scaleLabel.labelString = "toto";
-	//manager_chart3.chart["set1"].options.scales.xAxes[0].time.unit = "second";
-	
+	// example of updating a chart configuration:
+	// manager_chart3.chart["set1"].options.scales.xAxes[0].scaleLabel.labelString = "this is a new label for the 3rd chart";
 }
 </script>
 
@@ -90,14 +90,15 @@ function init_charts() {
 <button onclick="var m = NetMonitor.manage(chart3); if (m !== undefined) manager_chart3 = m">manage chart 3</button>
 <button onclick="NetMonitor.unmanage(manager_charts)">unmanage charts 1 and 2</button>
 <button onclick="NetMonitor.unmanage(manager_chart3)">unmanage chart 3</button>
-<button onclick="NetMonitor.pushValue(manager_charts, 'set1', 123, undefined, function () {console.error('value pushed')})">add value to dataset 1</button>
+<button onclick="NetMonitor.pushValue(manager_charts, 'set1', 123, undefined, function () {console.info('value pushed')})">add value to dataset 1</button>
 <button onclick="NetMonitor.pushValue(manager_chart3, 'set2', 234)">add value to dataset 2</button>
 <br/>
-	<canvas id="myChart1" width="800" height="200"></canvas>
-	<canvas id="myChart2" width="800" height="200"></canvas>
-	<canvas id="myChart3" width="800" height="200"></canvas>
-<script>
-</script>
+<!-- 1st chart, displaying last 60 seconds of data set 1 -->
+<canvas id="myChart1" width="800" height="200"></canvas>
+<!-- 2nd chart, displaying last 30 seconds of data set 2 -->
+<canvas id="myChart2" width="800" height="200"></canvas>
+<!-- 3rd chart, displaying last 10 seconds of data set 1 -->
+<canvas id="myChart3" width="800" height="200"></canvas>
 
 </body>
 </html>
