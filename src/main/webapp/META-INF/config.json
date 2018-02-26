@@ -2,7 +2,8 @@
 	"default_lifetime": 86400,
 	"probes": [
 		{
-			"XXXdataset": "set1",
+		    "__comment_dataset": "replace DISABLEDdataset by dataset to enable this data set example",
+			"DISABLEDdataset": "set1",
 
 			"__comment_lifetime": "life duration in seconds",
 			"lifetime": 3600,
@@ -37,7 +38,8 @@
 			"rate": 10
 		},
 		{
-			"dataset": "set2",
+		    "__comment_dataset": "replace DISABLEDdataset by dataset to enable this data set example",
+			"DISABLEDdataset": "set2",
 			"lifetime": 3600,
 			"type": "snmp",
 			"version": "v2c",
@@ -47,7 +49,8 @@
 			"rate": 10
 		},
 		{
-			"dataset": "set1",
+		    "__comment_dataset": "replace DISABLEDdataset by dataset to enable this data set example",
+			"DISABLEDdataset": "set1",
 			"lifetime": 3600,
 			"type": "snmp",
 			"version": "v2c",
