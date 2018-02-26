@@ -59,7 +59,7 @@ public class MonitorProbe implements Runnable {
         targetAddress = GenericAddress.parse("udp:" + agent + "/161");
 
         if (dataset == null) {
-            logger.error("Configuration error: dataset should be defined");
+            logger.error("Configuration error: probe without dataset");
             return;
         }
 
@@ -252,8 +252,12 @@ public class MonitorProbe implements Runnable {
 
 	      final OID _oid = new OID(oid);
 	      requestPDU.add(new VariableBinding(_oid));
-	      requestPDU.setType(PDU.GETNEXT);
+	      requestPDU.setType(PDU.GET);
 	      
+	      long current = 0;
+	      long current_timestamp = 0;
+	      boolean current_isset = false;
+
 	      while (true) {
 	          PDU responsePDU;
 	          ResponseEvent response;
@@ -267,11 +271,31 @@ public class MonitorProbe implements Runnable {
 	          
 	          if (response == null) {
 	              logger.warn("SNMP response is null");
+                  current_isset = false;
 	          } else {
 	              responsePDU = response.getResponse();
 	              if (responsePDU == null) {
 	                  logger.warn("SNMP response PDU is null");
-	              } else logger.info(responsePDU.getVariable(_oid).toString());
+	                  current_isset = false;
+	              } else {
+                      long now = System.currentTimeMillis();
+                      final long value = responsePDU.getVariable(_oid).toLong();
+	                  
+	                  if (current_isset == false) {
+	                      current = value;
+	                      current_timestamp = now;
+	                      current_isset = true;
+	                      continue;
+	                  }
+	                  
+	                  if (value != current) {
+	                      final long throughput = (8 * 1000 * (value - current)) / (now - current_timestamp);
+	                      logger.debug("throughput:" + throughput);
+	                      
+                          current = value;
+                          current_timestamp = now;
+	                  }
+	              }
 	          }
 	      }
 
