@@ -32,6 +32,8 @@
 			"password_auth": "password1234",
 			"password_priv": "password1234",
 			"oid": "1.3.6.1.2.1.2.2.1.10.10101",
+			
+			"__comment_rate_": "requests per second",
 			"rate": 10
 		},
 		{
@@ -42,6 +44,16 @@
 			"agent": "10.69.127.247",
 			"community": "public",
 			"oid": "1.3.6.1.2.1.2.2.1.16.10101",
+			"rate": 10
+		},
+		{
+			"dataset": "set1",
+			"lifetime": 3600,
+			"type": "snmp",
+			"version": "v2c",
+			"agent": "10.69.127.247",
+			"community": "public",
+			"oid": "1.3.6.1.2.1.2.2.1.10.10101",
 			"rate": 10
 		}
 	] 

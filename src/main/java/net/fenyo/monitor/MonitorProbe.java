@@ -261,6 +261,12 @@ public class MonitorProbe implements Runnable {
 	      while (true) {
 	          PDU responsePDU;
 	          ResponseEvent response;
+	          
+	          try {
+	              Thread.sleep(1000 / rate);
+	          } catch (final InterruptedException e) {
+	              logger.warn(e.toString());
+	          }
 
 	          try {
 	              response = snmp.send(requestPDU, target, transport);
@@ -290,8 +296,16 @@ public class MonitorProbe implements Runnable {
 	                  
 	                  if (value != current) {
 	                      final long throughput = (8 * 1000 * (value - current)) / (now - current_timestamp);
-	                      logger.debug("throughput:" + throughput);
+	                      if (throughput < 0) {
+	                          logger.warn("negative throughput");
+	                          current_isset = false;
+	                      }
 	                      
+	                      try {
+                            controller._add(throughput, dataset, lifetime);
+                        } catch (MonitorException e) {
+                            logger.error(e.toString());
+                        }
                           current = value;
                           current_timestamp = now;
 	                  }

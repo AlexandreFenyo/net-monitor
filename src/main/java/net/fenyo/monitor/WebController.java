@@ -83,18 +83,23 @@ public class WebController {
     public Boolean add(final Principal p, @RequestParam("value") final long value, @RequestParam("dataset") final String dataset, @RequestParam(value = "lifetime", defaultValue = "0", required = false) long lifetime) throws MonitorException {
         if (lifetime < -1) throw new MonitorException("add op.: invalid lifetime value [" + lifetime + "] for dataset [" + dataset + "]");
         if (lifetime == -1) lifetime = config.default_lifetime;
+        _add(value, dataset, lifetime);
+        return true;
+    }
+
+    public void _add(final long value, final String dataset, final long lifetime) throws MonitorException {
+        final DataSet data;
+
         synchronized (data_sets) {
             if (!data_sets.containsKey(dataset)) {
                 data_sets.put(dataset, new DataSet(lifetime));
-                return true;
-            } else {
-                final DataSet data = data_sets.get(dataset);
-                data.addValue(new Long(value).toString(), lifetime);
-                final String text = "{\"time\":0,\"value\":" + new Long(value).toString() + "}";
-                template.convertAndSend("/data/" + dataset, text);
-                return true;
             }
+            data = data_sets.get(dataset);
         }
+
+        data.addValue(new Long(value).toString(), lifetime);
+        final String text = "{\"time\":0,\"value\":" + new Long(value).toString() + "}";
+        template.convertAndSend("/data/" + dataset, text);
     }
 
     // curl -v --header "Accept: application/json" http://localhost:8080/net-monitor/dispatch/request?dataset=dataset1&lifetime=60
