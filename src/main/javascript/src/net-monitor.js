@@ -1,7 +1,7 @@
 
 "use strict";
 
-const version = "67";
+const version = "69";
 
 ////////////////////////////////////////////////////////////////
 // DEVELOPMENT ENVIRONMENT INIT - without Babel
@@ -161,6 +161,9 @@ function _manage(charts, callbackDone) {
 
 	for (let c of charts.views) {
 		var ctx = document.getElementById(c.id).getContext("2d");
+
+		console.error("AVANT CHART");
+
 		let chart = new Chart(ctx, {
 			type: "line",
 			data: {
@@ -179,7 +182,7 @@ function _manage(charts, callbackDone) {
 					xAxes: [{
 						type: "time",
 						time: {
-							unit: "seconds",
+							unit: "second",
 							min: pastDateString(c.lifeTime),
 							max: pastDateString(0)
 						},
@@ -203,6 +206,9 @@ function _manage(charts, callbackDone) {
 				}
 			}
 		});
+		
+		console.error("APRES CHART");
+
 		chart2manager[c.id] = manager;
 		manager.chart[c.dataSet] = chart;
 		manager.lifeTime[c.dataSet] = c.lifeTime;
