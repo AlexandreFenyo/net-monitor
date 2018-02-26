@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>html#38</title>
+<title>html#39</title>
 
 <!-- ------------------------------------- -->
 <!-- UNCOMMENT THESE LINES WHEN DEVELOPING -->
@@ -58,9 +58,15 @@ var chart3 = {
 
 var manager_charts;
 var manager_chart3;
+
+function init_charts() {
+	//manager_chart3.chart["set1"].options.scales.xAxes[0].scaleLabel.labelString = "toto";
+	//manager_chart3.chart["set1"].options.scales.xAxes[0].time.unit = "second";
+	
+}
 </script>
 
-<body onload="manager_charts = NetMonitor.manage(charts);manager_chart3 = NetMonitor.manage(chart3);">
+<body onload="manager_charts = NetMonitor.manage(charts);manager_chart3 = NetMonitor.manage(chart3); init_charts()">
 
 <br/>
 <button onclick="var m = NetMonitor.manage(charts); if (m !== undefined) manager_charts = m">manage charts 1 and 2</button>

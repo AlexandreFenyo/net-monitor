@@ -1,17 +1,11 @@
 package net.fenyo.monitor;
 
-import java.io.IOException;
-import java.net.InetAddress;
-import java.net.UnknownHostException;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
+import java.io.*;
+import org.slf4j.*;
 import org.snmp4j.*;
 import org.snmp4j.smi.*;
 import org.snmp4j.mp.*;
 import org.snmp4j.transport.*;
-import org.snmp4j.util.*;
 import org.snmp4j.event.*;
 import org.snmp4j.security.*;
 
@@ -302,10 +296,10 @@ public class MonitorProbe implements Runnable {
 	                      }
 	                      
 	                      try {
-                            controller._add(throughput, dataset, lifetime);
-                        } catch (MonitorException e) {
-                            logger.error(e.toString());
-                        }
+	                          controller._add(throughput, dataset, lifetime);
+	                      } catch (MonitorException e) {
+	                          logger.error(e.toString());
+	                      }
                           current = value;
                           current_timestamp = now;
 	                  }

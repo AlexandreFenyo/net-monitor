@@ -1,7 +1,7 @@
 
 "use strict";
 
-const version = "65";
+const version = "67";
 
 ////////////////////////////////////////////////////////////////
 // DEVELOPMENT ENVIRONMENT INIT - without Babel
@@ -74,6 +74,10 @@ var chart2manager = new Object();
 // compute a date in the past
 function pastDateString(sec) {
 	return moment().subtract(sec, 's').format();
+}
+
+function pastDate(sec) {
+	return moment().subtract(sec, 's');
 }
 
 // connect the web socket to the server
@@ -175,6 +179,7 @@ function _manage(charts, callbackDone) {
 					xAxes: [{
 						type: "time",
 						time: {
+							unit: "seconds",
 							min: pastDateString(c.lifeTime),
 							max: pastDateString(0)
 						},
@@ -208,8 +213,8 @@ function _manage(charts, callbackDone) {
 						(window.location.protocol + "//" + window.location.host + "/net-monitor/dispatch")
 						: charts.dispatchUrl) + "/request" + "?dataset=" + c.dataSet + "&lifetime=" + c.lifeTime);
 		xhttp.onload = function () {
-			chart.options.scales.xAxes[0].time.min = pastDateString(c.lifeTime);
-			chart.options.scales.xAxes[0].time.max = pastDateString(0);
+			chart.options.scales.xAxes[0].time.min = pastDate(c.lifeTime);
+			chart.options.scales.xAxes[0].time.max = pastDate(0);
 			chart.data.datasets[0].data.splice(0, chart.data.datasets[0].data.length);
 
 			try {
@@ -235,7 +240,10 @@ function _manage(charts, callbackDone) {
 		xhttp.send();
 	}
 
+	let lastcall = new moment();
 	manager.intervalId = window.setInterval(function () {
+		if (new moment().diff(lastcall) < 1000) return;
+		lastcall = new moment();
 		for (let dataSet in manager.chart) {
 			var retry = true;
 			do {
@@ -245,11 +253,11 @@ function _manage(charts, callbackDone) {
 				else retry = false;
 			} while (retry);
 			
-			manager.chart[dataSet].options.scales.xAxes[0].time.min = pastDateString(manager.lifeTime[dataSet]);
-			manager.chart[dataSet].options.scales.xAxes[0].time.max = pastDateString(0);
+			manager.chart[dataSet].options.scales.xAxes[0].time.min = pastDate(manager.lifeTime[dataSet]);
+			manager.chart[dataSet].options.scales.xAxes[0].time.max = pastDate(0);
 			manager.chart[dataSet].update();
 		}
-	}, 1000);
+	}, 200);
 
 	manager.stompClient = connectStomp(manager);
 	return manager;

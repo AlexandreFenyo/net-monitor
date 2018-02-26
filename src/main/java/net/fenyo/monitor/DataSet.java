@@ -1,15 +1,11 @@
 package net.fenyo.monitor;
 
-import java.util.ArrayList;
-import java.util.Date;
+import java.util.*;
 import java.util.Iterator;
 import java.util.List;
-import java.time.Instant;
-import java.time.temporal.ChronoUnit;
-import java.time.temporal.TemporalUnit;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import java.time.*;
+import java.time.temporal.*;
+import org.slf4j.*;
 
 public class DataSet {
     private static final Logger logger = LoggerFactory.getLogger(DataSet.class);
@@ -51,13 +47,12 @@ public class DataSet {
             if (it.next().isBefore(beginning)) {
                 instants.remove(0);
                 values.remove(0);
-            }
-            return;
+            } else return;
         }
     }
 
     // keep at most only one value outside of the time window
-    private synchronized void flush() {
+    private void flush() {
         flush(instants, values, lifetime);
     }
 
