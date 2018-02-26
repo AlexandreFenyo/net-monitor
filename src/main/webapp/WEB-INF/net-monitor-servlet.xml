@@ -1,5 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<!--
+  Copyright 2018 Alexandre Fenyo - alex@fenyo.net - http://fenyo.net
+  
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:mvc="http://www.springframework.org/schema/mvc"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -21,9 +37,6 @@
     <!-- process annotations in net.fenyo.monitor -->
     <mvc:annotation-driven />
     <context:component-scan base-package="net.fenyo.monitor" />
-
-    <!-- import global parameters -->
-    <context:property-placeholder location="META-INF/config.properties" />
 
     <!-- direct mappings without the need to use a controller -->
     <mvc:resources mapping="/javascript/**" location="/javascript/" />

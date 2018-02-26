@@ -1,45 +1,47 @@
 
 package net.fenyo.monitor;
 
-import java.io.IOException;
-import java.io.InputStream;
-//import java.net.URL;
-import java.nio.charset.Charset;
+/*
+ * Copyright 2018 Alexandre Fenyo - alex@fenyo.net - http://fenyo.net
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ * 
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+*/
+
+/**
+ * Web sockets dispatcher and web services controller
+ * @author Alexandre Fenyo
+ */
+
+import java.io.*;
 import java.security.Principal;
-import java.time.Instant;
-import java.time.temporal.ChronoUnit;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 import javax.servlet.*;
-import javax.servlet.http.HttpServletRequest;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.event.ContextRefreshedEvent;
+import org.slf4j.*;
+import org.springframework.beans.factory.annotation.*;
+import org.springframework.context.event.*;
 import org.springframework.context.event.EventListener;
-import org.springframework.core.io.ClassPathResource;
-import org.springframework.messaging.handler.annotation.MessageMapping;
-import org.springframework.messaging.handler.annotation.SendTo;
-import org.springframework.messaging.simp.SimpMessagingTemplate;
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.servlet.ModelAndView;
-import org.springframework.web.servlet.view.RedirectView;
+import org.springframework.messaging.simp.*;
+import org.springframework.web.bind.annotation.*;
+import com.fasterxml.jackson.core.*;
+import com.fasterxml.jackson.databind.*;
 
-import com.fasterxml.jackson.core.JsonParseException;
-import com.fasterxml.jackson.databind.JsonMappingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
-
-import java.util.Collections;
+/**
+ * Spring controller.
+ * Dispatch STOMP messages to browsers, send data sets content to requesting browsers.
+ * @author Alexandre Fenyo
+ */
 
 @RestController
 public class WebController {
@@ -49,37 +51,86 @@ public class WebController {
     @Autowired
     private ServletContext context;
     
+    MonitorConfig config = null;
+
     private Map<String, DataSet> data_sets = Collections.synchronizedMap(new HashMap<String, DataSet>());
 
+    /**
+     * Constructor.
+     * Create a MonitorException instance.
+     * @param SimpMessagingTemplate template object used to send STOMP messages to browsers.
+     */
     @Autowired
 	public WebController(final SimpMessagingTemplate template) {
 		this.template = template;
 	}
 
+    /**
+     * Parse configuration file to instantiate probe instances.
+     * @param none.
+     */
     @EventListener(ContextRefreshedEvent.class)
     public void contextRefreshedEvent() throws JsonParseException, JsonMappingException, IOException {
-    	ObjectMapper objectMapper = new ObjectMapper();
-    	InputStream is = context.getResourceAsStream("META-INF/config.json");
-    	SnmpConfig config = objectMapper.readValue(is, SnmpConfig.class);
+    	final ObjectMapper objectMapper = new ObjectMapper();
+    	final InputStream is = context.getResourceAsStream("META-INF/config.json");
+    	objectMapper.disable(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES);
+    	config = objectMapper.readValue(is, MonitorConfig.class);
+        MonitorConfig.initSnmp();
+    	config.runProbes(this);
     }
 
+    /**
+     * Answer to HTTP requests to add a value to a data set and publish this value to the STOMP message broker.
+     * @param long value numeric value.
+     * @param String data data set name.
+     * @param long lifetime new lifetime for this data set. Must be >= -1. -1 means default value.
+     */
     // http://localhost:8080/net-monitor/dispatch/add?value=123&dataset=dataset1
+    // http://localhost:8080/net-monitor/dispatch/add?value=123&dataset=dataset1&lifetime=60
     @RequestMapping(value = "/add", method = RequestMethod.GET)
-    public Boolean add(final Principal p, @RequestParam("value") final long value, @RequestParam("dataset") final String dataset) {
-        final DataSet data = data_sets.get(dataset);
-        data.addValue(new Long(value).toString());
-        final String text = "{\"time\":0,\"value\":" + new Long(value).toString() + "}";
-        template.convertAndSend("/data/" + dataset, text);
+    public Boolean add(final Principal p, @RequestParam("value") final long value, @RequestParam("dataset") final String dataset, @RequestParam(value = "lifetime", defaultValue = "0", required = false) long lifetime) throws MonitorException {
+        if (lifetime < -1) throw new MonitorException("add op.: invalid lifetime value [" + lifetime + "] for dataset [" + dataset + "]");
+        if (lifetime == -1) lifetime = config.default_lifetime;
+        _add(value, dataset, lifetime);
         return true;
     }
 
-    // curl -v --header "Accept: application/json" http://localhost:8080/net-monitor/dispatch/request?dataset=dataset1&range=60
+    /**
+     * Add a value to a data set and publish this value to the STOMP message broker.
+     * @param long value numeric value.
+     * @param String dataset data set name.
+     * @param long lifetime new lifetime for this data set. Must be >= 0. 0 means no lifetime change if the data set already exists. Otherwise, 0 means no persistence.
+     */
+    public void _add(final long value, final String dataset, final long lifetime) throws MonitorException {
+        final DataSet data;
+
+        synchronized (data_sets) {
+            if (!data_sets.containsKey(dataset)) {
+                data_sets.put(dataset, new DataSet(lifetime));
+            }
+            data = data_sets.get(dataset);
+        }
+
+        data.addValue(new Long(value).toString(), lifetime);
+        final String text = "{\"time\":0,\"value\":" + new Long(value).toString() + "}";
+        template.convertAndSend("/data/" + dataset, text);
+    }
+
+    /**
+     * Answer to browser requests to get initial data.
+     * @param String dataset data set name.
+     * @param long lifetime new lifetime for this data set. Must be >= 0. 0 means no lifetime change if the data set already exists. Otherwise, 0 means no persistence.
+     */
+    // curl -v --header "Accept: application/json" http://localhost:8080/net-monitor/dispatch/request?dataset=dataset1&lifetime=60
+    // lifetime >= 0
     @RequestMapping(value = "/request", method = RequestMethod.GET)
     @CrossOrigin(origins = "*")
-    public Data [] request(final Principal p, @RequestParam("dataset") final String dataset, @RequestParam("range") final long range) {
+    public Data [] request(final Principal p, @RequestParam("dataset") final String dataset, @RequestParam("lifetime") final long lifetime) throws MonitorException {
+        if (lifetime == -1) throw new MonitorException("request op.: invalid lifetime value [" + lifetime + "] for dataset [" + dataset + "]");
     	synchronized (data_sets) {
-    		if (!data_sets.containsKey(dataset)) data_sets.put(dataset, new DataSet(range));
+    		if (!data_sets.containsKey(dataset)) data_sets.put(dataset, new DataSet(lifetime));
     	}
-    	return data_sets.get(dataset).toArray();
+        data_sets.get(dataset).extend(lifetime);
+        return data_sets.get(dataset).toArray(lifetime);
     }
 }
