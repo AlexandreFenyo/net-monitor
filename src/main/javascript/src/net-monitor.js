@@ -197,7 +197,19 @@ function _manage(charts, callbackDone) {
 					}],
 					yAxes: [{
 						ticks: {
-							beginAtZero: true
+							beginAtZero: true,
+							callback: function(value, index, values) {
+								let v = value;
+								if (value >= 1000000) {
+									v = v / 1000000;
+									return v + " Mbit/s";
+								}
+								if (value >= 1000) {
+									v = v / 1000;
+									return v + " Kbit/s";
+								}
+		                        return value + " bit/s";
+		                    }
 						}
 					}]
 				}
