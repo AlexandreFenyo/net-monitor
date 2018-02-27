@@ -87,6 +87,13 @@ From a remote host, use:<br>
 </ul>
 </li>
 </ul>
+<h4 id="update-files">Update files</h4>
+<p>If you update source files, just run the following command lines to take updates into account:</p>
+<pre class=" language-bash"><code class="prism  language-bash">user% npx webpack
+user% mvn compile <span class="token function">install</span>
+user% mvn tomcat7:run-war
+</code></pre>
+<h3 id="windows--eclipse">Windows + Eclipse</h3>
 <h2 id="support">Support</h2>
 <p>Best-effort support is available here :</p>
 <p><img src="docs/support.png" alt="support"></p>
