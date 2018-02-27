@@ -91,11 +91,6 @@ From a remote host, use:<br>
 <p>Best-effort support is available here :</p>
 <p><img src="docs/support.png" alt="support"></p>
 <hr>
-<p>apt-get =&gt; npm 3.5.2<br>
-=&gt; node 4.2.6</p>
-<p>npm install yarn =&gt; yarn 1.5.0<br>
-warning You are using Node “4.2.6” which is not supported and may encounter bugs or unexpected behavior. Yarn supports the following semver range: “^4.8.0 || ^5.7.0 || ^6.2.2 || &gt;=8.0.0”</p>
-<hr>
 <p>written with StackEdit - Support StackEdit</p>
 <p><a href="https://monetizejs.com/authorize?client_id=ESTHdCYOi18iLhhO&amp;summary=true"><img src="https://cdn.monetizejs.com/resources/button-32.png" alt=""></a></p>
 <p><a href="https://stackedit.io/">StackEdit</a> is a full-featured, open-source Markdown editor based on PageDown, the Markdown library used by Stack Overflow and the other Stack Exchange sites.</p>
