@@ -3,6 +3,19 @@
 
 ---
 
+<h2 id="generate-from-sources">Generate from sources</h2>
+<ul>
+<li>
+<p>Download from github:</p>
+<p><code>git clone https://github.com/AlexandreFenyo/net-monitor.git</code></p>
+</li>
+<li>
+<p>Install npm (example with Linux Ubuntu):</p>
+</li>
+<li>
+<p><code>apt-get install npm</code></p>
+</li>
+</ul>
 <h2 id="support">Support</h2>
 <p>Best-effort support is available here :</p>
 <p><img src="docs/support.png" alt="support"></p>
