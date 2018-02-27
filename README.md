@@ -25,7 +25,8 @@ Note: this example is for Linux Ubuntu 16.04 LTS.
       
       Note 1:
 If you do not bind to a recent repository, the node version installed may be too much older to work correctly with yarn (see yarn installation below).
-Note 2:
+
+    Note 2:
 A recent version of npm has been installed, as a dependency of this recent nodejs.
 
   - Install yarn:
@@ -93,5 +94,5 @@ written with StackEdit - Support StackEdit
 [StackEdit](https://stackedit.io/) is a full-featured, open-source Markdown editor based on PageDown, the Markdown library used by Stack Overflow and the other Stack Exchange sites.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzc1NzU1NzY5XX0=
+eyJoaXN0b3J5IjpbLTMwNjg5Mjg1M119
 -->
