@@ -7,13 +7,13 @@
 <ul>
 <li>
 <p>Download from github:</p>
-<p><code>git clone https://github.com/AlexandreFenyo/net-monitor.git</code></p>
+<p><code>user% git clone https://github.com/AlexandreFenyo/net-monitor.git</code></p>
 </li>
 <li>
 <p>Install npm (example with Linux Ubuntu):</p>
 </li>
 <li>
-<p><code>apt-get install npm</code></p>
+<p><code>root# apt-get install npm</code></p>
 </li>
 </ul>
 <h2 id="support">Support</h2>
