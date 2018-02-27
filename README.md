@@ -82,7 +82,7 @@ From a remote host, use:<br>
 </li>
 <li>
 <p>The module is available here:<br>
-<a href="http://HOSTNAME:8080/javascript/public/net-monitor.min.js">http://HOSTNAME:8080/javascript/public/net-monitor.min.js</a></p>
+<a href="http://HOSTNAME:8080/net-monitor/javascript/public/net-monitor.min.js">http://HOSTNAME:8080/net-monitor/javascript/public/net-monitor.min.js</a></p>
 </li>
 </ul>
 </li>
