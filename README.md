@@ -87,6 +87,12 @@ Best-effort support is available here :
 
 ----------
 
+increase version in package.json
+npm publish --access=public
+https://www.npmjs.com/package/@fenyo/net-monitor
+
+----------
+
 written with StackEdit - Support StackEdit
 
 [![](https://cdn.monetizejs.com/resources/button-32.png)](https://monetizejs.com/authorize?client_id=ESTHdCYOi18iLhhO&summary=true)

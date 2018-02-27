@@ -1,12 +1,17 @@
 {
-  "name": "net-monitor",
-  "version": "1.0.0",
+  "name": "@fenyo/net-monitor",
+  "version": "1.0.8",
   "description": "dynamic time series with JS and JEE",
   "main": "index.html",
+  "keyword": [ "snmp", "network", "graph" ],
+  "homepage": "https://github.com/AlexandreFenyo/net-monitor/",
+  "bugs": { "email": "support-net-monitor@fenyo.net" },
+  "author": { "name": "Alexandre Fenyo", "email": "support-net-monitor@fenyo.net", "url": "https://fenyo.net" },
   "repository": {
     "type": "git",
     "url": "https://github.com/AlexandreFenyo/net-monitor/net-monitor.git"
   },
+  "files": [ "src/main/javascript" ],
   "scripts": {
     "build": "babel src/main/javascript/src -d src/main/javascript/dist",
     "watch": "webpack --watch"
