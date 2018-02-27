@@ -72,7 +72,7 @@ A recent version of npm has been installed, as a dependency of this recent nodej
 </ul>
 </li>
 <li>
-<p>Access to the built resources</p>
+<p>Access to the generated resources</p>
 <ul>
 <li>
 <p>Now, you can access the demo application on:<br>
