@@ -90,6 +90,7 @@ Best-effort support is available here :
 increase version in package.json
 npm publish --access=public
 https://www.npmjs.com/package/@fenyo/net-monitor
+https://www.npmjs.com/package/webstomp-client
 
 ----------
 
