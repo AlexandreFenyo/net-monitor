@@ -201,6 +201,8 @@ user% mvn tomcat7:run-war
 
 ## Windows + Eclipse
 
+The sources available from GitHub can be imported in Eclipse as a project.
+
 Follow these instructions:
 
 - a recent JDK (1.8.x or higher)
@@ -242,5 +244,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTgyMDQxMzkwNl19
+eyJoaXN0b3J5IjpbMTkzOTgyMTE3Nl19
 -->
