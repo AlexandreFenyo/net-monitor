@@ -192,7 +192,7 @@ a recent version of npm has been installed, as a dependency of this recent nodej
 
   - The module is available here: http://HOSTNAME:8080/net-monitor/javascript/public/net-monitor.min.js
 
-### Update files
+### updates
 
 After having updated some source files, just run the following command lines to take updates into account:
 ````bash
@@ -272,5 +272,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0MDc2MTk3ODldfQ==
+eyJoaXN0b3J5IjpbMTY2NDY5NTAzM119
 -->
