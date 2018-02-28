@@ -3,7 +3,7 @@
 ## Install from the JEE server
 
 ### base URL
-The JEE server that comes with net-monitor is also a repository of a client installation. If the server is running on host `host` and port `port`, the 
+The JEE server that comes with net-monitor is also a repository of a client installation. If the server is running on host `host` and port `port`, the client is available on http(s)://host:port/net-monitor/javascript/public/net-monitor.bundle.dev.js
 
 ### select the correct build
 
@@ -204,5 +204,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzgyNTg0NzQyXX0=
+eyJoaXN0b3J5IjpbMTk3MzQ3MTIxNF19
 -->
