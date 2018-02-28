@@ -118,7 +118,7 @@ var manager = NetMonitor.manage(charts);
 
 # Build from sources
 
-## Linux
+## Linux + Maven
 
 ### first installation
 
@@ -244,5 +244,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTgyNjA3MTQzN119
+eyJoaXN0b3J5IjpbMTQxNTMzNzExN119
 -->
