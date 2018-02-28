@@ -233,11 +233,15 @@ Finally, publish the net-monitor project into the tomcat server: open the _Serve
 
   `c:\net-monitor> yarn install`
 
-- Use webpack and Babel to transpile, add polyfill, minify and package the JavaScript module:
+- Use webpack and Babel to transpile, add polyfill, minify and package the JavaScript module.
 
-  `c:\net-monitor> webpack -w
-    
-    This will create `src/main/javascript/public/net-monitor/net-monitor.min.js` from `src/main/javascript/src/net-monitor.js` and relative dependencies in `node_modules`
+  `c:\net-monitor> webpack --verbose`
+
+    This will create `src/main/javascript/public/net-monitor/net-monitor-*.js` from `src/main/javascript/src/net-monitor.js` and relative dependencies in `node_modules`
+
+- Use webpack and Babel to transpile, add polyfill, minify and package the JavaScript module.
+
+  `c:\net-monitor> webpack --verbose
 
 
 # Support
@@ -266,5 +270,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzAwNzgyNjIwXX0=
+eyJoaXN0b3J5IjpbMTUyMzc0MTYxNV19
 -->
