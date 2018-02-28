@@ -249,6 +249,7 @@ Finally, publish the net-monitor project into the tomcat server: open the _Serve
 
 You can now start the server and visit the demo on http://localhost:8080/net-monitor
 
+Note: if you apply changes to the Java sources or resources, Eclipse will automatically reload the servlet.
 
 # Support
 
@@ -276,5 +277,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODg3NjA5MzIzXX0=
+eyJoaXN0b3J5IjpbMzQ5Nzg2ODQzXX0=
 -->
