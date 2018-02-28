@@ -103,7 +103,7 @@ Note that the dependencies are also installed on the server.
 ## ES6 module
 
 ```javascript
-import Chart from 'chart.js';
+import NetMonitor from 'net-monitor.bundle.min.js';
 var myChart = new Chart(ctx, {...});
 ```
 
@@ -213,5 +213,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgxMjc0NDI5Nl19
+eyJoaXN0b3J5IjpbNzcxMDkxNzldfQ==
 -->
