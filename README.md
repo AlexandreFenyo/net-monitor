@@ -108,6 +108,13 @@ var charts = { ... };
 var manager = NetMonitor.manage(charts);
 ```
 
+## common JS
+
+```javascript
+import NetMonitor from 'net-monitor.bundle.min.js';
+var charts = { ... };
+var manager = NetMonitor.manage(charts);
+```
 
 ## Build from sources
 
@@ -214,5 +221,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI5OTc4MDcwNl19
+eyJoaXN0b3J5IjpbLTE1NDE3Mjk1NDFdfQ==
 -->
