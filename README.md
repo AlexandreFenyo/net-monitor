@@ -225,14 +225,15 @@ Finally, publish the net-monitor project into the tomcat server: open the _Serve
 
 - Install yarn: see https://yarnpkg.com/lang/en/docs/install/
 
-- Install webpack :
-````shell
-npm install -g webpack
-````
+- Install webpack:
+
+  ````shell
+  c:\> npm install -g webpack
+  ````
 
 - Populate JavaScript module dependencies into `node_modules` repository:
 
-  `c:\> yarn install`
+  `c:\net-monitor> yarn install`
 
   - Use webpack and Babel to transpile, add polyfill, minify and package the JavaScript module:
 
@@ -267,5 +268,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM0MDA4MzU2OF19
+eyJoaXN0b3J5IjpbNzcxMzc5MTYxXX0=
 -->
