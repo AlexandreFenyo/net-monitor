@@ -102,6 +102,10 @@ Note that the dependencies are also installed on the server.
 
 ## ES6 module
 
+```html
+import Chart from 'chart.js';
+var myChart = new Chart(ctx, {...});
+```
 
 
 ## Build from sources
@@ -209,5 +213,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTkzNTUxOTkyNV19
+eyJoaXN0b3J5IjpbNzcwMzM1NzgyXX0=
 -->
