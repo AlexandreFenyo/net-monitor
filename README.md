@@ -57,7 +57,7 @@ net-monitor can be integrated with plain JavaScript or with different module loa
 <script src="javascript/public/net-monitor.bundle.min.js"></script>
 <script>
 	var charts = { ... };
-    var manager = NetMonitor(charts);
+    var manager = NetMonitor.manage(charts);
 </script>
 ````
 
@@ -166,5 +166,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMzkyNDU2MV19
+eyJoaXN0b3J5IjpbMjEyNzQ4NjM5Nl19
 -->
