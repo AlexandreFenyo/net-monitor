@@ -213,7 +213,7 @@ Follow these instructions:
 
 Now, go to menu **File > Import**, choose _Projects from Git_ and clone net-monitor from https://github.com/AlexandreFenyo/net-monitor.git
 
-Finally, publish the net-monitor project to the tomcat server: open the **Servers** view, select the server, right click and select **Add and Remove**, then add the project.
+Finally, publish the net-monitor project into the tomcat server: open the **Servers** view, select the server, right click and select **Add and Remove**, then add the project.
 
 
 # Support
@@ -242,5 +242,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk0ODQ2OTE2N119
+eyJoaXN0b3J5IjpbMTY1MTY0NjQ3Nl19
 -->
