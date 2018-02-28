@@ -22,9 +22,7 @@ There are two different builds available:
 - A build bundled with dependencies: 
 `src/main/javascript/public/net-monitor.bundle.min.js`
 
-
-
-## Generate from sources
+## Build from sources
 
 ### Linux
 
@@ -129,5 +127,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM1OTY4MzE1XX0=
+eyJoaXN0b3J5IjpbLTE5MjM1NjQwODRdfQ==
 -->
