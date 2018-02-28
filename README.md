@@ -1,5 +1,7 @@
 # Installation
 
+You can install net-monitor from the [npmjs repository](https://www.npmjs.com/) using npm or yarn.
+
 ## npm
 
 `npm install @fenyo/net-monitor --save`
@@ -113,5 +115,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUxODc0OTkyM119
+eyJoaXN0b3J5IjpbLTU5OTE2MTUzXX0=
 -->
