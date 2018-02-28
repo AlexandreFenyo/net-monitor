@@ -201,6 +201,8 @@ user% mvn tomcat7:run-war
 
 ## Windows + Eclipse
 
+### install in Eclipse
+
 The [sources available from GitHub](https://github.com/AlexandreFenyo/net-monitor) can be imported in [Eclipse](https://www.eclipse.org/) as a project with [Spring MVC](http://www.springframework.org/) and  [Maven](https://maven.apache.org/) natures.
 
 Follow these instructions:
@@ -217,6 +219,7 @@ Now, go to menu **File > Import**, choose _Projects from Git_ and clone net-moni
 
 Finally, publish the net-monitor project into the tomcat server: open the _Servers_ view, select the server, right click and select **Add and Remove**, then add the project.
 
+### install the client-side 
 
 # Support
 
@@ -244,5 +247,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQxNTMzNzExN119
+eyJoaXN0b3J5IjpbLTE3ODY3MDcwNzFdfQ==
 -->
