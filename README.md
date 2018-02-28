@@ -184,17 +184,11 @@ a recent version of npm has been installed, as a dependency of this recent nodej
 
 - Access to the generated resources
 
-  - Now, you can access the demo application on:
+  - Now, you can access the demo application on: http://localhost:8080/net-monitor
 
-http://localhost:8080/net-monitor
+    From a remote host, use: http://HOSTNAME:8080/net-monitor
 
-    From a remote host, use:
-
-http://HOSTNAME:8080/net-monitor
-
-  - The module is available here:
-
-http://HOSTNAME:8080/net-monitor/javascript/public/net-monitor.min.js
+  - The module is available here: http://HOSTNAME:8080/net-monitor/javascript/public/net-monitor.min.js
 
 ### Update files
 
@@ -235,5 +229,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAxMzYwNTAzXX0=
+eyJoaXN0b3J5IjpbLTU0ODE3MTQ2NV19
 -->
