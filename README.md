@@ -75,6 +75,8 @@ net-monitor can be integrated with plain JavaScript or with different module loa
 
 ## script tag with standalone build
 
+Note that the dependencies are also installed on the server.
+
 ````html
 <script src="jquery/dist/jquery.min.js"></script>
 <script src="moment/moment.js"></script>
@@ -195,5 +197,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjE0NTYzMzY0NF19
+eyJoaXN0b3J5IjpbLTE4MDIwNDA0NzldfQ==
 -->
