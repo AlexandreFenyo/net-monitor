@@ -64,6 +64,12 @@ net-monitor can be integrated with plain JavaScript or with different module loa
 ## script tag with standalone build
 
 ````html
+<script src="jquery/dist/jquery.min.js"></script>
+<script src="moment/moment.js"></script>
+<script src="webstomp-client/dist/webstomp.min.js"></script>
+<script src="chart.js/dist/Chart.bundle.min.js"></script>
+<script src="javascript/public/net-monitor.standalone.min.js"></script> -->
+
 <script src="javascript/public/net-monitor.bundle.min.js"></script>
 <script>
 	var charts = { ... };
@@ -177,5 +183,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2MDkyNDI2ODFdfQ==
+eyJoaXN0b3J5IjpbLTExNjMxOTU4MjVdfQ==
 -->
