@@ -247,7 +247,7 @@ Finally, publish the net-monitor project into the tomcat server: open the _Serve
 
 ### start the server
 
-You can now start the server and visit the demo  http://localhost:8080/net-monitor to visit
+You can now start the server and visit the demo on http://localhost:8080/net-monitor
 
 
 # Support
@@ -276,5 +276,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMDQzMzI3NzhdfQ==
+eyJoaXN0b3J5IjpbODg3NjA5MzIzXX0=
 -->
