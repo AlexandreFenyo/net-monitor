@@ -94,7 +94,6 @@ Note that the dependencies are also installed on the server.
 <script src="webstomp-client/dist/webstomp.min.js"></script>
 <script src="chart.js/dist/Chart.bundle.min.js"></script>
 <script src="javascript/public/net-monitor.standalone.min.js"></script>
-
 <script src="javascript/public/net-monitor.bundle.min.js"></script>
 <script>
     var charts = { ... };
@@ -208,5 +207,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODg1MjE1MzU2XX0=
+eyJoaXN0b3J5IjpbNTM5ODc3NjQ2XX0=
 -->
