@@ -219,7 +219,8 @@ Now, go to menu **File > Import**, choose _Projects from Git_ and clone net-moni
 
 Finally, publish the net-monitor project into the tomcat server: open the _Servers_ view, select the server, right click and select **Add and Remove**, then add the project.
 
-### install the client-side 
+### install the client-side tools
+
 
 # Support
 
@@ -247,5 +248,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3ODY3MDcwNzFdfQ==
+eyJoaXN0b3J5IjpbLTU0MDk4NjgyMF19
 -->
