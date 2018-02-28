@@ -185,7 +185,7 @@ http://HOSTNAME:8080/net-monitor/javascript/public/net-monitor.min.js
 
 ### Update files
 
-If you update source files, just run the following command lines to take updates into account:
+After having updated some source files, just run the following command lines to take updates into account:
 ````bash
 user% npx webpack
 user% mvn compile install
@@ -222,5 +222,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc2MzcxMjUzMl19
+eyJoaXN0b3J5IjpbLTEyMjc5MTQ3OV19
 -->
