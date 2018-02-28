@@ -211,7 +211,8 @@ Follow these instructions:
   - click **Add…** to add a new server runtime environment.
   - In the _New Server Runtime Environment_ dialog, select **Apache > Apache Tomcat v7.0** (the latest version of Tomcat to date) and check the option _Create a new local server_
 
-Now, go to menu **File > Import**, choose _Projects from Git_ and clone 
+Now, go to menu **File > Import**, choose _Projects from Git_ and clone net-monitor from https://github.com/AlexandreFenyo/net-monitor.git
+
 
 
 # Support
@@ -240,5 +241,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwODQ1MTk2MF19
+eyJoaXN0b3J5IjpbLTE3MTQ1OTI3ODBdfQ==
 -->
