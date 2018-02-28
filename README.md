@@ -262,14 +262,6 @@ Best-effort support is available here :
 
 ----------
 
-increase version in package.json
-npm publish --access=public
-https://www.npmjs.com/package/@fenyo/net-monitor
-https://www.npmjs.com/package/webstomp-client
-https://eowyn.eu.org/cloudflare/
-
-----------
-
 written with StackEdit - Support StackEdit
 
 [![](https://cdn.monetizejs.com/resources/button-32.png)](https://monetizejs.com/authorize?client_id=ESTHdCYOi18iLhhO&summary=true)
@@ -280,5 +272,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc2NDM5OTA0Ml19
+eyJoaXN0b3J5IjpbLTE5NDU1NTkwOTZdfQ==
 -->
