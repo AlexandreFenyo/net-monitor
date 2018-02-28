@@ -51,11 +51,10 @@ net-monitor-[VERSION].bundle.min.js
 
 net-monitor can be integrated with plain JavaScript or with different module loaders. The examples below show how to load net-monitor in different systems.
 
-## ES6 modules
+## script tag
 
 ````html
-import Chart from 'chart.js';
-var myChart = new Chart(ctx, {...});
+
 ````
 
 ## Build from sources
@@ -163,5 +162,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgzOTE1MTU3NF19
+eyJoaXN0b3J5IjpbLTIwNjQyMTcxMTBdfQ==
 -->
