@@ -33,8 +33,9 @@ The Cloudflare base URL that contains each build is https://eowyn.eu.org/cloudfl
 
 ### Select the correct build
 
-- Standalone builds are available using this URL template:
-net-monitor-1.0.10.bundle.dev.js](https://eowyn.eu.org/cloudflare/net-monitor-1.0.10.bundle.dev.js)
+- Standalone builds are available using this template:
+net-monitor-VERSION.bundle.dev.js
+Example : https://eowyn.eu.org/cloudflare/net-monitor-1.0.10.bundle.dev.js
 
 
 
@@ -143,5 +144,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTcxMDM5NTU3NF19
+eyJoaXN0b3J5IjpbMzQyMjExMzY1XX0=
 -->
