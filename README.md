@@ -1,5 +1,15 @@
 # Client installation
 
+## Select the correct build
+
+There are two different builds available:
+
+- A standalone build:
+`src/main/javascript/public/net-monitor.standalone.min.js`
+
+- A build bundled with dependencies: 
+`src/main/javascript/public/net-monitor.bundle.min.js`
+
 ## Install from the npmjs repository
 
 You can install net-monitor from the [npmjs repository](https://www.npmjs.com/) using your favorite package manager: [npm](https://www.npmjs.com/docs/orgs/) or [yarn](https://yarnpkg.com/	) (avoid using [bower](https://bower.io/blog/2017/how-to-migrate-away-from-bower/) for new client side modules). This will install net-monitor and its dependencies.
@@ -136,5 +146,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY3OTg3NzI3NV19
+eyJoaXN0b3J5IjpbNTE5NTc5MDk2XX0=
 -->
