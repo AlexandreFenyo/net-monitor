@@ -118,6 +118,8 @@ var manager = NetMonitor.manage(charts);
 
 # Build from sources
 
+If you want to contribute to net-monitor, you can build it from the sources with the follow
+
 ## Linux + Maven
 
 ### first installation
@@ -270,5 +272,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI5NzA2MTQ5MF19
+eyJoaXN0b3J5IjpbLTE3NjY2MzMzNTBdfQ==
 -->
