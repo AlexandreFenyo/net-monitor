@@ -28,6 +28,7 @@ There are two different builds available:
 
 ## Install from the Cloudflare CDN
 
+### Base directory
 The Cloudflare base directory that contains each build is https://eowyn.eu.org/cloudflare/
 
 
@@ -138,5 +139,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTE0MDM4NDkwXX0=
+eyJoaXN0b3J5IjpbLTEyOTQzMjA1MzddfQ==
 -->
