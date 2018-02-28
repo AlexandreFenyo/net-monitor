@@ -165,12 +165,15 @@ A recent version of npm has been installed, as a dependency of this recent nodej
 - Java EE part (application server):
 
   - Install a recent JDK to build the JEE application:
+
     `root# apt-get install openjdk-8-jdk`
 
   - Install maven:
+
     `root# apt-get install maven`
 
   - Build with maven:
+
     `user% mvn clean install`
 
     The generated WAR file is built here: `net-monitor/target/net-monitor-0.0.1-SNAPSHOT.war`
@@ -228,5 +231,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzM2ODA5MDk3XX0=
+eyJoaXN0b3J5IjpbMTczNTM3NDM2M119
 -->
