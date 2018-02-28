@@ -201,6 +201,7 @@ user% mvn tomcat7:run-war
 
 ## Windows + Eclipse
 
+Install a recent JDK, install Eclipse Neon.3 or higher, 
 
 
 # Support
@@ -229,5 +230,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU0ODE3MTQ2NV19
+eyJoaXN0b3J5IjpbMTY0NTg0ODM2MF19
 -->
