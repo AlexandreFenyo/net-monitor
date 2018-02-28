@@ -137,11 +137,11 @@ Note: this example is for Linux Ubuntu 16.04 LTS.
     - Bind to a recent node repository:
 
       `root# curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -`
-      
+
     - Install node from this repository:
 
       `root# apt-get install nodejs`
-      
+
       Note 1:
 If you do not bind to a recent repository, the node version installed may be too much older to work correctly with yarn (see yarn installation below).
 
@@ -225,5 +225,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5Mzg5NzEzNjVdfQ==
+eyJoaXN0b3J5IjpbMjAzMzgzMzgxOV19
 -->
