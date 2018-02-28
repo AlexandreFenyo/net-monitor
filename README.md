@@ -12,7 +12,7 @@ Suppose that the server is running on host `host` and port `port`:
 - the standalone build is available on:
   http(s)://host:port/net-monitor/javascript/public/net-monitor.standalone.min.js
 
-- the dependencies, for use with the standalone bui
+- the dependencies, for use with the standalone build 
   
 ## Install from the npmjs repository
 
@@ -199,5 +199,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMTUyMjYwNTBdfQ==
+eyJoaXN0b3J5IjpbLTIwODE4MDI2ODBdfQ==
 -->
