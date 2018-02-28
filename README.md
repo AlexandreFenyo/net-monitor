@@ -53,10 +53,10 @@ net-monitor can be integrated with plain JavaScript or with different module loa
 
 ## ES6 modules
 
-````html
+```html
 import Chart from 'chart.js';
 var myChart = new Chart(ctx, {...});
-````
+```
 
 ## Build from sources
 
@@ -163,5 +163,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgzOTE1MTU3NF19
+eyJoaXN0b3J5IjpbMTU3NzUxNDg4OF19
 -->
