@@ -221,7 +221,7 @@ Finally, publish the net-monitor project into the tomcat server: open the _Serve
 
 ### install the client-side tools
 
-- install node.js and npm: https://nodejs.org/en/download/
+- install Node.js and npm: see https://nodejs.org/en/download/
 - 
 
 # Support
@@ -250,5 +250,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1MDY5Mjg3OTBdfQ==
+eyJoaXN0b3J5IjpbMTEzOTA3NTgzMV19
 -->
