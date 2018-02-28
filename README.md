@@ -31,6 +31,8 @@ There are two different builds available:
 ### Base URL
 The Cloudflare base URL that contains each build is https://eowyn.eu.org/cloudflare/
 
+### Select the correct build
+
 
 
 
@@ -139,5 +141,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjQ1NDU4NTk5XX0=
+eyJoaXN0b3J5IjpbMTg1NzE4MDg3N119
 -->
