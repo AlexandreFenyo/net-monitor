@@ -53,7 +53,8 @@ net-monitor can be integrated with plain JavaScript or with different module loa
 
 ## ES6 modules
 
-````
+````html
+
 ````
 
 ## Build from sources
@@ -161,5 +162,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgzMTUyMTcwNV19
+eyJoaXN0b3J5IjpbLTExMTkyMTk5MzBdfQ==
 -->
