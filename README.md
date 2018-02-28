@@ -14,8 +14,11 @@ Suppose that the server is running on host `host` and port `port`:
 
 - the dependencies, for use with the standalone build, are available on:
   http(s)://host:port/net-monitor/jquery/dist/jquery.min.js
+  
   http(s)://host:port/net-monitor/jquery/dist/jquery.min.js
+  
   http(s)://host:port/net-monitor/jquery/dist/jquery.min.js
+  
   http(s)://host:port/net-monitor/jquery/dist/jquery.min.js
 
   
@@ -204,5 +207,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTcyOTgzMzA3NF19
+eyJoaXN0b3J5IjpbMTUyMTE5MDA4NF19
 -->
