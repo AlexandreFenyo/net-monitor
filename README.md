@@ -32,11 +32,11 @@ You can also access the dedicated page on npmjs: https://www.npmjs.com/package/@
 
 There are two different builds available:
 
-- A standalone build:
-`src/main/javascript/public/net-monitor.standalone.min.js`
-
 - A bundle build with dependencies: 
 `src/main/javascript/public/net-monitor.bundle.min.js`
+
+- A standalone build:
+`src/main/javascript/public/net-monitor.standalone.min.js`
 
 ## Install from the Cloudflare CDN
 
@@ -195,5 +195,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyMjg1NDkyMzBdfQ==
+eyJoaXN0b3J5IjpbLTEwNzQyNTY5ODBdfQ==
 -->
