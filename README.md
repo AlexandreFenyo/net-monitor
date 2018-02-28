@@ -221,6 +221,7 @@ Finally, publish the net-monitor project into the tomcat server: open the _Serve
 
 ### install the client-side tools
 
+- inst
 
 # Support
 
@@ -248,5 +249,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU0MDk4NjgyMF19
+eyJoaXN0b3J5IjpbNjE0MDQ3MDI1XX0=
 -->
