@@ -116,9 +116,9 @@ var charts = { ... };
 var manager = NetMonitor.manage(charts);
 ```
 
-## Build from sources
+# Build from sources
 
-### Linux
+## Linux
 
 #### first installation
 
@@ -221,5 +221,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI4NTQ5Njk5MF19
+eyJoaXN0b3J5IjpbMTM3NzI0Mjk2XX0=
 -->
