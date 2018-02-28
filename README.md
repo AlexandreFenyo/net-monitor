@@ -2,7 +2,7 @@
 
 ## Install from the npmjs repository
 
-You can install net-monitor from the [npmjs repository](https://www.npmjs.com/) using npm or yarn. This will install net-monitor and its dependencies.
+You can install net-monitor from the [npmjs repository](https://www.npmjs.com/) using npm or yarn (avoid using bower for new client side modules). This will install net-monitor and its dependencies.
 
 You can also access the dedicated page on npmjs: https://www.npmjs.com/package/@fenyo/net-monitor
 
@@ -132,5 +132,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU2MDYzODU4Nl19
+eyJoaXN0b3J5IjpbLTEwMzUzMzEzNzFdfQ==
 -->
