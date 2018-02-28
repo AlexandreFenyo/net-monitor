@@ -205,7 +205,7 @@ Install:
 
 - a recent JDK (1.8.x or higher)
 - a version of [Eclipse](https://www.eclipse.org/) (Neon.3 or higher) including STS ([Spring Tools](https://spring.io/tools/sts))
-- 
+- add a tomcat (8.x or higher) server to Eclipse (in Eclipse IDE, go to menu **Window > Preferences**. Then expand the **Server > Runtime Environments** node in the _Preferences_ dialog
 
 
 # Support
@@ -234,5 +234,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2ODQ5OTEzMjBdfQ==
+eyJoaXN0b3J5IjpbMTg5ODY1NzVdfQ==
 -->
