@@ -191,11 +191,11 @@ user% mvn compile install
 user% mvn tomcat7:run-war
 ````
 
-### Windows + Eclipse
+## Windows + Eclipse
 
 
 
-## Support
+# Support
 
 Best-effort support is available here :
 
@@ -221,5 +221,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2MTQ4NDczNDBdfQ==
+eyJoaXN0b3J5IjpbNzY1MTMzOTE0XX0=
 -->
