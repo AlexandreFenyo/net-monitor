@@ -2,7 +2,7 @@
 
 ## Install from the JEE server
 
-If you have installed the JEE server that comes with net-monitor, you have also installed the net-monitor client on it.
+If you have installed the JEE server that comes with net-monitor, you already have installed the net-monitor client on it.
 
 Suppose the server is running on host `host` and port `port`:
 - the standalone build is available on:
@@ -194,5 +194,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwNTI2ODYxNDhdfQ==
+eyJoaXN0b3J5IjpbLTgzNTE5MDk3XX0=
 -->
