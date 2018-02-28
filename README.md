@@ -201,7 +201,7 @@ user% mvn tomcat7:run-war
 
 ## Windows + Eclipse
 
-The sources available from GitHub can be imported in Eclipse as a project.
+The sources available from GitHub can be imported in Eclipse as a project with Spring and Maven nature.
 
 Follow these instructions:
 
@@ -244,5 +244,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkzOTgyMTE3Nl19
+eyJoaXN0b3J5IjpbMTY0NDg0Mzk5NF19
 -->
