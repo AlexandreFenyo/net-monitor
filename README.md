@@ -5,10 +5,10 @@
 There are two different builds available:
 
 - A standalone build:
-`src/main/javascript/public/net-monitor.standalone.min.js`
+`net-monitor.standalone.min.js`
 
 - A build bundled with dependencies: 
-`src/main/javascript/public/net-monitor.bundle.min.js`
+`net-monitor.bundle.min.js`
 
 ## Install from the npmjs repository
 
@@ -146,5 +146,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTE5NTc5MDk2XX0=
+eyJoaXN0b3J5IjpbLTEwMjYwNDgyOTRdfQ==
 -->
