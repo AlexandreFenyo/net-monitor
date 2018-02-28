@@ -179,17 +179,21 @@ A recent version of npm has been installed, as a dependency of this recent nodej
     The generated WAR file is built here: `net-monitor/target/net-monitor-0.0.1-SNAPSHOT.war`
 
   - Run this application with tomcat:
+
     `user% mvn tomcat7:run-war`
 
 - Access to the generated resources
 
   - Now, you can access the demo application on:
+
 http://localhost:8080/net-monitor
 
     From a remote host, use:
+
 http://HOSTNAME:8080/net-monitor
 
   - The module is available here:
+
 http://HOSTNAME:8080/net-monitor/javascript/public/net-monitor.min.js
 
 ### Update files
@@ -231,5 +235,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTczNTM3NDM2M119
+eyJoaXN0b3J5IjpbLTE0NTg0NjA1NTNdfQ==
 -->
