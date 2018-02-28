@@ -210,7 +210,8 @@ Install:
   - Then expand the **Server > Runtime Environments** node in the _Preferences_ dialog.
   - Click **Add…** to add a new server runtime environment.
   - In the _New Server Runtime Environment_ dialog, select **Apache > Apache Tomcat v7.0** (the latest version of Tomcat to date) and check the option _Create a new local server_
- 
+
+
 
 
 # Support
@@ -239,5 +240,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY2ODg2NDIxXX0=
+eyJoaXN0b3J5IjpbLTE4NTAyNzQzMzddfQ==
 -->
