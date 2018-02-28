@@ -10,7 +10,6 @@ Suppose the server is running on host `host` and port `port`:
 
 - the bundle build is available on:
   http(s)://host:port/net-monitor/javascript/public/net-monitor.bundle.min.js
-
   
 ## Install from the npmjs repository
 
@@ -195,5 +194,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjE5MTg3MzA2XX0=
+eyJoaXN0b3J5IjpbLTEwNTI2ODYxNDhdfQ==
 -->
