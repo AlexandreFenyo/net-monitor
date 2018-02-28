@@ -61,6 +61,17 @@ net-monitor can be integrated with plain JavaScript or with different module loa
 </script>
 ````
 
+## script tag with standalone build
+
+````html
+<script src="javascript/public/net-monitor.bundle.min.js"></script>
+<script>
+	var charts = { ... };
+    var manager = NetMonitor.manage(charts);
+</script>
+````
+
+
 ## Build from sources
 
 ### Linux
@@ -166,5 +177,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjEyNzQ4NjM5Nl19
+eyJoaXN0b3J5IjpbLTE2MDkyNDI2ODFdfQ==
 -->
