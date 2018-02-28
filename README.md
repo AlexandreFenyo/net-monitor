@@ -1,4 +1,4 @@
-# Installation
+# Client installation
 
 ## Install from the npmjs repository
 
@@ -127,5 +127,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5MjM1NjQwODRdfQ==
+eyJoaXN0b3J5IjpbLTE5MjU2MDk2MDFdfQ==
 -->
