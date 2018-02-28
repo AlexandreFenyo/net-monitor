@@ -1,6 +1,6 @@
 #!/bin/zsh
 
-echo "dp not forget to run ssh -L 2222:localhost:22 fenyo.net"
+echo "do not forget to run ssh -L 2222:localhost:22 fenyo.net"
 echo "do not forget to update version in package.json prior to running this script"
 # net-monitor.bundle.dev.js  net-monitor.bundle.min.js  net-monitor.standalone.dev.js  net-monitor.standalone.min.js
 
