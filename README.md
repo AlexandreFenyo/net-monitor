@@ -201,7 +201,11 @@ user% mvn tomcat7:run-war
 
 ## Windows + Eclipse
 
-Install a recent JDK (1.8.x or higher), install a version of [Eclipse](https://www.eclipse.org/) (Neon.3 or higher) including STS ([Spring Tools](https://spring.io/tools/sts))
+Install:
+
+- a recent JDK (1.8.x or higher)
+- a version of [Eclipse](https://www.eclipse.org/) (Neon.3 or higher) including STS ([Spring Tools](https://spring.io/tools/sts))
+- 
 
 
 # Support
@@ -230,5 +234,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU5MTI5NzE2OF19
+eyJoaXN0b3J5IjpbLTE2ODQ5OTEzMjBdfQ==
 -->
