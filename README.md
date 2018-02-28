@@ -100,6 +100,9 @@ Note that the dependencies are also installed on the server.
 </script>
 ````
 
+## ES6 module
+
+
 
 ## Build from sources
 
@@ -206,5 +209,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg4MDAyNjE0NV19
+eyJoaXN0b3J5IjpbLTkzNTUxOTkyNV19
 -->
