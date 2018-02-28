@@ -20,7 +20,7 @@ Suppose that the server is running on host `host` and port `port`:
   
   http(s)://host:port/net-monitor/webstomp-client/dist/webstomp.min.js
   
-  http(s)://host:port/net-monitor/jquery/dist/jquery.min.js
+  http(s)://host:port/net-monitor/chart.js/dist/Chart.bundle.min.js
 
   
 ## Install from the npmjs repository
@@ -208,5 +208,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMyMzUzNzU4MV19
+eyJoaXN0b3J5IjpbODg1MjE1MzU2XX0=
 -->
