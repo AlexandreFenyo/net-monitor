@@ -102,7 +102,7 @@ Note that the dependencies are also installed on the server.
 
 ## ES6 module
 
-```html
+```javascript
 import Chart from 'chart.js';
 var myChart = new Chart(ctx, {...});
 ```
@@ -213,5 +213,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzcwMzM1NzgyXX0=
+eyJoaXN0b3J5IjpbMTgxMjc0NDI5Nl19
 -->
