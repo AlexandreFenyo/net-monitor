@@ -221,7 +221,7 @@ Finally, publish the net-monitor project into the tomcat server: open the _Serve
 
 ### install the client-side tools
 
-- install npm and
+- install npm and 
 
 # Support
 
@@ -249,5 +249,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMzU5NzM1NF19
+eyJoaXN0b3J5IjpbNzE2ODMzMTZdfQ==
 -->
