@@ -11,21 +11,6 @@ Suppose the server is running on host `host` and port `port`:
 - the bundle build is available on:
   http(s)://host:port/net-monitor/javascript/public/net-monitor.bundle.min.js
 
-### select the correct build
-
-- Standalone builds are available using this template:
-net-monitor-[VERSION].standalone.min.js
-
-  Example: https://eowyn.eu.org/cloudflare/net-monitor-1.0.10.standalone.min.js
-
-  The latest standalone build is https://eowyn.eu.org/cloudflare/net-monitor-latest.standalone.min.js
-
-- Bundle builds are available using this template:
-net-monitor-[VERSION].bundle.min.js
-
-  Example: https://eowyn.eu.org/cloudflare/net-monitor-1.0.10.bundle.min.js
-
-  The latest bundle build is https://eowyn.eu.org/cloudflare/net-monitor-latest.bundle.min.js
   
 ## Install from the npmjs repository
 
@@ -210,5 +195,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTExNjA0NDQzNV19
+eyJoaXN0b3J5IjpbMjE5MTg3MzA2XX0=
 -->
