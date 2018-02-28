@@ -239,9 +239,9 @@ Finally, publish the net-monitor project into the tomcat server: open the _Serve
 
     This will create `src/main/javascript/public/net-monitor/net-monitor-*.js` from `src/main/javascript/src/net-monitor.js` and relative dependencies in `node_modules`
 
-- Use webpack and Babel to transpile, add polyfill, minify and package the JavaScript module.
+- Finally, run webpack in listen mode:
 
-  `c:\net-monitor> webpack --verbose
+  `c:\net-monitor> webpack -w`
 
 
 # Support
@@ -270,5 +270,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUyMzc0MTYxNV19
+eyJoaXN0b3J5IjpbMTI5NzA2MTQ5MF19
 -->
