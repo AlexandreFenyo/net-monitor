@@ -252,7 +252,7 @@ You can now start the server and visit the demo on http://localhost:8080/net-mon
 Notes:
 - if you apply changes to the Java sources or resources, Eclipse will automatically reload the servlet.
 - If you apply changes to the `webpack.config.js` configuration file, you should restart webpack.
-- If you apply changes to the JavaScript sources in `src\main\javascript\src`, you need to wait for webpack to apply changes to the `src\main\javascript\public` , then refresh the project in the Project Explorer window (select the project and type F5).
+- If you apply changes to the JavaScript sources in `src\main\javascript\src`, you need to wait for webpack to apply changes into the `src\main\javascript\public` directory, then refresh the project in the Project Explorer window (select the project and type F5).
 
 # Support
 
@@ -280,5 +280,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjA1NDA3MDEwXX0=
+eyJoaXN0b3J5IjpbLTE3NTQ5MzE2NzJdfQ==
 -->
