@@ -177,7 +177,7 @@ A recent version of npm has been installed, as a dependency of this recent nodej
   - Now, you can access the demo application on:
 http://localhost:8080/net-monitor
 
-  From a remote host, use:
+    From a remote host, use:
 http://HOSTNAME:8080/net-monitor
 
   - The module is available here:
@@ -222,5 +222,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNjA5ODMzODBdfQ==
+eyJoaXN0b3J5IjpbLTc2MzcxMjUzMl19
 -->
