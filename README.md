@@ -6,8 +6,8 @@ If you have installed the JEE server that comes with net-monitor, you have also 
 
 Suppose the server is running on host `host` and port `port`:
 - the standalone build is available on:
-  http(s)://host:port/net-monitor/javascript/public/net-monitor.bundle.min.js
-- the standalone build is available on:
+  http(s)://host:port/net-monitor/javascript/public/net-monitor.standalone.min.js
+- the bundle build is available on:
   http(s)://host:port/net-monitor/javascript/public/net-monitor.bundle.min.js
 
 ### select the correct build
@@ -209,5 +209,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUxODQ4MzgzOV19
+eyJoaXN0b3J5IjpbOTQ4MDUxOTQxXX0=
 -->
