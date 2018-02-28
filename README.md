@@ -203,7 +203,7 @@ user% mvn tomcat7:run-war
 
 ## Windows + Eclipse
 
-### install in Eclipse
+### install Eclipse
 
 The [sources available from GitHub](https://github.com/AlexandreFenyo/net-monitor) can be imported in [Eclipse](https://www.eclipse.org/) as a project with [Spring MVC](http://www.springframework.org/) and  [Maven](https://maven.apache.org/) natures.
 
@@ -272,5 +272,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY2NDY5NTAzM119
+eyJoaXN0b3J5IjpbMTQ1NDg3NTUxNl19
 -->
