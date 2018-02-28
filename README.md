@@ -3,7 +3,7 @@
 ## Install from the JEE server
 
 ### base URL
-The JEE server that comes with net-monitor is also a repository of a client installation.
+The JEE server that comes with net-monitor is also a repository of a client installation. If the server is running on host `host` and port `port`, the base URL
 
 ### select the correct build
 
@@ -204,5 +204,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwNDcyODUwMzFdfQ==
+eyJoaXN0b3J5IjpbNjk1MjkwMTUwXX0=
 -->
