@@ -1,5 +1,26 @@
 # Client installation
 
+## Install from the JEE server
+
+### base URL
+The Cloudflare base URL that contains each build is https://eowyn.eu.org/cloudflare/
+
+### select the correct build
+
+- Standalone builds are available using this template:
+net-monitor-[VERSION].standalone.min.js
+
+  Example: https://eowyn.eu.org/cloudflare/net-monitor-1.0.10.standalone.min.js
+
+  The latest standalone build is https://eowyn.eu.org/cloudflare/net-monitor-latest.standalone.min.js
+
+- Bundle builds are available using this template:
+net-monitor-[VERSION].bundle.min.js
+
+  Example: https://eowyn.eu.org/cloudflare/net-monitor-1.0.10.bundle.min.js
+
+  The latest bundle build is https://eowyn.eu.org/cloudflare/net-monitor-latest.bundle.min.js
+  
 ## Install from the npmjs repository
 
 ### package managers
@@ -183,5 +204,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTg1NTM0NjA1XX0=
+eyJoaXN0b3J5IjpbLTEwNjM0NDc0OTddfQ==
 -->
