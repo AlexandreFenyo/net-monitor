@@ -149,12 +149,15 @@ If you do not bind to a recent repository, the node version installed may be too
 A recent version of npm has been installed, as a dependency of this recent nodejs.
 
   - Install yarn:
+
     `root# npm install -g yarn`
 
   - Populate JavaScript module dependencies into `node_modules` repository:
+
     `user% yarn install`
 
   - Use webpack and Babel to transpile, add polyfill, minify and package the JavaScript module:
+
     `user% npx webpack`
     
     This will create `src/main/javascript/public/net-monitor/net-monitor.min.js` from `src/main/javascript/src/net-monitor.js` and relative dependencies in `node_modules`
@@ -225,5 +228,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAzMzgzMzgxOV19
+eyJoaXN0b3J5IjpbNzM2ODA5MDk3XX0=
 -->
