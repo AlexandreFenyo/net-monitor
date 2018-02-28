@@ -19,23 +19,28 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>html#40</title>
+<title>html#46</title>
 
-<!-- ------------------------------------- -->
-<!-- UNCOMMENT THESE LINES WHEN DEVELOPING -->
-<!-- and use a recent version of Firefox -->
-<!-- we include dependent libraries since import keyword is not supported in browsers (at the beginning of net-monitor.js)  -->
+ 
+<!-- bundle without babel -->
+<script src="javascript/public/net-monitor.bundle.dev.js"></script>
+ 
+<!-- bundle with babel -->
+<!-- <script src="javascript/public/net-monitor.bundle.min.js"></script> -->
+
+<!-- standalone without babel -->
 <!-- <script src="jquery/dist/jquery.min.js"></script>
 <script src="moment/moment.js"></script>
 <script src="webstomp-client/dist/webstomp.min.js"></script>
 <script src="chart.js/dist/Chart.bundle.min.js"></script>
-<script src="javascript/public/net-monitor.dev.js"></script> -->
-<!-- ------------------------------------- -->
+<script src="javascript/public/net-monitor.standalone.dev.js"></script> -->
 
-<!-- ------------------------------------- -->
-<!-- COMMENT THIS LINE WHEN DEVELOPING     -->
-<script src="javascript/public/net-monitor.min.js"></script>
-<!-- ------------------------------------- -->
+ <!-- standalone with babel -->
+<!-- <script src="jquery/dist/jquery.min.js"></script>
+<script src="moment/moment.js"></script>
+<script src="webstomp-client/dist/webstomp.min.js"></script>
+<script src="chart.js/dist/Chart.bundle.min.js"></script>
+<script src="javascript/public/net-monitor.standalone.min.js"></script> -->
  
 </head>
 
