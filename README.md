@@ -111,7 +111,7 @@ var manager = NetMonitor.manage(charts);
 ## common JS
 
 ```javascript
-import NetMonitor from 'net-monitor.bundle.min.js';
+var NetMonitor = require('net-monitor.bundle.min.js');
 var charts = { ... };
 var manager = NetMonitor.manage(charts);
 ```
@@ -221,5 +221,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1NDE3Mjk1NDFdfQ==
+eyJoaXN0b3J5IjpbMTI4NTQ5Njk5MF19
 -->
