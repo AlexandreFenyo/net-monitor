@@ -143,10 +143,10 @@ Note: this example is for Linux Ubuntu 16.04 LTS.
       `root# apt-get install nodejs`
 
       Note 1:
-If you do not bind to a recent repository, the node version installed may be too much older to work correctly with yarn (see yarn installation below).
+if you do not bind to a recent repository, the node version installed may be too much older to work correctly with yarn (see yarn installation below).
 
       Note 2:
-A recent version of npm has been installed, as a dependency of this recent nodejs.
+a recent version of npm has been installed, as a dependency of this recent nodejs.
 
   - Install yarn:
 
@@ -235,5 +235,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0NTg0NjA1NTNdfQ==
+eyJoaXN0b3J5IjpbMjAxMzYwNTAzXX0=
 -->
