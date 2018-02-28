@@ -134,6 +134,7 @@ Note: this example is for Linux Ubuntu 16.04 LTS.
 
   - Install a **recent** version of nodejs:
     - Bind to a recent node repository:
+  
       `root# curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -`
       
     - Install node from this repository:
@@ -222,5 +223,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyMjc5MTQ3OV19
+eyJoaXN0b3J5IjpbNTcyMTI3NTc5XX0=
 -->
