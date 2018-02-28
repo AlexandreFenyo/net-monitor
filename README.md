@@ -184,7 +184,7 @@ a recent version of npm has been installed, as a dependency of this recent nodej
 
     `user% mvn tomcat7:run-war`
 
-- Access to the generated resources
+- Access to the generated resources:
 
   - Now, you can access the demo application on: http://localhost:8080/net-monitor
 
@@ -280,5 +280,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzc3ODg1MDM2XX0=
+eyJoaXN0b3J5IjpbNjI4MDg5MDEyXX0=
 -->
