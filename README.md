@@ -120,7 +120,7 @@ var manager = NetMonitor.manage(charts);
 
 ## Linux
 
-#### first installation
+### first installation
 
 Note: this example is for Linux Ubuntu 16.04 LTS.
 
@@ -221,5 +221,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM3NzI0Mjk2XX0=
+eyJoaXN0b3J5IjpbLTE3MzgxODI1ODldfQ==
 -->
