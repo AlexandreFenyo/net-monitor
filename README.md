@@ -38,10 +38,10 @@ net-monitor-[VERSION].standalone.min.js
 Example: https://eowyn.eu.org/cloudflare/net-monitor-1.0.10.standalone.min.js
 The latest standalone build is here: https://eowyn.eu.org/cloudflare/net-monitor-latest.standalone.min.js
 
-- Bundled builds are available using this template:
+- Bundle builds are available using this template:
 net-monitor-[VERSION].bundle.min.js
 Example: https://eowyn.eu.org/cloudflare/net-monitor-1.0.10.bundle.min.js
-The latest bundled build is here: https://eowyn.eu.org/cloudflare/net-monitor-latest.bundle.min.js
+The latest bundle build is here: https://eowyn.eu.org/cloudflare/net-monitor-latest.bundle.min.js
 
 
 ## Build from sources
@@ -149,5 +149,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUzODE1MjU0NF19
+eyJoaXN0b3J5IjpbNTAxODk3NDUyXX0=
 -->
