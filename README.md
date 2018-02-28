@@ -49,7 +49,7 @@ net-monitor-[VERSION].bundle.min.js
 
 # Client integration
 
-
+net-monitor can be integrated with plain JavaScript or with different module loaders. The examples below show how to load Chart.js in different systems.
 
 
 ## Build from sources
@@ -157,5 +157,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTEzMzQ5MDY3NF19
+eyJoaXN0b3J5IjpbLTE1NjY3OTM4OV19
 -->
