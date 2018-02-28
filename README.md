@@ -133,11 +133,13 @@ Note: this example is for Linux Ubuntu 16.04 LTS.
 - JavaScript part (client module for use in browsers):
 
   - Install a **recent** version of nodejs:
+
     - Bind to a recent node repository:
-  
+
       `root# curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -`
       
     - Install node from this repository:
+
       `root# apt-get install nodejs`
       
       Note 1:
@@ -223,5 +225,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTcyMTI3NTc5XX0=
+eyJoaXN0b3J5IjpbLTE5Mzg5NzEzNjVdfQ==
 -->
