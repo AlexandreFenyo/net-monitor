@@ -245,6 +245,10 @@ Finally, publish the net-monitor project into the tomcat server: open the _Serve
 
   `c:\net-monitor> webpack -w`
 
+### start the server
+
+You can now start the server and visit the demo  http://localhost:8080/net-monitor to visit
+
 
 # Support
 
@@ -272,5 +276,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI2NzcwNzY3OF19
+eyJoaXN0b3J5IjpbLTIwMDQzMzI3NzhdfQ==
 -->
