@@ -213,7 +213,7 @@ Follow these instructions:
 
 Now, go to menu **File > Import**, choose _Projects from Git_ and clone net-monitor from https://github.com/AlexandreFenyo/net-monitor.git
 
-Finally, publish 
+Finally, publish the 
 
 
 # Support
@@ -242,5 +242,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMjg2NTI4NDddfQ==
+eyJoaXN0b3J5IjpbLTYwODgyNDQxNF19
 -->
