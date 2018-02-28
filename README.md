@@ -14,14 +14,7 @@ You can also access the dedicated page on npmjs: https://www.npmjs.com/package/@
 
 `yarn add @fenyo/net-monitor`
 
-## Install from the Cloudflare CDN
-
-You can access the 
-https://eowyn.eu.org/cloudflare/
-
-
-
-## Select the correct build
+### Select the correct build
 
 There are two different builds available:
 
@@ -30,6 +23,13 @@ There are two different builds available:
 
 - A build bundled with dependencies: 
 `src/main/javascript/public/net-monitor.bundle.min.js`
+
+## Install from the Cloudflare CDN
+
+You can access the 
+https://eowyn.eu.org/cloudflare/
+
+
 
 ## Build from sources
 
@@ -136,5 +136,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY3OTg3NzI3NV19
+eyJoaXN0b3J5IjpbMTM4MzA3NjYxOF19
 -->
