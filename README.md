@@ -3,7 +3,7 @@
 ## Install from the JEE server
 
 ### base URL
-The Cloudflare base URL that contains each build is https://eowyn.eu.org/cloudflare/
+The JEE server that comes with net-monitor is also a repository of a client installation.
 
 ### select the correct build
 
@@ -204,5 +204,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwNjM0NDc0OTddfQ==
+eyJoaXN0b3J5IjpbLTEwNDcyODUwMzFdfQ==
 -->
