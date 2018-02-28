@@ -52,6 +52,7 @@ net-monitor-[VERSION].bundle.min.js
 net-monitor can be integrated with plain JavaScript or with different module loaders. The examples below show how to load net-monitor in different systems.
 
 
+
 ## Build from sources
 
 ### Linux
@@ -157,5 +158,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3ODQ0MjcyMTRdfQ==
+eyJoaXN0b3J5IjpbMTUxMTU5MzA5Ml19
 -->
