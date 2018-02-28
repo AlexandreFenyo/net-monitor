@@ -23,7 +23,7 @@ There are two different builds available:
 - A standalone build:
 `src/main/javascript/public/net-monitor.standalone.min.js`
 
-- A build bundled with dependencies: 
+- A bundle build with dependencies: 
 `src/main/javascript/public/net-monitor.bundle.min.js`
 
 ## Install from the Cloudflare CDN
@@ -149,5 +149,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTAxODk3NDUyXX0=
+eyJoaXN0b3J5IjpbLTEyOTc1NTYzMDZdfQ==
 -->
