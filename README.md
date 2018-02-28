@@ -14,7 +14,7 @@ You can install net-monitor from the [npmjs repository](https://www.npmjs.com/) 
 
 ## Select the correct build
 
-There are four different builds available 
+There are four different builds available:
 src/main/javascript/public/net-monitor.bundle.dev.js
 
 
@@ -123,5 +123,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjU1MjE5MjU5XX0=
+eyJoaXN0b3J5IjpbLTE5NDk2MDgzNTFdfQ==
 -->
