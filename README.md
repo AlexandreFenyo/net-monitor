@@ -16,7 +16,7 @@ You can also access the dedicated page on npmjs: https://www.npmjs.com/package/@
 
 `yarn add @fenyo/net-monitor`
 
-### Select the correct build
+### select the correct build
 
 There are two different builds available:
 
@@ -28,10 +28,10 @@ There are two different builds available:
 
 ## Install from the Cloudflare CDN
 
-### Base URL
+### base URL
 The Cloudflare base URL that contains each build is https://eowyn.eu.org/cloudflare/
 
-### Select the correct build
+### select the correct build
 
 - Standalone builds are available using this template:
 net-monitor-[VERSION].standalone.min.js
@@ -52,7 +52,7 @@ net-monitor-[VERSION].bundle.min.js
 
 ### Linux
 
-#### First installation
+#### first installation
 
 Note: this example is for Linux Ubuntu 16.04 LTS.
 
@@ -153,5 +153,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTAzNzE5OTgyXX0=
+eyJoaXN0b3J5IjpbMTQ5OTM0NDg3OF19
 -->
