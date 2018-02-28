@@ -15,17 +15,8 @@
 
 "use strict";
 
-const version = "67";
-
-////////////////////////////////////////////////////////////////
-// DEVELOPMENT ENVIRONMENT INIT - without Babel
-
-// "import" keyword is not supported by web browsers => not interpreted in development environment (i.e. without using Babel)
-// This is why we must include the following lines at the top of development environment .html files:
-// <script src="jquery/dist/jquery.min.js"></script>
-// <script src="moment/moment.js"></script>
-// <script src="webstomp-client/dist/webstomp.min.js"></script>
-// <script src="chart.js/dist/Chart.bundle.min.js"></script>
+const config = require('config');
+const version = "92";
 
 var debug = true;
 
@@ -45,43 +36,20 @@ export const getChart = function (manager, dataSet) {
 	_getChart(manager, dataSet);
 };
 
-// END DEVELOPMENT ENVIRONMENT INIT
-////////////////////////////////////////////////////////////////
-
-////////////////////////////////////////////////////////////////
-// PRODUCTION ENVIRONMENT INIT - with Babel
-
-import $ from "jquery/dist/jquery.min.js";
-import moment from "moment/moment.js";
-import webstomp from "webstomp-client/dist/webstomp.min.js";
-import Chart from "chart.js/dist/Chart.bundle.min.js";
-
-try {
-	module.exports = {
-			manage: function (charts, callbackDone) {
-				return _manage(charts, callbackDone);
-			},
-			unmanage: function (manager, callbackDone) {
-				_unmanage(manager, callbackDone);
-			},
-			pushValue: function (manager, dataSet, value, lifeTime, callbackDone) {
-				pushValue(manager, dataSet, value, lifeTime, callbackDone);
-			},
-			getChart: function (manager, dataSet) {
-				_manage(manager, dataSet);
-			}
-	};
-	debug = false;
-} catch (error) {
-	// running in dev env => module.exports is constant
-	console.log(error);
+if (config.moduleType === "bundle") {
+	var $ = config.$;
+	var moment = config.moment;
+	var webstomp = config.webstomp;
+	var Chart = config.Chart;
+} else {
+	var $ = window.$;
+	var moment = window.moment;
+	var webstomp = window.webstomp;
+	var Chart = window.Chart;
 }
 
-//END PRODUCTION ENVIRONMENT INIT
-////////////////////////////////////////////////////////////////
-
-//checking updates are taken into account
-if (debug) $(function () { console.error("================> js#" + version); });
+//checking that updates are taken into account
+if (debug) $(function () { console.error("===============================> js#" + version); });
 
 var chart2manager = new Object();
 

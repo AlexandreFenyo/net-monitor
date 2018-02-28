@@ -17,104 +17,92 @@ const webpack = require("webpack")
 const path = require("path")
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 
-let config_prod = {
-		entry: [ "babel-polyfill", "./src/main/javascript/src/net-monitor.js" ],
-		output: {
-			path: path.resolve(__dirname, "./src/main/javascript/public"),
-		    filename: "./net-monitor.min.js",
-		    libraryTarget: 'var',
-		    library: 'NetMonitor'
-		},
-		module: {
-			rules: [{
-				test: /\.js$/,
-				exclude: /node_modules/,
-				loader: "babel-loader"
-			}]
-		  },
-		plugins: [
-			new UglifyJsPlugin()
-			]
-	}
-
-let config_dev = {
-	entry: [ "./src/main/javascript/src/net-monitor.js" ],
+let config_bundle_dev = {
+	entry: { app: "./src/main/javascript/src/net-monitor.js" },
 	output: {
 		path: path.resolve(__dirname, "./src/main/javascript/public"),
-	    filename: "./net-monitor.dev.js",
+	    filename: "./net-monitor.bundle.dev.js",
 	    libraryTarget: 'var',
-	    library: 'NetMonitor',
+	    library: 'NetMonitor'
 	},
-	module: {},
-	plugins: []
+	module: {
+		rules: []
+	},
+	plugins: [],
+	resolve: {
+		alias: {
+			config: './bundle-config.js'
+		}
+	}
 }
 
-//let config_ie11 = {
-//	entry: [ "babel-polyfill", "./src/main/javascript/src/net-monitor.js" ],
-//	output: {
-//		path: path.resolve(__dirname, "./src/main/javascript/public"),
-//	    filename: "./net-monitor.dev.ie11.js",
-//	    libraryTarget: 'var',
-//		library: 'NetMonitor'
-//	},
-//	module: {
-//		rules: [{
-//			test: /\.js$/,
-//			exclude: /node_modules/,
-//			loader: "babel-loader"
-//		}]
-//	  },
-//	plugins: []
-//}
+let config_bundle_prod = {
+	entry: [ "babel-polyfill", "./src/main/javascript/src/net-monitor.js" ],
+	output: {
+		path: path.resolve(__dirname, "./src/main/javascript/public"),
+	    filename: "./net-monitor.bundle.min.js",
+	    libraryTarget: 'var',
+	    library: 'NetMonitor'
+	},
+	module: {
+		rules: [{
+			test: /\.js$/,
+			exclude: /node_modules/,
+			loader: "babel-loader"
+		}]
+	},
+	plugins: [
+		new UglifyJsPlugin()
+	],
+	resolve: {
+		alias: {
+			config: './bundle-config.js'
+		}
+	}
+}
 
-//let config_prod = {
-//	entry: [ "babel-polyfill", "./src/main/javascript/src/net-monitor.js" ],
-//	output: {
-//		path: path.resolve(__dirname, "./src/main/javascript/public"),
-//	    filename: "./net-monitor.min.js",
-//	    libraryTarget: 'var',
-//	    library: 'NetMonitor'
-//	},
-//	module: {
-//		rules: [{
-//			test: /\.js$/,
-//			exclude: /node_modules/,
-//			loader: "babel-loader"
-//		}]
-//	  },
-//	plugins: [
-//		new UglifyJsPlugin()
-//		]
-//}
-//
-//let config_dev = {
-//entry: [ "./src/main/javascript/src/net-monitor.js" ],
-//output: {
-//	path: path.resolve(__dirname, "./src/main/javascript/public"),
-//    filename: "./net-monitor.dev.js",
-//    libraryTarget: 'var',
-//    library: 'NetMonitor',
-//},
-//module: {},
-//plugins: []
-//}
-//
-//let config_ie11 = {
-//entry: [ "babel-polyfill", "./src/main/javascript/src/net-monitor.js" ],
-//output: {
-//	path: path.resolve(__dirname, "./src/main/javascript/public"),
-//    filename: "./net-monitor.dev.ie11.js",
-//    libraryTarget: 'var',
-//	library: 'NetMonitor'
-//},
-//module: {
-//	rules: [{
-//		test: /\.js$/,
-//		exclude: /node_modules/,
-//		loader: "babel-loader"
-//	}]
-//  },
-//plugins: []
-//}
+let config_standalone_dev = {
+	entry: { app: "./src/main/javascript/src/net-monitor.js" },
+	output: {
+		path: path.resolve(__dirname, "./src/main/javascript/public"),
+	    filename: "./net-monitor.standalone.dev.js",
+	    libraryTarget: 'var',
+	    library: 'NetMonitor'
+	},
+	module: {
+		rules: []
+	},
+	plugins: [],
+	resolve: {
+		alias: {
+			config: './standalone-config.js'
+		}
+	}
+}
 
- module.exports = [ config_prod, config_dev /* , config_ie11 */ ];
+let config_standalone_prod = {
+	entry: [ "babel-polyfill", "./src/main/javascript/src/net-monitor.js" ],
+	output: {
+		path: path.resolve(__dirname, "./src/main/javascript/public"),
+		filename: "./net-monitor.standalone.min.js",
+	    libraryTarget: 'var',
+	    library: 'NetMonitor'
+	},
+	module: {
+		rules: [{
+			test: /\.js$/,
+			exclude: /node_modules/,
+			loader: "babel-loader"
+		}]
+	},
+	plugins: [
+		new UglifyJsPlugin()
+	],
+	resolve: {
+		alias: {
+			config: './standalone-config.js'
+		}
+	}
+}
+
+module.exports = [ config_standalone_prod, config_standalone_dev, config_bundle_dev, config_bundle_prod ];
