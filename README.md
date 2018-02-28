@@ -104,7 +104,8 @@ Note that the dependencies are also installed on the server.
 
 ```javascript
 import NetMonitor from 'net-monitor.bundle.min.js';
-var myChart = new Chart(ctx, {...});
+var charts = { ... };
+var manager = NetMonitor.manage(charts);
 ```
 
 
@@ -213,5 +214,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzcxMDkxNzldfQ==
+eyJoaXN0b3J5IjpbMTI5OTc4MDcwNl19
 -->
