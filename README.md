@@ -272,6 +272,7 @@ For instance, on Cloudflare, you can access the debugging resources here:
 - bundle debugging build:
 [https://eowyn.eu.org/cloudflare/net-monitor-latest.bundle.min.js](https://eowyn.eu.org/cloudflare/net-monitor-latest.bundle.min.js)
 
+Using the standalone debugging build is the easiest way to debug thi
 
 # Support
 
@@ -291,5 +292,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3Njg1Nzc5MTldfQ==
+eyJoaXN0b3J5IjpbLTExNjA2MDk0NDJdfQ==
 -->
