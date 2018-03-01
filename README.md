@@ -254,6 +254,10 @@ Notes:
 - If you apply changes to the `webpack.config.js` configuration file, you should restart webpack and restart the server.
 - If you apply changes to the JavaScript sources in `src\main\javascript\src`, you need to wait for webpack to apply changes into the `src\main\javascript\public` directory. Then refresh the project in the _Project Explorer_ window (select the project and type F5), for Eclipse to publish the new bundle and standalone builds.
 
+## debugging
+
+You can 
+
 # Support
 
 Best-effort support is available here :
@@ -272,5 +276,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNzkwNjM1OTNdfQ==
+eyJoaXN0b3J5IjpbLTI0NTA2MTIwMF19
 -->
