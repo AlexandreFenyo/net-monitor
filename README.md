@@ -256,7 +256,7 @@ Notes:
 
 ## debugging
 
-Two debugging builds are available: just replace _min_ with _dev_ in the path to the JavaScript resources.
+Two debugging builds are available from the npmjs repository, the Cloudflare CDN and the JEE server: just replace _min_ with _dev_ in the path to the JavaScript resources.
 
 Those builds are:
 - not processed with [Babel](https://babeljs.io/)
@@ -291,5 +291,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1MTgxNTEzN119
+eyJoaXN0b3J5IjpbMTIyMDQ4ODA1NF19
 -->
