@@ -258,6 +258,8 @@ Notes:
 
 Two debugging builds are available: just replace _min_ with _dev_ in the path to the JavaScript resources.
 
+Those builds are not processed with Babel, nor minimized. This is pure 
+
 For instance, on Cloudflare, you can access the debugging resources here:
 
 - standalone debugging build:
@@ -285,5 +287,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYwNjEyMzQ4NV19
+eyJoaXN0b3J5IjpbNTc0ODIyODc5XX0=
 -->
