@@ -260,7 +260,8 @@ Two debugging builds are available: just replace _min_ with _dev_ in the path to
 
 For instance, on Cloudflare, you can access the debugging resources here:
 
-- standalone debugging build:[https://eowyn.eu.org/cloudflare/net-monitor-latest.standalone.min.js](https://eowyn.eu.org/cloudflare/net-monitor-latest.standalone.min.js)
+- standalone debugging build:
+- [https://eowyn.eu.org/cloudflare/net-monitor-latest.standalone.min.js](https://eowyn.eu.org/cloudflare/net-monitor-latest.standalone.min.js)
 - [https://eowyn.eu.org/cloudflare/net-monitor-latest.bundle.min.js](https://eowyn.eu.org/cloudflare/net-monitor-latest.bundle.min.js)
 
 
@@ -282,5 +283,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3MDQ1OTc4M119
+eyJoaXN0b3J5IjpbMTY2MDE3NTQ3Nl19
 -->
