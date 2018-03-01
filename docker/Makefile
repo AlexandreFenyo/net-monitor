@@ -1,5 +1,5 @@
 
-# docker run -p 8888:80 -v /$PWD/net-monitor/config.json:/net-monitor/src/main/webapp/META-INF/config.json -v /$PWD/net-monitor/log4j.xml:/net-monitor/src/main/resources/log4j.xml -t -i fenyoa/net-monitor bash
+# docker run -p 8888:80 -v $PWD/net-monitor/config.json:/net-monitor/src/main/webapp/META-INF/config.json -v $PWD/net-monitor/log4j.xml:/net-monitor/src/main/resources/log4j.xml -t -i fenyoa/net-monitor bash
 
 all:
 	@cat Makefile
