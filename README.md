@@ -260,9 +260,9 @@ Two debugging builds are available from the [npmjs](https://www.npmjs.com/) repo
 
 Those builds are:
 - not processed with [Babel](https://babeljs.io/)
+- not minified
 - not transpiled, so written with a subset of pure [ECMAScript® 2015](http://www.ecma-international.org/ecma-262/6.0/)
 - free of any Polyfill
-- not minified
 
 For instance, on Cloudflare, you can access the debugging resources here:
 
@@ -291,5 +291,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA4ODg3NjgxXX0=
+eyJoaXN0b3J5IjpbLTE3Njg1Nzc5MTldfQ==
 -->
