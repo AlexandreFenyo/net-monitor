@@ -254,7 +254,7 @@ Notes:
 - If you apply changes to the `webpack.config.js` configuration file, you should restart webpack and restart the server.
 - If you apply changes to the JavaScript sources in `src\main\javascript\src`, you need to wait for webpack to apply changes into the `src\main\javascript\public` directory. Then refresh the project in the _Project Explorer_ window (select the project and type F5), for Eclipse to publish the new bundle and standalone builds.
 
-## debugging
+## debugging JavaScript client library
 
 Two debugging builds are available from the [npmjs](https://www.npmjs.com/) repository, the Cloudflare CDN and the JEE server: just replace _min_ with _dev_ in the path to the JavaScript resources.
 
@@ -291,5 +291,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTMwNTEyMDU0N119
+eyJoaXN0b3J5IjpbNzIwMTY1MzAyXX0=
 -->
