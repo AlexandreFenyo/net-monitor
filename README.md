@@ -267,10 +267,10 @@ Those builds are:
 For instance, on Cloudflare, you can access the debugging resources here:
 
 - standalone debugging build:
-[https://eowyn.eu.org/cloudflare/net-monitor-latest.standalone.min.js](https://eowyn.eu.org/cloudflare/net-monitor-latest.standalone.min.js)
+[https://eowyn.eu.org/cloudflare/net-monitor-latest.standalone.dev.js](https://eowyn.eu.org/cloudflare/net-monitor-latest.standalone.dev.js)
 
 - bundle debugging build:
-[https://eowyn.eu.org/cloudflare/net-monitor-latest.bundle.min.js](https://eowyn.eu.org/cloudflare/net-monitor-latest.bundle.min.js)
+[https://eowyn.eu.org/cloudflare/net-monitor-latest.bundle.dev.js](https://eowyn.eu.org/cloudflare/net-monitor-latest.bundle.dev.js)
 
 Using the standalone debugging build is the easiest way to update and debug this software.
 
@@ -292,5 +292,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQzMTU2OTY4NF19
+eyJoaXN0b3J5IjpbLTkwNzI1NzUxNl19
 -->
