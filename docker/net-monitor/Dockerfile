@@ -12,4 +12,4 @@ RUN git clone https://github.com/AlexandreFenyo/net-monitor.git
 WORKDIR "/net-monitor"
 RUN yarn install && npx webpack && mvn install
 RUN mvn tomcat7:deploy || true
-CMD ["mvn", "tomcat7:run"]
+CMD ["mvn", "tomcat7:run-war"]
