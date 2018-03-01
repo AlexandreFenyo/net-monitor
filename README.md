@@ -116,7 +116,7 @@ var charts = { ... };
 var manager = NetMonitor.manage(charts);
 ```
 
-# Build from sources
+# Build from the sources
 
 If you want to contribute to net-monitor, you can build it from the sources with the following recipes.
 
@@ -272,5 +272,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MTE4NjY3MjRdfQ==
+eyJoaXN0b3J5IjpbLTc3NDU5MjMzOV19
 -->
