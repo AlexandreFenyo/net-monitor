@@ -260,7 +260,8 @@ Two debugging builds are available: just replace _min_ with _dev_ in the path to
 
 Those builds are:
 - not processed with [Babel](https://babeljs.io/)
-- not transpiled, so this is a subset of pure ES-2015
+- not transpiled, so written with a subset of pure [ECMAScript® 2015](http://www.ecma-international.org/ecma-262/6.0/)
+- free of any Polyfill
 
 For instance, on Cloudflare, you can access the debugging resources here:
 
@@ -289,5 +290,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUxMDUwNTA2MF19
+eyJoaXN0b3J5IjpbLTEwNTk4MTY0NjFdfQ==
 -->
