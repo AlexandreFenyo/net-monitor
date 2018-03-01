@@ -258,6 +258,11 @@ Notes:
 
 Two debugging builds are available: just replace _min_ with _dev_ in the path to the JavaScript resources.
 
+For instance, on Cloudflare, you can access the debugging resources here:
+
+- [https://eowyn.eu.org/cloudflare/net-monitor-latest.standalone.min.js](https://eowyn.eu.org/cloudflare/net-monitor-latest.standalone.min.js)
+- [https://eowyn.eu.org/cloudflare/net-monitor-latest.bundle.min.js](https://eowyn.eu.org/cloudflare/net-monitor-latest.bundle.min.js)
+
 
 # Support
 
@@ -277,5 +282,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU5OTg1NDAwNV19
+eyJoaXN0b3J5IjpbLTIwMDgwMTk2NzRdfQ==
 -->
