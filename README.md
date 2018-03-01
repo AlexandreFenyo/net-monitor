@@ -258,7 +258,9 @@ Notes:
 
 Two debugging builds are available: just replace _min_ with _dev_ in the path to the JavaScript resources.
 
-Those builds are not processed with Babel, nor minimized. This is pure 
+Those builds are:
+- not processed with [Babel](https://babeljs.io/)
+- not transpiled, so this is a subset of pure ES-2015
 
 For instance, on Cloudflare, you can access the debugging resources here:
 
@@ -287,5 +289,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTc0ODIyODc5XX0=
+eyJoaXN0b3J5IjpbLTUxMDUwNTA2MF19
 -->
