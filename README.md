@@ -256,7 +256,8 @@ Notes:
 
 ## debugging
 
-You can 
+Two degugging builds are available: just replace _min_ with _dev_ in the path to the JavaScript resources.
+
 
 # Support
 
@@ -276,5 +277,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI0NTA2MTIwMF19
+eyJoaXN0b3J5IjpbOTM2MDg0Njg4XX0=
 -->
