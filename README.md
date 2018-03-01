@@ -118,7 +118,7 @@ var manager = NetMonitor.manage(charts);
 
 # Build from the sources
 
-If you want to contribute to net-monitor, you can build it from the sources with the following recipes.
+If you want to contribute to net-monitor, you can build the client and server software from the sources with the following recipes.
 
 ## Linux + Maven
 
@@ -272,5 +272,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc3NDU5MjMzOV19
+eyJoaXN0b3J5IjpbLTExNzkwNjM1OTNdfQ==
 -->
