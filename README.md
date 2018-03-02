@@ -7,7 +7,7 @@ A data set is a time series (i.e. a set of time stamped collected data), maintai
 
 Data sets can only be updated by one of the following two mecanisms:
 
-- a new data, timestamped with the current instant, can be added by an internal probe or by an external web service request to the server.
+- a new data, timestamped with the current instant (corresponding to the instant the data is added into the server memory), can be added by an internal probe or by an external web service request to the server.
 
 ### chart
 
@@ -440,5 +440,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5OTY2MTI0N119
+eyJoaXN0b3J5IjpbLTYyMTU2MzQ3NF19
 -->
