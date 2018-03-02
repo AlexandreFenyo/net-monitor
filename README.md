@@ -1,5 +1,7 @@
 # Server installation
 
+The net-monitor server is a Java application that needs a servlet engine to run with.
+
 ## Install from the WAR archive
 
 You can download the 
@@ -298,5 +300,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMTQzNzk2OTZdfQ==
+eyJoaXN0b3J5IjpbOTU3MDg4NzddfQ==
 -->
