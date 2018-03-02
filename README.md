@@ -5,6 +5,7 @@ Data sets
 manager
 view : link between a chart and a dataset
 
+### lifetime
 
 # Demo
 
@@ -423,5 +424,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc2OTIwMjI5XX0=
+eyJoaXN0b3J5IjpbLTE3OTc1ODE0NTNdfQ==
 -->
