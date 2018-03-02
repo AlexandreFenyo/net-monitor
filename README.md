@@ -124,7 +124,7 @@ net-monitor-[VERSION].bundle.min.js
 
 ## Install from the sources
 
-See the chapter _Build client library and server from the sources_ below to make a build, then get the JavaScript builds from the repository  
+See the chapter _Build client library and server from the sources_ below to make a build, then get the JavaScript builds from the repository  src/main/javascript/public
 
 # Client integration
 
@@ -348,5 +348,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzODc1OTI1NjJdfQ==
+eyJoaXN0b3J5IjpbMTQzMTExMzIzMF19
 -->
