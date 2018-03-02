@@ -10,6 +10,11 @@ All these components are packaged in a single servlet that needs a servlet conta
 
 This servlet is requested by the net-monitor JavaScript client library.
 
+## Install with Docker
+
+Using Docker is the prefered way to install net-monitor.
+
+
 ## Install from the WAR archive in the Cloudflare CDN
 
 ### base URL
@@ -363,5 +368,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg3MjI3Mzk1MF19
+eyJoaXN0b3J5IjpbLTE3OTM3NTkwNzRdfQ==
 -->
