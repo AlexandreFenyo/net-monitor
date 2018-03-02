@@ -39,7 +39,7 @@ Suppose you have chosen port 8888.
 You can now run the container this way, **in foreground**:
 
 ````shell
-user% docker run -p 8888:8080 -v $PWD/net-monitor/config.json:/config.json -v $PWD/net-monitor/log4j.xml:/log4j.xml -t -i fenyoa/net-monitor
+user% docker run --rm -t -i -p 8888:8080 -v $PWD/net-monitor/config.json:/config.json -v $PWD/net-monitor/log4j.xml:/log4j.xml fenyoa/net-monitor
 ````
 
 You can run the container this way, **in the background** (detached mode):
@@ -401,5 +401,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ3MzMyMzIxNl19
+eyJoaXN0b3J5IjpbMTcwNzIyMjczNV19
 -->
