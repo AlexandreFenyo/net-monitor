@@ -15,4 +15,6 @@ WORKDIR "/net-monitor"
 RUN yarn install && npx webpack
 RUN mvn clean compile
 RUN mvn war:exploded
+# this call to tomcat7:deploy will exit with an error but it will download the dependencies we want to download now, not at container startup
+RUN mvn tomcat7:deploy || true
 CMD ["mvn", "tomcat7:run"]
