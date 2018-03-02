@@ -19,4 +19,3 @@ RUN mvn war:exploded
 RUN mvn tomcat7:deploy || true
 ADD startup.sh startup.sh
 CMD ["bash", "startup.sh"]
-#CMD ["mvn", "tomcat7:run"]
