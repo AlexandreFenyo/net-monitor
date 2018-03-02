@@ -51,7 +51,9 @@ user% rm -rf WEB-INF
 
 ## Install from the sources
 
-See the chapter _Build client library and server from the sources_ below to make a build. 
+See the chapter _Build client library and server from the sources_ below to make a build.
+
+Using Linux + Maven, you will be able to find the WAR archive in 
 
 
 # Client installation
@@ -352,5 +354,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwMjI1MDE3ODFdfQ==
+eyJoaXN0b3J5IjpbLTE5NjgwMTY4NTddfQ==
 -->
