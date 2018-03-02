@@ -6,9 +6,9 @@ The net-monitor server is made of three components:
 - a [STOMP](http://jmesnil.net/stomp-websocket/doc/) message broker over [RFC-6455](https://tools.ietf.org/html/rfc6455) [WebSocket](https://en.wikipedia.org/wiki/WebSocket) technology
 - a [SNMP](https://tools.ietf.org/html/rfc1157) v1/v2c/v3 manager
 
-All these components are packaged in a single Servlet that needs a Servlet container to run into. Tomcat is the prefered container for this purpose.
+All these components are packaged in a single servlet that needs a servlet container to run into. Tomcat is the prefered container for this purpose.
 
-This Servlet is requested by the net-monitor JavaScript client library.
+This servlet is requested by the net-monitor JavaScript client library.
 
 ## Install from the WAR archive in the Cloudflare CDN
 
@@ -17,7 +17,7 @@ The [Cloudflare](https://www.cloudflare.com/) base URL that contains each build 
 
 ### select the correct build
 
-**For compatibility purpose, the version of the net-monitor Servlet must be the same as the version of the net-monitor JavaScript client library.**
+**For compatibility purpose, the version of the net-monitor servlet must be the same as the version of the net-monitor JavaScript client library.**
 
 Therefore, when selecting the net-monitor-[VERSION].[standalone|bundle].[min|dev].js client library, choose the corresponding net-monitor-[VERSION].war web archive with the same version.
 
@@ -332,5 +332,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTgzMjc1ODE1Nl19
+eyJoaXN0b3J5IjpbMTg4Nzg2NzU3Ml19
 -->
