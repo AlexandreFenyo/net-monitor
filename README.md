@@ -17,7 +17,7 @@ For integrity purpose, data sets can only be updated by one of the following two
 
 ### chart
 
-
+A chart is a 
 
 ### manager
 
@@ -448,5 +448,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwNzcyODExNjddfQ==
+eyJoaXN0b3J5IjpbLTM1Mjg3Njk2N119
 -->
