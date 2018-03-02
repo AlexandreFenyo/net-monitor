@@ -14,6 +14,11 @@ This servlet is requested by the net-monitor JavaScript client library.
 
 Using Docker is the prefered way to install net-monitor.
 
+### download the image
+
+```shell
+user% docker pull fenyoa/vpnoverdns
+```
 
 ## Install from the WAR archive in the Cloudflare CDN
 
@@ -368,5 +373,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3OTM3NTkwNzRdfQ==
+eyJoaXN0b3J5IjpbLTUxMjI1MjM1MF19
 -->
