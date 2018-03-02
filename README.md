@@ -16,13 +16,11 @@ Using Docker is the prefered way to install net-monitor.
 
 ### download the image
 
-Before running a container with the net-monitor image, you may pull the latest image from [DockerHub](https://hub.docker.com/r/fenyoa/net-monitor/).
+Before running a container with the net-monitor image, you may pull the latest image from [DockerHub](https://hub.docker.com/r/fenyoa/net-monitor/). Anyway, running a container with this image will fetch the image if not already pulled.
 
 ```shell
 user% docker pull fenyoa/net-monitor
 ```
-
-
 
 ## Install from the WAR archive in the Cloudflare CDN
 
@@ -377,5 +375,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI5NTkyNjk3OF19
+eyJoaXN0b3J5IjpbNDE4MDE4MjExXX0=
 -->
