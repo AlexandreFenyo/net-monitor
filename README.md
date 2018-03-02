@@ -27,7 +27,7 @@ The latest web archive build corresponding to the latest client library build is
 
 Before pushing the net-monitor WAR archive in a servlet container, you need to update the _META-INF/config.json_ configuration file contained in the archive.
 
-You do not need to explore the archive to do that, you can simply use `jar` to update the configuration file the following way (we suppose you have a configuration file named _config.json_ and the WAR file in the current directory):
+You do not need to explode the archive to do that, you can simply use `jar` to update the configuration file the following way (we suppose you have a configuration file named _config.json_ and the WAR file in the current directory):
 
 ````shell
 user% mkdir META-INF
@@ -332,5 +332,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzc1ODM2Mjk4XX0=
+eyJoaXN0b3J5IjpbLTE4Mjk1MjE3MDRdfQ==
 -->
