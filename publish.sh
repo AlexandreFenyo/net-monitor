@@ -26,6 +26,7 @@ done
 rm -rf target
 mvn clean compile war:war
 scp -P 2222 target/net-monitor-*-SNAPSHOT.war fenyo@localhost:public_html/eowyn.eu.org/cloudflare/net-monitor-$(jq -r .version < package.json).war
+ssh -p 2222 fenyo@localhost "cd public_html/eowyn.eu.org/cloudflare/; rm -f net-monitor-latest.war ; ln -s net-monitor-$(jq -r .version < package.json).war net-monitor-latest.war"
 
 cd docker
 make build-net-monitor

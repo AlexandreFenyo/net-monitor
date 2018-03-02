@@ -8,8 +8,7 @@ fi
 
 if [ ! -f /log4j.xml ]
 then
-  echo you must specify a log4j.xml file - see documentation
-  exit 1
+  echo you may specify a log4j.xml file - see documentation
 fi
 
 cp /config.json /net-monitor/target/net-monitor-*-SNAPSHOT/META-INF/config.json
