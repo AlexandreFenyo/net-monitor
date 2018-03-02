@@ -19,7 +19,7 @@ For integrity purpose, data sets can only be updated by one of the following two
 
 A chart is a html canvas displaying time series using the [Chart.js](http://www.chartjs.org/) library.
 
-net-monitor aims to create charts for you, and dynamically update the data associated to those charts.
+net-monitor aims to create charts for you, in the browser, and dynamically update the data associated to those charts from the server.
 
 ### manager
 
@@ -454,5 +454,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA1ODc1MzM2N119
+eyJoaXN0b3J5IjpbLTU3OTM3OTEzOV19
 -->
