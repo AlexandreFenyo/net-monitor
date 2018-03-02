@@ -2,7 +2,7 @@
 
 The net-monitor server is made of three components:
 - a REST/JSON web-services server
-- a STOMP message broker over WebSockets
+- a [STOMP](http://jmesnil.net/stomp-websocket/doc/) message broker over [RFC-6455](https://tools.ietf.org/html/rfc6455) [WebSocket](https://en.wikipedia.org/wiki/WebSocket)
 - 
 
 a Java application that needs a servlet engine to run with.
@@ -305,5 +305,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM0MDUyOTk1Ml19
+eyJoaXN0b3J5IjpbLTMzMjA4MzM0M119
 -->
