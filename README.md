@@ -22,6 +22,10 @@ Therefore, when selecting the net-monitor-[VERSION].[standalone|bundle].[min|dev
 
 The latest web archive build corresponding to the latest client library build is https://eowyn.eu.org/cloudflare/net-monitor-latest.war
 
+### update the archive with the configuration file
+
+Before running the net-monitor WAR file _config.json_ 
+
 # Client installation
 
 ## Install from the JEE server
@@ -316,5 +320,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM5MDM3NjYyMl19
+eyJoaXN0b3J5IjpbLTE2Mjc3NzQzMzldfQ==
 -->
