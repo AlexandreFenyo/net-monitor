@@ -5,7 +5,9 @@
 
 A data set is a time series (i.e. a set of time stamped collected data), maintained in the net-manager server memory. A data set typically contains numerical network throughput values.
 
-The only way to update a data set is to add a new data
+Data sets can only be updated by one of the following two mecanisms:
+
+- a new data, timestamped with the current insta
 
 ### chart
 
@@ -438,5 +440,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE4MTg1MDkzNV19
+eyJoaXN0b3J5IjpbNjAxMDczNThdfQ==
 -->
