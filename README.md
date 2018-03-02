@@ -23,7 +23,7 @@ net-monitor aims to create charts for you, and dynamically update the data assoc
 
 ### manager
 
-
+net-monitor lets you delegate the management of charts and data 
 
 ### view : link between a chart and a dataset
 
@@ -452,5 +452,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk2MjAyMTg4XX0=
+eyJoaXN0b3J5IjpbLTIwMDQ5MDI0MDddfQ==
 -->
