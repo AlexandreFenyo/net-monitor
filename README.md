@@ -31,6 +31,9 @@ Before running a container, fetch the following informations:
 - the _config.json_ configuration file,
   you will have to map this file to the container root directory (`/`, not `/root`)
 
+- the _log4j.xml_ configuration file,
+  you will have to map this file to the container root directory (`/`, not `/root`)
+
 - the _log4j.xml_ logging rules file.
 
 
@@ -389,5 +392,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNjU5ODEwNl19
+eyJoaXN0b3J5IjpbMTA1NTMxNzA3M119
 -->
