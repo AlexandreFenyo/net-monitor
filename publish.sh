@@ -1,8 +1,15 @@
 #!/bin/zsh
 
+echo "BEFORE RUNNING THIS SCRIPT:"
 echo "do not forget to run ssh -L 2222:localhost:22 fenyo.net"
 echo "do not forget to update version in package.json prior to running this script"
 echo "do not forget to run mvn clean install"
+echo "do not forget to commit and push to GitHub"
+
+echo "sleeping 5 secs"
+sleep 5
+echo "starting to publish"
+
 # net-monitor.bundle.dev.js  net-monitor.bundle.min.js  net-monitor.standalone.dev.js  net-monitor.standalone.min.js
 
 npx webpack
@@ -17,3 +24,8 @@ do
     ssh -p 2222 fenyo@localhost "cd public_html/eowyn.eu.org/cloudflare/; rm -f net-monitor-latest.$b.$d.js ; ln -s net-monitor-$(jq -r .version < package.json).$b.$d.js net-monitor-latest.$b.$d.js"
   done
 done
+
+cd docker
+make build-net-monitor
+make push-net-monitor
+
