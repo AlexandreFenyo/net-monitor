@@ -37,6 +37,7 @@ Before running a container, fetch the following informations:
 
 
 
+
 ## Install from the WAR archive in the Cloudflare CDN
 
 ### base URL
@@ -390,5 +391,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTcyODI1OTU5NV19
+eyJoaXN0b3J5IjpbMjAxNjk0OTYzOV19
 -->
