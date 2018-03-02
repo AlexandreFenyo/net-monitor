@@ -29,7 +29,7 @@ Before pushing the net-monitor WAR archive in a servlet container, you need to u
 You do not need to explore the archive to do that, you can simply use `jar` to update the configuration file the following way (we suppose you have a configuration file named _config.json_ and the WAR file in the current directory):
 
 ````shell
-
+user% jar uf 
 ````
 
 
@@ -330,5 +330,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYxNzY3MjIyXX0=
+eyJoaXN0b3J5IjpbNzQ4MzIxOTZdfQ==
 -->
