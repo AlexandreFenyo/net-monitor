@@ -48,10 +48,6 @@ You can run the container this way, **in the background** (detached mode):
 user% docker run -p 8888:8080 -v $PWD/net-monitor/config.json:/config.json -v $PWD/net-monitor/log4j.xml:/log4j.xml -d fenyoa/net-monitor
 ````
 
-
-
-
-
 ## Install from the WAR archive in the Cloudflare CDN
 
 ### base URL
@@ -405,5 +401,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg5NjI0NzQzMl19
+eyJoaXN0b3J5IjpbLTQ3MzMyMzIxNl19
 -->
