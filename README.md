@@ -45,7 +45,7 @@ user% docker run --rm -t -i -p 8888:8080 -v $PWD/net-monitor/config.json:/config
 You can run the container this way, **in the background** (detached mode):
 
 ````shell
-user% docker run -p 8888:8080 -v $PWD/net-monitor/config.json:/config.json -v $PWD/net-monitor/log4j.xml:/log4j.xml -d fenyoa/net-monitor
+user% docker run -d -p 8888:8080 -v $PWD/net-monitor/config.json:/config.json -v $PWD/net-monitor/log4j.xml:/log4j.xml fenyoa/net-monitor
 ````
 
 ## Install from the WAR archive in the Cloudflare CDN
@@ -401,5 +401,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTcwNzIyMjczNV19
+eyJoaXN0b3J5IjpbMzM5NzI3MzMxXX0=
 -->
