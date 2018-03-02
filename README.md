@@ -57,10 +57,6 @@ Building with Linux + Maven, you will find the WAR archive here: _net-monitor/ta
 
 Building with Windows + Eclipse, you can [use Eclipse to export the project as war](https://help.eclipse.org/luna/index.jsp?topic=%2Forg.eclipse.wst.webtools.doc.user%2Ftopics%2Ftwcrewar.html) to get the archive.
 
-## run the server
-
-Refer to your servlet container documentation (tomcat is a good choice) to find [how to publish the net-monitor war file](https://tomcat.apache.org/tomcat-8.0-doc/deployer-howto.html).
-
 # Client installation
 
 ## Install from the JEE server
@@ -359,5 +355,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNDMwNTM1MDddfQ==
+eyJoaXN0b3J5IjpbLTExOTUwNDM3NThdfQ==
 -->
