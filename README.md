@@ -3,7 +3,7 @@
 
 ### Data set
 
-A data set is a time series (i.e. a set of time stamped collected data), maintained in the net-manager server memory. A data set typically contains numerical network throughput values collected from a snmp agent. A maximum data lifetime  is associated with each data set.
+A data set is a time series (i.e. a set of time stamped collected data), maintained in the net-manager server memory. A data set typically contains numerical network throughput values collected from a snmp agent. A maximum data lifetime is associated with each data set.
 
 For integrity purpose, data sets can only be updated by one of the following two mecanisms:
 
@@ -448,5 +448,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxOTEyNDAyMV19
+eyJoaXN0b3J5IjpbNTU2ODUzOTcxXX0=
 -->
