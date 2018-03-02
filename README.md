@@ -36,6 +36,18 @@ user% jar uf net-monitor-*.war META-INF/config.json
 user% rm -rf META-INF
 ````
 
+### update the archive with the logging rules
+
+Before pushing the net-monitor WAR archive in a servlet container, you **may** want to update the _META-INF/config.json_ configuration file contained in the archive.
+
+You do not need to explode the archive to do that, you can simply use `jar` to update the configuration file the following way (we suppose you have a configuration file named _config.json_ and the WAR file in the current directory):
+
+````shell
+user% mkdir META-INF
+user% cp config.json META-INF
+user% jar uf net-monitor-*.war META-INF/config.json
+user% rm -rf META-INF
+````
 
 
 # Client installation
@@ -332,5 +344,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4Mjk1MjE3MDRdfQ==
+eyJoaXN0b3J5IjpbMTI1Mjc4NTQ1OV19
 -->
