@@ -7,7 +7,7 @@ The net-monitor server is made of three components:
 
 All these components are packaged in a single Servlet that needs a Servlet container to run into. Tomcat is the prefered container for this purpose.
 
-The version of the net-monitor Servlet must be the same as the version of the net-montu
+The version of the net-monitor Servlet must be the same as the version of the net-monitor client
 
 ## Install from the WAR archive in the Cloudflare CDN
 
@@ -327,5 +327,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0Njc4MzY3NDddfQ==
+eyJoaXN0b3J5IjpbNzA0NzU2NDM5XX0=
 -->
