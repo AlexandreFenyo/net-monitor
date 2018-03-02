@@ -51,7 +51,7 @@ user% rm -rf WEB-INF
 
 ### run the server
 
-Refer to your servlet container documentation to find how to publish the war file.
+Refer to your servlet container documentation to find how to publish the net-monitor war file.
 
 ## Install from the sources
 
@@ -359,5 +359,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzc0NjUzODA1XX0=
+eyJoaXN0b3J5IjpbOTg1NzAzNjcxXX0=
 -->
