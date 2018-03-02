@@ -34,8 +34,11 @@ Before running a container, fetch the following informations:
 - optionally, the _log4j.xml_ logging rules file:
   you may map this file to the container root directory (`/`, not `/root`)
 
+Suppose you have chosen port 8888. You can now run the container this way:
 
-
+````shell
+user% 
+````
 
 
 ## Install from the WAR archive in the Cloudflare CDN
@@ -391,5 +394,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAxNjk0OTYzOV19
+eyJoaXN0b3J5IjpbLTk1MTY4MzgwM119
 -->
