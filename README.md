@@ -26,7 +26,7 @@ user% docker pull fenyoa/net-monitor
 Before running a container, fetch the following informations:
 
 - the port number you want the servlet container to listen to:
-  you will have to forward this port 
+  you will have to forward this port the the 
 - the _config.json_ configuration file,
 - the _log4j.xml_ logging rules file.
 
@@ -386,5 +386,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUzMjM5MDk1OF19
+eyJoaXN0b3J5IjpbLTE2MjE3NDE4NDBdfQ==
 -->
