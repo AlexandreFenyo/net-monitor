@@ -24,7 +24,7 @@ The latest web archive build corresponding to the latest client library build is
 
 ### update the archive with the configuration file
 
-Before pushing the net-monitor WAR archive in a servlet container, you need to update the _META-INF/config.json_ configuration file contained in the archive. You do not need to explore the archive to do that, you can simply 
+Before pushing the net-monitor WAR archive in a servlet container, you need to update the _META-INF/config.json_ configuration file contained in the archive. You do not need to explore the archive to do that, you can simply us
 
 
 
@@ -322,5 +322,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNjQ5NzEwODFdfQ==
+eyJoaXN0b3J5IjpbLTI0OTM5OTk3OV19
 -->
