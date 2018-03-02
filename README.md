@@ -7,7 +7,7 @@ A data set is a time series (i.e. a set of time stamped collected data), maintai
 
 Data sets can only be updated by one of the following two mecanisms:
 
-- a new data, timestamped with the current insta
+- a new data, timestamped with the current instant, 
 
 ### chart
 
@@ -440,5 +440,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjAxMDczNThdfQ==
+eyJoaXN0b3J5IjpbMjE0ODY1NDMyXX0=
 -->
