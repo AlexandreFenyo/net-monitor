@@ -25,6 +25,8 @@ net-monitor aims to create charts for you, and dynamically update the data assoc
 
 net-monitor lets you delegate the management of charts and data sets to a manager. From the point of view of a manager, there is a one-to-one association between a chart and a data set.
 
+The manager creates the chart,
+
 
 
 ### view : link between a chart and a dataset
@@ -454,5 +456,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTcwNjkyNTQyNV19
+eyJoaXN0b3J5IjpbNDI3OTU5OTMzXX0=
 -->
