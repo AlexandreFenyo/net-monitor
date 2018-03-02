@@ -34,11 +34,12 @@ Before running a container, fetch the following informations:
 - optionally, the _log4j.xml_ logging rules file:
   you may map this file to the container root directory (`/`, not `/root`)
 
-Suppose you have chosen port 8888. You can now run the container this way:
+Suppose you have chosen port 8888. You can now run the container this way, in foreground:
 
 ````shell
 user% docker run -p 8888:8080 -v $PWD/net-monitor/config.json:/config.json -v $PWD/net-monitor/log4j.xml:/log4j.xml -t -i fenyoa/net-monitor
 ````
+
 
 
 
@@ -395,5 +396,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUwMzI2ODg3MV19
+eyJoaXN0b3J5IjpbMTcyNjgzMjEyMV19
 -->
