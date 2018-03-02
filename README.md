@@ -15,7 +15,7 @@ For integrity purpose, data sets can only be updated by one of the following two
 
   Keeping one data value older than the lifetime of the data set is useful to correctly draw a line chart representing the data set over its life time: to draw the first segment, having a timestamped value outside the canvas is necessary.
 
-To sum up, a data set has a name, a life time and contains a set of timestamped data.
+**To sum up, a data set has a name, a life time and contains a set of timestamped data.**
 
 ### chart
 
@@ -458,5 +458,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjg3NDY4MjU3XX0=
+eyJoaXN0b3J5IjpbODk3NDUxMjk3XX0=
 -->
