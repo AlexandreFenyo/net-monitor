@@ -25,7 +25,7 @@ user% docker pull fenyoa/net-monitor
 
 Before running a container, fetch the following informations:
 
-- the port number you want the servl
+- the port number you want the servlet container to lis
 
 
 ## Install from the WAR archive in the Cloudflare CDN
@@ -381,5 +381,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTczMzkwMzk5Nl19
+eyJoaXN0b3J5IjpbNjg4Mzg3NTc1XX0=
 -->
