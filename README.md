@@ -49,6 +49,10 @@ user% jar uf net-monitor-*.war WEB-INF/classes/log4j.xml
 user% rm -rf WEB-INF
 ````
 
+### run the server
+
+Refer to your servlet container to find how to publish the 
+
 ## Install from the sources
 
 See the chapter _Build client library and server from the sources_ below to make a build.
@@ -355,5 +359,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExOTUwNDM3NThdfQ==
+eyJoaXN0b3J5IjpbLTE2MTEwNzMyMTNdfQ==
 -->
