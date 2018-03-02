@@ -49,6 +49,10 @@ user% jar uf net-monitor-*.war WEB-INF/classes/log4j.xml
 user% rm -rf WEB-INF
 ````
 
+## Install from the sources
+
+See the chapter _Build client library and server from the sources_ below to make a build. 
+
 
 # Client installation
 
@@ -348,5 +352,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ2NDI2Mjc3MF19
+eyJoaXN0b3J5IjpbLTEwMjI1MDE3ODFdfQ==
 -->
