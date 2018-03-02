@@ -16,6 +16,8 @@ Using Docker is the prefered way to install net-monitor.
 
 ### download the image
 
+Before running a container with the net-monitor image, you may pull the image from DockerHub.
+
 ```shell
 user% docker pull fenyoa/net-monitor
 ```
@@ -373,5 +375,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTgyMTAxMDEzOV19
+eyJoaXN0b3J5IjpbMzc5NDY0NzQ1XX0=
 -->
