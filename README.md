@@ -55,7 +55,7 @@ See the chapter _Build client library and server from the sources_ below to make
 
 Building with Linux + Maven, you will find the WAR archive here: _net-monitor/target/net-monitor-*-SNAPSHOT.war_
 
-Building with Windows + Eclipse, you need to export the project as war
+Building with Windows + Eclipse, you need to export the project as war to get the archive.
 
 # Client installation
 
@@ -355,5 +355,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUxNjM3NDEwOF19
+eyJoaXN0b3J5IjpbMTA3MTQxMjkzNF19
 -->
