@@ -7,6 +7,7 @@ The net-monitor server is made of three components:
 
 All these components are packaged in a single Servlet that needs a Servlet container to run into. Tomcat is the prefered container for this purpose.
 
+The version of the net-monitor Servlet must be the 
 
 ## Install from the WAR archive in the Cloudflare CDN
 
@@ -14,6 +15,8 @@ All these components are packaged in a single Servlet that needs a Servlet conta
 The [Cloudflare](https://www.cloudflare.com/) base URL that contains each build is https://eowyn.eu.org/cloudflare/
 
 ### select the correct build
+
+The 
 
 - Standalone builds are available using this template:
 net-monitor-[VERSION].standalone.min.js
@@ -324,5 +327,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg4NTY4NjgyN119
+eyJoaXN0b3J5IjpbMTYwNjc2NDEwMV19
 -->
