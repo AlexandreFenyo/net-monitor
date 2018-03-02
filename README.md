@@ -13,7 +13,7 @@ For integrity purpose, data sets can only be updated by one of the following two
 
 - When two data values become older than the data set lifetime, the oldest one is removed. Therefore, there can only be one data value older that the data set lifetime, at most.
 
-  Keeping one data value older than the lifetime of the data set is useful to correctly draw a line chart representing the data set over its life time: the first segment ne
+  Keeping one data value older than the lifetime of the data set is useful to correctly draw a line chart representing the data set over its life time: the first segment needs 
 
 ### chart
 
@@ -450,5 +450,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTQwMzI5NTMyXX0=
+eyJoaXN0b3J5IjpbLTcxNDAyNDUzNl19
 -->
