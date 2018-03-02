@@ -23,7 +23,7 @@ user% docker pull fenyoa/net-monitor
 ```
 ### run a container
 
-
+Before running a container, fetch the following informations:
 
 
 ## Install from the WAR archive in the Cloudflare CDN
@@ -379,5 +379,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE4OTI1OTQ2M119
+eyJoaXN0b3J5IjpbMTcyMzY4ODgxNF19
 -->
