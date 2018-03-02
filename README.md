@@ -5,7 +5,7 @@
 
 A data set is a time series (i.e. a set of time stamped collected data), maintained in the net-manager server memory. A data set typically contains numerical network throughput values.
 
-Data sets can only be updated by one of the following two mecanisms:
+For integrity purpose, data sets can only be updated by one of the following two mecanisms:
 
 - a new data, timestamped with the current instant (corresponding to the instant the data is added into the server memory), can be added by an internal probe or by an external web service request to the server. No data can be added with a timestamp in the past or the future. Therefore, the probe or the web service request that add a new data does not need to 
 
@@ -440,5 +440,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUxMDQxMTcyM119
+eyJoaXN0b3J5IjpbLTY4NjA2NjQ4MV19
 -->
