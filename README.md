@@ -31,7 +31,8 @@ You do not need to explore the archive to do that, you can simply use `jar` to u
 ````shell
 user% mkdir META-INF
 user% cp config.json META-INF
-user% jar uf net-monitor-*.war 
+user% jar uf net-monitor-*.war META-INF/config.json
+user% rm -rf META-INF
 ````
 
 
@@ -332,5 +333,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU3OTIwNjc3NV19
+eyJoaXN0b3J5IjpbMTMwNjI5NzE1OF19
 -->
