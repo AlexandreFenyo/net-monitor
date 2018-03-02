@@ -38,9 +38,9 @@ user% rm -rf META-INF
 
 ### update the archive with the logging rules
 
-Before pushing the net-monitor WAR archive in a servlet container, you **may** want to update the _META-INF/config.json_ configuration file contained in the archive.
+Before pushing the net-monitor WAR archive in a servlet container, you **may** want to update the _WEB-INF/classes/log4j.xml_ logging rules file contained in the archive.
 
-You do not need to explode the archive to do that, you can simply use `jar` to update the configuration file the following way (we suppose you have a configuration file named _config.json_ and the WAR file in the current directory):
+You do not need to explode the archive to do that, you can simply use `jar` to update the file the following way (we suppose you have a logging rules file named _log4j.xml_ and the WAR file in the current directory):
 
 ````shell
 user% mkdir META-INF
@@ -344,5 +344,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI1Mjc4NTQ1OV19
+eyJoaXN0b3J5IjpbLTEzNTk1ODc1MzFdfQ==
 -->
