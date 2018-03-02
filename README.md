@@ -3,7 +3,7 @@
 
 ### data set
 
-A data set is a named time series (i.e. a set of time stamped collected data), maintained in the net-manager server memory. A data set typically contains numerical network throughput values collected from a snmp agent. A maximum data lifetime is associated with each data set.
+A net-monitor data set is a named time series (i.e. a set of time stamped collected data), maintained in the net-manager server memory. A data set typically contains numerical network throughput values collected from a snmp agent. A maximum data lifetime is associated with each data set.
 
 For integrity purpose, data sets can only be updated by one of the following two mecanisms:
 
@@ -20,6 +20,10 @@ For integrity purpose, data sets can only be updated by one of the following two
 ### chart
 
 A chart is a html canvas displaying time series using the [Chart.js](http://www.chartjs.org/) library.
+
+### view
+
+A net-monitor view is 
 
 net-monitor aims to create charts for you, in the browser, and dynamically update the data associated to those charts from the server.
 
@@ -458,5 +462,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAyNDU5NDIxM119
+eyJoaXN0b3J5IjpbLTk2MjMwNDcxNV19
 -->
