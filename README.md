@@ -4,6 +4,8 @@
 
 # API
 
+## Creating a chart
+
 # Configuration
 
 
@@ -411,5 +413,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMTkwODAwMTNdfQ==
+eyJoaXN0b3J5IjpbMTM1ODAwOTI5MV19
 -->
