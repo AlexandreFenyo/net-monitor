@@ -3,7 +3,6 @@
 
 ### Data set
 
-### lifetime
 
 ### chart
 
@@ -11,6 +10,7 @@
 
 ### view : link between a chart and a dataset
 
+### lifetime
 
 
 
@@ -432,5 +432,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU4MDU3NTk1OV19
+eyJoaXN0b3J5IjpbMTUwNDUxNTQxN119
 -->
