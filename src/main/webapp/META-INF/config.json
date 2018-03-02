@@ -3,7 +3,7 @@
 	"probes": [
 		{
 		    "__comment_dataset": "replace DISABLEDdataset by dataset to enable this data set example",
-			"DISABLEDdataset": "set1",
+			"dataset": "set1",
 
 			"__comment_lifetime": "life duration in seconds",
 			"lifetime": 3600,
@@ -39,7 +39,7 @@
 		},
 		{
 		    "__comment_dataset": "replace DISABLEDdataset by dataset to enable this data set example",
-			"DISABLEDdataset": "set2",
+			"dataset": "set2",
 			"lifetime": 3600,
 			"type": "snmp",
 			"version": "v2c",
@@ -50,7 +50,7 @@
 		},
 		{
 		    "__comment_dataset": "replace DISABLEDdataset by dataset to enable this data set example",
-			"DISABLEDdataset": "set1",
+			"dataset": "set1",
 			"lifetime": 3600,
 			"type": "snmp",
 			"version": "v2c",
