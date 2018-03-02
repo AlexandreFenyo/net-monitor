@@ -3,7 +3,7 @@
 
 ### Data set
 
-A data set is a set of timestamped collected data, maintained in the net-manager server memory. A datum i
+A data set is a set of timestamped collected data, maintained in the net-manager server memory. A data set typically contains network throughput 
 
 ### chart
 
@@ -13,6 +13,7 @@ A data set is a set of timestamped collected data, maintained in the net-manager
 
 ### lifetime
 
+### Probe
 
 
 
@@ -433,5 +434,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk3NjM3MTU4NF19
+eyJoaXN0b3J5IjpbLTQ1MDUwMjUwM119
 -->
