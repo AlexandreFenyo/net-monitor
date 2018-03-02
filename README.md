@@ -13,7 +13,7 @@ For integrity purpose, data sets can only be updated by one of the following two
 
   Therefore, the probe or the web service request that adds a new data does not need to specify a timestamp.
 
-- when two data become older than the data set lifetime, the 
+- when two data become older than the data set lifetime, the oldest one is removed. Therefore, there can only be one data older that the data set lifetime.
 
 ### chart
 
@@ -446,5 +446,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQxMDQ3MTgyMV19
+eyJoaXN0b3J5IjpbMTQ4OTMyOTcxOF19
 -->
