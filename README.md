@@ -25,7 +25,7 @@ user% docker pull fenyoa/net-monitor
 
 Before running a container, fetch the following informations:
 
-- the port number you want the 
+- the port number you want the server
 
 
 ## Install from the WAR archive in the Cloudflare CDN
@@ -381,5 +381,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ4OTQyNDI0NF19
+eyJoaXN0b3J5IjpbMzk4MjE0Nzk5XX0=
 -->
