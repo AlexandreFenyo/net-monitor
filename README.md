@@ -16,7 +16,7 @@ The [Cloudflare](https://www.cloudflare.com/) base URL that contains each build 
 
 ### select the correct build
 
-**For compatibility purpose, the version of the net-monitor Servlet must be the same as the version of the net-monitor JavaScript client.**
+**For compatibility purpose, the version of the net-monitor Servlet must be the same as the version of the net-monitor JavaScript client library.**
 
 - Standalone builds are available using this template:
 net-monitor-[VERSION].standalone.min.js
@@ -327,5 +327,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgyMjY5MzY5Ml19
+eyJoaXN0b3J5IjpbMTY4NTQwNjQwMV19
 -->
