@@ -25,8 +25,12 @@ user% docker pull fenyoa/net-monitor
 
 Before running a container, fetch the following informations:
 
-- the port number you want the servlet container to listen to,
-- 
+- the port number you want the servlet container to listen to:
+  you 
+- the _config.json_ configuration file,
+- the _log4j.xml_ logging rules file.
+
+
 
 
 ## Install from the WAR archive in the Cloudflare CDN
@@ -382,5 +386,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTcyMjcwNDg2XX0=
+eyJoaXN0b3J5IjpbLTE0Mzg4ODUwNzldfQ==
 -->
