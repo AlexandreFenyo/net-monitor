@@ -1,6 +1,9 @@
 # Server installation
 
-The net-monitor server is a Java application that needs a servlet engine to run with.
+The net-monitor server is made of three components:
+- a REST web-services server and a web-socket server.
+
+a Java application that needs a servlet engine to run with.
 
 ## Install from the WAR archive
 
@@ -300,5 +303,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTU3MDg4NzddfQ==
+eyJoaXN0b3J5IjpbNTQyMDQ1ODc0XX0=
 -->
