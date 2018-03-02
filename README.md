@@ -51,7 +51,7 @@ user% rm -rf WEB-INF
 
 ### run the server
 
-Refer to your servlet container to find how to publish the 
+Refer to your servlet container to find how to publish the war 
 
 ## Install from the sources
 
@@ -359,5 +359,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2MTEwNzMyMTNdfQ==
+eyJoaXN0b3J5IjpbLTI2NDUxNTU4OV19
 -->
