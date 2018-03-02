@@ -122,6 +122,11 @@ net-monitor-[VERSION].bundle.min.js
 
   The latest bundle build is https://eowyn.eu.org/cloudflare/net-monitor-latest.bundle.min.js
 
+## Install from the sources
+
+See the chapter _Build client library and server from the sources_ below.
+The 
+
 # Client integration
 
 net-monitor can be integrated with plain JavaScript or with different module loaders, into your web application. The examples below show how to load net-monitor in different systems.
@@ -344,5 +349,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTI1NDY4MTQwXX0=
+eyJoaXN0b3J5IjpbLTE2NjU5Mzc2OTRdfQ==
 -->
