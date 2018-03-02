@@ -3,7 +3,7 @@
 
 ### Data set
 
-A data set is a set of timestamped collected data, maintained in the net-manager server memory. A data set c
+A data set is a set of timestamped collected data, maintained in the net-manager server memory. A data set currently 
 
 ### chart
 
@@ -433,5 +433,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTgxNTE4NDc1XX0=
+eyJoaXN0b3J5IjpbLTE1ODA0NDI2NDZdfQ==
 -->
