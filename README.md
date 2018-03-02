@@ -23,7 +23,7 @@ A chart is a html canvas displaying time series using the [Chart.js](http://www.
 
 ### view
 
-A net-monitor view is 
+A net-monitor view is a chart used to display the 
 
 net-monitor aims to create charts for you, in the browser, and dynamically update the data associated to those charts from the server.
 
@@ -462,5 +462,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk2MjMwNDcxNV19
+eyJoaXN0b3J5IjpbMTEwNDc2MTcwMV19
 -->
