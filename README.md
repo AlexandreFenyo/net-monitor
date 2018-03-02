@@ -37,8 +37,6 @@ user% rm -rf META-INF
 
 
 
-
-
 # Client installation
 
 ## Install from the JEE server
@@ -333,5 +331,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMwNjI5NzE1OF19
+eyJoaXN0b3J5IjpbLTEyMzkyNTk4Ml19
 -->
