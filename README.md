@@ -43,10 +43,10 @@ Before pushing the net-monitor WAR archive in a servlet container, you **may** w
 You do not need to explode the archive to do that, you can simply use `jar` to update the file the following way (we suppose you have a logging rules file named _log4j.xml_ and the WAR file in the current directory):
 
 ````shell
-user% mkdir META-INF
-user% cp config.json META-INF
-user% jar uf net-monitor-*.war META-INF/config.json
-user% rm -rf META-INF
+user% mkdir -p WEB-INF/classes
+user% cp log4j.xml WEB-INF/classes
+user% jar uf net-monitor-*.war WEB-INF/classes/log4j.xml
+user% rm -rf WEB-INF
 ````
 
 
@@ -344,5 +344,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNTk1ODc1MzFdfQ==
+eyJoaXN0b3J5IjpbODc5NDg0NjAxXX0=
 -->
