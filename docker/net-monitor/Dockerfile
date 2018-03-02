@@ -10,6 +10,7 @@ RUN apt-get install -y nodejs
 RUN npm install -g yarn
 RUN git clone https://github.com/AlexandreFenyo/net-monitor.git
 WORKDIR "/net-monitor"
-RUN yarn install && npx webpack && mvn install
-RUN mvn tomcat7:deploy || true
-CMD ["mvn", "tomcat7:run-war"]
+RUN yarn install && npx webpack
+RUN mvn clean compile
+RUN mvn war:exploded
+CMD ["mvn", "tomcat7:run"]
