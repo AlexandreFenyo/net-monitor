@@ -124,7 +124,7 @@ net-monitor-[VERSION].bundle.min.js
 
 # Client integration
 
-net-monitor can be integrated with plain JavaScript or with different module loaders. The examples below show how to load net-monitor in different systems.
+net-monitor can be integrated with plain JavaScript or with different module loaders, into your web application. The examples below show how to load net-monitor in different systems.
 
 ## script tag with bundle build
 
@@ -344,5 +344,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NTE1NDE5ODddfQ==
+eyJoaXN0b3J5IjpbNTI1NDY4MTQwXX0=
 -->
