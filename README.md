@@ -2,6 +2,8 @@
 
 Charts
 Data sets
+manager
+view : link between a chart and a dataset
 
 
 # Demo
@@ -421,5 +423,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2NzMwMjU3MzhdfQ==
+eyJoaXN0b3J5IjpbLTc2OTIwMjI5XX0=
 -->
