@@ -1,7 +1,10 @@
 # Concepts
 
-Charts
-Data sets
+
+### Data set
+
+### chart
+
 manager
 view : link between a chart and a dataset
 
@@ -424,5 +427,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3OTc1ODE0NTNdfQ==
+eyJoaXN0b3J5IjpbMTU2Mzk0MTI4N119
 -->
