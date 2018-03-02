@@ -1,3 +1,9 @@
+# Server installation
+
+## Install from the WAR archive
+
+You can download the 
+
 # Client installation
 
 ## Install from the JEE server
@@ -292,5 +298,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTkwNzI1NzUxNl19
+eyJoaXN0b3J5IjpbLTIxMTQzNzk2OTZdfQ==
 -->
