@@ -2,7 +2,7 @@
 
 The net-monitor server is made of three components:
 - a REST/JSON web-services server
-- a web-socket server
+- a STOMP message broker based on a WebSocket server
 - 
 
 a Java application that needs a servlet engine to run with.
@@ -305,5 +305,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1NzI0NzMyNDZdfQ==
+eyJoaXN0b3J5IjpbLTIwMzk3NDIxOTldfQ==
 -->
