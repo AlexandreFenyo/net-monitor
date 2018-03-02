@@ -15,6 +15,8 @@ For integrity purpose, data sets can only be updated by one of the following two
 
   Keeping one data value older than the lifetime of the data set is useful to correctly draw a line chart representing the data set over its life time: to draw the first segment, having a timestamped value outside the canvas is necessary.
 
+
+
 ### chart
 
 A chart is a html canvas displaying time series using the [Chart.js](http://www.chartjs.org/) library.
@@ -456,5 +458,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQxNDI3NjQxOF19
+eyJoaXN0b3J5IjpbMTYyNDUxNDMzMF19
 -->
