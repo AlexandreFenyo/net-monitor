@@ -8,9 +8,27 @@ The net-monitor server is made of three components:
 All these components are packaged in a single Servlet that needs a Servlet container to run into. Tomcat is the prefered container for this purpose.
 
 
-## Install from the WAR archive
+## Install from the WAR archive in the Cloudflare CDN
 
-You can download the 
+### base URL
+The [Cloudflare](https://www.cloudflare.com/) base URL that contains each build is https://eowyn.eu.org/cloudflare/
+
+### select the correct build
+
+- Standalone builds are available using this template:
+net-monitor-[VERSION].standalone.min.js
+
+  Example: https://eowyn.eu.org/cloudflare/net-monitor-1.0.10.standalone.min.js
+
+  The latest standalone build is https://eowyn.eu.org/cloudflare/net-monitor-latest.standalone.min.js
+
+- Bundle builds are available using this template:
+net-monitor-[VERSION].bundle.min.js
+
+  Example: https://eowyn.eu.org/cloudflare/net-monitor-1.0.10.bundle.min.js
+
+  The latest bundle build is https://eowyn.eu.org/cloudflare/net-monitor-latest.bundle.min.js
+  
 
 # Client installation
 
@@ -306,5 +324,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5NTg0MzA0MTJdfQ==
+eyJoaXN0b3J5IjpbMTg4NTY4NjgyN119
 -->
