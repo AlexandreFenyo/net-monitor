@@ -49,6 +49,10 @@ user% jar uf net-monitor-*.war WEB-INF/classes/log4j.xml
 user% rm -rf WEB-INF
 ````
 
+### run the server
+
+Refer to your servlet container documentation (tomcat is a good choice) to find [how to publish the net-monitor war file](https://tomcat.apache.org/tomcat-8.0-doc/deployer-howto.html).
+
 ## Install from the sources
 
 See the chapter _Build client library and server from the sources_ below to make a build.
@@ -56,6 +60,12 @@ See the chapter _Build client library and server from the sources_ below to make
 Building with Linux + Maven, you will find the WAR archive here: _net-monitor/target/net-monitor-*-SNAPSHOT.war_
 
 Building with Windows + Eclipse, you can [use Eclipse to export the project as war](https://help.eclipse.org/luna/index.jsp?topic=%2Forg.eclipse.wst.webtools.doc.user%2Ftopics%2Ftwcrewar.html) to get the archive.
+
+### run the server
+
+Refer to your servlet container documentation (tomcat is a good choice) to find [how to publish the net-monitor war file](https://tomcat.apache.org/tomcat-8.0-doc/deployer-howto.html).
+
+
 
 # Client installation
 
@@ -355,5 +365,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExOTUwNDM3NThdfQ==
+eyJoaXN0b3J5IjpbMTkxNDkwNDQ1NF19
 -->
