@@ -65,6 +65,8 @@ Building with Windows + Eclipse, you can [use Eclipse to export the project as w
 
 Refer to your servlet container documentation (tomcat is a good choice) to find [how to publish the net-monitor war file](https://tomcat.apache.org/tomcat-8.0-doc/deployer-howto.html).
 
+## Install with Docker
+
 
 
 # Client installation
@@ -365,5 +367,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkxNDkwNDQ1NF19
+eyJoaXN0b3J5IjpbLTE5NjYzODQ1NDVdfQ==
 -->
