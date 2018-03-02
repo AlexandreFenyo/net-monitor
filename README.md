@@ -21,8 +21,6 @@ A chart is a html canvas displaying time series using the [Chart.js](http://www.
 
 net-monitor aims to create charts for you, and dynamically manage the data associated to those charts.
 
-
-
 ### manager
 
 ### view : link between a chart and a dataset
@@ -452,5 +450,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTY5MzAyNTIwXX0=
+eyJoaXN0b3J5IjpbLTEwODI3NjU5MjRdfQ==
 -->
