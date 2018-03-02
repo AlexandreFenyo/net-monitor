@@ -14,5 +14,5 @@ push-net-monitor:
 	@docker push fenyoa/net-monitor
 
 run-net-monitor:
-	@docker run -p 8888:8080 -v ${PWD}/net-monitor/config.json:/net-monitor/src/main/webapp/META-INF/config.json -v ${PWD}/net-monitor/log4j.xml:/net-monitor/src/main/resources/log4j.xml -t -i fenyoa/net-monitor
+	@docker run -p 8888:8080 -v ${PWD}/net-monitor/config.json:/config.json -v ${PWD}/net-monitor/log4j.xml:/log4j.xml -t -i fenyoa/net-monitor
 
