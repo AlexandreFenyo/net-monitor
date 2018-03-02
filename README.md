@@ -20,7 +20,7 @@ The [Cloudflare](https://www.cloudflare.com/) base URL that contains each build 
 
 Therefore, when selecting the net-monitor-[VERSION].[standalone|bundle].[min|dev].js client library, choose the corresponding net-monitor-[VERSION].war web archive with the same version.
 
-The latest standalone web archive build corresponding to the latest client library build is https://eowyn.eu.org/cloudflare/net-monitor-ltest.war.
+The latest standalone web archive build corresponding to the latest client library build is https://eowyn.eu.org/cloudflare/net-monitor-latest.war.
 
 - Bundle builds are available using this template:
 net-monitor-[VERSION].bundle.min.js
@@ -324,5 +324,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk3OTUzNTM4Ml19
+eyJoaXN0b3J5IjpbMTU5MTc3MTUzXX0=
 -->
