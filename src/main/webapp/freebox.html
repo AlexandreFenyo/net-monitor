@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+
+<!--
+  Copyright 2018 Alexandre Fenyo - alex@fenyo.net - http://fenyo.net
+  
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+
+<html>
+<head>
+<meta charset="UTF-8">
+<title>html#47</title>
+ 
+<!-- bundle without babel -->
+<!-- <script src="javascript/public/net-monitor.bundle.dev.js"></script> -->
+ 
+<!-- bundle with babel -->
+<script src="javascript/public/net-monitor.bundle.min.js"></script>
+
+<!-- standalone without babel -->
+<!-- <script src="jquery/dist/jquery.min.js"></script>
+<script src="moment/moment.js"></script>
+<script src="webstomp-client/dist/webstomp.min.js"></script>
+<script src="chart.js/dist/Chart.bundle.min.js"></script>
+<script src="javascript/public/net-monitor.standalone.dev.js"></script> -->
+
+<!-- standalone with babel -->
+<!-- <script src="jquery/dist/jquery.min.js"></script>
+<script src="moment/moment.js"></script>
+<script src="webstomp-client/dist/webstomp.min.js"></script>
+<script src="chart.js/dist/Chart.bundle.min.js"></script>
+<script src="javascript/public/net-monitor.standalone.min.js"></script> -->
+ 
+</head>
+
+<body>
+
+<script>
+var charts = {
+		// optional URL to access the server:
+		// dispatchUrl: "http://localhost:8080/net-monitor/dispatch",
+		views: [
+			{
+				id: "myChart1",
+				topLabel: "INTERNET DOWNSTREAM",
+				bottomLabel: "ingress",
+				lifeTime: 120,
+				dataSet: "freeboxDownstream"
+			},
+			{
+				id: "myChart2",
+				topLabel: "INTERNET UPSTREAM",
+				bottomLabel: "egress",
+				lifeTime: 120,
+				dataSet: "freeboxUpstream"
+			}
+		]
+};
+
+var manager_charts;
+
+function init_charts() {
+	// example of updating a chart configuration:
+	// manager_chart3.chart["set1"].options.scales.xAxes[0].scaleLabel.labelString = "this is a new label for the 3rd chart";
+}
+</script>
+
+<body onload="manager_charts = NetMonitor.manage(charts); init_charts()">
+
+<br/>
+<button onclick="NetMonitor.pushValue(manager_charts, 'set1', 123, undefined, function () {console.info('value pushed')})">add value to dataset 1</button>
+<br/>
+<!-- 1st chart, displaying last 60 seconds of data set 1 -->
+<canvas id="myChart1" width="800" height="200"></canvas>
+<!-- 2nd chart, displaying last 30 seconds of data set 2 -->
+<canvas id="myChart2" width="800" height="200"></canvas>
+
+</body>
+</html>
