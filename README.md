@@ -231,7 +231,7 @@ Here is an example of a SNMPv2c probe:
 }
 ````
 
-With SNMP
+With SNMPv3 pro
 
 
 # Client API
@@ -647,5 +647,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY2MjE3MjU3NF19
+eyJoaXN0b3J5IjpbLTUwMDExMjcyNF19
 -->
