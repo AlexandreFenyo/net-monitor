@@ -11,7 +11,7 @@ It is made of two parts:
 - a JavaScript client library (module): net-monitor.bundle.min.js
 - a server running in a servlet container, that feeds the client library with data
 
-The implementation is very efficient: clients do not poll the server. Instead, clients subscribe 
+The implementation is very efficient: clients do not poll the server. Instead, clients subscribe to a m
 A very large number of clients can be connected to the same server because the implementation is efficient because the client library doesn
 
 [![general description](https://raw.githubusercontent.com/AlexandreFenyo/net-monitor/master/docs/general-700.png)](https://raw.githubusercontent.com/AlexandreFenyo/net-monitor/master/docs/general.png)
@@ -533,5 +533,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5Njc3OTE0NjhdfQ==
+eyJoaXN0b3J5IjpbNzU4Mjc3NDgzXX0=
 -->
