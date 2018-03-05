@@ -60,7 +60,7 @@ Up to now, we have encountered three types of lifetime:
 
 - the lifetime that a probe specifies when pushing a new value into a data set. For external probes, it can change over the time.
 
-- the lifetime of a view, that defines the time range displayed by the corresponding chart.
+- the lifetime of a view, that defines the time range displayed by the corresponding chart. It should be greater or equal to the lifetime of the associated data set.
 
 Here are the rules that define lifetime updates:
 
@@ -485,5 +485,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjU3MTIyOTIzXX0=
+eyJoaXN0b3J5IjpbLTQ5NzU4NDk4Ml19
 -->
