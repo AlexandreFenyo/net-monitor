@@ -8,8 +8,8 @@ net-monitor is a client / server toolkit. Its purpose is to let you include HTML
 
 It is made of two parts:
 
-- a JavaScript client library (module): net-monitor.bundle.min.js
-- a server running in a servlet container, that collects data and feeds the client library with them
+- a JavaScript client library (module): net-monitor.bundle.min.js;
+- a server running in a servlet container, that collects data and feeds the client library with them.
 
 The implementation is very efficient: clients (browsers) do not poll the server. Instead, clients subscribe to their desired topics (data sets) from a message broker, on top of WebSockets.
 
@@ -535,5 +535,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzg3NDgxNTYyXX0=
+eyJoaXN0b3J5IjpbLTEyMjYyODk0MDddfQ==
 -->
