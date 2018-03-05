@@ -190,7 +190,7 @@ There is currently 3 types of probes:
 Here are the 8 mandatory keys for any SNMP probe: dataset, lifetime, type, version, agent, oid and rate.
 
 - dataset: data set name
-- lifetime: lifetime associated to data collected from this probe
+- lifetime: lifetime used when the data collected from this probe are pushed to the data set
 
 ````json
 {
@@ -621,5 +621,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzMzcwMjk1NzZdfQ==
+eyJoaXN0b3J5IjpbNTMzODUxNzEyXX0=
 -->
