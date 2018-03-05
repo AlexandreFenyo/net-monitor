@@ -1,6 +1,6 @@
 # Concepts
 
-!()[https://raw.githubusercontent.com/AlexandreFenyo/net-monitor/master/docs/animation.png]
+![net-monitor](https://raw.githubusercontent.com/AlexandreFenyo/net-monitor/master/docs/animation.png)
 
 [![general description](https://raw.githubusercontent.com/AlexandreFenyo/net-monitor/master/docs/general-700.png)](https://raw.githubusercontent.com/AlexandreFenyo/net-monitor/master/docs/general.png)
 
@@ -521,5 +521,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc0NjY2OTE4Nl19
+eyJoaXN0b3J5IjpbODkwMTUxMzE0XX0=
 -->
