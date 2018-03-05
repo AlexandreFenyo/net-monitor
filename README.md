@@ -20,7 +20,7 @@ For integrity purpose, data sets can only be updated by one of the following two
 
   Keeping one data value older than the lifetime of the data set is useful to correctly draw a line chart representing the data set over its life time: to draw the first segment, having a timestamped value outside the canvas is necessary.
 
-**To sum up, a data set has a name, a life time and contains a set of timestamped data, maintained in the net-monitor server memory. It is created by a probe, when adding a new value to a named dataset not already instanciated. **
+**To sum up, a data set has a name, a life time and contains a set of timestamped data, maintained in the net-monitor server memory. It is created by a probe, when adding a new value to a named dataset not already instanciated.**
 
 ### Probe
 
@@ -517,5 +517,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg1Njc5MDk2Nl19
+eyJoaXN0b3J5IjpbLTY4MzUxMjg1OF19
 -->
