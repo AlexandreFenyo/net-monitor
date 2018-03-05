@@ -121,6 +121,8 @@ Here are the rules **you** must follow, to display data values correctly in ever
 
 # Server configuration
 
+
+
 # Client API
 
 ## Creating a chart
@@ -534,5 +536,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1NzY1MjAwMjBdfQ==
+eyJoaXN0b3J5IjpbNzY0NTQxMTM2XX0=
 -->
