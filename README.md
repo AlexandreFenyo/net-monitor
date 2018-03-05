@@ -19,7 +19,7 @@ For integrity purpose, data sets can only be updated by one of the following two
 
 ### chart
 
-A chart is a JavaScript object  html canvas displaying time series using the [Chart.js](http://www.chartjs.org/) JavaScript library.
+A chart is a JavaScript object that the [Chart.js](http://www.chartjs.org/) JavaScript library uses to display time series using a html canvas.
 
 ### view
 
@@ -462,5 +462,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU2NDk5MzUxNV19
+eyJoaXN0b3J5IjpbMTE1Mjg3MzU3Ml19
 -->
