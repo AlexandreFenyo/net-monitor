@@ -38,7 +38,7 @@ There are two probe types:
 
   External probes **may choose to specify** a lifetime when pushing a data to a data set. This lifetime can change over the time. When specified, it must always be greater or equal to 0 second.
 
-### chart
+### chartXXX
 
 A chart is a JavaScript object that the [Chart.js](http://www.chartjs.org/) JavaScript library uses to display time series using a html canvas.
 
@@ -485,5 +485,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjU3MTIyOTIzXX0=
+eyJoaXN0b3J5IjpbMTQwODYzNjQ1OV19
 -->
