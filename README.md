@@ -70,7 +70,7 @@ Up to now, we have encountered four types of lifetime:
 
 Here are the rules that define the life cycle of th dataset lifetime:
 
-- when a probe pushes a new value to a data set with a name not already associated to an existing one, a new data set is created. Its initial lifetime is the one specified by the probe for this value. If the probe omits to specify a lifetime (therefore this is an external probe), 
+- when a probe pushes a new value to a data set with a name not already associated to an existing one, a new data set is created. Its initial lifetime is the one specified by the probe for this value. If the probe omits to specify a lifetime (therefore this is an external probe), the lifetime of this new data set is set 0.
 
 - when a probe adds 
 
@@ -491,5 +491,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNjA1MzYwNF19
+eyJoaXN0b3J5IjpbMjI4NTAyODY1XX0=
 -->
