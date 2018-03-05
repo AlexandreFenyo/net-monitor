@@ -243,7 +243,7 @@ With `authPriv`, you must also define:
 -  a value for the key `auth_priv`,  among `DES`, `3DES`, `AES128`, `AES192` and `AES256`.
 - a value for the key `password_priv`
 
-
+Note that one username must have the same auth and priv secrets on every nodes.
 
 
 
@@ -660,5 +660,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIzODY2NDY3OF19
+eyJoaXN0b3J5IjpbLTE5MjA5MzQ2NDNdfQ==
 -->
