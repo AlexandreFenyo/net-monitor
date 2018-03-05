@@ -181,7 +181,7 @@ The internal probes are specified as an array of probe configuration parts, in t
 }
 ````
 
-There is currently 3 types of probes:
+There is currently 3 types of internal probes:
 
 - SNMPv1
 - SNMPv2c
@@ -628,5 +628,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg0MDcyNjEzOV19
+eyJoaXN0b3J5IjpbLTM4NjY0MjEzMl19
 -->
