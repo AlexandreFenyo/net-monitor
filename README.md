@@ -189,7 +189,7 @@ There is currently 3 types of probes:
 
 Here are the 8 mandatory keys for any SNMP probe: dataset, lifetime, type, version, agent, oid and rate.
 
-- dataset: 
+- dataset: data set name
 
 ````json
 {
@@ -620,5 +620,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIzOTUwMTc3NF19
+eyJoaXN0b3J5IjpbMTY5ODcyOTM1MV19
 -->
