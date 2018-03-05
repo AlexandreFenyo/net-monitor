@@ -135,7 +135,31 @@ Depending on the installation way (with Docker, from the WAR archive, from the s
 
 ### log4j.xml
 
+The default logging rules configuration file looks like this:
+````xml
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
 
+	<!-- Appenders -->
+	<appender name="console" class="org.apache.log4j.ConsoleAppender">
+		<param name="Target" value="System.out" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%-5p: %d %c - %m%n" />
+		</layout>
+	</appender>
+
+	<!-- Application Loggers -->
+	<logger name="net.fenyo">
+		<level value="info" />
+	</logger>
+
+	<!-- Root Logger -->
+	<root>
+		<priority value="warn" />
+		<appender-ref ref="console" />
+	</root>
+	
+</log4j:configuration>
+````
 
 
 # Client API
@@ -551,5 +575,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMTE3NTI5M119
+eyJoaXN0b3J5IjpbNTg0MzA1MTA3XX0=
 -->
