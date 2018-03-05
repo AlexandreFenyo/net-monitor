@@ -191,8 +191,9 @@ Here are the 8 mandatory keys for any SNMP probe: dataset, lifetime, type, versi
 
 - dataset: data set name
 - lifetime: lifetime used when a data value collected from this probe is pushed to the data set
+- type: must be `snmp`
+- version: must be `v1`, `v2c` or `v3`, depending on the SNMP version of the agent
 - 
-
 
 ````json
 {
@@ -623,5 +624,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTIzNjUxMDQ2XX0=
+eyJoaXN0b3J5IjpbLTU0Nzc0MTc1M119
 -->
