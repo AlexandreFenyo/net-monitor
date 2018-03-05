@@ -271,7 +271,7 @@ Here is an example of a configuration file with 3 probes: two SNMP v2c and one v
 			"lifetime": 3600,
 			"type": "snmp",
 			"version": "v2c",
-			"agent": "10.69.127.247",
+			"agent": "10.69.127.248",
 			"community": "public",
 			"oid": "1.3.6.1.2.1.2.2.1.16.10101",
 			"rate": 10
@@ -281,7 +281,7 @@ Here is an example of a configuration file with 3 probes: two SNMP v2c and one v
 			"lifetime": 3600,
 			"type": "snmp",
 			"version": "v2c",
-			"agent": "10.69.127.247",
+			"agent": "10.69.127.248",
 			"community": "public",
 			"oid": "1.3.6.1.2.1.2.2.1.10.10102",
 			"rate": 10
@@ -703,5 +703,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTQzOTgxODcwXX0=
+eyJoaXN0b3J5IjpbLTc2MzA5MzA0Ml19
 -->
