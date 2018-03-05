@@ -64,7 +64,7 @@ Here is the operations a manager does, when asked to manage a new chart:
 
 - Then the manager draws the values from this local copy on the chart.
 
-- Finally the manager, waits for messages from the broker 
+- Each time the manager receives a new value from the message broker, it adds the value to the locale copy of the data set and draws it on the chart.
 
 ### lifetime
 
@@ -509,5 +509,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI4OTM0NDcxMV19
+eyJoaXN0b3J5IjpbMTY4MDE3ODc0N119
 -->
