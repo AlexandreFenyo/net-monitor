@@ -66,6 +66,8 @@ Here is the operations a manager does, when asked to manage a new chart:
 
 - Each time the manager receives a new value from the message broker, it adds the value to the locale copy of the data set and draws it on the chart.
 
+- 
+
 ### lifetime
 
 Up to now, we have encountered four types of lifetime:
@@ -509,5 +511,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY4MDE3ODc0N119
+eyJoaXN0b3J5IjpbLTE4MTgwMDk2NzhdfQ==
 -->
