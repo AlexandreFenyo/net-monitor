@@ -60,6 +60,8 @@ Up to now, we have encountered two types of lifetime:
 
 - the lifetime that a probe specifies when pushing a new value into a data set. For external probes, it can change over the time.
 
+- 
+
   Here is the lifecycle of the data set lifetime:
   
   - the data set lifetime initial value is set when the data set is created:
@@ -484,5 +486,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIzMTg3OTM3M119
+eyJoaXN0b3J5IjpbLTEzMzg5NzEyMjJdfQ==
 -->
