@@ -54,7 +54,7 @@ Up to now, we have encountered two types of lifetime:
 
   Here is the lifecycle of this lifetime:
   
-  - 
+  - the data set lifetime initial value is set at da
 
 
 # Demo
@@ -474,5 +474,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTcyNzE5NjQ1Nl19
+eyJoaXN0b3J5IjpbLTI3NzY1NzYwNV19
 -->
