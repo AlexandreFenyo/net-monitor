@@ -1,6 +1,6 @@
 # Concepts
 
-[![support](docs/general-700.png)](docs/general.png)
+[![general description](docs/general-700.png)](docs/general.png)
 
 ### net-monitor goal
 
@@ -519,5 +519,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg1Nzg2MDZdfQ==
+eyJoaXN0b3J5IjpbLTE5OTMyMjQ2MV19
 -->
