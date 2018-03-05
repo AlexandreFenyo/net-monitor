@@ -24,6 +24,11 @@ For integrity purpose, data sets can only be updated by one of the following two
 
 A probe collects real-time data and push them to its associated data set.
 
+There are two probe types:
+
+- internal probles :
+  those probes run in the net-monitor server.
+
 ### chart
 
 A chart is a JavaScript object that the [Chart.js](http://www.chartjs.org/) JavaScript library uses to display time series using a html canvas.
@@ -462,5 +467,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUxNTgzMTYwOF19
+eyJoaXN0b3J5IjpbLTIwNjU2NTA5MjRdfQ==
 -->
