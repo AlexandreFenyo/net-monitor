@@ -50,7 +50,7 @@ If you want to display multiple charts associated to the same data set, just cre
 
 Up to now, we have encountered two types of lifetime:
 
-- the lifetime associated to a data set: this value defines the time before data are discarded from the data set (remember that a data set may contain one data older than the life time of the set).
+- the lifetime associated to a data set: this value defines the duration before data are discarded from the data set (remember that a data set may contain one data older than the life time of the set).
 
   - 
 
@@ -472,5 +472,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkwOTk2OTQ2N119
+eyJoaXN0b3J5IjpbNDIxNzE3Ml19
 -->
