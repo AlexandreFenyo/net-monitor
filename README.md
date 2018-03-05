@@ -20,9 +20,7 @@ Therefore, a very large number of clients can be connected to the same server wi
 # Concepts
 [![general description](https://raw.githubusercontent.com/AlexandreFenyo/net-monitor/master/docs/general-700.png)](https://raw.githubusercontent.com/AlexandreFenyo/net-monitor/master/docs/general.png)
 
-## net-monitor goal
-
-net-monitor aims to create charts for you, in the browser, and dynamically update the data associated to those charts by talking to the server.
+Before using net-monitor, you may start reading informations about its co
 
 ## data set
 
@@ -537,5 +535,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU5MDcyMTkxOF19
+eyJoaXN0b3J5IjpbMTA5MDcwMDA2OV19
 -->
