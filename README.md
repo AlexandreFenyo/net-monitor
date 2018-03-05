@@ -22,7 +22,7 @@ For integrity purpose, data sets can only be updated by one of the following two
 
 **To sum up, a data set has a name, a life time and contains a set of timestamped data, maintained in the net-monitor server memory. It is created by a probe, when adding a new value to a named dataset not already instanciated.**
 
-### Probe
+### probe
 
 A probe collects real-time data and push them to its associated data set.
 
@@ -517,5 +517,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY4MzUxMjg1OF19
+eyJoaXN0b3J5IjpbLTE5MjcyNjUyNzRdfQ==
 -->
