@@ -96,7 +96,7 @@ Therefore, the data set lifetime can only be increased. This rule is important t
 
 Here are the rules **you** must follow, to display data values correctly in every situations :
 
-- When you add a data value by means of an external probe, push the data with a lifetime that is greater than the greatest time scale among those of the views that already or will display the corresponding dataset.
+- When you add a data value by means of an external probe, push the data with a lifetime that is greater than the greatest time scale among those of the views that already do, or later will display the corresponding dataset.
 
 # Demo
 
@@ -515,5 +515,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2OTQzNDIyNTBdfQ==
+eyJoaXN0b3J5IjpbMTM3NjE5OTg3M119
 -->
