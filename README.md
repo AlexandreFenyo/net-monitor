@@ -20,6 +20,10 @@ For integrity purpose, data sets can only be updated by one of the following two
 
 **To sum up, a data set has a name, a life time and contains a set of timestamped data, maintained in the net-monitor server memory.**
 
+### Probe
+
+A probe collects data and push them 
+
 ### chart
 
 A chart is a JavaScript object that the [Chart.js](http://www.chartjs.org/) JavaScript library uses to display time series using a html canvas.
@@ -36,7 +40,6 @@ If you want to display multiple charts associated to the same data set, just cre
 
 ### lifetime
 
-### Probe
 
 collect data
 
@@ -459,5 +462,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1NTM0Njk3NTRdfQ==
+eyJoaXN0b3J5IjpbMjYzMjAzNDIzXX0=
 -->
