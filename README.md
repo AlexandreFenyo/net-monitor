@@ -48,7 +48,7 @@ A view (or chart view) is a net-monitor JavaScript object running in the browser
 
 ### manager
 
-A manager is a net-monitor JavaScript object running in the browser, that lets you delegate the management of couples of chart views and data sets. From the point of view of a manager, there is a one-to-one association between a chart view and a data set.
+A manager is a net-monitor JavaScript object running in the browser, that lets you delegate the management of many couples of chart views and data sets. From the point of view of a manager, there is a one-to-one association between a chart view and a data set.
 
 If you want to display multiple charts associated to the same data set, just create multiple managers. This may be useful to display different views of the same data set, for instance a short-range view populated with the last 60 seconds of data, and a long-range view populated the 2 last hours of data.
 
@@ -482,5 +482,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMjc1NjEzN119
+eyJoaXN0b3J5IjpbODM3NTE0ODk0XX0=
 -->
