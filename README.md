@@ -233,6 +233,8 @@ Here is an example of a SNMPv2c probe:
 
 With SNMPv3 probes, you must not set a community secret but specify a security level and, depending on this level, specify some algorithms and some secrets.
 
+First, define a value for the key `sec_level`, among `noAuthNoPriv`, `authNoPriv` and `authPriv`.
+
 
 
 
@@ -649,5 +651,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjEwOTY5OTU4OV19
+eyJoaXN0b3J5IjpbMTk3MjMwNzM1Nl19
 -->
