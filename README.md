@@ -20,11 +20,11 @@ Therefore, a very large number of clients can be connected to the same server wi
 # Concepts
 [![general description](https://raw.githubusercontent.com/AlexandreFenyo/net-monitor/master/docs/general-700.png)](https://raw.githubusercontent.com/AlexandreFenyo/net-monitor/master/docs/general.png)
 
-### net-monitor goal
+## net-monitor goal
 
 net-monitor aims to create charts for you, in the browser, and dynamically update the data associated to those charts by talking to the server.
 
-### data set
+## data set
 
 A net-monitor data set is a named time series (i.e. a set of time stamped collected data), maintained in the net-manager server memory. A data set typically contains numerical network throughput values collected from a snmp agent. A maximum data lifetime is associated with each data set.
 
@@ -42,7 +42,7 @@ For integrity purpose, data sets can only be updated by one of the following two
 
 **To sum up, a data set has a name, a life time and contains a set of timestamped data, maintained in the net-monitor server memory. It is created by a probe, when adding a new value to a named dataset not already instanciated.**
 
-### probe
+## probe
 
 A probe collects real-time data and push them to its associated data set.
 
@@ -60,15 +60,15 @@ There are two probe types:
 
   External probes **may choose to specify** a lifetime when pushing a data to a data set. This lifetime can change over the time. Not specifying a lifetime or specifying 0 means that in case the dataset already exists, no change for its lifetime is requested. I the dataset does not exist, its initial lifetime will be set to 0, therefore only one data value will be kept in this dataset until another lifetime is specified.
 
-### chart
+## chart
 
 A chart is a JavaScript object that the [Chart.js](http://www.chartjs.org/) JavaScript library uses to display time series using a html canvas.
 
-### view
+## view
 
 A view (or chart view) is a net-monitor JavaScript object running in the browser, that associates a chart to a subset of a data set. This subset contains only the data with a timestamp in the range from now to the latest X seconds. X denotes the lifetime of the view, that must be greater than 0 second, and that corresponds to the time scale of x-axis of the view. There is a one-to-one association between a view and a chart.
 
-### manager
+## manager
 
 A manager is a net-monitor JavaScript object running in the browser, that lets you delegate the management of many couples of chart views and data sets. From the point of view of a manager, there is a one-to-one association between a chart view and a data set.
 
@@ -90,7 +90,7 @@ Here are the operations a manager does, when asked to manage a new chart:
 
 If you want to change the time scale displayed by a view with a chart, just ask the manager to unmanage the view and create a new manager to do the job again.
 
-### lifetime
+## lifetime
 
 Up to now, we have encountered four types of lifetime:
 
@@ -537,5 +537,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzM1OTM5MTE5XX0=
+eyJoaXN0b3J5IjpbMTU5MDcyMTkxOF19
 -->
