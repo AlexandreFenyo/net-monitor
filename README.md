@@ -194,7 +194,7 @@ Here are the 8 mandatory keys for any SNMP probe: dataset, lifetime, type, versi
 - type: must be `snmp`
 - version: must be `v1`, `v2c` or `v3`, depending on the SNMP version of the agent
 - agent: DNS name, IPv4 address or IPv6 address of the agent
-- community: 
+- OID: 
 
 ````json
 {
@@ -625,5 +625,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzY4Nzg1MTIyXX0=
+eyJoaXN0b3J5IjpbLTEzMDAyMjgwNjFdfQ==
 -->
