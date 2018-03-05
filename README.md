@@ -199,7 +199,10 @@ Here are the mandatory keys for any SNMP probe: dataset, lifetime, type, version
 
 The rate should be about ten times the update rate of the OID value, for the manager to collect the data just when it changes. This is important since net-monitor computes throughputs by dividing by the delay the difference between this new value and the previous one. Therefore, the computed delay must be accurate to get a correct throughtput value.
 
-Here is an example of a snippet defining 
+For SNMPv1 probes, one more key / value is needed, to specify the community.
+
+Therefore, here is an example of a SNMPv1 probe:
+
 ````json
 {
   "dataset": "set1",
@@ -629,5 +632,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjEzMTA0MDQ4XX0=
+eyJoaXN0b3J5IjpbLTE5NzA3MjMwNDhdfQ==
 -->
