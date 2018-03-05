@@ -197,7 +197,7 @@ Here are the mandatory keys for any SNMP probe: dataset, lifetime, type, version
 - OID: an OID corresponding to a numeric value. 
 - rate: the rate (unit: per seconds) at which the manager probes the agent to look for a new value
 
-The rate should be about ten times the update rate of the OID value, for the manager to collect the data just when is changes. This is important 
+The rate should be about ten times the update rate of the OID value, for the manager to collect the data just when is changes. This is important since the d
 
 ````json
 {
@@ -628,5 +628,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTkzNTE0NDg4Nl19
+eyJoaXN0b3J5IjpbLTEzNjQ1MjYwOV19
 -->
