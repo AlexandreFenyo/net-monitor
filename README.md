@@ -23,7 +23,7 @@ A chart is a JavaScript object that the [Chart.js](http://www.chartjs.org/) Java
 
 ### view
 
-A net-monitor view is a net-monitor JavaScript object is a chart used to display the 
+A view is a net-monitor JavaScript object that associate a chart to a data set.
 
 net-monitor aims to create charts for you, in the browser, and dynamically update the data associated to those charts from the server.
 
@@ -462,5 +462,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE1Mjg3MzU3Ml19
+eyJoaXN0b3J5IjpbLTc4ODI2MjUxNF19
 -->
