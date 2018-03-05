@@ -12,6 +12,8 @@ It is made of two parts:
 - a server running in a servlet container, that feeds the client library with data
 
 The implementation is very efficient: clients (browsers) do not poll the server. Instead, clients subscribe to their desired topics from a message broker, on top of WebSockets.
+
+W
 A very large number of clients can be connected to the same server because the implementation is efficient because the client library doesn
 
 [![general description](https://raw.githubusercontent.com/AlexandreFenyo/net-monitor/master/docs/general-700.png)](https://raw.githubusercontent.com/AlexandreFenyo/net-monitor/master/docs/general.png)
@@ -533,5 +535,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwMjUzNTcwN119
+eyJoaXN0b3J5IjpbMTUyMDQ3NDI1NF19
 -->
