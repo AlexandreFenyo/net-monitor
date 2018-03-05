@@ -62,11 +62,9 @@ Up to now, we have encountered two types of lifetime:
 
 - the lifetime of a view, that defines the time range displayed by the corresponding chart.
 
-Here are the rules associated to lifetime values
-  
-  - the data set lifetime initial value is set when the data set is created:
+Here are the rules that define lifetime updates:
 
-    - when a probe adds a value to a data set with a name not already associated to an existing data set, a new data set is created. The initial 
+- when a probe adds a value to a data set with a name not already associated to an existing one, a new data set is created. Its initial lifetime is the one attached 
 
 
 # Demo
@@ -486,5 +484,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY3NDM5ODc1N119
+eyJoaXN0b3J5IjpbLTExMDM2NDk5NjRdfQ==
 -->
