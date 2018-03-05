@@ -170,6 +170,7 @@ If you want to inspect / debug the other components (Spring MVC, WebSocket imple
 ### config.json
 
 The config.json contains the whole server configuration in JSON file format ([RFC-4627](https://www.ietf.org/rfc/rfc4627.txt)).
+
 the default lifetime
 
 ````json
@@ -594,5 +595,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY2Nzk3MDI5MV19
+eyJoaXN0b3J5IjpbNjQzMzgyMzY3XX0=
 -->
