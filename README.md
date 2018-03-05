@@ -54,7 +54,11 @@ A manager is a net-monitor JavaScript object running in the browser, that lets y
 
 If you want to display multiple charts associated to the same data set, just create multiple managers. This may be useful to display different views of the same data set, for instance a short-range view populated with the last 60 seconds of data, and a long-range view populated the 2 last hours of data.
 
-The manager first creates the chart. Then it download
+Here is the operations a manager does:
+
+- the manager first creates the chart.
+
+- then the manager connects to the server and 
 
 ### lifetime
 
@@ -499,5 +503,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjY2ODgwNDM2XX0=
+eyJoaXN0b3J5IjpbMzA0NTI4MTE2XX0=
 -->
