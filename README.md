@@ -231,7 +231,7 @@ Here is an example of a SNMPv2c probe:
 }
 ````
 
-With SNMPv3 probes, 
+With SNMPv3 probes, the community is replaced by 
 
 
 # Client API
@@ -647,5 +647,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODg1Njg4NDJdfQ==
+eyJoaXN0b3J5IjpbNTgwODQ0MTQ1XX0=
 -->
