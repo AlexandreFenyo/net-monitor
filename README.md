@@ -72,7 +72,7 @@ Here are the rules that define the life cycle of th dataset lifetime:
 
 - when a probe pushes a new value to a data set with a name not already associated to an existing one, a new data set is created. Its initial lifetime is the one specified by the probe for this value, or 0 if the probe omits to specify a lifetime.
 
-- when a probe pushes a new value to a data set that has already been created, and when that probe specifies a lifetime, its initial lifetime is increased to the new   the one specified by the probe for this value, or 0 if the probe omits to specify a lifetime.
+- when a probe pushes a new value to a data set that has already been created previously, and when that probe specifies a lifetime greater than the current data set lifetime, then the data set lifetime is updated to this new value. Otherwise, no change occurs to the data set
 
 - when a probe adds 
 
@@ -493,5 +493,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjE0NDIyOTY1XX0=
+eyJoaXN0b3J5IjpbMTU1MzU2NTA4Ml19
 -->
