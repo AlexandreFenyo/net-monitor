@@ -1,8 +1,6 @@
 # Concepts
 
-[![general description](https://raw.githubusercontent.com/AlexandreFenyo/net-monitor/master/docs/general-700.png)](docs/general.png)
-
-s://raw.githubusercontent.com/AlexandreFenyo/net-monitor/master/docs/general.png
+[![general description](https://raw.githubusercontent.com/AlexandreFenyo/net-monitor/master/docs/general-700.png)](https://raw.githubusercontent.com/AlexandreFenyo/net-monitor/master/docs/general.png)
 
 ### net-monitor goal
 
@@ -521,5 +519,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYzMTkxNzYzMF19
+eyJoaXN0b3J5IjpbMjAxMTcwOTQ3NV19
 -->
