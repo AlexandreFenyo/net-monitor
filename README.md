@@ -30,7 +30,7 @@ There are two probe types:
 
   Such a probe runs in the net-monitor server and is associated to a data set. Each time it collects a data, this data is pushes into the data set. There is currently one type of internal probe: SNMP probes, that collect network interfaces throughput.
 
-    Internal probes have a lifetime, that is the lifetime associated to 
+    Internal probes have a lifetime, that is the lifetime associated to each 
 
 - external probes :
   external probes can run anywhere, they just invoke a REST/JSON web service on the server to push some real-time data to a data set.
@@ -479,5 +479,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM4MDQxMjYzOV19
+eyJoaXN0b3J5IjpbLTE5MTE2ODg5MTZdfQ==
 -->
