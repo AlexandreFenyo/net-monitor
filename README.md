@@ -234,6 +234,8 @@ Here is an example of a SNMPv2c probe:
 With SNMPv3 probes, you must not set a community secret but specify a security level and, depending on this level, specify some algorithms and some secrets.
 
 
+
+
 # Client API
 
 ## Creating a chart
@@ -647,5 +649,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDc4NTgyMzY5XX0=
+eyJoaXN0b3J5IjpbMjEwOTY5OTU4OV19
 -->
