@@ -54,7 +54,7 @@ If you want to display multiple charts associated to the same data set, just cre
 
 ### lifetime
 
-Up to now, we have encountered two types of lifetime:
+Up to now, we have encountered three types of lifetime:
 
 - the lifetime associated to a data set maintained in the server: this value defines the duration before data are discarded from the data set (remember that a data set may contain one data older than the life time of the set).
 
@@ -485,5 +485,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM0Mzk1NTQwM119
+eyJoaXN0b3J5IjpbLTcwODY5MDU4OV19
 -->
