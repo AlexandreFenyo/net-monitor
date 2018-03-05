@@ -56,7 +56,7 @@ If you want to display multiple charts associated to the same data set, just cre
 
 Up to now, we have encountered four types of lifetime:
 
-- the global default lifetime configured in the server
+- the global default lifetime configured in the server: used by the server when a lifetime value is needed and no one is given.
 
 - the lifetime associated to a data set maintained in the server: this value defines the duration before data are discarded from the data set (remember that a data set may contain one data older than the life time of the set).
 
@@ -487,5 +487,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTgxMzY5MDQ0NF19
+eyJoaXN0b3J5IjpbLTIxMzQ2MDgyMzNdfQ==
 -->
