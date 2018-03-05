@@ -194,7 +194,7 @@ Here are the mandatory keys for any SNMP probe: dataset, lifetime, type, version
 - type: must be `snmp`
 - version: must be `v1`, `v2c` or `v3`, depending on the SNMP version of the agent
 - agent: DNS name, IPv4 address or IPv6 address of the agent
-- OID: an OID of type Counter like IF-MIB::ifInOctets
+- OID: an OID of type Counter like IF-MIB::ifInOctets[
 - rate: the rate (unit: per seconds) at which the manager probes the agent to look for a new value
 
 The rate should be about ten times the update rate of the OID value, for the manager to collect the data just when it changes. This is important since net-monitor computes throughputs by dividing by the delay the difference between this new value and the previous one. Therefore, the computed delay must be accurate to get a correct throughtput value.
@@ -628,5 +628,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjMwMTg4ODI2XX0=
+eyJoaXN0b3J5IjpbMjEzMDQ3MDYxOV19
 -->
