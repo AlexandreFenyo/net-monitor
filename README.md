@@ -208,6 +208,21 @@ Therefore, here is an example of a SNMPv1 probe:
   "dataset": "set1",
   "lifetime": 3600,
   "type": "snmp",
+  "version": "v1",
+  "agent": "10.69.127.247",
+  "community": "public",
+  "oid": "1.3.6.1.2.1.2.2.1.10.10101",
+  "rate": 10
+}
+````
+
+Here is an example of a SNMPv2c probe:
+
+````json
+{
+  "dataset": "set1",
+  "lifetime": 3600,
+  "type": "snmp",
   "version": "v2c",
   "agent": "10.69.127.247",
   "community": "public",
@@ -216,7 +231,6 @@ Therefore, here is an example of a SNMPv1 probe:
 }
 ````
 
-Here is an 
 
 
 
@@ -633,5 +647,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3NjQxNDI4ODddfQ==
+eyJoaXN0b3J5IjpbNjM1OTIyMDU2XX0=
 -->
