@@ -263,7 +263,7 @@ Here is an example of a configuration file with 3 probes: two SNMP v2c and one v
 			"agent": "10.69.127.247",
 			"password_auth": "password1234",
 			"password_priv": "password1234",
-			"oid": "1.3.6.1.2.1.2.2.1.10.10101",
+			"oid": "1.3.6.1.2.1.2.2.1.10.10105",
 			"rate": 10
 		},
 		{
@@ -273,7 +273,7 @@ Here is an example of a configuration file with 3 probes: two SNMP v2c and one v
 			"version": "v2c",
 			"agent": "10.69.127.248",
 			"community": "public",
-			"oid": "1.3.6.1.2.1.2.2.1.16.10101",
+			"oid": "1.3.6.1.2.1.2.2.1.10.10101",
 			"rate": 10
 		},
 		{
@@ -283,7 +283,7 @@ Here is an example of a configuration file with 3 probes: two SNMP v2c and one v
 			"version": "v2c",
 			"agent": "10.69.127.248",
 			"community": "public",
-			"oid": "1.3.6.1.2.1.2.2.1.10.10102",
+			"oid": "1.3.6.1.2.1.2.2.1.16.10101",
 			"rate": 10
 		}
 	] 
@@ -703,5 +703,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc2MzA5MzA0Ml19
+eyJoaXN0b3J5IjpbMTg5MTc4OTUzNV19
 -->
