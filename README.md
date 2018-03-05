@@ -4,6 +4,8 @@ In a nutshell:
 
 ![net-monitor](https://raw.githubusercontent.com/AlexandreFenyo/net-monitor/master/docs/animation.gif)
 
+# purpose
+
 net-monitor is a client / server toolkit. Its purpose is to let you include HTML animated networking charts into your web applications and single pages. It comes with a SNMP v1/v2c/v3 manager and is fully compliant with IPv4/IPv6.
 
 It is made of two main parts:
@@ -535,5 +537,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzMTgxODA3NzhdfQ==
+eyJoaXN0b3J5IjpbMTQ3MTQ3NTIxNV19
 -->
