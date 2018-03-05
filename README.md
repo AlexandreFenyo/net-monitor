@@ -68,6 +68,8 @@ Here are the operations a manager does, when asked to manage a new chart:
 
 - Regularly, the manager moves the data displayed on the chart to the left, for the drawing to follow the x-axis time scale. If some data is no longer useful for drawing the chart, it is removed from the local copy of the dataset.
 
+If you want to change the range displayed by a view, just ask the manager to unmanage the view and create a new manager to manage it again.
+
 ### lifetime
 
 Up to now, we have encountered four types of lifetime:
@@ -511,5 +513,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY0NDg1NDk5NV19
+eyJoaXN0b3J5IjpbNjE5MDg4NjcyXX0=
 -->
