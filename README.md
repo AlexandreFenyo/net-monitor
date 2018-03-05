@@ -29,6 +29,9 @@ There are two probe types:
 - internal probes :
   such a probe runs in the net-monitor server and is associated to a data set. Each time it collects a data, this data is pushes into the data set. There is currently one type of internal probe: SNMP probes, that collect network interfaces throughput.
 
+- external probes :
+  external probes can run anywhere, they just invoke a REST/JSON web service on the server to push some new data to 
+
 ### chart
 
 A chart is a JavaScript object that the [Chart.js](http://www.chartjs.org/) JavaScript library uses to display time series using a html canvas.
@@ -467,5 +470,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg2MDQzNDczMl19
+eyJoaXN0b3J5IjpbMjM1MjU0NzQxXX0=
 -->
