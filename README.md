@@ -28,13 +28,13 @@ A probe collects real-time data and push them to its associated data set.
 
 There are two probe types:
 
-- internal probes :
+- internal probes:
 
   Such a probe runs in the net-monitor server and is associated to a data set. Each time it collects a data, this data is pushes into the data set. There is currently one type of internal probe: SNMP probes, that collect network interfaces throughput.
 
     Internal probes are configured with a constant lifetime, that is the lifetime they specify when pushing a data to the data set. It is a static value that must be greater or equal to 0 second, or -1 to refer to the global default lifetime configured in the server.
 
-- external probes :
+- external probes:
 
   External probes can run anywhere, they just invoke a REST/JSON web service on the server to push some real-time data to a data set.
 
@@ -94,7 +94,7 @@ Here are the rules that define the life cycle of the dataset lifetime:
 
 Therefore, the data set lifetime can only be increased. This rule is important to avoid views displaying a larger time scale than the available dataset range.
 
-Here are the rules **you** must follow, to display data values correctly in every situations :
+Here are the rules **you** must follow, to display data values correctly in every situations:
 
 - When you add a data value by means of an external probe, push the data with a lifetime that is greater than the greatest time scale among those of the views that already do or later will display the corresponding dataset.
 
@@ -517,5 +517,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ2OTg3NTA4M119
+eyJoaXN0b3J5IjpbMTUyMjc5NzddfQ==
 -->
