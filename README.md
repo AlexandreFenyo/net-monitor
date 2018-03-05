@@ -187,7 +187,9 @@ There is currently 3 types of probes:
 - SNMPv2c
 - SNMPv3
 
-Here are the 8 keys mandatory for any SNMP probe: dataset, lifetime, 
+Here are the 8 keys mandatory for any SNMP probe: dataset, lifetime, type, version, agent, oid and rate.
+
+- dataset: 
 
 ````json
 {
@@ -618,5 +620,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5MTU1MDM2OTVdfQ==
+eyJoaXN0b3J5IjpbMjA1NDM1NDE4MF19
 -->
