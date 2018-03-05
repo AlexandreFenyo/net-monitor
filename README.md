@@ -27,7 +27,7 @@ A probe collects real-time data and push them to its associated data set.
 There are two probe types:
 
 - internal probles :
-  such a probe run in the net-monitor server and is associated to a data set. It collects data and pushes them to the dataset.
+  such a probe run in the net-monitor server and is associated to a data set. It collects data and pushes them to the data set.
 
 ### chart
 
@@ -467,5 +467,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTE4OTA2ODU0XX0=
+eyJoaXN0b3J5IjpbLTEwNTA3ODA0NDZdfQ==
 -->
