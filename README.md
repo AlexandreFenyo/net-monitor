@@ -19,11 +19,11 @@ For integrity purpose, data sets can only be updated by one of the following two
 
 ### chart
 
-A chart is a html canvas displaying time series using the [Chart.js](http://www.chartjs.org/) JavaScript library.
+A chart is a JavaScript object  html canvas displaying time series using the [Chart.js](http://www.chartjs.org/) JavaScript library.
 
 ### view
 
-A net-monitor view is a chart used to display the 
+A net-monitor view is a net-monitor JavaScript object is a chart used to display the 
 
 net-monitor aims to create charts for you, in the browser, and dynamically update the data associated to those charts from the server.
 
@@ -462,5 +462,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc4MDQyNjAyNF19
+eyJoaXN0b3J5IjpbMTU2NDk5MzUxNV19
 -->
