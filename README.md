@@ -4,7 +4,7 @@
 
 # Concepts
 
-net-monitor is a client / server toolkit.
+net-monitor is a client / server toolkit. It is aimed to create HTML animated networking charts.
 [![general description](https://raw.githubusercontent.com/AlexandreFenyo/net-monitor/master/docs/general-700.png)](https://raw.githubusercontent.com/AlexandreFenyo/net-monitor/master/docs/general.png)
 
 ### net-monitor goal
@@ -524,5 +524,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA4ODgzNTM5MF19
+eyJoaXN0b3J5IjpbLTc4MDgyODI1XX0=
 -->
