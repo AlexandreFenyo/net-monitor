@@ -187,18 +187,19 @@ There is currently 3 types of probes:
 - SNMPv2c
 - SNMPv3
 
+Here are the 8 key/values
+
 ````json
-		{
-		    "__comment_dataset": "replace DISABLEDdataset by dataset to enable this data set example",
-			"dataset": "set1",
-			"lifetime": 3600,
-			"type": "snmp",
-			"version": "v2c",
-			"agent": "10.69.127.247",
-			"community": "public",
-			"oid": "1.3.6.1.2.1.2.2.1.10.10101",
-			"rate": 10
-		}
+{
+  "dataset": "set1",
+  "lifetime": 3600,
+  "type": "snmp",
+  "version": "v2c",
+  "agent": "10.69.127.247",
+  "community": "public",
+  "oid": "1.3.6.1.2.1.2.2.1.10.10101",
+  "rate": 10
+}
 ````
 
 
@@ -617,5 +618,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzEwMjczMTMwXX0=
+eyJoaXN0b3J5IjpbODQ5MjczMDM2XX0=
 -->
