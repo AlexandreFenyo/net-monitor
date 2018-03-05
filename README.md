@@ -127,9 +127,9 @@ There are two configuration files for the server side:
 
 - _config.json_: general properties and SNMP manager configuration file. Mandatory.
 
-## log4j.xml
+## Installing configuration files
 
-Th
+Depending on the installation way (with Docker, from the WAR archive, from the sources, 
 
 # Client API
 
@@ -544,5 +544,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzU2MjYxMTg2XX0=
+eyJoaXN0b3J5IjpbMjEzNzA2MzkwXX0=
 -->
