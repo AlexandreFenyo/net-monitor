@@ -195,7 +195,7 @@ Here are the mandatory keys for any SNMP probe: dataset, lifetime, type, version
 - version: must be `v1`, `v2c` or `v3`, depending on the SNMP version of the agent
 - agent: DNS name, IPv4 address or IPv6 address of the agent
 - OID: an OID corresponding to a numeric value. 
-- rate: the rate (unit: per seconds) at which the probe 
+- rate: the rate (unit: per seconds) at which the manager probes the agent to look for a new value
 
 ````json
 {
@@ -626,5 +626,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNjIyNjQwN119
+eyJoaXN0b3J5IjpbOTIwMDM1MTg4XX0=
 -->
