@@ -245,6 +245,7 @@ With `authPriv`, you must also define:
 
 Note that one username must have the same auth and priv secrets on every SNMP agents.
 
+Here is an example of 
 
 
 # Client API
@@ -660,5 +661,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxNDQyMDQxMTRdfQ==
+eyJoaXN0b3J5IjpbMTk0OTIwNTM1MF19
 -->
