@@ -237,7 +237,7 @@ First, define a value for the key `sec_level`, among `noAuthNoPriv`, `authNoPriv
 
 With `authNoPriv` and `authPriv`, you must define a value for the key `auth_algo`, among `MD5`, `SHA128`, `SHA224`, `SHA256`, `SHA384` and `SHA512`.
 
-With `authPriv`, you must also define a value for the key `auth_priv',  amoong 
+With `authPriv`, you must also define a value for the key `auth_priv',  among 
 
 
 
@@ -655,5 +655,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk4NTg5MjY5Nl19
+eyJoaXN0b3J5IjpbMTIwMDkxNjExM119
 -->
