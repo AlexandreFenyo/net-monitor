@@ -74,7 +74,7 @@ Here are the rules that define the life cycle of th dataset lifetime:
 
 - when a probe pushes a new value to a data set that has already been created previously, and when that probe specifies a lifetime greater than the current data set lifetime, then the data set lifetime is updated to this new value. Otherwise, no change occurs to the data set lifetime.
 
-- when a probe adds 
+
 
 # Demo
 
@@ -493,5 +493,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTcwMDQwMjk0M119
+eyJoaXN0b3J5IjpbLTE3MDUwNzgwNjFdfQ==
 -->
