@@ -96,7 +96,7 @@ Therefore, the data set lifetime can only be increased. This rule is important t
 
 Here are the rules **you** must follow :
 
-- when you create a view, 
+- when you add a data value with an external probe, define a 
 
 # Demo
 
@@ -515,5 +515,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzM4MDk0MjUzXX0=
+eyJoaXN0b3J5IjpbMjQwOTQwODgyXX0=
 -->
