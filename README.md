@@ -235,6 +235,8 @@ With SNMPv3 probes, you must not set a community secret but specify a security l
 
 First, define a value for the key `sec_level`, among `noAuthNoPriv`, `authNoPriv` and `authPriv`.
 
+With `authNoPriv` and `authPriv`, you must define a value for the key 
+
 
 
 
@@ -651,5 +653,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk3MjMwNzM1Nl19
+eyJoaXN0b3J5IjpbLTExNjk0NDU3ODRdfQ==
 -->
