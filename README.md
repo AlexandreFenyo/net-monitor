@@ -124,7 +124,6 @@ Here are the rules **you** must follow, to display data values correctly in ever
 There are two configuration files for the server side:
 
 - _log4j.xml_: logging rules file. Optionnal (there is a default one).
-
 - _config.json_: general properties and SNMP manager configuration file. Mandatory.
 
 ## Installing configuration files
@@ -173,7 +172,7 @@ The config.json contains the whole server configuration in JSON file format ([RF
 
 The default lifetime is specified in the default_lifetime property.
 
-The 
+The internal probes are specified 
 
 ````json
 {
@@ -597,5 +596,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0MzM1NDIxMDJdfQ==
+eyJoaXN0b3J5IjpbMzkxNzgzMDU4XX0=
 -->
