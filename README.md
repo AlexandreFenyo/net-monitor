@@ -60,7 +60,7 @@ Up to now, we have encountered two types of lifetime:
 
 - the lifetime that a probe specifies when pushing a new value into a data set. For external probes, it can change over the time.
 
-- 
+- the lifetime of a view, that is the
 
   Here is the lifecycle of the data set lifetime:
   
@@ -486,5 +486,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzMzg5NzEyMjJdfQ==
+eyJoaXN0b3J5IjpbLTQ2MjgwNDkxXX0=
 -->
