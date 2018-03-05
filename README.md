@@ -30,7 +30,7 @@ There are two probe types:
 
   Such a probe runs in the net-monitor server and is associated to a data set. Each time it collects a data, this data is pushes into the data set. There is currently one type of internal probe: SNMP probes, that collect network interfaces throughput.
 
-    Internal probes are configured with a constant lifetime, that is the lifetime they specify when pushing a data to the data set. It must always be greater or equal to 0 second, or -1 to represent the global default life time configured in the server.
+    Internal probes are configured with a constant lifetime, that is the lifetime they specify when pushing a data to the data set. It must always be greater or equal to 0 second, or -1 to represent the global default lifetime configured in the server.
 
 - external probes :
 
@@ -485,5 +485,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIzNjM0NDc5NF19
+eyJoaXN0b3J5IjpbNzU2OTg4NzQ2XX0=
 -->
