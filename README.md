@@ -129,7 +129,7 @@ There are two configuration files for the server side:
 
 ## Installing configuration files
 
-Depending on the installation way (with Docker, from the WAR archive, from the sources, 
+Depending on the installation way (with Docker, from the WAR archive, from the sources, ...), you 
 
 # Client API
 
@@ -544,5 +544,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjEzNzA2MzkwXX0=
+eyJoaXN0b3J5IjpbLTM1MDM4OTY1OF19
 -->
