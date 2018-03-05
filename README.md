@@ -66,7 +66,7 @@ Here is the operations a manager does, when asked to manage a new chart:
 
 - Each time the manager receives a new value from the message broker, it adds the value to the locale copy of the data set and draws it on the chart.
 
-- Regularly, the manager moves the data displayed on the chart to the left, for the drawing to follow the x-axis time scale. If some data is no longer useful for drawing the chart, it is remove from the local copy of the dataset.
+- Regularly, the manager moves the data displayed on the chart to the left, for the drawing to follow the x-axis time scale. If some data is no longer useful for drawing the chart, it is removed from the local copy of the dataset.
 
 ### lifetime
 
@@ -511,5 +511,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTYxMjAxNTk1OV19
+eyJoaXN0b3J5IjpbLTEwMTYzNDkwMjNdfQ==
 -->
