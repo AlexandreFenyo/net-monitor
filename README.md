@@ -161,7 +161,7 @@ The default logging rules configuration file looks like this:
 </log4j:configuration>
 ````
 
-Note that is you set a configuration that generates a high log rate, you should remove the `%d` part of the ConversionPattern because of performances issues with the `SimpleDateFormat` implementation of the standard JDK. For better results it is recommended to use the log4j date formatters.
+Note that is you set a configuration that generates a high log rate, you should remove the `%d` part of the ConversionPattern because of performances issues with the `SimpleDateFormat` implementation of the standard JDK: for better results it is recommended to use the log4j date formatters.
 
 
 # Client API
@@ -577,5 +577,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTE0OTgxNDM4XX0=
+eyJoaXN0b3J5IjpbLTg5NDQzNjk3NF19
 -->
