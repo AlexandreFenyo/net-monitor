@@ -36,7 +36,7 @@ There are two probe types:
 
   External probes can run anywhere, they just invoke a REST/JSON web service on the server to push some real-time data to a data set.
 
-  External probes **may choose to specify** a lifetime when pushing a data to a data set. This lifetime can change over the time. Not specifying a lifetime of specifying 0 means that if the dataset already exists, no change for its lifetime is requested. I the dataset does not exist, its initial lifetime will be set to 0,  When specified, it can be -1 to to refer to the global default lifetime configured in the server, 0 to ask not to change the dataset lifetime if it already exists, or to set it to 0 on the contrary.
+  External probes **may choose to specify** a lifetime when pushing a data to a data set. This lifetime can change over the time. Not specifying a lifetime of specifying 0 means that if the dataset already exists, no change for its lifetime is requested. I the dataset does not exist, its initial lifetime will be set to 0, therefore only one data value will be kept in this dataset. When specified, it can be -1 to to refer to the global default lifetime configured in the server, 0 to ask not to change the dataset lifetime if it already exists, or to set it to 0 on the contrary.
 
 ### chart
 
@@ -491,5 +491,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyMzY5NTk5Nl19
+eyJoaXN0b3J5IjpbMTg0Mjg0NTYzOV19
 -->
