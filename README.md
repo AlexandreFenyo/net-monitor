@@ -43,7 +43,7 @@ For integrity purpose, data sets can only be updated by one of the following two
 
 ## probe
 
-A probe collects real-time data and push them to its associated data set.
+A probe collects real-time data and pushes them to its associated data set.
 
 There are two probe types:
 
@@ -628,5 +628,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3OTA2NDI5OTVdfQ==
+eyJoaXN0b3J5IjpbMTg0MDcyNjEzOV19
 -->
