@@ -94,7 +94,7 @@ Here are the rules that define the life cycle of the dataset lifetime:
 
 Therefore, the data set lifetime can only be increased. This rule is important to avoid views displaying a larger time scale than the available dataset range.
 
-
+Here are the rules **you** must follow to 
 
 # Demo
 
@@ -513,5 +513,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTczODIxNjIwXX0=
+eyJoaXN0b3J5IjpbLTE5MjQ0NTU3MzJdfQ==
 -->
