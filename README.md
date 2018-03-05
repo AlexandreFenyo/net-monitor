@@ -60,7 +60,9 @@ Up to now, we have encountered four types of lifetime:
 
 - the lifetime associated to a data set maintained in the server: this value defines the duration before data are discarded from the data set (remember that a data set may contain one data older than the life time of the set).
 
-- the lifetime that a probe specifies when pushing a new value into a data set. For external probes, it can change over the time.
+- the lifetime that a probe specifies when pushing a new value into a data set.
+
+  - external probes: it can change over the time and must be greater or equal to 0.
 
 - the lifetime of a view, that defines the time range displayed by the corresponding chart. It should of course be greater or equal to the lifetime of the associated data set.
 
@@ -487,5 +489,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMzQ2MDgyMzNdfQ==
+eyJoaXN0b3J5IjpbMTAwMjY5MjYxMF19
 -->
