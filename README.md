@@ -163,7 +163,7 @@ The default logging rules configuration file looks like this:
 
 Note that if you set a configuration that generates a high log rate, you should remove the `%d` part of the ConversionPattern because of performances issues with the `SimpleDateFormat` implementation of the standard JDK: for better results it is recommended to use the log4j date formatters.
 
-If you want to inspect / debug the net-monitor behaviour, replace the level value for the `net.fenyo` logger by
+If you want to inspect / debug the net-monitor behaviour, replace the level value for the `net.fenyo` logger by debug.
 
 # Client API
 
@@ -578,5 +578,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA5MjYxMjQ3NV19
+eyJoaXN0b3J5IjpbLTExNzM2OTAyMjZdfQ==
 -->
