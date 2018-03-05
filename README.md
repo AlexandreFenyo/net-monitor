@@ -125,6 +125,11 @@ There are two configuration files for the server side:
 
 - _log4j.xml_: logging rules file. Optionnal (there is a default one).
 
+- _config.json_: general properties and SNMP manager configuration file. Mandatory.
+
+## log4j.xml
+
+Th
 
 # Client API
 
@@ -539,5 +544,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMzQ5NTc1MF19
+eyJoaXN0b3J5IjpbMzU2MjYxMTg2XX0=
 -->
