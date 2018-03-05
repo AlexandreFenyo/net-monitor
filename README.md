@@ -92,9 +92,7 @@ Here are the rules that define the life cycle of the dataset lifetime:
 
 - when a probe pushes a new value to a data set that has already been created previously, and when that probe specifies a lifetime greater than the current data set lifetime, then the data set lifetime is updated (increased) to this new value. Otherwise, no change occurs to the data set lifetime.
 
-Therefore, the data set lifetime can only be increased, decreasing it is forbidden. This rule is important because you can have some probes 
-
-to avoid views displaying a larger time scale than the available dataset range.
+Therefore, the data set lifetime can only be increased, decreasing it is forbidden. This rule is important to avoid views displaying a larger time scale than the available dataset range.
 
 Here are the rules **you** must follow, to display data values correctly in every situations:
 
@@ -519,5 +517,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzgzNTA1MTM4XX0=
+eyJoaXN0b3J5IjpbLTIwODQ3NzM4NTRdfQ==
 -->
