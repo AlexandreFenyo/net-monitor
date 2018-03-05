@@ -26,7 +26,7 @@ A chart is a JavaScript object that the [Chart.js](http://www.chartjs.org/) Java
 
 ### view
 
-A view is a net-monitor JavaScript object that associates a chart to a part of a data set. The data set part associated corresponding to the view is defined by a life time : the range of data associated to the view contains the data ol 
+A view is a net-monitor JavaScript object that associates a chart to a part of a data set. The data set part associated corresponding to the view is defined by a life time : the range of data associated to the view contains the data  
 
 ### manager
 
@@ -463,5 +463,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY4ODAyMzI2MV19
+eyJoaXN0b3J5IjpbMTc1MzQxMTIyNl19
 -->
