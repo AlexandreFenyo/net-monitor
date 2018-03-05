@@ -239,8 +239,9 @@ With `authNoPriv` and `authPriv`, you must define:
 - a value for the key `auth_algo`, among `MD5`, `SHA128`, `SHA224`, `SHA256`, `SHA384` and `SHA512`
 - a value for the key `password_auth`
 
-With `authPriv`, you must also define a value for the key `auth_priv`,  among `DES`, `3DES`, `AES128`, `AES192` and `AES256`.
-
+With `authPriv`, you must also define:
+-  a value for the key `auth_priv`,  among `DES`, `3DES`, `AES128`, `AES192` and `AES256`.
+- a value for the key `password_priv`
 
 
 
@@ -659,5 +660,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUwNTc1MDc2NF19
+eyJoaXN0b3J5IjpbOTA2OTc0MDUwXX0=
 -->
