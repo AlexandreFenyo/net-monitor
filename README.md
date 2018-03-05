@@ -172,7 +172,7 @@ The config.json contains the whole server configuration in JSON file format ([RF
 
 The default lifetime is specified in the default_lifetime property.
 
-The internal probes are specified 
+The internal probes are specified as an array of probe configuration parts, in the probes property.
 
 ````json
 {
@@ -180,6 +180,7 @@ The internal probes are specified
 	"probes": [ ... ] 
 }
 ````
+
 
 
 
@@ -596,5 +597,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzkxNzgzMDU4XX0=
+eyJoaXN0b3J5IjpbLTIwMzk3MzI1ODFdfQ==
 -->
