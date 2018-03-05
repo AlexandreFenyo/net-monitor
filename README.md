@@ -33,7 +33,10 @@ There are two probe types:
     Internal probes have a constant lifetime, that is the lifetime they associate to the data they push to the data set.
 
 - external probes :
-  external probes can run anywhere, they just invoke a REST/JSON web service on the server to push some real-time data to a data set.
+
+  External probes can run anywhere, they just invoke a REST/JSON web service on the server to push some real-time data to a data set.
+
+  External probes associate a lifetime with each data they push to a data set.
 
 ### chart
 
@@ -479,5 +482,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI5Nzk3NDk1OF19
+eyJoaXN0b3J5IjpbMTM3Nzk0NzI3OV19
 -->
