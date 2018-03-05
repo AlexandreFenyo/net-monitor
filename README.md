@@ -129,7 +129,9 @@ There are two configuration files for the server side:
 
 ## Installing configuration files
 
-Depending on the installation way (with Docker, from the WAR archive, from the sources, ...), you 
+Depending on the installation way (with Docker, from the WAR archive, from the sources, ...), you need to feed the server with the configuration files. See the Server installation chapter to find the specific way to do that.
+
+
 
 # Client API
 
@@ -544,5 +546,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM1MDM4OTY1OF19
+eyJoaXN0b3J5IjpbLTg0MzQyNjAwOF19
 -->
