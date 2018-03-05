@@ -8,7 +8,7 @@ net-monitor aims to create charts for you, in the browser, and dynamically updat
 
 A net-monitor data set is a named time series (i.e. a set of time stamped collected data), maintained in the net-manager server memory. A data set typically contains numerical network throughput values collected from a snmp agent. A maximum data lifetime is associated with each data set.
 
-The only way to create a new dataset 
+The only way to create a new data set is toad
 
 For integrity purpose, data sets can only be updated by one of the following two mecanisms:
 
@@ -495,5 +495,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE3ODA2ODM2MV19
+eyJoaXN0b3J5IjpbLTE3NTI3NDE5NTFdfQ==
 -->
