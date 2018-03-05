@@ -64,7 +64,7 @@ Up to now, we have encountered two types of lifetime:
 
 Here are the rules that define lifetime updates:
 
-- when a probe adds a value to a data set with a name not already associated to an existing one, a new data set is created. Its initial lifetime is the one attached 
+- when a probe adds a value to a data set with a name not already associated to an existing one, a new data set is created. Its initial lifetime is the one specified by the prob.
 
 
 # Demo
@@ -484,5 +484,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTExMTY2NTc1N119
+eyJoaXN0b3J5IjpbMTQ0MTE2NzU4Nl19
 -->
