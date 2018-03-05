@@ -1,9 +1,14 @@
 # Concepts
 
+### net-monitor goal
+
+net-monitor aims to create charts for you, in the browser, and dynamically update the data associated to those charts by talking to the server.
 
 ### data set
 
 A net-monitor data set is a named time series (i.e. a set of time stamped collected data), maintained in the net-manager server memory. A data set typically contains numerical network throughput values collected from a snmp agent. A maximum data lifetime is associated with each data set.
+
+The only way to create a new data set is to add a value to a named data set that has not already been created. Only probes (see below) can add a value to a data set, therefore only probes can create a new data set.
 
 For integrity purpose, data sets can only be updated by one of the following two mecanisms:
 
@@ -15,35 +20,85 @@ For integrity purpose, data sets can only be updated by one of the following two
 
   Keeping one data value older than the lifetime of the data set is useful to correctly draw a line chart representing the data set over its life time: to draw the first segment, having a timestamped value outside the canvas is necessary.
 
-**To sum up, a data set has a name, a life time and contains a set of timestamped data, maintained in the net-monitor server memory.**
+**To sum up, a data set has a name, a life time and contains a set of timestamped data, maintained in the net-monitor server memory. It is created by a probe, when adding a new value to a named dataset not already instanciated.**
+
+### probe
+
+A probe collects real-time data and push them to its associated data set.
+
+There are two probe types:
+
+- internal probes:
+
+  Such a probe runs in the net-monitor server and is associated to a data set. Each time it collects a data, this data is pushes into the data set. There is currently one type of internal probe: SNMP probes, that collect network interfaces throughput.
+
+    Internal probes are configured with a constant lifetime, that is the lifetime they specify when pushing a data to the data set. It is a static value that must be greater or equal to 0 second, or -1 to refer to the global default lifetime configured in the server.
+
+- external probes:
+
+  External probes can run anywhere, they just invoke a REST/JSON web service on the server to push some real-time data to a data set.
+
+  External probes **may choose to specify** a lifetime when pushing a data to a data set. This lifetime can change over the time. Not specifying a lifetime or specifying 0 means that in case the dataset already exists, no change for its lifetime is requested. I the dataset does not exist, its initial lifetime will be set to 0, therefore only one data value will be kept in this dataset until another lifetime is specified.
 
 ### chart
 
-A chart is a html canvas displaying time series using the [Chart.js](http://www.chartjs.org/) library.
+A chart is a JavaScript object that the [Chart.js](http://www.chartjs.org/) JavaScript library uses to display time series using a html canvas.
 
 ### view
 
-A net-monitor view is a chart used to display the 
-
-net-monitor aims to create charts for you, in the browser, and dynamically update the data associated to those charts from the server.
+A view (or chart view) is a net-monitor JavaScript object running in the browser, that associates a chart to a subset of a data set. This subset contains only the data with a timestamp in the range from now to the latest X seconds. X denotes the lifetime of the view, that must be greater than 0 second, and that corresponds to the time scale of x-axis of the view. There is a one-to-one association between a view and a chart.
 
 ### manager
 
-net-monitor lets you delegate the management of charts and data sets to a manager. From the point of view of a manager, there is a one-to-one association between a chart and a data set. If you want to display multiple charts associated to the same data set, just create multiple managers. This may be useful to display 
+A manager is a net-monitor JavaScript object running in the browser, that lets you delegate the management of many couples of chart views and data sets. From the point of view of a manager, there is a one-to-one association between a chart view and a data set.
 
+If you want to display multiple charts associated to the same data set, just create multiple managers. This may be useful to display different views of the same data set, for instance a short-range view populated with the last 60 seconds of data, and a long-range view populated the 2 last hours of data.
 
+Here are the operations a manager does, when asked to manage a new chart:
 
+- The manager first creates the view and its associated chart.
 
+- The manager uses a WebSocket to connect to a message broker in the server, in order to subscribe to new data pushed into this dataset.
 
-### view : link between a chart and a dataset
+- The manager connects again to the server and downloads, from this dataset, the data values that are not older than the lifetime defining the time scale of the view and, if available, one more data value in order to be able to draw the left-most segment of the graph. Therefore, the manager maintains a local copy of a subset of the data set.
+
+- Then the manager draws the values from this local copy on the chart.
+
+- Each time the manager receives a new value from the message broker, it adds the value to the locale copy of the data set and draws it on the chart.
+
+- Regularly, the manager moves the data displayed on the chart to the left, for the drawing to follow the x-axis time scale. If some data is no longer useful for drawing the chart, it is removed from the local copy of the dataset.
+
+If you want to change the time scale displayed by a view with a chart, just ask the manager to unmanage the view and create a new manager to do the job again.
 
 ### lifetime
 
-### Probe
+Up to now, we have encountered four types of lifetime:
 
-collect data
+- the global default lifetime configured in the server: used by the server when a lifetime value is needed and no one is given.
 
+- the lifetime associated to a data set maintained in the server: this value defines the duration before data are discarded from the data set (remember that a data set may contain at most one data older than the life time of the set).
 
+- the lifetime that a probe specifies when pushing a new value into a data set.
+
+  - external probes: it can change over the time and must be greater or equal to 0, or omitted.
+
+  - internal probes: it is a constant value greater or equal to 0 (-1 means global default lifetime).
+
+- the lifetime of a view, that is constant and defines the time range displayed by the corresponding chart. It should of course be greater or equal to the lifetime of the associated data set.
+
+Here are the rules that define the life cycle of the dataset lifetime:
+
+- when a probe pushes a new value to a data set with a name not already associated to an existing one, a new data set is created with this new name. Its initial lifetime is the one specified by the probe for this value, or 0 if the probe has omitted to specify a lifetime.
+
+- when a probe pushes a new value to a data set that has already been created previously, and when that probe specifies a lifetime greater than the current data set lifetime, then the data set lifetime is updated (increased) to this new value. Otherwise, no change occurs to the data set lifetime.
+
+Therefore, the data set lifetime can only be increased, decreasing it is forbidden. This rule is important to avoid views displaying a larger time scale than the available dataset range, after having changed the lifetime configuration of an external probe.
+
+Here are the rules **you** must follow, to display data values correctly in every situations:
+
+- When you add a data value by means of an external probe, push the data with a lifetime that is greater than the greatest time scale among those of the views that already do or later will display the corresponding dataset.
+
+- When you configure an internal probe, associate with it a lifetime that is greater than the greatest time scale among those of the views that already do or later will display the corresponding dataset.
 
 # Demo
 
@@ -462,5 +517,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTEwNDc2MTcwMV19
+eyJoaXN0b3J5IjpbLTE5MjcyNjUyNzRdfQ==
 -->
