@@ -20,7 +20,7 @@ Therefore, a very large number of clients can be connected to the same server wi
 # Concepts
 [![general description](https://raw.githubusercontent.com/AlexandreFenyo/net-monitor/master/docs/general-700.png)](https://raw.githubusercontent.com/AlexandreFenyo/net-monitor/master/docs/general.png)
 
-Before using net-monitor, you may start reading informations about its core concepts:
+Before using net-monitor, you may start reading this chapter to get informations about its core concepts: data sets, probes, charts, views, managers and lifetime configuration.
 
 
 ## data set
@@ -536,5 +536,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDk2MTkzNjQ5XX0=
+eyJoaXN0b3J5IjpbLTgzODQ3OTE4Ml19
 -->
