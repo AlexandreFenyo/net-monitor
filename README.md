@@ -169,7 +169,7 @@ If you want to inspect / debug the other components (Spring MVC, WebSocket imple
 
 ### config.json
 
-The config.json contains the whole server configuration.
+The config.json contains the whole server configuration. I
 the default lifetime
 
 ````json
@@ -594,5 +594,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4ODYyMjA0MjFdfQ==
+eyJoaXN0b3J5IjpbMjk4Mjg5MzE2XX0=
 -->
