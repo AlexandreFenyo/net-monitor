@@ -36,7 +36,7 @@ There are two probe types:
 
   External probes can run anywhere, they just invoke a REST/JSON web service on the server to push some real-time data to a data set.
 
-  External probes associate a lifetime with each data they push to a data set. This lifetime can change over the time.
+  External probes associate a lifetime with each data they push to a data set. This lifetime can change over the time. It must always be greater or equal to 0.
 
 ### chart
 
@@ -66,6 +66,7 @@ Here are the rules that define lifetime updates:
 
 - when a probe adds a value to a data set with a name not already associated to an existing one, a new data set is created. Its initial lifetime is the one specified by the probe for this value.
 
+- when a probe adds 
 
 # Demo
 
@@ -484,5 +485,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI1MjI5MDc1MV19
+eyJoaXN0b3J5IjpbMjU5ODE3NTIzXX0=
 -->
