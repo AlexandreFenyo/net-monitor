@@ -58,7 +58,7 @@ Up to now, we have encountered four types of lifetime:
 
 - the global default lifetime configured in the server: used by the server when a lifetime value is needed and no one is given.
 
-- the lifetime associated to a data set maintained in the server: this value defines the duration before data are discarded from the data set (remember that a data set may contain one data older than the life time of the set).
+- the lifetime associated to a data set maintained in the server: this value defines the duration before data are discarded from the data set (remember that a data set may contain at most one data older than the life time of the set).
 
 - the lifetime that a probe specifies when pushing a new value into a data set.
 
@@ -491,5 +491,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTMwMTE2MzEzOV19
+eyJoaXN0b3J5IjpbNzc4MTgwOTQxXX0=
 -->
