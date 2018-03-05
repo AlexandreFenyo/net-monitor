@@ -58,7 +58,7 @@ Up to now, we have encountered two types of lifetime:
 
 - the lifetime associated to a data set maintained in the server: this value defines the duration before data are discarded from the data set (remember that a data set may contain one data older than the life time of the set).
 
-- the lifetime that a probe specify when pushing a new value into a data set.
+- the lifetime that a probe specifies when pushing a new value into a data set.
 
   Here is the lifecycle of the data set lifetime:
   
@@ -484,5 +484,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA4NzIzOTExOV19
+eyJoaXN0b3J5IjpbLTExMjE0OTM2NTFdfQ==
 -->
