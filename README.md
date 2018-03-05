@@ -62,7 +62,9 @@ Up to now, we have encountered four types of lifetime:
 
 - the lifetime that a probe specifies when pushing a new value into a data set.
 
-  - external probes: it can change over the time and must be greater or equal to 0.
+  - external probes: it can change over the time and must be greater or equal to 0, or ommited.
+
+  - internal probes: it is a s change over the time and must be greater or equal to 0, or ommited.
 
 - the lifetime of a view, that defines the time range displayed by the corresponding chart. It should of course be greater or equal to the lifetime of the associated data set.
 
@@ -489,5 +491,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAwMjY5MjYxMF19
+eyJoaXN0b3J5IjpbLTYyNTU3OTg5MV19
 -->
