@@ -48,9 +48,9 @@ If you want to display multiple charts associated to the same data set, just cre
 
 ### lifetime
 
+Up to now, we have encountered two types of lifetime:
 
-collect data
-
+- the lifetime associated to a data set: 
 
 
 # Demo
@@ -470,5 +470,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MDYyNDQ1NjRdfQ==
+eyJoaXN0b3J5IjpbLTIwNjc4MDcyMTJdfQ==
 -->
