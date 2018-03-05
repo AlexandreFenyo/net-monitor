@@ -4,7 +4,7 @@ In a nutshell:
 
 ![net-monitor](https://raw.githubusercontent.com/AlexandreFenyo/net-monitor/master/docs/animation.gif)
 
-net-monitor is a client / server toolkit. Its purpose is to let you include HTML animated networking charts into your web applications and pages.
+net-monitor is a client / server toolkit. Its purpose is to let you include HTML animated networking charts into your web applications and pages. It includes a SNMP v1/v2c/v3 manager. 
 
 It is made of two parts:
 
@@ -535,5 +535,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyMjYyODk0MDddfQ==
+eyJoaXN0b3J5IjpbMzIxNTc3MjM4XX0=
 -->
