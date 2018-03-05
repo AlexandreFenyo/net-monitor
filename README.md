@@ -119,17 +119,15 @@ Here are the rules **you** must follow, to display data values correctly in ever
 
 - When you configure an internal probe, associate with it a lifetime that is greater than the greatest time scale among those of the views that already do or later will display the corresponding dataset.
 
-# Demo
+# Server configuration
 
-# API
+# Client API
 
 ## Creating a chart
 
 ## Managing a chart
 
 
-
-# Configuration
 
 
 
@@ -536,5 +534,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTgzODQ3OTE4Ml19
+eyJoaXN0b3J5IjpbLTE1NzY1MjAwMjBdfQ==
 -->
