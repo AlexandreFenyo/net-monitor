@@ -245,8 +245,73 @@ With `authPriv`, you must also define:
 
 Note that one username must have the same auth and priv secrets on every SNMP agents.
 
-Here is an example of 
+Here is an example of a configuration file with 3 probes: two SNMP v2c and one v3:
 
+````json
+{
+	"default_lifetime": 86400,
+	"probes": [
+		{
+		    "__comment_dataset": "replace DISABLEDdataset by dataset to enable this data set example",
+			"dataset": "set1",
+
+			"__comment_lifetime": "life duration in seconds",
+			"lifetime": 3600,
+			
+			"__comment_type": "snmp",
+			"type": "snmp",
+
+			"__comment_version": "v1, v2c or v3",
+			"version": "v3",
+
+			"__comment_community": "only with v1 or v2c",
+			"__DISABLED_community": "public",
+
+			"username": "user4",
+
+			"__comment_seclevel": "only with v3: noAuthNoPriv, authNoPriv or authPriv",
+			"sec_level": "authPriv",
+			
+			"__comment_auth_algo": "only with authNoPriv or AuthPriv: MD5, SHA128, SHA224, SHA256, SHA384 or SHA512",
+			"auth_algo": "MD5",
+
+			"__comment_priv_algo": "only with AuthPriv: DES, 3DES, AES128, AES192 or AES256",
+			"priv_algo": "DES",
+			
+			"agent": "10.69.127.247",
+
+			"password_auth": "password1234",
+			"password_priv": "password1234",
+			"oid": "1.3.6.1.2.1.2.2.1.10.10101",
+			
+			"__comment_rate_": "requests per second",
+			"rate": 10
+		},
+		{
+		    "__comment_dataset": "replace DISABLEDdataset by dataset to enable this data set example",
+			"dataset": "set2",
+			"lifetime": 3600,
+			"type": "snmp",
+			"version": "v2c",
+			"agent": "10.69.127.247",
+			"community": "public",
+			"oid": "1.3.6.1.2.1.2.2.1.16.10101",
+			"rate": 10
+		},
+		{
+		    "__comment_dataset": "replace DISABLEDdataset by dataset to enable this data set example",
+			"dataset": "set1",
+			"lifetime": 3600,
+			"type": "snmp",
+			"version": "v2c",
+			"agent": "10.69.127.247",
+			"community": "public",
+			"oid": "1.3.6.1.2.1.2.2.1.10.10101",
+			"rate": 10
+		}
+	] 
+}
+````
 
 # Client API
 
@@ -661,5 +726,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk0OTIwNTM1MF19
+eyJoaXN0b3J5IjpbNjc0ODEyMTQ2XX0=
 -->
