@@ -58,13 +58,13 @@ Here is the operations a manager does, when asked to manage a new chart:
 
 - The manager first creates the view and its associated chart.
 
-- The manager connects to the server to subscribe to new data pushed into this dataset.
+- The manager uses a WebSocket to connect to a message broker in the server, in order to subscribe to new data pushed into this dataset.
 
 - The manager connects again to the server and downloads, from this dataset, the data values that are not older than the lifetime defining the time scale of the view and, if available, one more data value in order to be able to draw the left-most segment of the graph. Therefore, the manager maintains a local copy of a subset of the data set.
 
 - Then the manager draws the values from this local copy on the chart.
 
-- Finally the manager, 
+- Finally the manager, waits for messages from the broker 
 
 ### lifetime
 
@@ -509,5 +509,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQyOTUwOTQ1MV19
+eyJoaXN0b3J5IjpbLTI4OTM0NDcxMV19
 -->
