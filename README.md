@@ -1,5 +1,7 @@
 # net-monitor
 
+In a nutshell:
+
 ![net-monitor](https://raw.githubusercontent.com/AlexandreFenyo/net-monitor/master/docs/animation.gif)
 
 # Concepts
@@ -534,5 +536,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA1MjA2NjA2OV19
+eyJoaXN0b3J5IjpbMjEwNjU1MzU1Nl19
 -->
