@@ -123,7 +123,7 @@ Here are the rules **you** must follow, to display data values correctly in ever
 
 There are two configuration files for the server side:
 
-- _log4j.xml_: logging rules file. Optionnal.
+- _log4j.xml_: logging rules file. Optionnal (there is a default one).
 
 
 # Client API
@@ -539,5 +539,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTExODc5MzYwMV19
+eyJoaXN0b3J5IjpbLTIxMzQ5NTc1MF19
 -->
