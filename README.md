@@ -32,6 +32,8 @@ There are two probe types:
 - external probes :
   external probes can run anywhere, they just invoke a REST/JSON web service on the server to push some real-time data to a data set.
 
+Each probe has a lifetime, that the probe 
+
 ### chart
 
 A chart is a JavaScript object that the [Chart.js](http://www.chartjs.org/) JavaScript library uses to display time series using a html canvas.
@@ -476,5 +478,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjIwMjY4OTc5XX0=
+eyJoaXN0b3J5IjpbODIxMTkxMzkwXX0=
 -->
