@@ -22,7 +22,7 @@ For integrity purpose, data sets can only be updated by one of the following two
 
 ### Probe
 
-A probe collects real-time data and push them 
+A probe collects real-time data and push them to its associated data set.
 
 ### chart
 
@@ -462,5 +462,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjM4MjMzNjk5XX0=
+eyJoaXN0b3J5IjpbMTUxNTgzMTYwOF19
 -->
