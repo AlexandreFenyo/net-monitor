@@ -30,7 +30,7 @@ A view (or chart view) is a net-monitor JavaScript object that associates a char
 
 ### manager
 
-net-monitor lets you delegate the management of chart views and data sets to a manager. From the point of view of a manager, there is a one-to-one association between a chart view and a data set. If you want to display multiple charts associated to the same data set, just create multiple managers. This may be useful to display different views of the same data set, for instance a short-time view populated withthe last 60 seconds of the data, and a 
+net-monitor lets you delegate the management of chart views and data sets to a manager. From the point of view of a manager, there is a one-to-one association between a chart view and a data set. If you want to display multiple charts associated to the same data set, just create multiple managers. This may be useful to display different views of the same data set, for instance a short-time view populated with the last 60 seconds of data, and a l
 
 
 
@@ -463,5 +463,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwOTQ2MzYwNjhdfQ==
+eyJoaXN0b3J5IjpbLTE1MDI5NTkxMTddfQ==
 -->
