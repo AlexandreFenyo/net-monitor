@@ -58,7 +58,7 @@ Here is the operations a manager does, when asked to manage a new chart:
 
 - The manager first creates the view and its associated chart.
 
-- Then the manager connects to the server and downloads, from this dataset, the data in this dataset that are not older thant the lifetime defining the time scale of the view.
+- Then the manager connects to the server and downloads, from this dataset, the data values that are not older thant the lifetime defining the time scale of the view.
 
 - 
 
@@ -505,5 +505,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU0ODI0MjI4M119
+eyJoaXN0b3J5IjpbOTg1NTIzMDkwXX0=
 -->
