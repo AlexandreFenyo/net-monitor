@@ -165,7 +165,7 @@ Note that if you set a configuration that generates a high log rate, you should 
 
 If you want to inspect / debug the net-monitor behaviour, replace the level value for the `net.fenyo` logger by debug.
 
-If you want to inspect / debug the other components (Spring MVC, WebSocket implementation, STOMP message broker, ...), replace the level value for the `net.fenyo` logger by debug.
+If you want to inspect / debug the other components (Spring MVC, WebSocket implementation, STOMP message broker, ...), replace the priority value for the root Logger by info or debug.
 
 # Client API
 
@@ -580,5 +580,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk1MTI1NTMxMF19
+eyJoaXN0b3J5IjpbLTg4NTA0MjExMV19
 -->
