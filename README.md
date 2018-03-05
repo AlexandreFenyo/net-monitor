@@ -121,6 +121,9 @@ Here are the rules **you** must follow, to display data values correctly in ever
 
 # Server configuration
 
+There are two configuration files for the server side:
+
+- log4j.xml
 
 
 # Client API
@@ -536,5 +539,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzY0NTQxMTM2XX0=
+eyJoaXN0b3J5IjpbLTEwNzc3MzY2NzFdfQ==
 -->
