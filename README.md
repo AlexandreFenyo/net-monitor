@@ -68,7 +68,7 @@ Here are the operations a manager does, when asked to manage a new chart:
 
 - Regularly, the manager moves the data displayed on the chart to the left, for the drawing to follow the x-axis time scale. If some data is no longer useful for drawing the chart, it is removed from the local copy of the dataset.
 
-If you want to change the time scale displayed by a view with a chart, just ask the manager to unmanage the view and create a new manager to manage it again.
+If you want to change the time scale displayed by a view with a chart, just ask the manager to unmanage the view and create a new manager to do the job again.
 
 ### lifetime
 
@@ -513,5 +513,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODczMzg1NDkzXX0=
+eyJoaXN0b3J5IjpbNTczODIxNjIwXX0=
 -->
