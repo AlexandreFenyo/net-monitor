@@ -161,7 +161,7 @@ The default logging rules configuration file looks like this:
 </log4j:configuration>
 ````
 
-Note that is you get a high rate of If you want to increase performances, change the ConversionPattern
+Note that is you get a high rate of logs, you should replace the `%d` part of the ConversionPattern because pattern If you want to increase performances, change the ConversionPattern
 
 # Client API
 
@@ -576,5 +576,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0NjQ5ODQxOF19
+eyJoaXN0b3J5IjpbLTExNTIyNTUwNjhdfQ==
 -->
