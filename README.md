@@ -1,4 +1,4 @@
-# Net-Monitor
+# net-monitor
 
 ![net-monitor](https://raw.githubusercontent.com/AlexandreFenyo/net-monitor/master/docs/animation.gif)
 
@@ -523,5 +523,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkxMzM0NzgzNF19
+eyJoaXN0b3J5IjpbMzA1NjE0NjUwXX0=
 -->
