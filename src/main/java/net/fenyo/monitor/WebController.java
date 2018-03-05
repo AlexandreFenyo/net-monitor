@@ -81,6 +81,7 @@ public class WebController {
 
     /**
      * Answer to HTTP requests to add a value to a data set and publish this value to the STOMP message broker.
+     * This is *not* called by internal probes.
      * @param long value numeric value.
      * @param String data data set name.
      * @param long lifetime new lifetime for this data set. Must be >= -1. -1 means default value.
@@ -97,6 +98,7 @@ public class WebController {
 
     /**
      * Add a value to a data set and publish this value to the STOMP message broker.
+     * This may be called by internal or external probes.
      * @param long value numeric value.
      * @param String dataset data set name.
      * @param long lifetime new lifetime for this data set. Must be >= 0. 0 means no lifetime change if the data set already exists. Otherwise, 0 means no persistence.

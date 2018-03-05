@@ -1,9 +1,31 @@
 {
 	"default_lifetime": 86400,
 	"probes": [
+			{
+			"dataset": "freeboxDownstream",
+			"lifetime": 3600,
+			"type": "snmp",
+			"version": "v2c",
+			"agent": "192.168.0.254",
+			"community": "public",
+			"oid": "1.3.6.1.2.1.2.2.1.10.10111",
+			"rate": 10
+		},
+
+		{
+			"dataset": "freeboxUpstream",
+			"lifetime": 3600,
+			"type": "snmp",
+			"version": "v2c",
+			"agent": "192.168.0.254",
+			"community": "public",
+			"oid": "1.3.6.1.2.1.2.2.1.16.10111",
+			"rate": 10
+		},
+	
 		{
 		    "__comment_dataset": "replace DISABLEDdataset by dataset to enable this data set example",
-			"dataset": "set1",
+			"DISABLEDdataset": "set1",
 
 			"__comment_lifetime": "life duration in seconds",
 			"lifetime": 3600,
@@ -15,7 +37,7 @@
 			"version": "v3",
 
 			"__comment_community": "only with v1 or v2c",
-			"__DISABLED_community": "public",
+			"__ANNULE_community": "public",
 
 			"username": "user4",
 
@@ -39,7 +61,7 @@
 		},
 		{
 		    "__comment_dataset": "replace DISABLEDdataset by dataset to enable this data set example",
-			"dataset": "set2",
+			"DISABLEDdataset": "set2",
 			"lifetime": 3600,
 			"type": "snmp",
 			"version": "v2c",
@@ -50,7 +72,7 @@
 		},
 		{
 		    "__comment_dataset": "replace DISABLEDdataset by dataset to enable this data set example",
-			"dataset": "set1",
+			"DISABLEDdataset": "set1",
 			"lifetime": 3600,
 			"type": "snmp",
 			"version": "v2c",
