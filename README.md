@@ -66,7 +66,7 @@ Up to now, we have encountered four types of lifetime:
 
   - internal probes: it is a constant value greater or equal to 0 (-1 means global default lifetime).
 
-- the lifetime of a view, that defines the time range displayed by the corresponding chart. It should of course be greater or equal to the lifetime of the associated data set.
+- the lifetime of a view, that is constant and defines the time range displayed by the corresponding chart. It should of course be greater or equal to the lifetime of the associated data set.
 
 Here are the rules that define dataset lifetime updates:
 
@@ -491,5 +491,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzc4MTgwOTQxXX0=
+eyJoaXN0b3J5IjpbMTQwNjI0MjQyOF19
 -->
