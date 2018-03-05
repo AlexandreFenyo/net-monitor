@@ -13,7 +13,7 @@ It is made of two main parts:
 - a JavaScript client library (module): net-monitor.bundle.min.js;
 - a server running in a servlet container, that collects data and feeds the client library with them.
 
-The implementation is very efficient: clients (browsers) do not poll the server. Instead, clients subscribe to their desired topics (data sets) from a message broker, on top of WebSockets.
+The implementation is very efficient: clients (i.e. browsers) do not poll the server. Instead, clients subscribe to their desired topics (data sets) from a message broker, on top of WebSockets.
 
 Therefore, a very large number of clients can be connected to the same server without performance issues.
 
@@ -628,5 +628,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjUxOTIyNTk5XX0=
+eyJoaXN0b3J5IjpbLTE3OTA2NDI5OTVdfQ==
 -->
