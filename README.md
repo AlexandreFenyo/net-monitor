@@ -167,7 +167,12 @@ If you want to inspect / debug the net-monitor behaviour, replace the level valu
 
 If you want to inspect / debug the other components (Spring MVC, WebSocket implementation, STOMP message broker, ...), replace the priority value for the root Logger by something like info or debug.
 
-# Client configuration
+### config.json
+
+The default logging rules configuration file looks like this:
+````xml
+
+````
 
 
 
@@ -584,5 +589,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzgzNTIyNzIyXX0=
+eyJoaXN0b3J5IjpbMTM4NDgwMzQ3N119
 -->
