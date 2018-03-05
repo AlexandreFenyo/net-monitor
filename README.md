@@ -1,5 +1,7 @@
 # Concepts
 
+![support](docs/support.png)
+
 ### net-monitor goal
 
 net-monitor aims to create charts for you, in the browser, and dynamically update the data associated to those charts by talking to the server.
@@ -517,5 +519,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5MjcyNjUyNzRdfQ==
+eyJoaXN0b3J5IjpbLTk2OTI4NDAzNV19
 -->
