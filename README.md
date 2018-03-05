@@ -62,7 +62,7 @@ Up to now, we have encountered two types of lifetime:
 
 - the lifetime of a view, that defines the time range displayed by the corresponding chart.
 
-  Here is the lifecycle of the data set lifetime:
+Here are the rules associated to lifetime values
   
   - the data set lifetime initial value is set when the data set is created:
 
@@ -486,5 +486,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM2NDc2OTQyNV19
+eyJoaXN0b3J5IjpbLTY3NDM5ODc1N119
 -->
