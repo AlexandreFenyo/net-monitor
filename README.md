@@ -56,7 +56,7 @@ Up to now, we have encountered two types of lifetime:
   
   - the data set lifetime initial value is set when the data set is created:
 
-    - when a probe adds a value to a data set with a name not already associated to an existing data set, a new data set is created.
+    - when a probe adds a value to a data set with a name not already associated to an existing data set, a new data set is created. The 
 
 
 # Demo
@@ -476,5 +476,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzczMzU0NjM3XX0=
+eyJoaXN0b3J5IjpbMzk5NjA5Njg0XX0=
 -->
