@@ -181,10 +181,11 @@ public class MonitorProbe implements Runnable {
                 return;
             }
 
+            // UN BUG A CORRIGER SI DEUX USERNAMES DANS LA MEME PROBE ???
             final UsmUserEntry entry = snmp.getUSM()
                     .getUserTable().getUser(new OctetString(username));
             if (entry == null) {
-                logger.error("Error: username should be unique");
+                logger.warn("Warning: username should be unique");
             }
 
             if (sec_level == null) {
@@ -270,7 +271,7 @@ public class MonitorProbe implements Runnable {
 	      target.setRetries(3);
 	      target.setTimeout(1500);
 	      target.setMaxSizeRequestPDU(1000);
-	    
+
 	      final PDU requestPDU;
 	      
 	      if (version.equals("v1")) {
