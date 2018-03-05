@@ -57,7 +57,7 @@ If you want to display multiple charts associated to the same data set, just cre
 Here is the operations a manager does, when asked to manage a new chart:
 
 - the manager first creates the view and its associated chart
-- then the manager connects to the server and download a part of the data from the dataset, 
+- then the manager connects to the server and downloads some data from the dataset: the data that are not older thant the lifetime defining the time scale of the view.
 
 ### lifetime
 
@@ -502,5 +502,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk5MTc2OTAxNF19
+eyJoaXN0b3J5IjpbMTMxMjQ4OTYzMl19
 -->
