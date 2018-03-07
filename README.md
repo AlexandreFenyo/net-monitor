@@ -377,7 +377,7 @@ var charts_conf = {
 
 ## Managing a chart
 
-Call Manager.manage(configuration_object)
+To create a manager that handles the views defined in a configuration object, just call `Manager.manage(charts_conf)`.
 
 
 
@@ -785,5 +785,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU5NDUyODA0OF19
+eyJoaXN0b3J5IjpbLTY1NTYxNDgwXX0=
 -->
