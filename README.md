@@ -429,6 +429,8 @@ This new manager creates the chart, displays initial values and manages new valu
 
 Simply call `NetMonitor.unmanage(manager)` to unmanage the chart. This will destroy the Chart.js chart instances (the charts disappear), close the web socket to the server and clean associated data.
 
+## Using the browser as an external probe
+
 
 # Server installation
 
@@ -833,5 +835,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI5MDcyMDkzNV19
+eyJoaXN0b3J5IjpbLTQ5OTQwNDQwNl19
 -->
