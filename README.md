@@ -414,24 +414,12 @@ This new manager creates the chart, displays initial values and manages new valu
 				dataSet: "set2"
 			}
 		]
-};
-var chart3 = {
-		views: [
-			{
-				id: "myChart3",
-				topLabel: "chart 3: last 10 seconds of data set 1",
-				bottomLabel: "dataset 1",
-				lifeTime: 10,
-				dataSet: "set1"
-			}
-		]
-};
-
-var manager_charts;
-var manager_chart3;
-
+    };
+var manager;
   </head>
-  <body onload="manager_charts = NetMonitor.manage(charts);manager_chart3 = NetMonitor.manage(chart3); init_charts()">
+  <body onload="manager = NetMonitor.manage(charts)">
+    <canvas id="myChart1" width="800" height="200"></canvas>
+    <canvas id="myChart2" width="800" height="200"></canvas>
   </body>
 </html>
 ````
@@ -840,5 +828,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzMjE4MDA5NzFdfQ==
+eyJoaXN0b3J5IjpbMTYwMjk0NTMwNV19
 -->
