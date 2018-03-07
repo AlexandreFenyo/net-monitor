@@ -354,7 +354,7 @@ Here is an example of a configuration object used to manage both of the charts m
 
 ````html
 var charts = {
-		// optional URL to access the server:
+		// optional URL to access the dispatch servlet:
 		dispatchUrl: "http://my-server.com:8080/net-monitor/dispatch",
 		views: [
 			{
@@ -785,5 +785,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5OTkxODU4OTldfQ==
+eyJoaXN0b3J5IjpbMzc1ODUyNjU3XX0=
 -->
