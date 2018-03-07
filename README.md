@@ -394,9 +394,44 @@ This new manager creates the chart, displays initial values and manages new valu
     <meta charset="UTF-8">
     <title>two animated graphs with net-monitor</title>
     <script src="javascript/public/net-monitor.bundle.min.js"></script>
-  </head>
-  <body>
+    <script>
+      var charts = {
+		// optional URL to access the server:
+		// dispatchUrl: "http://localhost:8080/net-monitor/dispatch",
+		views: [
+			{
+				id: "myChart1",
+				topLabel: "chart 1: last 60 seconds of data set 1",
+				bottomLabel: "dataset 1",
+				lifeTime: 60,
+				dataSet: "set1"
+			},
+			{
+				id: "myChart2",
+				topLabel: "chart 2: last 30 seconds of data set 2",
+				bottomLabel: "dataset 2",
+				lifeTime: 30,
+				dataSet: "set2"
+			}
+		]
+};
+var chart3 = {
+		views: [
+			{
+				id: "myChart3",
+				topLabel: "chart 3: last 10 seconds of data set 1",
+				bottomLabel: "dataset 1",
+				lifeTime: 10,
+				dataSet: "set1"
+			}
+		]
+};
 
+var manager_charts;
+var manager_chart3;
+
+  </head>
+  <body onload="manager_charts = NetMonitor.manage(charts);manager_chart3 = NetMonitor.manage(chart3); init_charts()">
   </body>
 </html>
 ````
@@ -805,5 +840,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1NzA2OTAyNTldfQ==
+eyJoaXN0b3J5IjpbLTEzMjE4MDA5NzFdfQ==
 -->
