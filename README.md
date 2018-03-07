@@ -303,7 +303,7 @@ See below the chapter _Client integration_ and choose a way to import the net-mo
 
 We suppose here that you have imported this module as the named object NetMonitor.
 
-To create and manage a chart, you  need to declare a ca
+To create and manage a chart, you  need to declare a canvas
 
 ## Managing a chart
 
@@ -714,5 +714,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNTU4NDMwNzRdfQ==
+eyJoaXN0b3J5IjpbLTY2NDY3MTU0OF19
 -->
