@@ -425,9 +425,9 @@ This new manager creates the chart, displays initial values and manages new valu
 </html>
 ````
 
-## Managing a chart
+## Unmanaging a chart
 
-### create a manager
+Simply call `manager.unmanage()` to unmanage the chart. This will destroy the Chart.js instance (the chart , close the web socket to the server and clean 
 
 
 # Server installation
@@ -833,5 +833,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5NjIzNDQ4NTNdfQ==
+eyJoaXN0b3J5IjpbNDA3NDIwMjQ0XX0=
 -->
