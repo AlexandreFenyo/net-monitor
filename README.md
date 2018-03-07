@@ -350,7 +350,7 @@ For instance, here is a view displaying the last minute values of the server dat
 
 ### full example
 
-Here is an example of a configuration object used to manage both of the charts myChart1 and myChart2 (see before):
+Here is an example of a configuration object used to manage both of the charts myChart1 and myChart2 we have talked about before:
 
 ````html
 var charts = {
@@ -785,5 +785,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzc1ODUyNjU3XX0=
+eyJoaXN0b3J5IjpbMjEzNzk4MDMyN119
 -->
