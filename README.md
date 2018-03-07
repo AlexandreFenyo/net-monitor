@@ -322,9 +322,10 @@ As said before, a manager can handle several charts, using views. So you need to
 
 Each view associates a dataset with a canvas id and some more parameters:
 
-- the lifetime the view must display (seconds),
-- the top label,
-- the bottom label.
+- the lifetime the view must display (unit: seconds),
+- the top label (optionnal),
+- the bottom label (optionnal).
+
 
 
 
@@ -738,5 +739,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjg5ODY1MTk3XX0=
+eyJoaXN0b3J5IjpbLTY3Mzc1ODYzOV19
 -->
