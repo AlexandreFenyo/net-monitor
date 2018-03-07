@@ -22,7 +22,6 @@ Therefore, a very large number of clients can be connected to the same server wi
 
 Before using net-monitor, you may start reading this chapter to get informations about its core concepts: data sets, probes, charts, views, managers and lifetime configuration.
 
-
 ## data set
 
 A net-monitor data set is a named time series (i.e. a set of time stamped collected data), maintained in the net-manager server memory. A data set typically contains numerical network throughput values collected from a snmp agent. A maximum data lifetime is associated with each data set.
@@ -703,5 +702,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg5MTc4OTUzNV19
+eyJoaXN0b3J5IjpbNDIxMTQyMDkzXX0=
 -->
