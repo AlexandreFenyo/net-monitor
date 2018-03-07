@@ -12,7 +12,7 @@ https://fenyo.net/net-monitor/freebox.html
 
 # Purpose
 
-net-monitor is a client / server toolkit. Its purpose is to let you include HTML animated networking charts into your web applications and single pages. It comes with a SNMP v1/v2c/v3 manager and is fully compliant with IPv4/IPv6.
+net-monitor is a client / server toolkit. Its purpose is to let you include HTML animated networking charts into your web applications and single pages. It comes with a SNMP v1/v2c/v3 manager and is fully compliant with IPv4 and IPv6.
 
 It is made of two main parts:
 
@@ -708,5 +708,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNzI0NjgwNjJdfQ==
+eyJoaXN0b3J5IjpbNTAyMzc5NDY0XX0=
 -->
