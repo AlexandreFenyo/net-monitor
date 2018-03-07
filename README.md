@@ -303,6 +303,8 @@ See below the chapter _Client integration_ and choose a way to import the net-mo
 
 We suppose here that you have imported this module as object NetMonitor.
 
+
+
 ## Managing a chart
 
 
@@ -712,5 +714,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjE0NDMxNTM4NV19
+eyJoaXN0b3J5IjpbODQyNjYwMzA5XX0=
 -->
