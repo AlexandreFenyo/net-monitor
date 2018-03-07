@@ -317,6 +317,8 @@ We suppose here that you have created the following two charts:
 <canvas id="myChart2" width="800" height="200"></canvas>
 ````
 
+## Configuration object
+
 To manage these canvas, you must not call the Chart.js API but the net-monitor one.
 As said before, a manager can handle several charts, using views. So you need to create a configuration object that defines global parameters for this manager, and an array of views.
 
@@ -743,5 +745,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc4NjAxNTE5OF19
+eyJoaXN0b3J5IjpbLTczMTY3NzEyMV19
 -->
