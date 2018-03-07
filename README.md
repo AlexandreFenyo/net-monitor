@@ -350,7 +350,30 @@ For instance, here is a view displaying the last minute values of the server dat
 
 ### full example
 
+Here is an example of a configuration object used to manage both of the charts myChart1 and myChart2 (see before):
 
+````html
+var charts = {
+		// optional URL to access the server:
+		dispatchUrl: "http://localhost:8080/net-monitor/dispatch",
+		views: [
+			{
+				id: "myChart1",
+				topLabel: "chart 1: last 60 seconds of data set 1",
+				bottomLabel: "dataset 1",
+				lifeTime: 60,
+				dataSet: "set1"
+			},
+			{
+				id: "myChart2",
+				topLabel: "chart 2: last 30 seconds of data set 2",
+				bottomLabel: "dataset 2",
+				lifeTime: 30,
+				dataSet: "set2"
+			}
+		]
+};
+````
 
 
 ## Managing a chart
@@ -762,5 +785,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzI1NDgzNDEwXX0=
+eyJoaXN0b3J5IjpbLTEzNTY5ODYxMjZdfQ==
 -->
