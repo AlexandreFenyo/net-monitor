@@ -301,6 +301,8 @@ Here is an example of a configuration file with 3 probes: two SNMP v2c and one v
 
 See below the chapter _Client integration_ and choose a way to import the net-monitor JavaScript module.
 
+
+
 ## Managing a chart
 
 
@@ -710,5 +712,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYxNjQyOTY1OF19
+eyJoaXN0b3J5IjpbNDM2MDA5OTEwXX0=
 -->
