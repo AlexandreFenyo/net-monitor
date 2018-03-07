@@ -307,7 +307,7 @@ We suppose here that you have imported this module as the named object `NetMonit
 <script src="javascript/public/net-monitor.bundle.min.js"></script>
 ````
 
-To create and manage a chart, you first need to declare an html canvas, like you would do with Chart.js:
+To create and manage a chart, you first need to declare an html canvas with an id, like you would do with Chart.js:
 
 ````html
 <canvas id="myChart1" width="800" height="200"></canvas>
@@ -726,5 +726,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzMTc1Mzc4NjBdfQ==
+eyJoaXN0b3J5IjpbLTE1MDExNTk2NzBdfQ==
 -->
