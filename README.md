@@ -67,7 +67,7 @@ There are two probe types:
 There are typically two types of external probes:
 
 - daemons that collect data not available through SNMP,
-- the client browser can act as an external probe while calling `NetMonitor.pushValue(...)`).
+- your JavaScript application running in the client browser and calling `NetMonitor.pushValue(...)`
 
 ## chart
 
@@ -840,5 +840,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAzNDMzNzUxMl19
+eyJoaXN0b3J5IjpbMTAzNDA3Mjk1N119
 -->
