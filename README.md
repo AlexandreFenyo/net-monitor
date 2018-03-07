@@ -381,6 +381,7 @@ To create a manager that handles the views defined in a configuration object, ju
 
 This will create the chart, display initial values and manage new values.
 
+This is typically called when the page is loaded.
 
 
 # Server installation
@@ -786,5 +787,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTcyMjU5MjQ5XX0=
+eyJoaXN0b3J5IjpbMTQ4MzU5NTgwXX0=
 -->
