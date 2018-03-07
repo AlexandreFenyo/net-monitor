@@ -383,7 +383,7 @@ This will create the chart, display initial values and manage new values.
 
 This is typically called when the page is loaded.
 
-H
+Here is 
 
 
 # Server installation
@@ -789,5 +789,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzUyMTM5MDUyXX0=
+eyJoaXN0b3J5IjpbNzU2ODM0MTUwXX0=
 -->
