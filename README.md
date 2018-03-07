@@ -6,6 +6,7 @@ In a nutshell:
 
 # Live demo
 
+A live de
 https://fenyo.net/net-monitor/freebox.html
 
 # Purpose
@@ -706,5 +707,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUyNzU2ODAwXX0=
+eyJoaXN0b3J5IjpbMjAyMDgwODUwMl19
 -->
