@@ -382,6 +382,7 @@ To create a manager that handles the views defined in a configuration object, ju
 
 
 
+
 # Server installation
 
 The net-monitor server is made of three components:
@@ -785,5 +786,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY1NTYxNDgwXX0=
+eyJoaXN0b3J5IjpbLTE5NTc0MjU4Ml19
 -->
