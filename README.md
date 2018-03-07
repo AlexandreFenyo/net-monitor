@@ -64,6 +64,11 @@ There are two probe types:
 
   External probes **may choose to specify** a lifetime when pushing a data to a data set. This lifetime can change over the time. Not specifying a lifetime or specifying 0 means that in case the dataset already exists, no change for its lifetime is requested. I the dataset does not exist, its initial lifetime will be set to 0, therefore only one data value will be kept in this dataset until another lifetime is specified.
 
+There are typically two types of external probes:
+
+- daemons that collect data not available through SNMP,
+- the client browser can act as an external probe while calling `NetMonitor.pushValue(...)`).
+
 ## chart
 
 A chart is a JavaScript object that the [Chart.js](http://www.chartjs.org/) JavaScript library uses to display time series using a html canvas.
@@ -835,5 +840,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTQ2MzE5ODIxXX0=
+eyJoaXN0b3J5IjpbMTAzNDMzNzUxMl19
 -->
