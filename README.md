@@ -318,7 +318,7 @@ We suppose here that you have created the following two charts:
 ````
 
 To manage these canvas, you must not call the Chart.js API but the net-monitor one.
-As said before, a manager can handle several charts. So you need to create a configuration object that 
+As said before, a manager can handle several charts. So you need to create a configuration object that define, for each canvas IDs, the dataset that it must display 
 
 
 
@@ -731,5 +731,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIyMzY5Mzg3Ml19
+eyJoaXN0b3J5IjpbMTk1Njc4MjczMV19
 -->
