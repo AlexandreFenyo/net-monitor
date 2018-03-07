@@ -299,6 +299,8 @@ Here is an example of a configuration file with 3 probes: two SNMP v2c and one v
 
 ## Creating a chart
 
+
+
 ## Managing a chart
 
 
@@ -708,5 +710,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTUyNDk4NjQ3XX0=
+eyJoaXN0b3J5IjpbMTc2ODA3MzM5NV19
 -->
