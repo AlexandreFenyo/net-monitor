@@ -352,7 +352,7 @@ For instance, here is a view displaying the last minute values of the server dat
 
 Here is an example of a configuration object used to manage both of the charts myChart1 and myChart2 we have talked about before:
 
-````html
+````javascript
 var charts = {
 		// optional URL to access the dispatch servlet:
 		dispatchUrl: "http://my-server.com:8080/net-monitor/dispatch",
@@ -785,5 +785,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjEzNzk4MDMyN119
+eyJoaXN0b3J5IjpbMTI2NTgxNjI5N119
 -->
