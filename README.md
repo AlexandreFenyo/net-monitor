@@ -320,7 +320,7 @@ We suppose here that you have created the following two charts:
 To manage these canvas, you must not call the Chart.js API but the net-monitor one.
 As said before, a manager can handle several charts, using views. So you need to create a configuration object that defines global parameters for this manager, and an array of views.
 
-There is currently one global optionnal parameter: `dispatchUrl`. This parameter is used when the Uweb page that 
+There is currently one global optionnal parameter: `dispatchUrl`. This parameter is used when the URL of the web page that 
 
 Each view associates a dataset with a canvas id and some more parameters:
 
@@ -741,5 +741,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM4NTIzNzI2XX0=
+eyJoaXN0b3J5IjpbLTE3MzA1NjQ5ODhdfQ==
 -->
