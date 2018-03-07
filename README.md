@@ -36,7 +36,7 @@ The only way to create a new data set is to add a value to a named data set that
 
 For integrity purpose, data sets can only be updated by one of the following two mecanisms:
 
-- A new data value, timestamped with the current instant (corresponding to the instant the data is added into the server memory), can be added by a net-monitor probe (typically using its internal snmp manager) or by an external web service request to the server.
+- A new data value, timestamped with the current instant (corresponding to the instant the data is added into the server memory), can be added by a net-monitor probe (typically using its internal snmp manager) or by an external web service request to the server (the client browser can act as an external probe when calling `NetMonitor.pushValue(...)`).
 
   No data can be added with a timestamp in the past or the future. Therefore, the probe or the web service request that adds a new data does not need to specify a timestamp.
 
@@ -835,5 +835,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ5OTQwNDQwNl19
+eyJoaXN0b3J5IjpbLTIwODY0Mzk4MTJdfQ==
 -->
