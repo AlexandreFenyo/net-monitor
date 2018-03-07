@@ -6,7 +6,8 @@ In a nutshell:
 
 # Live demo
 
-A live demo 
+A live demo displaying the ingress and egress throughput of my ADSL box at home is available here:
+
 https://fenyo.net/net-monitor/freebox.html
 
 # Purpose
@@ -707,5 +708,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ0ODAwMjY5NF19
+eyJoaXN0b3J5IjpbLTIwODAwMDU0NjldfQ==
 -->
