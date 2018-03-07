@@ -348,6 +348,9 @@ For instance, here is a view displaying the last minute values of the server dat
 }
 ````
 
+### full example
+
+
 
 
 ## Managing a chart
@@ -759,5 +762,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk1Mzk4NDA5OF19
+eyJoaXN0b3J5IjpbNzI1NDgzNDEwXX0=
 -->
