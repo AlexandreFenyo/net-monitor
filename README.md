@@ -318,7 +318,14 @@ We suppose here that you have created the following two charts:
 ````
 
 To manage these canvas, you must not call the Chart.js API but the net-monitor one.
-As said before, a manager can handle several charts, using views. So you need to create a configuration object that defines an array of views. Each view associates a dataset with a canvas id and some more parameters (lifetime 
+As said before, a manager can handle several charts, using views. So you need to create a configuration object that defines an array of views.
+
+Each view associates a dataset with a canvas id and some more parameters:
+
+- the lifetime the view must display (seconds),
+- the top label,
+- the bottom label.
+
 
 
 
@@ -731,5 +738,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNzI0MjM0MDZdfQ==
+eyJoaXN0b3J5IjpbNjg5ODY1MTk3XX0=
 -->
