@@ -383,9 +383,16 @@ To create a manager that handles the views defined in a configuration object, ju
 
 This new manager creates the chart, displays initial values and manages new values.
 
-This is typically called when the page is loaded.
+`Manager.manage(...)` is typically called when the page is loaded.
 
-Here is 
+### example
+
+````html
+<!DOCTYPE html>
+<html>
+<head>
+
+````
 
 
 # Server installation
@@ -791,5 +798,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAxMjg4OTIxNV19
+eyJoaXN0b3J5IjpbLTEyMjU2ODMyNDFdfQ==
 -->
