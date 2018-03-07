@@ -427,7 +427,7 @@ This new manager creates the chart, displays initial values and manages new valu
 
 ## Unmanaging a chart
 
-Simply call `manager.unmanage()` to unmanage the chart. This will destroy the Chart.js instance (the chart , close the web socket to the server and clean 
+Simply call `manager.unmanage()` to unmanage the chart. This will destroy the Chart.js chart instances (the charts disappear), close the web socket to the server and clean associated data.
 
 
 # Server installation
@@ -833,5 +833,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDA3NDIwMjQ0XX0=
+eyJoaXN0b3J5IjpbMTIxNzU5MDkyNl19
 -->
