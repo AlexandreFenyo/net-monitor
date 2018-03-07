@@ -393,7 +393,12 @@ This new manager creates the chart, displays initial values and manages new valu
   <head>
     <meta charset="UTF-8">
     <title>two animated graphs with net-monitor</title>
+    <script src="javascript/public/net-monitor.bundle.min.js"></script>
+  </head>
+  <body>
 
+  </body>
+</html>
 ````
 
 
@@ -800,5 +805,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE4MDY5MzBdfQ==
+eyJoaXN0b3J5IjpbLTE1NzA2OTAyNTldfQ==
 -->
