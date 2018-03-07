@@ -425,6 +425,10 @@ This new manager creates the chart, displays initial values and manages new valu
 </html>
 ````
 
+## Managing a chart
+
+### create a manager
+
 
 # Server installation
 
@@ -829,5 +833,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQwNTQyMzA3MV19
+eyJoaXN0b3J5IjpbLTE5NjIzNDQ4NTNdfQ==
 -->
