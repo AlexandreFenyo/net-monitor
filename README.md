@@ -301,9 +301,13 @@ Here is an example of a configuration file with 3 probes: two SNMP v2c and one v
 
 See below the chapter _Client integration_ and choose a way to import the net-monitor JavaScript module (script tag, ES6 module, common JS, ...).
 
-We suppose here that you have imported this module as the named object NetMonitor.
+We suppose here that you have imported this module as the named object NetMonitor, for instance this way:
 
-To create and manage a chart, you first need to declare a canvas, like you would do with Chart.js:
+````html
+<script src="javascript/public/net-monitor.bundle.min.js"></script>
+````
+
+To create and manage a chart, you first need to declare an html canvas, like you would do with Chart.js:
 
 ````html
 <canvas id="myChart1" width="800" height="200"></canvas>
@@ -720,5 +724,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc1MTY5NzUwOV19
+eyJoaXN0b3J5IjpbOTQ2Nzc0MzIzXX0=
 -->
