@@ -418,7 +418,7 @@ This new manager creates the chart, displays initial values and manages new valu
     var manager;
     </script>
   </head>
-  <body onload="manager = NetMonitor.manage(charts)">
+  <body onload="manager=NetMonitor.manage(charts)">
     <canvas id="myChart1" width="800" height="200"></canvas>
     <canvas id="myChart2" width="800" height="200"></canvas>
   </body>
@@ -829,5 +829,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1MzU2NDUzN119
+eyJoaXN0b3J5IjpbLTQwNTQyMzA3MV19
 -->
