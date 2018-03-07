@@ -377,9 +377,11 @@ var charts_conf = {
 
 ## Managing a chart
 
-To create a manager that handles the views defined in a configuration object, just call `Manager.manage(charts_conf)`.
+### create a manager
 
-This will create the chart, display initial values and manage new values.
+To create a manager that handles the views defined in a configuration object, just call `Manager.manage(charts_conf)`. This will return a manager object, that can later be used to process different actions.
+
+This new manager creates the chart, displays initial values and manages new values.
 
 This is typically called when the page is loaded.
 
@@ -789,5 +791,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzU2ODM0MTUwXX0=
+eyJoaXN0b3J5IjpbMTAxMjg4OTIxNV19
 -->
