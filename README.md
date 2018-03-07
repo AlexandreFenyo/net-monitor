@@ -336,7 +336,7 @@ Each view associates a dataset with a canvas id and some more parameters:
 - the top label (optional),
 - the bottom label (optional).
 
-For instance, here is a view displaying the last minute values of the data set named set1:
+For instance, here is a view displaying the last minute values of the server data set named set1, on the canvas with id myChart1:
 
 ````html
 {
@@ -759,5 +759,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA5MTMwMTUxNV19
+eyJoaXN0b3J5IjpbLTk1Mzk4NDA5OF19
 -->
