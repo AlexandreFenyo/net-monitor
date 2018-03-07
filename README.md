@@ -324,7 +324,7 @@ As said before, a manager can handle several charts, using views. So you need to
 
 ### global parameters
 
-There is currently one global optional parameter: `dispatchUrl`. This parameter is used to help the browser locate the net-monitor server when the base URL (http[s]://[hostname]:[port]/[context]) of the web page that makes use of net-monitor is not the same that the base URL of the server side of net-monitor.
+There is currently one global optional parameter: `dispatchUrl`. This parameter is used to help the browser locate the dispatch servlet in the net-monitor server when the base URL (http[s]://[hostname]:[port]/[context]) of the web page that makes use of net-monitor is not the same that the base URL of the server side of net-monitor.
 
 For instance, suppose that the html page using net-monitor has been loaded from http[s]://[hostname]:[port]/[local-part] (ex: https://myserver.com:4443/myapp/app.html). When dispatchUrl is not used, the net-monitor JavaScript client computes the server URL using the protocol, hostname and port from the URL of the page, and adds the context `/net-monitor`. Therefore, this lead to https://myserver.com:4443/net-monitor In case the net-monitor server is published at another URL, for instance http://myotherserver:8080/net-monitor, you must set dispatchUrl to http://myotherserver:8080/net-monitor.
 
@@ -785,5 +785,5 @@ written with StackEdit - Support StackEdit
 eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAyMzQ2MTM2Nl19
+eyJoaXN0b3J5IjpbMTcwMTAwNTI1XX0=
 -->
