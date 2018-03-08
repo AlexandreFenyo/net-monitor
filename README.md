@@ -553,7 +553,7 @@ The communication protocol between those two components should be:
 - AJP for everything but  WebSocket connections,
 - a transparent proxy for WebSocket connections.
 
-So you need to enable AJP on a TCP port (for instance 9001), just launch mvn
+Therefore, you need to configure the AJP TCP port used by Apache tomcat (for instance TCP/9001): for instance, if running Apache tomcat with mage
 
 
 
@@ -859,5 +859,5 @@ eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 eyJoaXN0b3J5IjpbLTE1MjQ4MjA0MzNdfQ==
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzODQ2Mzg3ODBdfQ==
+eyJoaXN0b3J5IjpbLTE3MjAwMDA0NTJdfQ==
 -->
