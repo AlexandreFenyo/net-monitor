@@ -444,7 +444,7 @@ Arguments:
 
 - manager: the manager that manages a view associated to the data set on which the value must be pushed,
 
-- dataSet 
+- dataSet: 
 
 <button onclick="NetMonitor.pushValue(manager_charts, 'set1', 123, undefined, function () {console.info('value pushed')})">add value to dataset 1</button>
 
@@ -887,5 +887,5 @@ eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 eyJoaXN0b3J5IjpbLTE1MjQ4MjA0MzNdfQ==
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ4NTYyMDc3Ml19
+eyJoaXN0b3J5IjpbLTExMzQ1MjIzODBdfQ==
 -->
