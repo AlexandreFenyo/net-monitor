@@ -438,6 +438,9 @@ Simply call `NetMonitor.unmanage(manager)` to unmanage the chart. This will dest
 
 ## Using the browser as an external probe
 
+You can push a value to a data set with a call to `NetMonitor.pushValue(manager, dataSet, value, lifeTime, callbackDone)`.
+
+
 
 # Server installation
 
@@ -877,5 +880,5 @@ eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 eyJoaXN0b3J5IjpbLTE1MjQ4MjA0MzNdfQ==
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0MzIyNzk0Ml19
+eyJoaXN0b3J5IjpbLTk2MzMyMzUzMl19
 -->
