@@ -553,7 +553,7 @@ The communication protocol between those two components should be:
 - AJP for everything but  WebSocket connections,
 - a transparent proxy for WebSocket connections.
 
-So hyTo enable AJP on a TCP port (for instance 9001), just launch mvn
+So you need To enable AJP on a TCP port (for instance 9001), just launch mvn
 
 
 
@@ -859,5 +859,5 @@ eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 eyJoaXN0b3J5IjpbLTE1MjQ4MjA0MzNdfQ==
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY4MjAwODEzNl19
+eyJoaXN0b3J5IjpbNjk1ODAyNTk2XX0=
 -->
