@@ -345,7 +345,7 @@ Each view associates a dataset with a canvas id and some more parameters:
 
 For instance, here is a view displaying the last minute values of the server data set named set1, on the canvas with id myChart1:
 
-````json
+````javascript
 {
 	id: "myChart1",
 	topLabel: "chart 1: last 60 seconds of data set 1",
@@ -911,5 +911,5 @@ eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 eyJoaXN0b3J5IjpbLTE1MjQ4MjA0MzNdfQ==
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTgzNjc5NjI3M119
+eyJoaXN0b3J5IjpbMTg3ODczNjc0Nl19
 -->
