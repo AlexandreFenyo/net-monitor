@@ -546,7 +546,7 @@ Refer to your servlet container documentation (tomcat is a good choice) to find 
 
 ## Add SSL/https support
 
-The easiest way to publi
+The easiest way to publish the 
 
 # Client installation
 
@@ -849,5 +849,5 @@ eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 eyJoaXN0b3J5IjpbLTE1MjQ4MjA0MzNdfQ==
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjEyMDkwNzUxMF19
+eyJoaXN0b3J5IjpbNTAzMDk1NzMwXX0=
 -->
