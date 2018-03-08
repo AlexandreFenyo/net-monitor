@@ -442,7 +442,7 @@ You can push a value to a data set with a call to `NetMonitor.pushValue(manager,
 
 Arguments:
 
-- manager: the manager that manages a view associated to the data set on which the value must be pu
+- manager: the manager that manages a view associated to the data set on which the value must be pushed
 
 <button onclick="NetMonitor.pushValue(manager_charts, 'set1', 123, undefined, function () {console.info('value pushed')})">add value to dataset 1</button>
 
@@ -885,5 +885,5 @@ eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 eyJoaXN0b3J5IjpbLTE1MjQ4MjA0MzNdfQ==
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjIzODA5NjY5XX0=
+eyJoaXN0b3J5IjpbMTc0MjIxNjUwNV19
 -->
