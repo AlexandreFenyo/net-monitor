@@ -551,7 +551,7 @@ The easiest way to publish the server onto SSL/https is to add Apache httpd as a
 The communication protocol between those two components should be:
 
 - AJP for everything but  WebSockets
-- a transparent proxy for WebSocket 
+- a transparent proxy for WebSocket connections
 
 You need to configure Apache httpd to connect to Apache tomcat 
 
@@ -857,5 +857,5 @@ eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 eyJoaXN0b3J5IjpbLTE1MjQ4MjA0MzNdfQ==
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1NDg5ODk1MjRdfQ==
+eyJoaXN0b3J5IjpbLTEwNjA3NDc5OV19
 -->
