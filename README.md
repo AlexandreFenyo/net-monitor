@@ -557,19 +557,22 @@ Therefore, you need to configure the AJP TCP port used by Apache tomcat (for ins
 
 ````mvn -Dmaven.tomcat.ajp.port=9001 tomcat7:run````
 
+Remember that the http port tomcat7 listen to is 
+
 On the Apache httpd side, you need to handle:
 - requests to `/net-monitor/dispatch/socket` with the proxy_wstunnel module,
 - other requests to `/net-monitor/` with AJP.
 
-Here is a snippet of an http
+Here is a snippet of the `httpd.conf` configuration file:
+
 ````
 #enable the websocket tunneling module
 LoadModule proxy_wstunnel_module libexec/apache24/mod_proxy_wstunnel.so
 #enable AJP
 LoadModule proxy_ajp_module libexec/apache24/mod_proxy_ajp.so
 #nested ProxyPass rules must be set in the correct order
-ProxyPass "/net-monitor/dispatch/socket" "ws://127.0.0.1:81/net-monitor/dispatch/socket"
-ProxyPass /net-monitor/ ajp://127.0.0.1:9003/net-monitor/
+ProxyPass "/net-monitor/dispatch/socket" "ws://127.0.0.1:8080/net-monitor/dispatch/socket"
+ProxyPass /net-monitor/ ajp://127.0.0.1:9001/net-monitor/
 Redirect "/net-monitor" "/net-monitor/"
 
 ````
@@ -877,5 +880,5 @@ eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 eyJoaXN0b3J5IjpbLTE1MjQ4MjA0MzNdfQ==
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY3NDAzMDM4NV19
+eyJoaXN0b3J5IjpbLTUxMDg4MjU3N119
 -->
