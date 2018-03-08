@@ -466,9 +466,9 @@ manager.getChart('set1').data.datasets[0].borderColor = Color("#7743CE").alpha(.
 manager.getChart('set1').data.datasets[0].backgroundColor = Color("#0000").rgbString();
 #remove the legend
 manager.getChart('set1').options.legend.display = false;
-#use 
-//  manager_charts.chart\["freeboxUpstream"\].data.datasets\[0\].lineTension = 0;
-//  manager_charts.chart\["freeboxDownstream"\].data.datasets\[0\].lineTension = 0;
+#use straight lines instead of curve ones
+manager.getChart('set1').data.datasets[0].lineTension = 0;
+#change the grid color to 
   manager_charts.chart\["freeboxDownstream"\].options.scales.xAxes\[0\].gridLines.color = Color("#FFFFFF").alpha(.2).rgbString();
   manager_charts.chart\["freeboxDownstream"\].options.scales.yAxes\[0\].gridLines.color = Color("#FFFFFF").alpha(.2).rgbString();
 manager_charts.chart\["freeboxUpstream"\].options.scales.xAxes\[0\].gridLines.color = Color("#FFFFFF").alpha(.2).rgbString();
@@ -913,5 +913,5 @@ eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 eyJoaXN0b3J5IjpbLTE1MjQ4MjA0MzNdfQ==
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg5ODk2NDc0OV19
+eyJoaXN0b3J5IjpbLTExMDg5MDQyNzhdfQ==
 -->
