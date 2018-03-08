@@ -6,7 +6,7 @@ In a nutshell:
 
 # Live demo
 
-Two live demos displaying the ingress and egress throughputs of my ADSL box at home is available here:
+Two live demos displaying the ingress and egress throughputs of my ADSL box at home are available here:
 
 - https://fenyo.net/net-monitor/freebox.html: blank background, 120 seconds displayed
 
@@ -845,5 +845,5 @@ eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 eyJoaXN0b3J5IjpbLTE1MjQ4MjA0MzNdfQ==
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMTE2MzkzMDFdfQ==
+eyJoaXN0b3J5IjpbNTg4ODYxODc3XX0=
 -->
