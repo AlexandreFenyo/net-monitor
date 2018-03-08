@@ -448,8 +448,10 @@ Arguments:
 - lifeTime (optional): lifeTime for this value,
 - callbackDone: a callback function called by the manager when the value is added to the data set.
 
-<button onclick="NetMonitor.pushValue(manager_charts, 'set1', 123, undefined, function () {console.info('value pushed')})">add value to dataset 1</button>
-
+Here is an example of a html button adding the value 123 to a chart and logging :
+````html
+<button onclick="NetMonitor.pushValue(manager, 'set1', 123, undefined, function () {console.info('value pushed')})">add value to dataset 1</button>
+````
 
 # Server installation
 
@@ -889,5 +891,5 @@ eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 eyJoaXN0b3J5IjpbLTE1MjQ4MjA0MzNdfQ==
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc0MzY5OTYzMF19
+eyJoaXN0b3J5IjpbNTI1MzkzNzc4XX0=
 -->
