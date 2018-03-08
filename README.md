@@ -460,7 +460,7 @@ The Chart.js configuration properties can be accessed directly using `NetMonitor
 Here is an example of a chart customization:
 
 ````javascript
-#set border color
+#set border color to mauve
 manager.getChart('set1').data.datasets[0].borderColor = Color("#7743CE").alpha(.8).rgbString();
 #set background color to black
 manager.getChart('set1').data.datasets[0].backgroundColor = Color("#0000").rgbString();
@@ -911,5 +911,5 @@ eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 eyJoaXN0b3J5IjpbLTE1MjQ4MjA0MzNdfQ==
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MDY0MjkyMjBdfQ==
+eyJoaXN0b3J5IjpbLTgzNjc5NjI3M119
 -->
