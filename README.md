@@ -560,7 +560,7 @@ Therefore, you need to configure the AJP TCP port used by Apache tomcat (for ins
 On the Apache httpd side, use the following configuration:
 
 ````
-# enable  the websocket tunneling module
+\# enable  the websocket tunneling module
 LoadModule proxy_wstunnel_module libexec/apache24/mod_proxy_wstunnel.so
 ````
 
@@ -867,5 +867,5 @@ eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 eyJoaXN0b3J5IjpbLTE1MjQ4MjA0MzNdfQ==
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzU0MTc0NTA3XX0=
+eyJoaXN0b3J5IjpbNzAxOTY1OTk1XX0=
 -->
