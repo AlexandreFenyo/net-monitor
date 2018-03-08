@@ -544,6 +544,10 @@ Building with Windows + Eclipse, you can [use Eclipse to export the project as w
 
 Refer to your servlet container documentation (tomcat is a good choice) to find [how to publish the net-monitor war file](https://tomcat.apache.org/tomcat-8.0-doc/deployer-howto.html).
 
+## Add SSL/https support
+
+The easiest way to publi
+
 # Client installation
 
 ## Install from the JEE server
@@ -845,5 +849,5 @@ eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 eyJoaXN0b3J5IjpbLTE1MjQ4MjA0MzNdfQ==
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTg4ODYxODc3XX0=
+eyJoaXN0b3J5IjpbMjEyMDkwNzUxMF19
 -->
