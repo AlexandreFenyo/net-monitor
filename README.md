@@ -561,7 +561,7 @@ On the Apache httpd side, you need to handle:
 - requests to `/net-monitor/dispatch/socket` with the proxy_wstunnel module,
 - other requests to `/net-monitor/` with AJP.
 
-Here is an snippet 
+Here is a snippet of 
 ````
 #enable the websocket tunneling module
 LoadModule proxy_wstunnel_module libexec/apache24/mod_proxy_wstunnel.so
@@ -877,5 +877,5 @@ eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 eyJoaXN0b3J5IjpbLTE1MjQ4MjA0MzNdfQ==
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzIxNTI3NjgxXX0=
+eyJoaXN0b3J5IjpbMjE0NTk5OTYwMF19
 -->
