@@ -461,10 +461,7 @@ Here is an example of a chart customization:
 
 ````html
 var col1 = "#7743CE";
-  manager_charts.chart\["freeboxUpstream"\].data.datasets\[0\].borderColor = Color(col1).alpha(1).rgbString();
-  manager_charts.chart\["freeboxUpstream"\].data.datasets\[0\].backgroundColor = Color(col1).alpha(1).rgbString();
-  var col2 = "#FF0000";
-  manager_charts.chart\["freeboxDownstream"\].data.datasets\[0\].borderColor = Color(col2).alpha(1).rgbString();
+manager.getChart('set1').data.datasets[0].borderColor = Color("#7743CE").alpha(.8).rgbString();
   manager_charts.chart\["freeboxDownstream"\].data.datasets\[0\].backgroundColor = Color(col2).alpha(1).rgbString();
   manager_charts.chart\["freeboxUpstream"\].options.legend.display = false;
   manager_charts.chart\["freeboxDownstream"\].options.legend.display = false;
@@ -914,5 +911,5 @@ eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 eyJoaXN0b3J5IjpbLTE1MjQ4MjA0MzNdfQ==
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTgwNDg5MzY5Ml19
+eyJoaXN0b3J5IjpbLTU0MTYyMzkzOF19
 -->
