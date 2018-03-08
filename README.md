@@ -557,7 +557,12 @@ Therefore, you need to configure the AJP TCP port used by Apache tomcat (for ins
 
 ````mvn -Dmaven.tomcat.ajp.port=9001 tomcat7:run````
 
-On the Apache httpd side, 
+On the Apache httpd side, use the following configuration:
+
+````
+  # enable  the websocket tunneling module
+  LoadModule proxy_wstunnel_module libexec/apache24/mod_proxy_wstunnel.so
+````
 
 
 
@@ -862,5 +867,5 @@ eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 eyJoaXN0b3J5IjpbLTE1MjQ4MjA0MzNdfQ==
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg2ODgyMjAwNl19
+eyJoaXN0b3J5IjpbMTIyMDQ0MjQxMV19
 -->
