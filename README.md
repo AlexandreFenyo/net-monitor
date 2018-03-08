@@ -558,7 +558,8 @@ Therefore, you need to configure the AJP TCP port used by Apache tomcat (for ins
 ````mvn -Dmaven.tomcat.ajp.port=9001 tomcat7:run````
 
 On the Apache httpd side, you need to handle:
-- `/net-monitor/ redirect WebSocket connections  AJP protocol and use the following configuration:
+- requests to `/net-monitor/dispatch/socket` with the proxy_wstunnel module,
+- other requests to `/net-monitor/`
 
 ````
 #enable the websocket tunneling module
@@ -875,5 +876,5 @@ eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 eyJoaXN0b3J5IjpbLTE1MjQ4MjA0MzNdfQ==
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA1Mzk0MTM2MF19
+eyJoaXN0b3J5IjpbNDk4NzYxODUyXX0=
 -->
