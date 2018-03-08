@@ -460,11 +460,12 @@ The Chart.js configuration properties can be accessed directly using `NetMonitor
 Here is an example of a chart customization:
 
 ````html
-var col1 = "#7743CE";
+#set border color
 manager.getChart('set1').data.datasets[0].borderColor = Color("#7743CE").alpha(.8).rgbString();
-manager.getChart('set1').data.datasets[0].borderColor = Color("#7743CE").alpha(.8).rgbString();
-  manager_charts.chart\["freeboxDownstream"\].data.datasets\[0\].backgroundColor = Color(col2).alpha(1).rgbString();
-  manager_charts.chart\["freeboxUpstream"\].options.legend.display = false;
+#set background color to black
+manager.getChart('set1').data.datasets[0].backgroundColor = Color("#0000").rgbString();
+#remove the legend
+manager.getChart('set1').options.legend.display = false;
   manager_charts.chart\["freeboxDownstream"\].options.legend.display = false;
 //  manager_charts.chart\["freeboxUpstream"\].data.datasets\[0\].lineTension = 0;
 //  manager_charts.chart\["freeboxDownstream"\].data.datasets\[0\].lineTension = 0;
@@ -912,5 +913,5 @@ eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 eyJoaXN0b3J5IjpbLTE1MjQ4MjA0MzNdfQ==
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI3ODIwNjYwOV19
+eyJoaXN0b3J5IjpbMTQ5MDQyNjQxOV19
 -->
