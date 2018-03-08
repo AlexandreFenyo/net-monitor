@@ -553,9 +553,10 @@ The communication protocol between those two components should be:
 - AJP for everything but  WebSocket connections,
 - a transparent proxy for WebSocket connections.
 
-Therefore, you need to configure the AJP TCP port used by Apache tomcat (for instance TCP/9001): for instance, if running Apache tomcat with maven, run maven this way:
+Therefore, you need to configure the AJP TCP port used by Apache tomcat (for instance TCP/9001). For instance, when running Apache tomcat with maven, launch the following command with the AJP port as a parameter:
 
 ````mvn -Dmaven.tomcat.ajp.port=9001 tomcat7:run````
+
 
 
 
@@ -861,5 +862,5 @@ eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 eyJoaXN0b3J5IjpbLTE1MjQ4MjA0MzNdfQ==
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzI0NzczMjYyXX0=
+eyJoaXN0b3J5IjpbLTEzNDc0MDE2MzldfQ==
 -->
