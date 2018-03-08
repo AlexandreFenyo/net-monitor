@@ -546,7 +546,7 @@ Refer to your servlet container documentation (tomcat is a good choice) to find 
 
 ## Add SSL/https support
 
-The easiest way to publish the 
+The easiest way to publish the server onto SSL/https is to add Apache httpd as a front-end for the Apache tomcat application server.
 
 # Client installation
 
@@ -849,5 +849,5 @@ eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 eyJoaXN0b3J5IjpbLTE1MjQ4MjA0MzNdfQ==
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTAzMDk1NzMwXX0=
+eyJoaXN0b3J5IjpbMjAwMzUyOTgxNl19
 -->
