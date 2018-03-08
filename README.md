@@ -466,13 +466,11 @@ manager.getChart('set1').data.datasets[0].borderColor = Color("#7743CE").alpha(.
 manager.getChart('set1').data.datasets[0].backgroundColor = Color("#0000").rgbString();
 #remove the legend
 manager.getChart('set1').options.legend.display = false;
+#change the grid color to white
+manager.getChart('set1').options.scales.xAxes[0].gridLines.color = Color("#FFFFFF").rgbString();
+manager.getChart('set1').options.scales.yAxes[0].gridLines.color = Color("#FFFFFF").rgbString();
 #use straight lines instead of curve ones
 manager.getChart('set1').data.datasets[0].lineTension = 0;
-#change the grid color to white
-  manager_charts.chart\["freeboxDownstream"\].options.scales.xAxes\[0\].gridLines.color = Color("#FFFFFF").alpha(.2).rgbString();
-  manager_charts.chart\["freeboxDownstream"\].options.scales.yAxes\[0\].gridLines.color = Color("#FFFFFF").alpha(.2).rgbString();
-manager_charts.chart\["freeboxUpstream"\].options.scales.xAxes\[0\].gridLines.color = Color("#FFFFFF").alpha(.2).rgbString();
-  manager_charts.chart\["freeboxUpstream"\].options.scales.yAxes\[0\].gridLines.color = Color("#FFFFFF").alpha(.2).rgbString();
 ````
 
 # Server installation
@@ -913,5 +911,5 @@ eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 eyJoaXN0b3J5IjpbLTE1MjQ4MjA0MzNdfQ==
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMjM0NTQyMjldfQ==
+eyJoaXN0b3J5IjpbMjc5MzQ1ODIyXX0=
 -->
