@@ -448,7 +448,7 @@ Arguments:
 - lifeTime (optional): lifeTime for this value,
 - callbackDone: a callback function called by the manager when the value is added to the data set.
 
-Here is an example of a html button adding the value 123 to a chart and logging a message to the browser :
+Here is an example of a html button adding the value 123 to a chart and logging a message to the browser console whe:
 ````html
 <button onclick="NetMonitor.pushValue(manager, 'set1', 123, undefined, function () {console.info('value pushed')})">add value to dataset 1</button>
 ````
@@ -891,5 +891,5 @@ eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 eyJoaXN0b3J5IjpbLTE1MjQ4MjA0MzNdfQ==
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5NDczMDkxNF19
+eyJoaXN0b3J5IjpbNjcwNTkzMjU3XX0=
 -->
