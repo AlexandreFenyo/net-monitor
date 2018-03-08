@@ -453,6 +453,10 @@ Here is an example of a html button adding the value 123 to a chart and logging 
 <button onclick="NetMonitor.pushValue(manager, 'set1', 123, undefined, function () {console.info('value pushed')})">add 123 to set1</button>
 ````
 
+## Customizing a chart
+
+The Ch
+
 # Server installation
 
 The net-monitor server is made of three components:
@@ -891,5 +895,5 @@ eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 eyJoaXN0b3J5IjpbLTE1MjQ4MjA0MzNdfQ==
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5NTUwNDU1NTddfQ==
+eyJoaXN0b3J5IjpbMTY3MTk3MjI2Ml19
 -->
