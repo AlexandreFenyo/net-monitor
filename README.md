@@ -562,6 +562,13 @@ On the Apache httpd side, use the following configuration:
 ````
 #enable the websocket tunneling module
 LoadModule proxy_wstunnel_module libexec/apache24/mod_proxy_wstunnel.so
+#enable AJP
+LoadModule proxy_ajp_module libexec/apache24/mod_proxy_ajp.so
+#nested ProxyPass rules must be set in the correct order
+ProxyPass "/net-monitor/dispatch/socket" "ws://127.0.0.1:81/net-monitor/dispatch/socket"
+ProxyPass /net-monitor/ ajp://127.0.0.1:9003/net-monitor/
+Redirect "/net-monitor" "/net-monitor/"
+
 ````
 
 
@@ -867,5 +874,5 @@ eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 eyJoaXN0b3J5IjpbLTE1MjQ4MjA0MzNdfQ==
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTQzNzIxNjE3XX0=
+eyJoaXN0b3J5IjpbMTcwNTM0MjY4OV19
 -->
