@@ -544,7 +544,7 @@ Building with Windows + Eclipse, you can [use Eclipse to export the project as w
 
 Refer to your servlet container documentation (tomcat is a good choice) to find [how to publish the net-monitor war file](https://tomcat.apache.org/tomcat-8.0-doc/deployer-howto.html).
 
-## Add SSL/https support
+## SSL/https support
 
 The easiest way to publish the server onto SSL/https is to add Apache httpd as a front-end for the Apache tomcat application server, and configure Apache httpd to listen to port 443 with a public certificate and a private key.
 
@@ -877,5 +877,5 @@ eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 eyJoaXN0b3J5IjpbLTE1MjQ4MjA0MzNdfQ==
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2NjUxODgyMjldfQ==
+eyJoaXN0b3J5IjpbLTE0MzIyNzk0Ml19
 -->
