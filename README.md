@@ -559,7 +559,7 @@ Therefore, you need to configure the AJP TCP port used by Apache tomcat (for ins
 
 On the Apache httpd side, you need to handle:
 - requests to `/net-monitor/dispatch/socket` with the proxy_wstunnel module,
-- other requests to `/net-monitor/` with AJP
+- other requests to `/net-monitor/` with AJP.
 
 ````
 #enable the websocket tunneling module
@@ -876,5 +876,5 @@ eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 eyJoaXN0b3J5IjpbLTE1MjQ4MjA0MzNdfQ==
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYxOTIyNDYyMV19
+eyJoaXN0b3J5IjpbMjA1NjMyNTU5NV19
 -->
