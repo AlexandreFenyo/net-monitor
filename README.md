@@ -446,7 +446,7 @@ Arguments:
 - dataSet: the data set name,
 - value: a numeric value corresponding to a throughput,
 - lifeTime (optional): lifeTime for this value,
-- callbackDone: a callback function called by the manager after the value has been added to the data set.
+- callbackDone: a callback function called by the manager just after the value has been added to the data set.
 
 <button onclick="NetMonitor.pushValue(manager_charts, 'set1', 123, undefined, function () {console.info('value pushed')})">add value to dataset 1</button>
 
@@ -889,5 +889,5 @@ eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 eyJoaXN0b3J5IjpbLTE1MjQ4MjA0MzNdfQ==
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTgxNTQ0NTk0XX0=
+eyJoaXN0b3J5IjpbMjA5MjA3OTczNl19
 -->
