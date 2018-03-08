@@ -574,10 +574,7 @@ LoadModule proxy_ajp_module libexec/apache24/mod_proxy_ajp.so
 ProxyPass "/net-monitor/dispatch/socket" "ws://127.0.0.1:8080/net-monitor/dispatch/socket"
 ProxyPass /net-monitor/ ajp://127.0.0.1:9001/net-monitor/
 Redirect "/net-monitor" "/net-monitor/"
-
 ````
-
-
 
 # Client installation
 
@@ -880,5 +877,5 @@ eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 eyJoaXN0b3J5IjpbLTE1MjQ4MjA0MzNdfQ==
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjExMDk4NTM5M119
+eyJoaXN0b3J5IjpbLTQ1MTAwODc3M119
 -->
