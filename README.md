@@ -557,7 +557,7 @@ Therefore, you need to configure the AJP TCP port used by Apache tomcat (for ins
 
 ````mvn -Dmaven.tomcat.ajp.port=9001 tomcat7:run````
 
-Remember that the http port tomcat7 listen to is 
+The http port tomcat7 listens to is defined in the `pom.xml` file (8080 by default).
 
 On the Apache httpd side, you need to handle:
 - requests to `/net-monitor/dispatch/socket` with the proxy_wstunnel module,
@@ -880,5 +880,5 @@ eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 eyJoaXN0b3J5IjpbLTE1MjQ4MjA0MzNdfQ==
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUxMDg4MjU3N119
+eyJoaXN0b3J5IjpbMjExMDk4NTM5M119
 -->
