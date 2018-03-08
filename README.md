@@ -455,7 +455,7 @@ Here is an example of a html button adding the value 123 to a chart and logging 
 
 ## Customizing a chart
 
-The Chart.js 
+The Chart.js confoiguration
 
 # Server installation
 
@@ -895,5 +895,5 @@ eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 eyJoaXN0b3J5IjpbLTE1MjQ4MjA0MzNdfQ==
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjkxNDI2NjQyXX0=
+eyJoaXN0b3J5IjpbMTU3MDY5MjQ4MV19
 -->
