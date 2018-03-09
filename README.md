@@ -984,6 +984,10 @@ success Saved 114 new dependencies.
 ````
 
 Run webpack:
+````shell
+% npx webpack
+````
+
 
 
 
@@ -1008,5 +1012,5 @@ eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 eyJoaXN0b3J5IjpbLTE1MjQ4MjA0MzNdfQ==
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjc5MjU3MDkyXX0=
+eyJoaXN0b3J5IjpbOTA5MjM1MjhdfQ==
 -->
