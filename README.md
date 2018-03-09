@@ -965,6 +965,7 @@ chart.js/  chartjs-color/  chartjs-color-string/  color-convert/  color-name/  j
 ````
 
 
+
 # Support
 
 Best-effort support is available here :
@@ -986,5 +987,5 @@ eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 eyJoaXN0b3J5IjpbLTE1MjQ4MjA0MzNdfQ==
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzI0ODQwOTkyXX0=
+eyJoaXN0b3J5IjpbLTE4MDc1NDA5OF19
 -->
