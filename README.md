@@ -963,7 +963,7 @@ Done in 5.17s.
 chart.js/  chartjs-color/  chartjs-color-string/  color-convert/  color-name/  jquery/  moment/  webstomp-client/
 ````
 
-Add the following dev dependencies: babel-cli, babel-core, babel-loader, babel-polyfill, babel-preset-env, webpack, webpack-cli.
+Add the following dev dependencies: babel-cli, babel-core, babel-loader, babel-polyfill, babel-preset-env, webpack, webpack-cli, webpack-serve.
 
 For instance, with babel-cli:
 
@@ -1016,5 +1016,5 @@ eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 eyJoaXN0b3J5IjpbLTE1MjQ4MjA0MzNdfQ==
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2ODE2NTY4NTBdfQ==
+eyJoaXN0b3J5IjpbMTQyNzI5OTI4N119
 -->
