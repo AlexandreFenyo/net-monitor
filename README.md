@@ -948,7 +948,23 @@ C:\Users\fenyo\AppData\Roaming\npm
 ...
 ````
 
+Install dependencies in net-monitor:
 
+````shell
+ % yarn install
+yarn install v1.3.2
+info No lockfile found.
+[1/4] Resolving packages...
+[2/4] Fetching packages...
+[3/4] Linking dependencies...
+[4/4] Building fresh packages...
+success Saved lockfile.
+Done in 5.17s.
+fenyo@w69025595 /cygdrive/d/alex/git/net-monitor
+ % ls node_modules
+chart.js/  chartjs-color/  chartjs-color-string/  color-convert/  color-name/  jquery/  moment/  webstomp-client/
+
+````
 
 
 # Support
@@ -972,5 +988,5 @@ eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 eyJoaXN0b3J5IjpbLTE1MjQ4MjA0MzNdfQ==
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTYyMDEwNjU1M119
+eyJoaXN0b3J5IjpbMTUyNzExNjQwNV19
 -->
