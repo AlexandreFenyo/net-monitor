@@ -909,6 +909,7 @@ Clean up packages and dependencies:
 
 ````shell
 rm -rf node_modules
+rm yarn.lock
 ````
 
 
@@ -933,5 +934,5 @@ eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 eyJoaXN0b3J5IjpbLTE1MjQ4MjA0MzNdfQ==
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQzODI2MjE0OF19
+eyJoaXN0b3J5IjpbNDc0NzM3NjAyXX0=
 -->
