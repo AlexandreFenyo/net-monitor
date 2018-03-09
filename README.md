@@ -969,7 +969,7 @@ Add the following dev dependencies: babel-cli,
 For instance babel-cli:
 
 ````shell
- % yarn add babel-cli
+ % yarn add babel-cli --dev
 yarn add v1.3.2
 [1/4] Resolving packages...
 [2/4] Fetching packages...
@@ -1009,5 +1009,5 @@ eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 eyJoaXN0b3J5IjpbLTE1MjQ4MjA0MzNdfQ==
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODA4ODI4ODM2XX0=
+eyJoaXN0b3J5IjpbLTkyODgyMzYyM119
 -->
