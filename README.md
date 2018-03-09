@@ -920,6 +920,9 @@ rm -rf node_modules
 rm yarn.lock
 ````
 
+Update dependencies and devDependencies in `package.json`
+
+
 
 # Support
 
@@ -942,5 +945,5 @@ eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 eyJoaXN0b3J5IjpbLTE1MjQ4MjA0MzNdfQ==
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwNzUzNzYxMTBdfQ==
+eyJoaXN0b3J5IjpbMTEwMzIwMTQ4XX0=
 -->
