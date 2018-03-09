@@ -894,8 +894,11 @@ Using the standalone debugging build is the easiest way to update and debug this
 
 To develop on the client side, using Eclipse may not be the best way to take into account JavaScript and html code updates immediately. Therefore, using tools specifically designed for JavaScript developers is a better idea.
 
-First, install 
+First, install the webpack-serve node module:
+
+````
 npm install webpack-serve --save-dev
+````
 
 
 # Support
@@ -919,5 +922,5 @@ eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 eyJoaXN0b3J5IjpbLTE1MjQ4MjA0MzNdfQ==
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzcyMDYyMjY4XX0=
+eyJoaXN0b3J5IjpbMTcyNjQwNjk2Nl19
 -->
