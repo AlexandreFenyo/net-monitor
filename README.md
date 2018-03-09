@@ -934,7 +934,18 @@ C:\Users\fenyo\AppData\Roaming\npm\npm -> C:\Users\fenyo\AppData\Roaming\npm\nod
 added 533 packages in 39.69s
 ````
 
+Check for npm dependencies just installed:
 
+ % npm ls -g
+C:\Users\fenyo\AppData\Roaming\npm
+`-- npm@5.7.1
+  +-- abbrev@1.1.1
+  +-- ansi-regex@3.0.0
+  +-- ansicolors@0.3.2
+  +-- ansistyles@0.1.3
+  +-- aproba@1.2.0
+
+..
 
 # Support
 
@@ -957,5 +968,5 @@ eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 eyJoaXN0b3J5IjpbLTE1MjQ4MjA0MzNdfQ==
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE4NzA3NTMwOV19
+eyJoaXN0b3J5IjpbMTg4MTEyMTYzXX0=
 -->
