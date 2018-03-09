@@ -892,7 +892,7 @@ Using the standalone debugging build is the easiest way to update and debug this
 
 ## developing on the client side
 
-To develop on the client side, using Eclipse may not be the best way to take into account JavaScript and html code updates immediately. Therefore, using tools specifically designed 
+To develop on the client side, using Eclipse may not be the best way to take into account JavaScript and html code updates immediately. Therefore, using tools specifically designed t
 
 
 # Support
@@ -916,5 +916,5 @@ eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 eyJoaXN0b3J5IjpbLTE1MjQ4MjA0MzNdfQ==
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTY3MjY0NjEwXX0=
+eyJoaXN0b3J5IjpbMTQzNzM5MjIyMl19
 -->
