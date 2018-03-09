@@ -892,6 +892,7 @@ Using the standalone debugging build is the easiest way to update and debug this
 
 ## developing
 
+First instal
 
 
 # Support
@@ -915,5 +916,5 @@ eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 eyJoaXN0b3J5IjpbLTE1MjQ4MjA0MzNdfQ==
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk0NDY5MDk3XX0=
+eyJoaXN0b3J5IjpbLTE4MDQ4NTM4Nl19
 -->
