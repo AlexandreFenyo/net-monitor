@@ -964,6 +964,26 @@ Done in 5.17s.
 chart.js/  chartjs-color/  chartjs-color-string/  color-convert/  color-name/  jquery/  moment/  webstomp-client/
 ````
 
+Add dev dependencies, for instance babel-cli:
+
+````shell
+ % yarn add babel-cli
+yarn add v1.3.2
+[1/4] Resolving packages...
+[2/4] Fetching packages...
+info fsevents@1.1.3: The platform "win32" is incompatible with this module.
+info "fsevents@1.1.3" is an optional dependency and failed compatibility check. Excluding it from installation.
+[3/4] Linking dependencies...
+[4/4] Building fresh packages...
+success Saved lockfile.
+success Saved 114 new dependencies.
+├─ ansi-regex@2.1.1
+├─ ansi-styles@2.2.1
+├─ anymatch@1.3.2
+├─ arr-diff@2.0.0
+...
+````
+
 
 
 # Support
@@ -987,5 +1007,5 @@ eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 eyJoaXN0b3J5IjpbLTE1MjQ4MjA0MzNdfQ==
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MDc1NDA5OF19
+eyJoaXN0b3J5IjpbMTg5MTgwMzc0M119
 -->
