@@ -909,6 +909,7 @@ Remove global packages installed:
 
 ````shell
 npm remove bower -g
+npm remove webpack -g
 ...
 ````
 
@@ -941,5 +942,5 @@ eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 eyJoaXN0b3J5IjpbLTE1MjQ4MjA0MzNdfQ==
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTgxNTMxNjkwNl19
+eyJoaXN0b3J5IjpbLTIwNzUzNzYxMTBdfQ==
 -->
