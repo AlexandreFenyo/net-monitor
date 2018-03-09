@@ -922,6 +922,18 @@ rm yarn.lock
 
 Update dependencies and devDependencies in `package.json`
 
+Update npm:
+
+````shell
+% npm -v
+5.6.0
+% npm install npm@latest -g
+C:\Users\fenyo\AppData\Roaming\npm\npx -> C:\Users\fenyo\AppData\Roaming\npm\node_modules\npm\bin\npx-cli.js
+C:\Users\fenyo\AppData\Roaming\npm\npm -> C:\Users\fenyo\AppData\Roaming\npm\node_modules\npm\bin\npm-cli.js
++ npm@5.7.1
+added 533 packages in 39.69s
+````
+
 
 
 # Support
@@ -945,5 +957,5 @@ eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 eyJoaXN0b3J5IjpbLTE1MjQ4MjA0MzNdfQ==
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTEwMzIwMTQ4XX0=
+eyJoaXN0b3J5IjpbMTE4NzA3NTMwOV19
 -->
