@@ -896,7 +896,10 @@ To develop on the client side, using Eclipse may not be the best way to take int
 
 ### set-up an initial environment
 
+First, install npm and yarn.
+
 List global npm packages installed:
+
 ````shell
 npm ls -g
 ````
@@ -963,6 +966,7 @@ chart.js/  chartjs-color/  chartjs-color-string/  color-convert/  color-name/  j
 Add the following dev dependencies: babel-cli, babel-core, babel-loader, babel-polyfill, babel-preset-env, webpack, webpack-cli.
 
 For instance, with babel-cli:
+
 ````shell
  % yarn add babel-cli --dev
 yarn add v1.3.2
@@ -980,6 +984,7 @@ success Saved 114 new dependencies.
 ````
 
 Run webpack:
+
 ````shell
 % npx webpack
 ````
@@ -1008,5 +1013,5 @@ eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 eyJoaXN0b3J5IjpbLTE1MjQ4MjA0MzNdfQ==
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTg5NzU2MjY0XX0=
+eyJoaXN0b3J5IjpbLTEzODgxNTI4NzddfQ==
 -->
