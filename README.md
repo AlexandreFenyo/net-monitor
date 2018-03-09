@@ -1009,6 +1009,7 @@ Therefore, you can launch the net-monitor server with Eclipse.
 
 Connect your browser to http://localhost:8082/src/main/webapp/index-serve.html
 
+[ note : attention au process node.js qui peut tourner en background sous Windows ]
 
 # Support
 
@@ -1031,5 +1032,5 @@ eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 eyJoaXN0b3J5IjpbLTE1MjQ4MjA0MzNdfQ==
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ1NzA1NDMyMl19
+eyJoaXN0b3J5IjpbMzc3NDM0ODI4XX0=
 -->
