@@ -973,8 +973,6 @@ For instance babel-cli:
 yarn add v1.3.2
 [1/4] Resolving packages...
 [2/4] Fetching packages...
-info fsevents@1.1.3: The platform "win32" is incompatible with this module.
-info "fsevents@1.1.3" is an optional dependency and failed compatibility check. Excluding it from installation.
 [3/4] Linking dependencies...
 [4/4] Building fresh packages...
 success Saved lockfile.
@@ -1009,5 +1007,5 @@ eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 eyJoaXN0b3J5IjpbLTE1MjQ4MjA0MzNdfQ==
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTkyODgyMzYyM119
+eyJoaXN0b3J5IjpbNzkyMzUyNzg1XX0=
 -->
