@@ -960,10 +960,9 @@ info No lockfile found.
 [4/4] Building fresh packages...
 success Saved lockfile.
 Done in 5.17s.
-fenyo@w69025595 /cygdrive/d/alex/git/net-monitor
+
  % ls node_modules
 chart.js/  chartjs-color/  chartjs-color-string/  color-convert/  color-name/  jquery/  moment/  webstomp-client/
-
 ````
 
 
@@ -988,5 +987,5 @@ eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 eyJoaXN0b3J5IjpbLTE1MjQ4MjA0MzNdfQ==
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUyNzExNjQwNV19
+eyJoaXN0b3J5IjpbMTE3NTc0MDMxMF19
 -->
