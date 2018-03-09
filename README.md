@@ -896,6 +896,7 @@ To develop on the client side, using Eclipse may not be the best way to take int
 
 ### set-up an initial environment
 
+
 List global npm packages installed:
 ````shell
 npm ls -g
@@ -1008,5 +1009,5 @@ eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 eyJoaXN0b3J5IjpbLTE1MjQ4MjA0MzNdfQ==
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTg5NzU2MjY0XX0=
+eyJoaXN0b3J5IjpbLTEyNTE1NTMwMDJdfQ==
 -->
