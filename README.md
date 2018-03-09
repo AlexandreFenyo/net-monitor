@@ -964,7 +964,18 @@ Done in 5.17s.
 chart.js/  chartjs-color/  chartjs-color-string/  color-convert/  color-name/  jquery/  moment/  webstomp-client/
 ````
 
-Add the following dev dependencies: babel-cli, 
+Add the following dev dependencies: babel-cli, babel-core, babel-loader, babel-polyfill, babel-preset-env, 
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "file-loader": "^1.1.10",
+    "null-loader": "^0.1.1",
+    "uglifyjs-webpack-plugin": "^1.1.8",
+    "webpack": "^3.10.0",
+    "webpack-cli": "^2.0.9",
+    "webpack-dev-server": "^2.11.1"
+
 
 For instance babel-cli:
 
@@ -1007,5 +1018,5 @@ eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 eyJoaXN0b3J5IjpbLTE1MjQ4MjA0MzNdfQ==
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzkyMzUyNzg1XX0=
+eyJoaXN0b3J5IjpbMTc2NzI2NzMyMl19
 -->
