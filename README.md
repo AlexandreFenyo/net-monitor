@@ -905,6 +905,13 @@ List global npm packages installed:
 npm ls -g
 ````
 
+Remove global packages installed:
+
+````shell
+npm remove bower -g
+...
+````
+
 Clean up packages and dependencies:
 
 ````shell
@@ -934,5 +941,5 @@ eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 eyJoaXN0b3J5IjpbLTE1MjQ4MjA0MzNdfQ==
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDc0NzM3NjAyXX0=
+eyJoaXN0b3J5IjpbLTgxNTMxNjkwNl19
 -->
