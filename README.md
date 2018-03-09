@@ -896,7 +896,7 @@ To develop on the client side, using Eclipse may not be the best way to take int
 
 First, install the webpack-serve node module:
 
-````
+````shell
 npm install webpack-serve --save-dev
 ````
 
@@ -922,5 +922,5 @@ eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 eyJoaXN0b3J5IjpbLTE1MjQ4MjA0MzNdfQ==
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTcyNjQwNjk2Nl19
+eyJoaXN0b3J5IjpbLTE4OTUxMDg1NzBdfQ==
 -->
