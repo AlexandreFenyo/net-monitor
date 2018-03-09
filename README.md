@@ -983,7 +983,7 @@ success Saved 114 new dependencies.
 ...
 ````
 
-Run webp
+Run webpack
 
 
 # Support
@@ -1007,5 +1007,5 @@ eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 eyJoaXN0b3J5IjpbLTE1MjQ4MjA0MzNdfQ==
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5NTU1ODEzMDVdfQ==
+eyJoaXN0b3J5IjpbLTcyNDg1OTgwXX0=
 -->
