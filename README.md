@@ -905,6 +905,10 @@ List global npm packages installed:
 npm ls -g
 ````
 
+Clean up packages and dependencies:
+
+
+
 # Support
 
 Best-effort support is available here :
@@ -926,5 +930,5 @@ eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 eyJoaXN0b3J5IjpbLTE1MjQ4MjA0MzNdfQ==
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzY5ODQzODA5XX0=
+eyJoaXN0b3J5IjpbLTIwNTI2MDk5NjRdfQ==
 -->
