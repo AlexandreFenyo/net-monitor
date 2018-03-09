@@ -936,6 +936,7 @@ added 533 packages in 39.69s
 
 Check for npm dependencies just installed:
 
+````shell
  % npm ls -g
 C:\Users\fenyo\AppData\Roaming\npm
 `-- npm@5.7.1
@@ -945,6 +946,7 @@ C:\Users\fenyo\AppData\Roaming\npm
   +-- ansistyles@0.1.3
   +-- aproba@1.2.0
 ...
+````shell
 
 
 # Support
@@ -968,5 +970,5 @@ eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 eyJoaXN0b3J5IjpbLTE1MjQ4MjA0MzNdfQ==
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzQxMDI3MjNdfQ==
+eyJoaXN0b3J5IjpbLTc3MzcxODM0M119
 -->
