@@ -890,9 +890,9 @@ For instance, on Cloudflare, you can access the debugging resources here:
 
 Using the standalone debugging build is the easiest way to update and debug this software.
 
-## developing
+## developing on the client side
 
-First install
+To develop on the client side, using Eclipse may not be the best way to take into account JavaScript and html code updates immediately. Therefore, using tools specifically designed 
 
 
 # Support
@@ -916,5 +916,5 @@ eyJoaXN0b3J5IjpbLTU0NzAzMjQzN119
 eyJoaXN0b3J5IjpbLTE1MjQ4MjA0MzNdfQ==
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTczODg5NDY3NF19
+eyJoaXN0b3J5IjpbOTY3MjY0NjEwXX0=
 -->
