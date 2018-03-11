@@ -12,6 +12,8 @@ Two live demos displaying the ingress and egress throughputs of my ADSL box at h
 
 - https://fenyo.net/newweb/net-monitor/freebox-outside-black.html: black background, 30 seconds displayed
 
+- https://jsfiddle.net/jsfiddleeowyn/1cu172ya/: a simple JSFiddle displaying live data
+
 # Purpose
 
 net-monitor is a client / server toolkit. Its purpose is to let you include HTML animated networking charts into your web applications and single pages. It comes with a SNMP v1/v2c/v3 manager and is fully compliant with IPv4 & IPv6.
