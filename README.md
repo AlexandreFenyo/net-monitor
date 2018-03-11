@@ -455,22 +455,22 @@ Here is an example of a html button adding the value 123 to a chart and logging 
 
 ## Customizing a chart
 
-The Chart.js configuration properties can be accessed directly using `NetMonitor.getChart(dataSet)`.
+The Chart.js configuration properties can be accessed directly using `NetMonitor.getChart(manager, dataSet)`.
 
 Here is an example of a chart customization:
 
 ````javascript
 #set border color to mauve
-manager.getChart('set1').data.datasets[0].borderColor = Color("#7743CE").alpha(.8).rgbString();
+NetMonitor.getChart(manager, 'set1').data.datasets[0].borderColor = Color("#7743CE").alpha(.8).rgbString();
 #set background color to black
-manager.getChart('set1').data.datasets[0].backgroundColor = Color("#0000").rgbString();
+NetMonitor.getChart(manager, 'set1').data.datasets[0].backgroundColor = Color("#0000").rgbString();
 #remove the legend
-manager.getChart('set1').options.legend.display = false;
+NetMonitor.getChart(manager, 'set1').options.legend.display = false;
 #change the grid color to white
-manager.getChart('set1').options.scales.xAxes[0].gridLines.color = Color("#FFFFFF").rgbString();
-manager.getChart('set1').options.scales.yAxes[0].gridLines.color = Color("#FFFFFF").rgbString();
+NetMonitor.getChart(manager, 'set1').options.scales.xAxes[0].gridLines.color = Color("#FFFFFF").rgbString();
+NetMonitor.getChart(manager, 'set1').options.scales.yAxes[0].gridLines.color = Color("#FFFFFF").rgbString();
 #use straight lines instead of curve ones
-manager.getChart('set1').data.datasets[0].lineTension = 0;
+NetMonitor.getChart(manager, 'set1').data.datasets[0].lineTension = 0;
 ````
 
 # Server installation
