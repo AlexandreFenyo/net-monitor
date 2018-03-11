@@ -1,6 +1,6 @@
 {
   "name": "@fenyo/net-monitor",
-  "version": "1.0.16",
+  "version": "1.0.17",
   "description": "dynamic time series with JS and JEE",
   "main": "index.html",
   "keyword": [
