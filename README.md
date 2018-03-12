@@ -1004,10 +1004,10 @@ npx webpack-serve --config webpack.serve.js --port 8082
 ````
 
 The node server is listening to:
-- port 8081 for a websocket, that is not used by net-monitor
-- port 8082 for any other request
+- port 8081 for a websocket, that is not used here,
+- port 8082 for any other request.
 
-Therefore, you can launch the net-monitor server with Eclipse on port 8080 for both .
+Therefore, you can launch the net-monitor server with Eclipse on port 8080. The net-monitor server listen to http://
 
 Connect your browser to http://localhost:8082/src/main/webapp/index-serve.html
 
@@ -1037,5 +1037,5 @@ eyJoaXN0b3J5IjpbLTE1MjQ4MjA0MzNdfQ==
 eyJoaXN0b3J5IjpbMzc3NDM0ODI4XX0=
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTEwOTYxNjI1M119
+eyJoaXN0b3J5IjpbMjE5NjY1Nzg4XX0=
 -->
