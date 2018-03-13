@@ -996,11 +996,11 @@ Run webpack:
 Run a development server:
 
 ````shell
-npm run serve
+npm run server
 ````
 or
 ````shell
-npx webpack-serve --config webpack.serve.js --port 8082
+npx webpack-dev-server --config webpack.server.js --port 8082
 ````
 
 The node server is listening to:
@@ -1037,5 +1037,5 @@ eyJoaXN0b3J5IjpbLTE1MjQ4MjA0MzNdfQ==
 eyJoaXN0b3J5IjpbMzc3NDM0ODI4XX0=
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjg0ODMxNDgzXX0=
+eyJoaXN0b3J5IjpbMTA0NDkyMTU1N119
 -->
