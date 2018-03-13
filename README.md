@@ -333,7 +333,11 @@ As said before, a manager can handle several charts, using views. So you need to
 
 ### global parameters
 
-There is currently one global optional parameter: `dispatchUrl`. This parameter is used to help the browser locate the dispatch servlet in the net-monitor server when the base URL (http[s]://[hostname]:[port]/[context]) of the web page that makes use of net-monitor is not the same that the base URL of the server side of net-monitor. This dispatch servlet is used to access web sockets and web services on the server.
+Here are the global parameters:
+
+`dispatchUrl` This parameter is used to help the browser locate the dispatch servlet in the net-monitor server when the base URL (http[s]://[hostname]:[port]/[context]) of the web page that makes use of net-monitor is not the same that the base URL of the server side of net-monitor. This dispatch servlet is used to access web sockets and web services on the server.
+
+`dispatchUrlWebSocket`.
 
 For instance, suppose that the html page using net-monitor has been loaded from http[s]://[hostname]:[port]/[local-part] (ex: https://myserver.com:4443/myapp/app.html). When dispatchUrl is not used, the net-monitor JavaScript client computes the server URL using the protocol, hostname and port from the URL of the page, adds the context `/net-monitor/` and finally adds the servlet name `dispatch`. Therefore, this lead to https://myserver.com:4443/net-monitor/dispatch. In case the net-monitor server is published at another URL, for instance http://myotherserver:8080/net-monitor, you must set dispatchUrl to http://myotherserver:8080/net-monitor/dispatch.
 
@@ -1031,5 +1035,5 @@ eyJoaXN0b3J5IjpbLTE1MjQ4MjA0MzNdfQ==
 eyJoaXN0b3J5IjpbMzc3NDM0ODI4XX0=
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MjU0Mzg4MjVdfQ==
+eyJoaXN0b3J5IjpbLTY5Mzc0MTQzM119
 -->
