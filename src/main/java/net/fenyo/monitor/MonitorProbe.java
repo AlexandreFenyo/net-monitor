@@ -300,9 +300,15 @@ public class MonitorProbe implements Runnable {
 
 	          try {
 	              response = snmp.send(requestPDU, target, transport);
-	          } catch (IOException e) {
-	              logger.error(e.toString());
-	              return;
+	          } catch (final Exception e) {
+	              // typically to manage "org.snmp4j.MessageException: No route to host (sendto failed)"
+	              logger.warn("Exception when requesting SNMP agent: " + e.toString());
+	              try {
+	                  Thread.sleep(1000);
+	              } catch (final InterruptedException e2) {
+	                  logger.error(e2.toString());
+	              }
+	              continue;
 	          }
 	          
 	          if (response == null) {
