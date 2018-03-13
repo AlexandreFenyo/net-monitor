@@ -21,8 +21,7 @@ let config_standalone_dev = {
 	mode: "development",
 	entry: { app: "./src/main/javascript/src/net-monitor.js" },
 	output: {
-	    path: path.resolve(__dirname, "./src/main/javascript/public"),
-	    filename: "./net-monitor.standalone.dev.js",
+	    filename: "src/main/javascript/public/net-monitor.standalone.dev.js",
 	    libraryTarget: 'var',
 	    library: 'NetMonitor'
 	},

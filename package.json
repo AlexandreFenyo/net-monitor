@@ -23,7 +23,7 @@
   "scripts": {
     "build": "babel src/main/javascript/src -d src/main/javascript/dist",
     "watch": "webpack --watch",
-    "server": "webpack-dev-server --config webpack.server.js --port 8082"
+    "dev": "webpack-dev-server --config webpack.dev.js --port 8082"
   },
   "license": "BSD-2-Clause",
   "dependencies": {

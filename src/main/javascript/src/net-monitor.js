@@ -16,7 +16,7 @@
 "use strict";
 
 const config = require('config');
-const version = "107";
+const version = "118";
 
 var debug = true;
 
@@ -33,7 +33,7 @@ export const pushValue = function (manager, dataSet, value, lifeTime, callbackDo
 };
 
 export const getChart = function (manager, dataSet) {
-	_getChart(manager, dataSet);
+	return _getChart(manager, dataSet);
 };
 
 if (config.moduleType === "bundle") {

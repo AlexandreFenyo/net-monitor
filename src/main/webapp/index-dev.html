@@ -3,7 +3,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>html#47</title>
+<title>html#48</title>
  
 <script src="/node_modules/jquery/dist/jquery.min.js"></script>
 <script src="/node_modules/moment/moment.js"></script>
@@ -16,7 +16,6 @@
 <script>
 var charts = {
 		dispatchUrl: "http://localhost:8080/net-monitor/dispatch",
-		dispatchUrlWebSocket: "http://localhost:8085/net-monitor/dispatch/socket",
 		views: [
 			{
 				id: "myChart1",
@@ -35,6 +34,7 @@ var charts = {
 		]
 };
 var chart3 = {
+		dispatchUrl: "http://localhost:8080/net-monitor/dispatch",
 		views: [
 			{
 				id: "myChart3",
