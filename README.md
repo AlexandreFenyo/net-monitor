@@ -1005,9 +1005,7 @@ npx webpack-dev-server --config webpack.server.js --port 8082
 
 The development server runs on port 8082, therefore you can launch the net-monitor server with Eclipse on port 8080. This way, the net-monitor server answers to http requests sent to http://localhost:8080/net-monitor and to web socket connections sent to http://localhost:8080/net-monitor/dispatch/socket.
 
-Connect your browser to http://localhost:8082/src/main/webapp/index-serve.html to 
-
-[ note : attention au process node.js qui peut tourner en background sous Windows ]
+Connect your browser to the development server: http://localhost:8082/src/main/webapp/index-serve.html
 
 # Support
 
@@ -1033,5 +1031,5 @@ eyJoaXN0b3J5IjpbLTE1MjQ4MjA0MzNdfQ==
 eyJoaXN0b3J5IjpbMzc3NDM0ODI4XX0=
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzIxNTI1MDI3XX0=
+eyJoaXN0b3J5IjpbMTk3MTg1NDQ5N119
 -->
