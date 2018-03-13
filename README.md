@@ -335,7 +335,7 @@ As said before, a manager can handle several charts, using views. So you need to
 
 Here are the global parameters:
 
-`dispatchUrl` This parameter is used to help the browser locate the dispatch servlet in the net-monitor server when the base URL (http[s]://[hostname]:[port]/[context]) of the web page that makes use of net-monitor is not the same that the base URL of the server side of net-monitor. This dispatch servlet is used to access web sockets and web services on the server.
+`dispatchUrl` (optional): this parameter is used to help the browser locate the dispatch servlet in the net-monitor server when the base URL (http[s]://[hostname]:[port]/[context]) of the web page that makes use of net-monitor is not the same that the base URL of the server side of net-monitor. This dispatch servlet is used to access web sockets and web services on the server.
 
 `dispatchUrlWebSocket`.
 
@@ -1035,5 +1035,5 @@ eyJoaXN0b3J5IjpbLTE1MjQ4MjA0MzNdfQ==
 eyJoaXN0b3J5IjpbMzc3NDM0ODI4XX0=
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY5Mzc0MTQzM119
+eyJoaXN0b3J5IjpbLTgzOTQzMzA4OF19
 -->
