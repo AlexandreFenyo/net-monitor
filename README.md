@@ -996,7 +996,7 @@ Run webpack:
 Run a development server:
 
 ````shell
-npm run server
+npm run dev
 ````
 or
 ````shell
@@ -1031,5 +1031,5 @@ eyJoaXN0b3J5IjpbLTE1MjQ4MjA0MzNdfQ==
 eyJoaXN0b3J5IjpbMzc3NDM0ODI4XX0=
 -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgyNDQ1NzE0N119
+eyJoaXN0b3J5IjpbLTE4MjU0Mzg4MjVdfQ==
 -->
