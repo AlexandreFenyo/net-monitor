@@ -16,7 +16,7 @@
 "use strict";
 
 const config = require('config');
-const version = "106";
+const version = "107";
 
 var debug = true;
 
