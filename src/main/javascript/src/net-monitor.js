@@ -65,9 +65,11 @@ function pastDate(sec) {
 // connect the web socket to the server
 function connectStomp(manager) {
 	let stompClient = webstomp.client(
-			((typeof manager.dispatchUrl === "undefined") ?
+			(typeof manager.dispatchUrlWebSocket === "undefined") ?
+			(((typeof manager.dispatchUrl === "undefined") ?
 					((window.location.protocol === "http:" ? "ws:" : "wss:") + "//" + window.location.host + "/net-monitor/dispatch")
-					: manager.dispatchUrl.replace(/^http/i, "ws")) + "/socket"
+					: manager.dispatchUrl.replace(/^http/i, "ws")) + "/socket")
+					: manager.dispatchUrlWebSocket
 	);
 	stompClient.heartbeat = { incoming: 1000, outgoing: 1000 };
 	stompClient.connect({}, function () {
@@ -134,6 +136,7 @@ function _manage(charts, callbackDone) {
 	manager.lifeTime = new Object();
 	manager.id = new Object();
 	manager.dispatchUrl = charts.dispatchUrl;
+	manager.dispatchUrlWebSocket = charts.dispatchUrlWebSocket;
 
 	for (let c of charts.views)
 		if (chart2manager[c.id] !== undefined) {
@@ -203,9 +206,9 @@ function _manage(charts, callbackDone) {
 		manager.id[c.dataSet] = c.id;
 
 		let xhttp = new XMLHttpRequest();
-		xhttp.open("GET", ((typeof charts.dispatchUrl === "undefined") ?
+		xhttp.open("GET", ((typeof manager.dispatchUrl === "undefined") ?
 						(window.location.protocol + "//" + window.location.host + "/net-monitor/dispatch")
-						: charts.dispatchUrl) + "/request" + "?dataset=" + c.dataSet + "&lifetime=" + c.lifeTime);
+						: manager.dispatchUrl) + "/request" + "?dataset=" + c.dataSet + "&lifetime=" + c.lifeTime);
 		xhttp.onload = function () {
 			chart.options.scales.xAxes[0].time.min = pastDate(c.lifeTime);
 			chart.options.scales.xAxes[0].time.max = pastDate(0);
