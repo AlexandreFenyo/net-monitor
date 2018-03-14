@@ -310,7 +310,7 @@ public class MonitorProbe implements Runnable {
 	              }
 	              continue;
 	          }
-	          
+
 	          if (response == null) {
 	              logger.warn("SNMP response is null");
                   current_isset = false;
@@ -335,6 +335,7 @@ public class MonitorProbe implements Runnable {
 	                      if (throughput < 0) {
 	                          logger.warn("negative throughput");
 	                          current_isset = false;
+	                          continue;
 	                      }
 	                      
 	                      try {

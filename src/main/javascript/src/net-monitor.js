@@ -78,7 +78,7 @@ function connectStomp(manager) {
 				if (message.body) {
 					var t = new Object();
 					var now = new moment();
-					t.x = now.format();
+					t.x = now;
 					t.y = JSON.parse(message.body).value;
 					t.moment = now;
 					manager.chart[dataSet].data.datasets[0].data.push(t);
@@ -220,7 +220,7 @@ function _manage(charts, callbackDone) {
 				for (let i of response) {
 					var t = new Object();
 					var m = moment(now).subtract(i.millisecondsFromNow, 'ms');
-					t.x = m.format();
+					t.x = m;
 					t.y = i.value;
 					t.moment = m;
 					chart.data.datasets[0].data.push(t);
