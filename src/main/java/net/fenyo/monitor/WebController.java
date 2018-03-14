@@ -89,6 +89,7 @@ public class WebController {
     // http://localhost:8080/net-monitor/dispatch/add?value=123&dataset=dataset1
     // http://localhost:8080/net-monitor/dispatch/add?value=123&dataset=dataset1&lifetime=60
     @RequestMapping(value = "/add", method = RequestMethod.GET)
+    @CrossOrigin(origins = "*")
     public Boolean add(final Principal p, @RequestParam("value") final long value, @RequestParam("dataset") final String dataset, @RequestParam(value = "lifetime", defaultValue = "0", required = false) long lifetime) throws MonitorException {
         if (lifetime < -1) throw new MonitorException("add op.: invalid lifetime value [" + lifetime + "] for dataset [" + dataset + "]");
         if (lifetime == -1) lifetime = config.default_lifetime;

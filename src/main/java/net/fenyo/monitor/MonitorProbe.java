@@ -17,6 +17,10 @@ package net.fenyo.monitor;
 */
 
 import java.io.*;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.Map;
+
 import org.slf4j.*;
 import org.snmp4j.*;
 import org.snmp4j.smi.*;
@@ -36,51 +40,53 @@ public class MonitorProbe implements Runnable {
     public String dataset;
     public Long lifetime;
     public String type;
-	public String version;
-	public String agent;
-	public String community;
+    public String version;
+    public String agent;
+    public String community;
     public String sec_level;
     public String auth_algo;
     public String priv_algo;
     public String username;
     public String password_auth;
     public String password_priv;
-	public String oid;
-	public Long rate;
+    public String oid;
+    public Long rate;
 
-	private WebController controller;
-	private static Snmp snmp;
-	private static TransportMapping transport;
+    private WebController controller;
+    private static Snmp snmp;
+    private static TransportMapping transport;
 
-	/**
-	 * Constructor.
-	 * Link the the SNMP library.
-	 * @param none.
-	 */
+    private static Map<String, SnmpV3User> users_v3 = new HashMap<String, SnmpV3User>();
 
-	public static void initSnmpProbes() throws IOException {
+    /**
+     * Constructor.
+     * Link the the SNMP library.
+     * @param none.
+     */
+
+    public static void initSnmpProbes() throws IOException {
         transport = new DefaultUdpTransportMapping();
         snmp = new Snmp(transport);
         final USM usm = new USM(SecurityProtocols.getInstance(), new OctetString(MPv3.createLocalEngineID()), 0);
         SecurityModels.getInstance().addSecurityModel(usm);
         transport.listen();
-	}
+    }
 
     /**
      * Create a thread to capture data.
      * @param WebController controller associated controller, used to add values to the the data set.
      */
-	public void runProbe(final WebController controller) {
-	    this.controller = controller;
-	    new Thread(this).start();
-	}
+    public void runProbe(final WebController controller) {
+        this.controller = controller;
+        new Thread(this).start();
+    }
 
     /**
      * Capture loop.
      * @param none.
      */
-	public void run() {
-	    Target target = null;
+    public void run() {
+        Target target = null;
         Address targetAddress;
         int sec_level_index;
         OID auth_type = null, priv_type = null;
@@ -181,13 +187,6 @@ public class MonitorProbe implements Runnable {
                 return;
             }
 
-            // UN BUG A CORRIGER SI DEUX USERNAMES DANS LA MEME PROBE ???
-            final UsmUserEntry entry = snmp.getUSM()
-                    .getUserTable().getUser(new OctetString(username));
-            if (entry == null) {
-                logger.warn("Warning: username should be unique");
-            }
-
             if (sec_level == null) {
                 logger.error("Error: sec_level should be defined with v3");
                 return;
@@ -258,96 +257,125 @@ public class MonitorProbe implements Runnable {
                     return;
                 }
             }
-            
-            snmp.getUSM().addUser(new OctetString(username),
+
+            boolean need_add_user = false;
+            synchronized (users_v3) {
+                if (users_v3.containsKey(username)) {
+                    if ((users_v3.get(username).sec_level == null && sec_level != null) ||
+                            (users_v3.get(username).sec_level != null && !users_v3.get(username).sec_level.equals(sec_level)) ||
+                            (users_v3.get(username).auth_algo == null && auth_algo != null) ||
+                            (users_v3.get(username).auth_algo != null && !users_v3.get(username).auth_algo.equals(auth_algo)) ||
+                            (users_v3.get(username).priv_algo == null && priv_algo != null) ||
+                            (users_v3.get(username).priv_algo != null && !users_v3.get(username).priv_algo.equals(priv_algo)) ||
+                            (users_v3.get(username).password_auth == null && password_auth != null) ||
+                            (users_v3.get(username).password_auth != null && !users_v3.get(username).password_auth.equals(password_auth)) ||
+                            (users_v3.get(username).password_priv == null && password_priv != null) ||
+                            (users_v3.get(username).password_priv != null && !users_v3.get(username).password_priv.equals(password_priv))
+                            ) {
+                        logger.error("shared users must have the same parameter values");
+                        return;
+                    }
+                } else {
+                    final SnmpV3User user_v3 = new SnmpV3User();
+                    user_v3.sec_level = sec_level;
+                    user_v3.auth_algo = auth_algo;
+                    user_v3.priv_algo = priv_algo;
+                    user_v3.password_auth = password_auth;
+                    user_v3.password_priv = password_priv;
+                    users_v3.put(username, user_v3);
+                    need_add_user = true;
+                }
+            }
+
+            if (need_add_user) snmp.getUSM().addUser(new OctetString(username),
                     new UsmUser(new OctetString(username),
                             auth_type, (auth_type != null ? new OctetString(password_auth) : null),
                             priv_type, (priv_type != null ? new OctetString(password_priv) : null)));
 
-          target = new UserTarget(targetAddress, new OctetString(username), new byte[] {}, sec_level_index);
-          target.setVersion(SnmpConstants.version3);
+            target = new UserTarget(targetAddress, new OctetString(username), new byte[] {}, sec_level_index);
+            target.setVersion(SnmpConstants.version3);
         }
+        
+        target.setRetries(3);
+        target.setTimeout(1500);
+        target.setMaxSizeRequestPDU(1000);
 
-	      target.setRetries(3);
-	      target.setTimeout(1500);
-	      target.setMaxSizeRequestPDU(1000);
+        final PDU requestPDU;
+          
+        if (version.equals("v1")) {
+              requestPDU = new PDUv1();
+          } else if (version.equals("v2c")) {
+              requestPDU = new PDU();
+          } else requestPDU = new ScopedPDU();
 
-	      final PDU requestPDU;
-	      
-	      if (version.equals("v1")) {
-	          requestPDU = new PDUv1();
-	      } else if (version.equals("v2c")) {
-	          requestPDU = new PDU();
-	      } else requestPDU = new ScopedPDU();
+          final OID _oid = new OID(oid);
+          requestPDU.add(new VariableBinding(_oid));
+          requestPDU.setType(PDU.GET);
+          
+          long current = 0;
+          long current_timestamp = 0;
+          boolean current_isset = false;
 
-	      final OID _oid = new OID(oid);
-	      requestPDU.add(new VariableBinding(_oid));
-	      requestPDU.setType(PDU.GET);
-	      
-	      long current = 0;
-	      long current_timestamp = 0;
-	      boolean current_isset = false;
+          while (true) {
+              PDU responsePDU;
+              ResponseEvent response;
+              
+              try {
+                  Thread.sleep(1000 / rate);
+              } catch (final InterruptedException e) {
+                  logger.warn(e.toString());
+              }
 
-	      while (true) {
-	          PDU responsePDU;
-	          ResponseEvent response;
-	          
-	          try {
-	              Thread.sleep(1000 / rate);
-	          } catch (final InterruptedException e) {
-	              logger.warn(e.toString());
-	          }
+              try {
+                  response = snmp.send(requestPDU, target, transport);
+              } catch (final Exception e) {
+                  // typically to manage "org.snmp4j.MessageException: No route to host (sendto failed)"
+                  logger.warn("Exception when requesting SNMP agent: " + e.toString());
+                  try {
+                      Thread.sleep(1000);
+                  } catch (final InterruptedException e2) {
+                      logger.error(e2.toString());
+                  }
+                  continue;
+              }
 
-	          try {
-	              response = snmp.send(requestPDU, target, transport);
-	          } catch (final Exception e) {
-	              // typically to manage "org.snmp4j.MessageException: No route to host (sendto failed)"
-	              logger.warn("Exception when requesting SNMP agent: " + e.toString());
-	              try {
-	                  Thread.sleep(1000);
-	              } catch (final InterruptedException e2) {
-	                  logger.error(e2.toString());
-	              }
-	              continue;
-	          }
-
-	          if (response == null) {
-	              logger.warn("SNMP response is null");
+              if (response == null) {
+                  logger.warn("SNMP response is null");
                   current_isset = false;
-	          } else {
-	              responsePDU = response.getResponse();
-	              if (responsePDU == null) {
-	                  logger.warn("SNMP response PDU is null");
-	                  current_isset = false;
-	              } else {
+              } else {
+                  responsePDU = response.getResponse();
+                  if (responsePDU == null) {
+                      logger.warn("SNMP response PDU is null");
+                      current_isset = false;
+                  } else {
                       long now = System.currentTimeMillis();
                       final long value = responsePDU.getVariable(_oid).toLong();
-	                  
-	                  if (current_isset == false) {
-	                      current = value;
-	                      current_timestamp = now;
-	                      current_isset = true;
-	                      continue;
-	                  }
-	                  
-	                  if (value != current) {
-	                      final long throughput = (8 * 1000 * (value - current)) / (now - current_timestamp);
-	                      if (throughput < 0) {
-	                          logger.warn("negative throughput");
-	                          current_isset = false;
-	                          continue;
-	                      }
-	                      
-	                      try {
-	                          controller._add(throughput, dataset, lifetime);
-	                      } catch (MonitorException e) {
-	                          logger.error(e.toString());
-	                      }
+                      
+                      if (current_isset == false) {
                           current = value;
                           current_timestamp = now;
-	                  }
-	              }
-	          }
-	      }
+                          current_isset = true;
+                          continue;
+                      }
+                      
+                      if (value != current) {
+                          final long throughput = (8 * 1000 * (value - current)) / (now - current_timestamp);
+                          if (throughput < 0) {
+                              logger.warn("negative throughput");
+                              current_isset = false;
+                              continue;
+                          }
+                          
+                          try {
+                              controller._add(throughput, dataset, lifetime);
+                          } catch (MonitorException e) {
+                              logger.error(e.toString());
+                          }
+                          current = value;
+                          current_timestamp = now;
+                      }
+                  }
+              }
+          }
     }
 }
