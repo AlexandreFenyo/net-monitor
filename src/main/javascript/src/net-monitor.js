@@ -53,11 +53,6 @@ if (debug) $(function () { console.error("===============================> js#" 
 
 var chart2manager = new Object();
 
-// compute a date in the past
-function pastDateString(sec) {
-	return moment().subtract(sec, 's').format();
-}
-
 function pastDate(sec) {
 	return moment().subtract(sec, 's');
 }
@@ -80,7 +75,24 @@ function connectStomp(manager) {
 					var now = new moment();
 					t.x = now;
 					t.y = JSON.parse(message.body).value;
+					t.index = JSON.parse(message.body).index;
 					t.moment = now;
+					
+
+					
+					
+					
+					var len = manager.chart[dataSet].data.datasets[0].data.length;
+					if (len > 0) {
+						console.log("INDEXES: " + manager.chart[dataSet].data.datasets[0].data[len - 1].index + " - " + t.index);
+						if (manager.chart[dataSet].data.datasets[0].data[len - 1].index + 1 !== t.index) {
+							console.error("INDEX PERDU :" + t.index);
+						} else console.error("INDEX OK !!!" + t.index);
+					}
+					
+					
+					
+					
 					manager.chart[dataSet].data.datasets[0].data.push(t);
 					manager.chart[dataSet].update();
 				} else console.error("error: got empty STOMP message");
@@ -165,8 +177,8 @@ function _manage(charts, callbackDone) {
 						type: "time",
 						time: {
 							unit: "second",
-							min: pastDateString(c.lifeTime),
-							max: pastDateString(0)
+							min: pastDate(c.lifeTime),
+							max: pastDate(0)
 						},
 						display: true,
 						scaleLabel: {
@@ -220,9 +232,18 @@ function _manage(charts, callbackDone) {
 				for (let i of response) {
 					var t = new Object();
 					var m = moment(now).subtract(i.millisecondsFromNow, 'ms');
+					t.index = i.index;
 					t.x = m;
 					t.y = i.value;
 					t.moment = m;
+					
+//					var l = chart.data.datasets[0].data.length;
+//					console.error("ARRAY LEN:" + l);
+//					if (l != 0) {
+//					let xx = chart.data.datasets[0].data[l - 1];
+//					console.error("VAL:" + xx.index);
+//					}
+					
 					chart.data.datasets[0].data.push(t);
 				}
 			} catch (error) {

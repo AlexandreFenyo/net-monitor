@@ -30,6 +30,9 @@ public class DataSet {
     private static final Logger logger = LoggerFactory.getLogger(DataSet.class);
     private long lifetime;
 
+    private long current_index = 0;
+    private final ArrayList<Long> indexes = new ArrayList<Long>();
+
     private final ArrayList<Instant> instants = new ArrayList<Instant>();
     private final ArrayList<String> values = new ArrayList<String>();
 
@@ -58,8 +61,10 @@ public class DataSet {
      * @param String value String representation of the data value.
      * @param long lifetime lifetime in seconds. Must be >= 0. 0 means no lifetime change. 
      */
-    public synchronized Instant addValue(final String value, final long lifetime) {
+    public synchronized long addValue(final String value, final long lifetime) {
+        long idx = current_index++;
         final Instant now = Instant.now();
+        indexes.add(idx);
         instants.add(now);
         values.add(value);
         if (lifetime > this.lifetime) {
@@ -67,7 +72,7 @@ public class DataSet {
             this.lifetime = lifetime;
         } else if (lifetime < this.lifetime && lifetime != 0) logger.warn("decreasing lifetime is forbidden");
         flush();
-        return now;
+        return idx;
     }
 
     /**
@@ -128,6 +133,8 @@ public class DataSet {
         flush();
 
         @SuppressWarnings("unchecked")
+        final List<Long> indexes = (List<Long>) this.indexes.clone();
+        @SuppressWarnings("unchecked")
         final List<Instant> instants = (List<Instant>) this.instants.clone();
         @SuppressWarnings("unchecked")
         final List<String> values = (List<String>) this.values.clone();
@@ -138,6 +145,7 @@ public class DataSet {
         final Data [] array = new Data[instants.size()];
         for (int i = 0; i < instants.size(); i++) {
             array[i] = new Data();
+            array[i].index = indexes.get(i);
             array[i].millisecondsFromNow = instants.get(i).until(now, ChronoUnit.MILLIS);
             array[i].value = values.get(i);
         }

@@ -114,8 +114,12 @@ public class WebController {
             data = data_sets.get(dataset);
         }
 
-        data.addValue(new Long(value).toString(), lifetime);
-        final String text = "{\"time\":0,\"value\":" + new Long(value).toString() + "}";
+        final long idx = data.addValue(new Long(value).toString(), lifetime);
+        final String text = "{\"index\":" + idx + ",\"time\":0,\"value\":" + new Long(value).toString() + "}";
+
+        // simulate loss
+        if (new Random().nextInt(10) == 0) return;
+
         template.convertAndSend("/data/" + dataset, text);
     }
 
