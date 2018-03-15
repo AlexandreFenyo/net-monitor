@@ -119,8 +119,8 @@ public class WebController {
 
         final String text = "{\"index\":" + data.index + ",\"time\":0,\"instant\":" + data.instant + ",\"value\":" + new Long(value).toString() + "}";
 
-        // simulate loss
-        if (new Random().nextInt(10) == 0) return data;
+        // simulate random loss
+        if (new Random().nextInt(10) < 5) return data;
 
         template.convertAndSend("/data/" + dataset, text);
         return data;
@@ -142,5 +142,18 @@ public class WebController {
     	}
         data_sets.get(dataset).extend(lifetime);
         return data_sets.get(dataset).toArray(lifetime);
+    }
+
+    /**
+     * Answer to browser requests to get lost data.
+     * @param String dataset data set name.
+     * @param long first lower index of requested data.
+     * @param long last upper index of requested data.
+     */
+    @RequestMapping(value = "/requestRange", method = RequestMethod.GET)
+    @CrossOrigin(origins = "*")
+    public Data [] requestRange(final Principal p, @RequestParam("dataset") final String dataset, @RequestParam("first") final long first, @RequestParam("last") final long last) throws MonitorException {
+        if (!data_sets.containsKey(dataset)) throw new MonitorException("invalid dataset");
+        return data_sets.get(dataset).toArrayRange(first, last);
     }
 }

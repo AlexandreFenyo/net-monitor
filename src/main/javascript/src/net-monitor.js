@@ -76,22 +76,75 @@ function connectStomp(manager) {
 					t.x = now;
 					t.y = JSON.parse(message.body).value;
 					t.index = JSON.parse(message.body).index;
-					t.moment = now;
-					
+					//t.moment = now;
+					t.moment = moment(JSON.parse(message.body).instant);
 
-					
-					
-					
+					// request lost data
 					var len = manager.chart[dataSet].data.datasets[0].data.length;
 					if (len > 0) {
 						console.log("INDEXES: " + manager.chart[dataSet].data.datasets[0].data[len - 1].index + " - " + t.index);
-						if (manager.chart[dataSet].data.datasets[0].data[len - 1].index + 1 !== t.index) {
-							console.error("INDEX PERDU :" + t.index);
-						} else console.error("INDEX OK !!!" + t.index);
+						if (manager.chart[dataSet].data.datasets[0].data[len - 1].index + 1 < t.index) {
+							let first_index = manager.chart[dataSet].data.datasets[0].data[len - 1].index + 1;
+							let last_index = t.index - 1;
+							console.error("INDEXES PERDUs: " + first_index + " => " + last_index);
+
+
+
+							
+							let xhttp = new XMLHttpRequest();
+							xhttp.open("GET", ((typeof manager.dispatchUrl === "undefined") ?
+											(window.location.protocol + "//" + window.location.host + "/net-monitor/dispatch")
+											: manager.dispatchUrl) + "/requestRange" + "?dataset=" + dataSet + "&first=" + first_index + "&last=" + last_index);
+							xhttp.onload = function () {
+								let pos1 = manager.chart[dataSet].data.datasets[0].data.findIndex(function (elt) { return elt.index >= first_index; });
+								console.error("I: " + pos1);
+								console.error("XXX: " + manager.chart[dataSet].data.datasets[0].data[pos1].index);
+
+								var response = JSON.parse(this.responseText);
+								for (let i of response) {
+									let t = new Object();
+									let m = moment(i.instant);
+									t.index = i.index;
+									t.x = m;
+									t.y = i.value;
+									t.moment = m;
+
+									console.error("RECEIVE 1 OLD IDX:" + t.index);
+
+									// utiliser splice et pas push
+									//chart.data.datasets[0].data.push(t);
+							}
+
+								
+								
+								
+								
+								
+								
+								
+//								chart.update();
+
+							};
+
+							xhttp.setRequestHeader("Content-type", "application/json");
+							xhttp.send();
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+						
+						}
 					}
-					
-					
-					
 					
 					manager.chart[dataSet].data.datasets[0].data.push(t);
 					manager.chart[dataSet].update();
@@ -231,7 +284,8 @@ function _manage(charts, callbackDone) {
 				var now = new moment();
 				for (let i of response) {
 					var t = new Object();
-					var m = moment(now).subtract(i.millisecondsFromNow, 'ms');
+					// var m = moment(now).subtract(i.millisecondsFromNow, 'ms');
+					var m = moment(i.instant);
 					t.index = i.index;
 					t.x = m;
 					t.y = i.value;

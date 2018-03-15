@@ -146,10 +146,10 @@ public class DataSet {
     }
 
     /**
-     * Convert the data set into an array of Data instances.
-     * @param none.
+     * Convert the most recent part of a data set into an array of Data instances.
+     * @param long time_range array range.
      */
-    public synchronized Data [] toArray(final long lifetime) {
+    public synchronized Data [] toArray(final long time_range) {
         flush();
 
         @SuppressWarnings("unchecked")
@@ -159,7 +159,7 @@ public class DataSet {
         @SuppressWarnings("unchecked")
         final List<String> values = (List<String>) this.values.clone();
 
-        flush(indexes, instants, values, lifetime);
+        flush(indexes, instants, values, time_range);
 
         final Instant now = Instant.now();
         final Data [] array = new Data[instants.size()];
@@ -169,6 +169,34 @@ public class DataSet {
             array[i].millisecondsFromNow = instants.get(i).until(now, ChronoUnit.MILLIS);
             array[i].instant = instants.get(i).toEpochMilli();
             array[i].value = values.get(i);
+        }
+        return array;
+    }
+
+    /**
+     * Convert a range of indexes in a data set into an array of Data instances.
+     * @param long first first index.
+     * @param long last last index.
+     */
+    public synchronized Data [] toArrayRange(final long first, final long last) {
+        flush();
+
+        // check that we have at least one data in this range
+        if (first > last || indexes.size() == 0 || indexes.get(0) > last || indexes.get(indexes.size() - 1) < first) return new Data[0];
+
+        int begin = indexes.indexOf(first);
+        if (begin == -1) begin = 0;
+        int end = indexes.indexOf(last);
+        if (end == -1) end = indexes.size() - 1;
+
+        final Data [] array = new Data[end - begin + 1];
+        
+        for (int i = 0; i < end - begin + 1; i++) {
+            array[i] = new Data();
+            array[i].index = indexes.get(begin + i);
+            array[i].millisecondsFromNow = -1;
+            array[i].instant = instants.get(begin + i).toEpochMilli();
+            array[i].value = values.get(begin + i);
         }
         return array;
     }
