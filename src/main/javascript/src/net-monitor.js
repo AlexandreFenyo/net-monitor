@@ -236,14 +236,6 @@ function _manage(charts, callbackDone) {
 					t.x = m;
 					t.y = i.value;
 					t.moment = m;
-					
-//					var l = chart.data.datasets[0].data.length;
-//					console.error("ARRAY LEN:" + l);
-//					if (l != 0) {
-//					let xx = chart.data.datasets[0].data[l - 1];
-//					console.error("VAL:" + xx.index);
-//					}
-					
 					chart.data.datasets[0].data.push(t);
 				}
 			} catch (error) {

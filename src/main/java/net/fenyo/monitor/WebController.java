@@ -104,23 +104,26 @@ public class WebController {
      * @param String dataset data set name.
      * @param long lifetime new lifetime for this data set. Must be >= 0. 0 means no lifetime change if the data set already exists. Otherwise, 0 means no persistence.
      */
-    public void _add(final long value, final String dataset, final long lifetime) throws MonitorException {
-        final DataSet data;
+    public Data _add(final long value, final String dataset, final long lifetime) throws MonitorException {
+        final DataSet data_set;
 
         synchronized (data_sets) {
             if (!data_sets.containsKey(dataset)) {
                 data_sets.put(dataset, new DataSet(lifetime));
             }
-            data = data_sets.get(dataset);
+            data_set = data_sets.get(dataset);
         }
 
-        final long idx = data.addValue(new Long(value).toString(), lifetime);
-        final String text = "{\"index\":" + idx + ",\"time\":0,\"value\":" + new Long(value).toString() + "}";
+        final Data data = data_set.addValue(new Long(value).toString(), lifetime);
+        if (data == null) return null;
+
+        final String text = "{\"index\":" + data.index + ",\"time\":0,\"instant\":" + data.instant + ",\"value\":" + new Long(value).toString() + "}";
 
         // simulate loss
-        if (new Random().nextInt(10) == 0) return;
+        if (new Random().nextInt(10) == 0) return data;
 
         template.convertAndSend("/data/" + dataset, text);
+        return data;
     }
 
     /**

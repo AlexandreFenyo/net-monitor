@@ -60,11 +60,24 @@ public class DataSet {
      * Add a data to this set and update the lifetime of the whole set. The lifetime can not be decreased.
      * @param String value String representation of the data value.
      * @param long lifetime lifetime in seconds. Must be >= 0. 0 means no lifetime change. 
+     * @throws MonitorException 
      */
-    public synchronized long addValue(final String value, final long lifetime) {
-        long idx = current_index++;
+//    public synchronized long addValue(final String value, final long lifetime) throws MonitorException {
+    public synchronized Data addValue(final String value, final long lifetime) throws MonitorException {
         final Instant now = Instant.now();
+        
+        // JavaScript Moment does not store nanoseconds but milliseconds, therefore we avoid having two distinct instants that correspond to the same moments.
+        if (!instants.isEmpty() && now.toEpochMilli() == instants.get(instants.size() - 1).toEpochMilli()) {
+            logger.warn("can not add multiple values during the same millisecond");
+            return null;
+        }
+
+        if (!instants.isEmpty() && now.isBefore(instants.get(instants.size() - 1))) throw new MonitorException("current instant in the past");
+
+        if (current_index == Long.MAX_VALUE) throw new MonitorException("index too big");
+        final long idx = current_index++;
         indexes.add(idx);
+
         instants.add(now);
         values.add(value);
         if (lifetime > this.lifetime) {
@@ -72,7 +85,13 @@ public class DataSet {
             this.lifetime = lifetime;
         } else if (lifetime < this.lifetime && lifetime != 0) logger.warn("decreasing lifetime is forbidden");
         flush();
-        return idx;
+
+        final Data data = new Data();
+        data.index = idx;
+        data.instant = now.toEpochMilli();
+        data.millisecondsFromNow = -1;
+        data.value = value;
+        return data;
     }
 
     /**
@@ -82,7 +101,7 @@ public class DataSet {
      * @param List<String> values data values.
      * @param long lifetime lifetime in seconds.
      */
-    private static void flush(final List<Instant> instants, final List<String> values, long lifetime) {
+    private static void flush(final List<Long> indexes, final List<Instant> instants, final List<String> values, long lifetime) {
         final Instant beginning = Instant.now().minus(lifetime, ChronoUnit.SECONDS);
         while (true) {
             final Iterator<Instant> it = instants.iterator();
@@ -90,6 +109,7 @@ public class DataSet {
             it.next();
             if (!it.hasNext()) return;
             if (it.next().isBefore(beginning)) {
+                indexes.remove(0);
                 instants.remove(0);
                 values.remove(0);
             } else return;
@@ -101,7 +121,7 @@ public class DataSet {
      * @param none.
      */
     private void flush() {
-        flush(instants, values, lifetime);
+        flush(indexes, instants, values, lifetime);
     }
 
     /**
@@ -139,14 +159,15 @@ public class DataSet {
         @SuppressWarnings("unchecked")
         final List<String> values = (List<String>) this.values.clone();
 
-        flush(instants, values, lifetime);
-        
+        flush(indexes, instants, values, lifetime);
+
         final Instant now = Instant.now();
         final Data [] array = new Data[instants.size()];
         for (int i = 0; i < instants.size(); i++) {
             array[i] = new Data();
             array[i].index = indexes.get(i);
             array[i].millisecondsFromNow = instants.get(i).until(now, ChronoUnit.MILLIS);
+            array[i].instant = instants.get(i).toEpochMilli();
             array[i].value = values.get(i);
         }
         return array;
