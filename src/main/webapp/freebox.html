@@ -19,7 +19,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>html#47</title>
+<title>html#49</title>
  
 <!-- bundle without babel -->
 <!-- <script src="javascript/public/net-monitor.bundle.dev.js"></script> -->
@@ -77,8 +77,10 @@ function init_charts() {
 
 <body onload="manager_charts = NetMonitor.manage(charts); init_charts()">
 
-<br/>
+<!-- <br/>
 <button onclick="NetMonitor.pushValue(manager_charts, 'set1', 123, undefined, function () {console.info('value pushed')})">add value to dataset 1</button>
+ -->
+ 
 <br/>
 <!-- 1st chart, displaying last 60 seconds of data set 1 -->
 <canvas id="myChart1" width="800" height="200"></canvas>
