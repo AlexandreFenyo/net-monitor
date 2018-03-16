@@ -53,6 +53,14 @@ if (debug) $(function () { console.error("===============================> js#" 
 
 var chart2manager = new Object();
 
+function dumpDataSet(manager, dataSet) {
+	console.error("--------------------------------------- DUMPING " + dataSet);
+	for (var i = 0; i < manager.chart[dataSet].data.datasets[0].data.length; i++) {
+		console.error("data[" + i + "].index = " + manager.chart[dataSet].data.datasets[0].data[i].index);
+	}
+	console.error("------------------------------------------------");
+}
+
 function pastDate(sec) {
 	return moment().subtract(sec, 's');
 }
@@ -82,24 +90,17 @@ function connectStomp(manager) {
 					// request lost data
 					var len = manager.chart[dataSet].data.datasets[0].data.length;
 					if (len > 0) {
-						console.log("INDEXES: " + manager.chart[dataSet].data.datasets[0].data[len - 1].index + " - " + t.index);
 						if (manager.chart[dataSet].data.datasets[0].data[len - 1].index + 1 < t.index) {
 							let first_index = manager.chart[dataSet].data.datasets[0].data[len - 1].index + 1;
 							let last_index = t.index - 1;
-							console.error("INDEXES PERDUs: " + first_index + " => " + last_index);
+							if (debug) console.info("lost indexes: " + first_index + " => " + last_index);
 
-
-
-							
 							let xhttp = new XMLHttpRequest();
 							xhttp.open("GET", ((typeof manager.dispatchUrl === "undefined") ?
 											(window.location.protocol + "//" + window.location.host + "/net-monitor/dispatch")
 											: manager.dispatchUrl) + "/requestRange" + "?dataset=" + dataSet + "&first=" + first_index + "&last=" + last_index);
 							xhttp.onload = function () {
-								let pos1 = manager.chart[dataSet].data.datasets[0].data.findIndex(function (elt) { return elt.index >= first_index; });
-								console.error("I: " + pos1);
-								console.error("XXX: " + manager.chart[dataSet].data.datasets[0].data[pos1].index);
-
+								let pos = 0;
 								var response = JSON.parse(this.responseText);
 								for (let i of response) {
 									let t = new Object();
@@ -108,41 +109,28 @@ function connectStomp(manager) {
 									t.x = m;
 									t.y = i.value;
 									t.moment = m;
+									if (manager.chart[dataSet].data.datasets[0].data.length === 0) {
+										chart.data.datasets[0].data.push(t);
+										continue;
+									}
+									while (manager.chart[dataSet].data.datasets[0].data[pos].index < t.index && pos < manager.chart[dataSet].data.datasets[0].data.length - 1) pos++;
 
-									console.error("RECEIVE 1 OLD IDX:" + t.index);
+									if (manager.chart[dataSet].data.datasets[0].data[pos].index === t.index) continue;
 
-									// utiliser splice et pas push
-									//chart.data.datasets[0].data.push(t);
-							}
+									if (manager.chart[dataSet].data.datasets[0].data[pos].index > t.index) {
+										manager.chart[dataSet].data.datasets[0].data.splice(pos, 0, t);
+										pos++;
+										continue;
+									}
 
-								
-								
-								
-								
-								
-								
-								
-//								chart.update();
-
+									chart.data.datasets[0].data.push(t);
+									pos++;
+								}
+								manager.chart[dataSet].update();
 							};
 
 							xhttp.setRequestHeader("Content-type", "application/json");
 							xhttp.send();
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-						
 						}
 					}
 					
