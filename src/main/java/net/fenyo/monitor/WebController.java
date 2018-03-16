@@ -120,7 +120,7 @@ public class WebController {
         final String text = "{\"index\":" + data.index + ",\"time\":0,\"instant\":" + data.instant + ",\"value\":" + new Long(value).toString() + "}";
 
         // simulate random loss
-        if (new Random().nextInt(10) < 5) return data;
+        // if (new Random().nextInt(10) < 5) return data;
 
         template.convertAndSend("/data/" + dataset, text);
         return data;
