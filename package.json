@@ -6,7 +6,8 @@
   "keyword": [
     "snmp",
     "network",
-    "graph"
+    "graph",
+    "chart"
   ],
   "homepage": "https://github.com/AlexandreFenyo/net-monitor/",
   "bugs": {
