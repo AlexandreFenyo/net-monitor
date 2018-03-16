@@ -15,14 +15,16 @@
 
 <script>
 var charts = {
-		dispatchUrl: "http://localhost:8080/net-monitor/dispatch",
+//		dispatchUrl: "http://localhost:8080/net-monitor/dispatch",
+		dispatchUrl: "http://192.168.0.6/net-monitor/dispatch",
 		views: [
 			{
 				id: "myChart1",
 				topLabel: "chart 1: last 60 seconds of data set 1",
 				bottomLabel: "dataset 1",
 				lifeTime: 60,
-				dataSet: "set1"
+				//dataSet: "set1"
+				dataSet: "freeboxDownstream"
 			},
 			{
 				id: "myChart2",

@@ -2,7 +2,7 @@
 	"default_lifetime": 86400,
 	"probes": [
 			{
-			"dataset": "freeboxDownstream",
+			"dataset": "set1",
 			"lifetime": 3600,
 			"type": "snmp",
 			"version": "v2c",
@@ -13,7 +13,7 @@
 		},
 
 		{
-			"dataset": "freeboxUpstream",
+			"dataset": "set2",
 			"lifetime": 3600,
 			"type": "snmp",
 			"version": "v2c",
