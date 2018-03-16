@@ -18,8 +18,12 @@ const path = require("path")
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 
 let config_bundle_prod = {
-	// PB ICI ?
+	
 	mode: "production",
+	devtool: "eval",
+	
+	// PB ICI ?
+	// mode: "production",
 	// entry: [ "babel-polyfill", "./src/main/javascript/src/net-monitor.js" ],
 	entry: [ "./src/main/javascript/src/net-monitor.js" ],
 	output: {
@@ -34,7 +38,8 @@ let config_bundle_prod = {
 			exclude: /node_modules/,
 			loader: "babel-loader"
 		}]
-	},
+	}
+	,
 	plugins: [
 		new UglifyJsPlugin()
 	]

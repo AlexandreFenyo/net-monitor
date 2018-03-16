@@ -28,10 +28,8 @@
   },
   "license": "BSD-2-Clause",
   "dependencies": {
-    "chart.js": "^2.7.1",
-    "jquery": "^3.3.1",
-    "moment": "^2.20.1",
-    "webstomp-client": "^1.2.0"
+    "chart.js": "^2.7.2",
+    "moment": "^2.21.0"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
@@ -40,7 +38,6 @@
     "babel-polyfill": "^6.26.0",
     "babel-preset-env": "^1.6.1",
     "webpack": "^4.1.1",
-    "webpack-cli": "^2.0.10",
-    "webpack-dev-server": "^3.1.1"
+    "webpack-cli": "^2.0.12"
   }
 }
