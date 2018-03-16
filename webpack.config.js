@@ -109,4 +109,6 @@ let config_standalone_prod = {
 	}
 }
 
-module.exports = [ config_standalone_prod, config_standalone_dev, config_bundle_dev, config_bundle_prod ];
+module.exports = [ config_standalone_prod, config_standalone_dev, config_bundle_prod, config_bundle_dev ];
+
+
