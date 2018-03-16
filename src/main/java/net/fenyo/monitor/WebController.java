@@ -89,6 +89,7 @@ public class WebController {
     // http://localhost:8080/net-monitor/dispatch/add?value=123&dataset=dataset1
     // http://localhost:8080/net-monitor/dispatch/add?value=123&dataset=dataset1&lifetime=60
     @RequestMapping(value = "/add", method = RequestMethod.GET)
+    @CrossOrigin(origins = "*")
     public Boolean add(final Principal p, @RequestParam("value") final long value, @RequestParam("dataset") final String dataset, @RequestParam(value = "lifetime", defaultValue = "0", required = false) long lifetime) throws MonitorException {
         if (lifetime < -1) throw new MonitorException("add op.: invalid lifetime value [" + lifetime + "] for dataset [" + dataset + "]");
         if (lifetime == -1) lifetime = config.default_lifetime;
@@ -103,19 +104,26 @@ public class WebController {
      * @param String dataset data set name.
      * @param long lifetime new lifetime for this data set. Must be >= 0. 0 means no lifetime change if the data set already exists. Otherwise, 0 means no persistence.
      */
-    public void _add(final long value, final String dataset, final long lifetime) throws MonitorException {
-        final DataSet data;
+    public Data _add(final long value, final String dataset, final long lifetime) throws MonitorException {
+        final DataSet data_set;
 
         synchronized (data_sets) {
             if (!data_sets.containsKey(dataset)) {
                 data_sets.put(dataset, new DataSet(lifetime));
             }
-            data = data_sets.get(dataset);
+            data_set = data_sets.get(dataset);
         }
 
-        data.addValue(new Long(value).toString(), lifetime);
-        final String text = "{\"time\":0,\"value\":" + new Long(value).toString() + "}";
+        final Data data = data_set.addValue(new Long(value).toString(), lifetime);
+        if (data == null) return null;
+
+        final String text = "{\"index\":" + data.index + ",\"time\":0,\"instant\":" + data.instant + ",\"value\":" + new Long(value).toString() + "}";
+
+        // simulate random loss
+        if (new Random().nextInt(10) < 5) return data;
+
         template.convertAndSend("/data/" + dataset, text);
+        return data;
     }
 
     /**
@@ -134,5 +142,18 @@ public class WebController {
     	}
         data_sets.get(dataset).extend(lifetime);
         return data_sets.get(dataset).toArray(lifetime);
+    }
+
+    /**
+     * Answer to browser requests to get lost data.
+     * @param String dataset data set name.
+     * @param long first lower index of requested data.
+     * @param long last upper index of requested data.
+     */
+    @RequestMapping(value = "/requestRange", method = RequestMethod.GET)
+    @CrossOrigin(origins = "*")
+    public Data [] requestRange(final Principal p, @RequestParam("dataset") final String dataset, @RequestParam("first") final long first, @RequestParam("last") final long last) throws MonitorException {
+        if (!data_sets.containsKey(dataset)) throw new MonitorException("invalid dataset");
+        return data_sets.get(dataset).toArrayRange(first, last);
     }
 }

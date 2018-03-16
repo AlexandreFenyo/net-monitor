@@ -16,7 +16,7 @@
 "use strict";
 
 const config = require('config');
-const version = "92";
+const version = "118";
 
 var debug = true;
 
@@ -53,9 +53,12 @@ if (debug) $(function () { console.error("===============================> js#" 
 
 var chart2manager = new Object();
 
-// compute a date in the past
-function pastDateString(sec) {
-	return moment().subtract(sec, 's').format();
+function dumpDataSet(manager, dataSet) {
+	console.error("--------------------------------------- DUMPING " + dataSet);
+	for (var i = 0; i < manager.chart[dataSet].data.datasets[0].data.length; i++) {
+		console.error("data[" + i + "].index = " + manager.chart[dataSet].data.datasets[0].data[i].index);
+	}
+	console.error("------------------------------------------------");
 }
 
 function pastDate(sec) {
@@ -65,9 +68,11 @@ function pastDate(sec) {
 // connect the web socket to the server
 function connectStomp(manager) {
 	let stompClient = webstomp.client(
-			((typeof manager.dispatchUrl === "undefined") ?
+			(typeof manager.dispatchUrlWebSocket === "undefined") ?
+			(((typeof manager.dispatchUrl === "undefined") ?
 					((window.location.protocol === "http:" ? "ws:" : "wss:") + "//" + window.location.host + "/net-monitor/dispatch")
-					: manager.dispatchUrl.replace(/^http/i, "ws")) + "/socket"
+					: manager.dispatchUrl.replace(/^http/i, "ws")) + "/socket")
+					: manager.dispatchUrlWebSocket
 	);
 	stompClient.heartbeat = { incoming: 1000, outgoing: 1000 };
 	stompClient.connect({}, function () {
@@ -76,9 +81,59 @@ function connectStomp(manager) {
 				if (message.body) {
 					var t = new Object();
 					var now = new moment();
-					t.x = now.format();
+					t.x = now;
 					t.y = JSON.parse(message.body).value;
-					t.moment = now;
+					t.index = JSON.parse(message.body).index;
+					//t.moment = now;
+					t.moment = moment(JSON.parse(message.body).instant);
+
+					// request lost data
+					var len = manager.chart[dataSet].data.datasets[0].data.length;
+					if (len > 0) {
+						if (manager.chart[dataSet].data.datasets[0].data[len - 1].index + 1 < t.index) {
+							let first_index = manager.chart[dataSet].data.datasets[0].data[len - 1].index + 1;
+							let last_index = t.index - 1;
+							if (debug) console.info("lost indexes: " + first_index + " => " + last_index);
+
+							let xhttp = new XMLHttpRequest();
+							xhttp.open("GET", ((typeof manager.dispatchUrl === "undefined") ?
+											(window.location.protocol + "//" + window.location.host + "/net-monitor/dispatch")
+											: manager.dispatchUrl) + "/requestRange" + "?dataset=" + dataSet + "&first=" + first_index + "&last=" + last_index);
+							xhttp.onload = function () {
+								let pos = 0;
+								var response = JSON.parse(this.responseText);
+								for (let i of response) {
+									let t = new Object();
+									let m = moment(i.instant);
+									t.index = i.index;
+									t.x = m;
+									t.y = i.value;
+									t.moment = m;
+									if (manager.chart[dataSet].data.datasets[0].data.length === 0) {
+										chart.data.datasets[0].data.push(t);
+										continue;
+									}
+									while (manager.chart[dataSet].data.datasets[0].data[pos].index < t.index && pos < manager.chart[dataSet].data.datasets[0].data.length - 1) pos++;
+
+									if (manager.chart[dataSet].data.datasets[0].data[pos].index === t.index) continue;
+
+									if (manager.chart[dataSet].data.datasets[0].data[pos].index > t.index) {
+										manager.chart[dataSet].data.datasets[0].data.splice(pos, 0, t);
+										pos++;
+										continue;
+									}
+
+									chart.data.datasets[0].data.push(t);
+									pos++;
+								}
+								manager.chart[dataSet].update();
+							};
+
+							xhttp.setRequestHeader("Content-type", "application/json");
+							xhttp.send();
+						}
+					}
+					
 					manager.chart[dataSet].data.datasets[0].data.push(t);
 					manager.chart[dataSet].update();
 				} else console.error("error: got empty STOMP message");
@@ -134,6 +189,7 @@ function _manage(charts, callbackDone) {
 	manager.lifeTime = new Object();
 	manager.id = new Object();
 	manager.dispatchUrl = charts.dispatchUrl;
+	manager.dispatchUrlWebSocket = charts.dispatchUrlWebSocket;
 
 	for (let c of charts.views)
 		if (chart2manager[c.id] !== undefined) {
@@ -162,8 +218,8 @@ function _manage(charts, callbackDone) {
 						type: "time",
 						time: {
 							unit: "second",
-							min: pastDateString(c.lifeTime),
-							max: pastDateString(0)
+							min: pastDate(c.lifeTime),
+							max: pastDate(0)
 						},
 						display: true,
 						scaleLabel: {
@@ -203,9 +259,9 @@ function _manage(charts, callbackDone) {
 		manager.id[c.dataSet] = c.id;
 
 		let xhttp = new XMLHttpRequest();
-		xhttp.open("GET", ((typeof charts.dispatchUrl === "undefined") ?
+		xhttp.open("GET", ((typeof manager.dispatchUrl === "undefined") ?
 						(window.location.protocol + "//" + window.location.host + "/net-monitor/dispatch")
-						: charts.dispatchUrl) + "/request" + "?dataset=" + c.dataSet + "&lifetime=" + c.lifeTime);
+						: manager.dispatchUrl) + "/request" + "?dataset=" + c.dataSet + "&lifetime=" + c.lifeTime);
 		xhttp.onload = function () {
 			chart.options.scales.xAxes[0].time.min = pastDate(c.lifeTime);
 			chart.options.scales.xAxes[0].time.max = pastDate(0);
@@ -216,8 +272,10 @@ function _manage(charts, callbackDone) {
 				var now = new moment();
 				for (let i of response) {
 					var t = new Object();
-					var m = moment(now).subtract(i.millisecondsFromNow, 'ms');
-					t.x = m.format();
+					// var m = moment(now).subtract(i.millisecondsFromNow, 'ms');
+					var m = moment(i.instant);
+					t.index = i.index;
+					t.x = m;
 					t.y = i.value;
 					t.moment = m;
 					chart.data.datasets[0].data.push(t);

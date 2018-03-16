@@ -18,6 +18,7 @@ const path = require("path")
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 
 let config_bundle_dev = {
+	mode: "development",
 	entry: { app: "./src/main/javascript/src/net-monitor.js" },
 	output: {
 		path: path.resolve(__dirname, "./src/main/javascript/public"),
@@ -37,6 +38,7 @@ let config_bundle_dev = {
 }
 
 let config_bundle_prod = {
+	mode: "production",
 	entry: [ "babel-polyfill", "./src/main/javascript/src/net-monitor.js" ],
 	output: {
 		path: path.resolve(__dirname, "./src/main/javascript/public"),
@@ -62,6 +64,7 @@ let config_bundle_prod = {
 }
 
 let config_standalone_dev = {
+	mode: "development",
 	entry: { app: "./src/main/javascript/src/net-monitor.js" },
 	output: {
 		path: path.resolve(__dirname, "./src/main/javascript/public"),
@@ -81,6 +84,7 @@ let config_standalone_dev = {
 }
 
 let config_standalone_prod = {
+	mode: "production",
 	entry: [ "babel-polyfill", "./src/main/javascript/src/net-monitor.js" ],
 	output: {
 		path: path.resolve(__dirname, "./src/main/javascript/public"),

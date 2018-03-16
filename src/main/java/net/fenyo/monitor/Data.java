@@ -22,6 +22,8 @@ package net.fenyo.monitor;
  */
 
 public class Data {
+    public long index;
     public long millisecondsFromNow;
+    public long instant;
     public String value;
 }
