@@ -81,11 +81,10 @@ function connectStomp(manager) {
 				if (message.body) {
 					var t = new Object();
 					var now = new moment();
-					t.x = now;
+					t.x = moment(JSON.parse(message.body).instant);
 					t.y = JSON.parse(message.body).value;
 					t.index = JSON.parse(message.body).index;
-					//t.moment = now;
-					t.moment = moment(JSON.parse(message.body).instant);
+					t.moment = t.x;
 
 					// request lost data
 					var len = manager.chart[dataSet].data.datasets[0].data.length;
