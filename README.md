@@ -8,9 +8,9 @@ In a nutshell:
 
 Two live demos displaying the ingress and egress throughputs of my ADSL box at home are available here:
 
-- https://fenyo.net/newweb/net-monitor/freebox-outside-white.html: blank background, 120 seconds displayed
+- blank background, 120 seconds displayed: https://fenyo.net/newweb/net-monitor/freebox-outside-white.html
 
-- https://fenyo.net/newweb/net-monitor/freebox-outside-black.html: black background, 30 seconds displayed
+- black background, 30 seconds displayed: https://fenyo.net/newweb/net-monitor/freebox-outside-black.html
 
 Run in JSFiddle with live data: https://jsfiddle.net/jsfiddleeowyn/1cu172ya/
 
