@@ -14,6 +14,8 @@ Two live demos displaying the ingress and egress throughputs of my ADSL box at h
 
 Run in JSFiddle with live data: https://jsfiddle.net/jsfiddleeowyn/1cu172ya/
 
+See a short video of net-monitor running on a small display based on Raspberry Pi in kiosk mode: https://fenyo.net/newweb/net-monitor/net-mon-on-rpi.mp4
+
 # Purpose
 
 net-monitor is a client / server toolkit. Its purpose is to let you include HTML animated networking charts into your web applications and single pages. It comes with a SNMP v1/v2c/v3 manager and is fully compliant with IPv4 & IPv6.
