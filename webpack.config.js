@@ -39,8 +39,6 @@ let config_bundle_dev = {
 
 let config_bundle_prod = {
 	mode: "production",
-	// devtool needed to avoid display problems: see branch debug_start
-	devtool: "eval",
 	entry: [ "babel-polyfill", "./src/main/javascript/src/net-monitor.js" ],
 	output: {
 		path: path.resolve(__dirname, "./src/main/javascript/public"),
@@ -87,8 +85,6 @@ let config_standalone_dev = {
 
 let config_standalone_prod = {
 	mode: "production",
-	// devtool needed to avoid display problems: see branch debug_start
-	devtool: "eval",
 	entry: [ "babel-polyfill", "./src/main/javascript/src/net-monitor.js" ],
 	output: {
 		path: path.resolve(__dirname, "./src/main/javascript/public"),
