@@ -16,9 +16,11 @@
 "use strict";
 
 const config = require('config');
-const version = "121";
+const version = "122";
 
 var debug = true;
+
+var time_drift = 0;
 
 export const manage = function (charts, callbackDone) {
 	return _manage(charts, callbackDone);
@@ -85,6 +87,8 @@ function connectStomp(manager) {
 					t.y = JSON.parse(message.body).value;
 					t.index = JSON.parse(message.body).index;
 					t.moment = t.x;
+
+					time_drift = now.diff(t.moment);
 
 					// request lost data
 					var len = manager.chart[dataSet].data.datasets[0].data.length;
@@ -262,8 +266,6 @@ function _manage(charts, callbackDone) {
 						(window.location.protocol + "//" + window.location.host + "/net-monitor/dispatch")
 						: manager.dispatchUrl) + "/request" + "?dataset=" + c.dataSet + "&lifetime=" + c.lifeTime);
 		xhttp.onload = function () {
-			chart.options.scales.xAxes[0].time.min = pastDate(c.lifeTime);
-			chart.options.scales.xAxes[0].time.max = pastDate(0);
 			chart.data.datasets[0].data.splice(0, chart.data.datasets[0].data.length);
 
 			try {
@@ -282,7 +284,13 @@ function _manage(charts, callbackDone) {
 			} catch (error) {
 				console.log(error);
 			}
-			
+
+			if (chart.data.datasets[0].data.length > 0)
+				time_drift = now.diff(chart.data.datasets[0].data[chart.data.datasets[0].data.length - 1].moment);
+
+			chart.options.scales.xAxes[0].time.min = pastDate(c.lifeTime).subtract(time_drift, "ms");
+			chart.options.scales.xAxes[0].time.max = pastDate(0).subtract(time_drift, "ms");
+
 			chart.update();
 			if (typeof callbackDone !== "undefined") callbackDone();
 		};
@@ -291,24 +299,21 @@ function _manage(charts, callbackDone) {
 		xhttp.send();
 	}
 
-	let lastcall = new moment();
 	manager.intervalId = window.setInterval(function () {
-		if (new moment().diff(lastcall) < 1000) return;
-		lastcall = new moment();
 		for (let dataSet in manager.chart) {
 			var retry = true;
 			do {
-				var limit = new moment().subtract(manager.lifeTime[dataSet], 's');
+				// 1000 means we suppose the time_drift can change up to 1000 ms during a session, so we keep data 1000 ms longer than we should 
+				var limit = new moment().subtract(manager.lifeTime[dataSet], 's').subtract(time_drift + 1000, "ms");
 				if (manager.chart[dataSet].data.datasets[0].data.length > 1 && manager.chart[dataSet].data.datasets[0].data[1].moment.isBefore(limit))
 					manager.chart[dataSet].data.datasets[0].data.splice(0, 1);
 				else retry = false;
 			} while (retry);
-			
-			manager.chart[dataSet].options.scales.xAxes[0].time.min = pastDate(manager.lifeTime[dataSet]);
-			manager.chart[dataSet].options.scales.xAxes[0].time.max = pastDate(0);
+			manager.chart[dataSet].options.scales.xAxes[0].time.min = pastDate(manager.lifeTime[dataSet]).subtract(time_drift, "ms");;
+			manager.chart[dataSet].options.scales.xAxes[0].time.max = pastDate(0).subtract(time_drift, "ms");
 			manager.chart[dataSet].update();
 		}
-	}, 200);
+	}, 1000);
 
 	manager.stompClient = connectStomp(manager);
 	return manager;
