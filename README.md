@@ -14,7 +14,7 @@ Two live demos displaying the ingress and egress throughputs of my ADSL box at h
 
 Run in JSFiddle with live data: https://jsfiddle.net/jsfiddleeowyn/1cu172ya/
 
-See a short video of net-monitor running on a small display based on Raspberry Pi in kiosk mode: https://fenyo.net/newweb/net-monitor/net-mon-on-rpi.mp4
+See a short video of net-monitor running on a small display based on a Raspberry Pi in kiosk mode: https://fenyo.net/newweb/net-monitor/net-mon-on-rpi.mp4
 
 # Purpose
 
