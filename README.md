@@ -727,7 +727,7 @@ Note that the dependencies are also installed on the server.
 ## ES6 module
 
 ```javascript
-import NetMonitor from "net-monitor";
+import NetMonitor from "@fenyo/net-monitor";
 var charts = { ... };
 var manager = NetMonitor.manage(charts);
 ```
@@ -735,7 +735,7 @@ var manager = NetMonitor.manage(charts);
 ## common JS
 
 ```javascript
-var NetMonitor = require("net-monitor");
+var NetMonitor = require("@fenyo/net-monitor");
 var charts = { ... };
 var manager = NetMonitor.manage(charts);
 ```
