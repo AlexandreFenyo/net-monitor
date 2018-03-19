@@ -727,7 +727,7 @@ Note that the dependencies are also installed on the server.
 ## ES6 module
 
 ```javascript
-import NetMonitor from 'net-monitor.bundle.min.js';
+import NetMonitor from "net-monitor";
 var charts = { ... };
 var manager = NetMonitor.manage(charts);
 ```
@@ -735,7 +735,7 @@ var manager = NetMonitor.manage(charts);
 ## common JS
 
 ```javascript
-var NetMonitor = require('net-monitor.bundle.min.js');
+var NetMonitor = require("net-monitor");
 var charts = { ... };
 var manager = NetMonitor.manage(charts);
 ```
