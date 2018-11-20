@@ -1,0 +1,21 @@
+Pour corriger le problème de websocket côté JavaScript de la 1.3.5 :
+- on repart de la 1.3.5 :
+  git clone https://github.com/AlexandreFenyo/net-monitor.git
+- on reprend l'ancien package-lock.json de la version 1.3.4
+- on ne s'appuie plus sur yarn mais sur npm :
+  rm yarn.lock
+- on rajoute une dépendance :
+  npm add uglifyjs-webpack-plugin -D
+- on peuple node_modules/
+  npm install -D
+- on corrige les failles de sécurité :
+  npm audit
+  npm audit fix
+  npm audit
+  Il en reste d'après cet audit, on procède à nouveau :
+  npm audit fix
+  npm audit
+  Là il n'en reste plus
+- npx webpack
+- mvn clean install tomcat7:run
+- on met à jour la doc car on a changé d'outil de gestion des packages
