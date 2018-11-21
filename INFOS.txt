@@ -18,4 +18,4 @@ Pour corriger le problème de websocket côté JavaScript de la 1.3.5 :
   Là il n'en reste plus
 - npx webpack
 - mvn clean install tomcat7:run
-- on met à jour la doc car on a changé d'outil de gestion des packages
+- Note : on a changé d'outil de gestion des packages, on n'utilise plus yarn mais npm

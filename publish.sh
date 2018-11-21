@@ -2,8 +2,8 @@
 
 echo "BEFORE RUNNING THIS SCRIPT:"
 echo "do not forget to run ssh -L 2222:localhost:22 fenyo.net"
-echo "do not forget to update version in package.json and add a tag prior to running this script"
-echo "do not forget to commit and push the repo to GitHub (after having updated package.json)"
+echo "do not forget to update version in package.json and add a tag prior to running this script (ex.: git tag -a 1.3.6)"
+echo "do not forget to commit and push (git push --tags) the repo to GitHub (after having updated package.json)"
 echo "do not forget docker login"
 echo "do not forget npm adduser"
 
