@@ -647,7 +647,7 @@ Suppose that the server is running on host `host` and port `port`:
 
 ### package managers
 
-You can install net-monitor from the [npmjs repository](https://www.npmjs.com/) using your favorite package manager: [npm](https://www.npmjs.com/docs/orgs/) or [yarn](https://yarnpkg.com/	) (avoid using [bower](https://bower.io/blog/2017/how-to-migrate-away-from-bower/) for new client side modules). This will install net-monitor and its dependencies.
+You can install net-monitor from the [npmjs repository](https://www.npmjs.com/) using your favorite package manager: [npm](https://www.npmjs.com/docs/orgs/) or [yarn](https://yarnpkg.com/) (avoid using [bower](https://bower.io/blog/2017/how-to-migrate-away-from-bower/) for new client side modules). This will install net-monitor and its dependencies.
 
 You can also access the dedicated page on npmjs: https://www.npmjs.com/package/@fenyo/net-monitor
 
@@ -769,18 +769,14 @@ Note: this example is for Linux Ubuntu 16.04 LTS.
       `root# apt-get install nodejs`
 
       Note 1:
-if you do not bind to a recent repository, the node version installed may be too much older to work correctly with yarn (see yarn installation below).
+if you do not bind to a recent repository, the node version installed may be too much older to work correctly.
 
       Note 2:
 a recent version of npm has been installed, as a dependency of this recent Node.js.
 
-  - Install yarn:
-
-    `root# npm install -g yarn`
-
   - Populate JavaScript module dependencies into `node_modules` repository:
 
-    `user% yarn install`
+    `user% npm install -D`
 
   - Use webpack and Babel to transpile, add polyfill, minify and package the JavaScript module:
 
@@ -849,15 +845,13 @@ Finally, publish the net-monitor project into the tomcat server: open the _Serve
 
 - install Node.js and npm: see https://nodejs.org/en/download/
 
-- Install yarn: see https://yarnpkg.com/lang/en/docs/install/
-
 - Install webpack:
 
   `c:\> npm install -g webpack`
 
 - Populate JavaScript module dependencies into `node_modules` repository:
 
-  `c:\net-monitor> yarn install`
+  `c:\net-monitor> npm install -D`
 
 - Use webpack and Babel to transpile, add polyfill, minify and package the JavaScript module.
 
@@ -904,7 +898,7 @@ To develop on the client side, using Eclipse may not be the best way to take int
 
 ### set-up an initial environment
 
-First, install npm and yarn.
+First, install npm.
 
 List global npm packages installed:
 
@@ -924,7 +918,7 @@ Clean up packages and dependencies:
 
 ````shell
 rm -rf node_modules
-rm yarn.lock
+rm package-lock.json
 ````
 
 Update dependencies and devDependencies in `package.json`
@@ -958,38 +952,13 @@ C:\Users\fenyo\AppData\Roaming\npm
 Install dependencies in net-monitor:
 
 ````shell
- % yarn install
-yarn install v1.3.2
-info No lockfile found.
-[1/4] Resolving packages...
-[2/4] Fetching packages...
-[3/4] Linking dependencies...
-[4/4] Building fresh packages...
-success Saved lockfile.
-Done in 5.17s.
+ % npm install -D
+...
 % ls node_modules
 chart.js/  chartjs-color/  chartjs-color-string/  color-convert/  color-name/  jquery/  moment/  webstomp-client/
 ````
 
-Add the following dev dependencies: babel-cli, babel-core, babel-loader, babel-polyfill, babel-preset-env, webpack, webpack-cli, webpack-dev-server.
-
-For instance, with babel-cli:
-
-````shell
- % yarn add babel-cli --dev
-yarn add v1.3.2
-[1/4] Resolving packages...
-[2/4] Fetching packages...
-[3/4] Linking dependencies...
-[4/4] Building fresh packages...
-success Saved lockfile.
-success Saved 114 new dependencies.
-├─ ansi-regex@2.1.1
-├─ ansi-styles@2.2.1
-├─ anymatch@1.3.2
-├─ arr-diff@2.0.0
-...
-````
+Add the following dev dependencies in package.json: babel-cli, babel-core, babel-loader, babel-polyfill, babel-preset-env, webpack, webpack-cli, webpack-dev-server.
 
 ### common operations
 
